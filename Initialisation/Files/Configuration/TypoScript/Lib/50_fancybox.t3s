@@ -1,0 +1,31 @@
+# ******************************************************************************
+#	(c) 2014 Daniel Schoeneck <mail@whiteroom.cc>
+#
+#	You can redistribute it and/or modify it under the terms of the
+#	GNU General Public License as published by the Free Software Foundation;
+#	either version 2 of the License, or (at your option) any later version.
+# ******************************************************************************
+
+
+# **********************************************************
+# Fancybox Plugin 
+# **********************************************************
+
+
+page.includeCSS {
+		fancybox = {$plugin.generic_lib.theme.resDir}/Public/JavaScript/Lib/fancybox/jquery.fancybox.css
+		fancybox.forceOnTop = 1
+		fancybox.if.isTrue = {$plugin.generic_lib.settings.fancybox}
+		fancybox.disableCompression = 1
+        fancybox.excludeFromConcatenation = 1
+}
+	
+page.includeJSFooterlibs {
+		fancybox = {$plugin.generic_lib.theme.resDir}/Public/JavaScript/Lib/fancybox/jquery.fancybox.pack.js
+		fancybox.forceOnTop = 1
+		fancybox.if.isTrue = {$plugin.generic_lib.settings.fancybox}
+		fancybox.disableCompression = 1
+        fancybox.excludeFromConcatenation = 1
+}
+
+

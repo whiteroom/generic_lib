@@ -1,0 +1,133 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+
+
+<article class="article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
+	<n:excludeDisplayedNews newsItem="{newsItem}"/>
+
+	<f:if condition="{newsItem.falMedia}">
+		<!-- fal media preview element -->
+		<div class="news-img-wrap">
+			<f:if condition="{newsItem.falMediaPreviews}">
+				<f:then>
+					<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" configuration="{additionalParams:'&tx_news_pi1[actbackPid]={settings.actbackPid}'}">
+						<f:alias map="{mediaElement: '{newsItem.falMediaPreviews.0}'}">
+							<f:if condition="{mediaElement.originalResource.type} == 2">
+										<f:comment><f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{settings.list.media.image.maxWidth}" maxHeight="{settings.list.media.image.maxHeight}"/></f:comment>								
+										<f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" width="{settings.list.media.image.maxWidth}" height="{settings.list.media.image.maxHeight}"/>
+							</f:if>
+							<f:if condition="{mediaElement.originalResource.type} == 4">
+								<f:render partial="Detail/FalMediaVideo" arguments="{mediaElement: mediaElement}"/>
+							</f:if>
+							<f:if condition="{mediaElement.originalResource.type} == 5">
+								<f:comment><f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{settings.list.media.image.maxWidth}" maxHeight="{settings.list.media.image.maxHeight}"/></f:comment>
+								<f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" width="{settings.list.media.image.maxWidth}" height="{settings.list.media.image.maxHeight}"/>
+							</f:if>
+						</f:alias>
+					</n:link>
+				</f:then>
+				<f:else>
+					<f:if condition="{settings.displayDummyIfNoMedia}">
+						<span class="no-media-element">
+							<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" configuration="{additionalParams:'&tx_news_pi1[actbackPid]={settings.actbackPid}'}">
+								<f:comment><f:image src="{settings.list.media.dummyImage}" title="" alt="" maxWidth="{settings.list.media.image.maxWidth}" maxHeight="{settings.list.media.image.maxHeight}"/></f:comment>
+								<f:image src="{settings.list.media.dummyImage}" title="" alt="" width="{settings.list.media.image.maxWidth}" height="{settings.list.media.image.maxHeight}"/>
+							</n:link>
+						</span>
+					</f:if>
+				</f:else>
+			</f:if>
+		</div>
+	</f:if>
+	
+
+	<div class="news-text-wrap{f:if(condition: '{newsItem.falMedia}', then: ' description',else:' description no-image')}" itemprop="description">
+		<h4>
+			<f:if condition="{settings.showDetailsMore}">
+				<f:then>
+					<span itemprop="headline">{newsItem.title}</span>
+				</f:then>
+				<f:else>
+					<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" configuration="{additionalParams:'&tx_news_pi1[actbackPid]={settings.actbackPid}'}">
+						<span itemprop="headline">{newsItem.title}</span>
+					</n:link>
+				</f:else>
+			</f:if>
+		</h4>
+
+		<f:if condition="{newsItem.teaser}">
+			<f:then>
+				{newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}
+			</f:then>
+			<f:else>
+				{newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}
+			</f:else>
+		</f:if>
+
+
+
+		<f:if condition="{settings.showDetailsMore}">
+			<p class="readon"><n:link newsItem="{newsItem}" settings="{settings}" class="more" title="{newsItem.title}" configuration="{additionalParams:'&tx_news_pi1[actbackPid]={settings.actbackPid}'}">
+				<f:translate key="more-link"/>
+			</n:link></p>
+		</f:if>
+
+
+		<f:if condition="{settings.templateLayout} == 1">
+			<p class="meta">
+				<!-- author -->
+				<f:if condition="{newsItem.author}">
+					<span class="news-list-author">
+						<f:translate key="author" arguments="{0:newsItem.author}"/>
+					</span> &#124;
+				</f:if>
+				<!-- date -->
+				<span class="news-list-date">
+					<time datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
+						<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>						
+						
+						<meta itemprop="datePublished" content="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}" />
+					</time>
+				</span>
+	
+				<f:if condition="{newsItem.firstCategory}">
+					<!-- first category -->
+					<br>Kategorie: <span class="news-list-category">{newsItem.firstCategory.title}</span>
+				</f:if>
+				
+	
+				<f:if condition="{newsItem.tags}">
+					<br>Tags: 
+					<f:for each="{newsItem.tags}" as="tag" iteration="iteratorTags"> 
+						<f:if condition="{iteratorTags.cycle} > 1">&#124;</f:if>
+						
+						<f:if condition="{iteratorTags.isFirst}">
+							<f:then>
+								<span class="news-list-tags first" itemprop="keywords">
+									<f:link.page pageUid="{settings.listPid}" additionalParams="{tx_news_pi1:{overwriteDemand:{tags: tag}}}">{tag.title}</f:link.page>
+								</span>
+							</f:then>
+							<f:else>
+								<f:if condition="{iteratorTags.isLast}">
+									<f:then>
+										<span class="news-list-tags last" itemprop="keywords">
+											<f:link.page pageUid="{settings.listPid}" additionalParams="{tx_news_pi1:{overwriteDemand:{tags: tag}}}">{tag.title}</f:link.page>
+										</span>
+									</f:then>
+									<f:else>
+										<span class="news-list-tags" itemprop="keywords">
+											<f:link.page pageUid="{settings.listPid}" additionalParams="{tx_news_pi1:{overwriteDemand:{tags: tag}}}">{tag.title}</f:link.page>
+										</span>
+									</f:else>
+								</f:if>
+							</f:else>
+						</f:if>
+					</f:for>
+				</f:if>
+
+			</p>
+		</f:if>
+	</div>
+</article>
+</html>

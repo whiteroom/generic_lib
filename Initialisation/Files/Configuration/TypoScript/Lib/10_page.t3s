@@ -1,0 +1,120 @@
+# ******************************************************************************
+#	(c) 2014 Daniel Schoeneck <mail@whiteroom.cc>
+#
+#	You can redistribute it and/or modify it under the terms of the
+#	GNU General Public License as published by the Free Software Foundation;
+#	either version 2 of the License, or (at your option) any later version.
+# ******************************************************************************
+
+
+# **********************************************************
+# General configuration of a page
+# **********************************************************
+
+
+
+# Notice:
+# page object is instantiated in EXT:fluidpages/Configuration/TypoScript/setup.txt
+page = PAGE 	
+page.typeNum = 0
+
+page.includeCSS {
+		normalize = {$plugin.generic_lib.theme.resDir}/Public/StyleSheets/normalize.min.css
+		normalize.disableCompression = 1
+		main = {$plugin.generic_lib.theme.resDir}/Public/StyleSheets/main.css
+		icomoon = {$plugin.generic_lib.theme.resDir}/Public/Fonts/style.css
+		client = {$plugin.generic_lib.theme.resDir}/Public/StyleSheets/client.css
+}
+	
+page.includeJSlibs {
+		modernizr = {$plugin.generic_lib.theme.resDir}/Public/JavaScript/Vendor/modernizr-2.8.3-respond-1.4.2.min.js
+		modernizr.async = 1
+		modernizr.disableCompression = 1
+        modernizr.excludeFromConcatenation = 1
+		
+		jquery = //ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js
+		jquery.external = 1
+		jquery.disableCompression = 1
+        jquery.excludeFromConcatenation = 1
+}
+
+
+
+page.jsInline{
+
+	# Fallback solution
+	# Decided to move jQuery to <head> section, despite recommendations from html5-boilerplate
+	# Reason: vegas slideshow JS will be rendered from fluid-template and has to load after
+	10 = TEXT
+	10.value (
+		window.jQuery || document.write('<script src="{$plugin.generic_lib.theme.resDir}/Public/JavaScript/Vendor/jquery-1.11.2.min.js"><\/script>');
+	)
+}
+
+page.includeJSFooter {
+		1 = {$plugin.generic_lib.theme.resDir}/Public/JavaScript/main.js
+		
+		2 = {$plugin.generic_lib.theme.resDir}/Public/JavaScript/fancybox-options.js
+		2.if.isTrue = {$plugin.generic_lib.settings.fancybox}
+}
+
+
+page.10 = FLUIDTEMPLATE
+page.10 {
+	
+	variables {
+		contentMain < styles.content.get
+		contentAside < styles.content.get
+		contentAside.select.where = colPos = 1
+		
+		
+		layout = TEXT
+		layout.data = levelfield:-2,backend_layout_next_level,slide
+		layout.override.field = backend_layout
+		
+		
+		vegas = TEXT 
+	    vegas.value = {$plugin.generic_lib.settings.vegas}
+			
+	}
+		
+	#file = {$plugin.generic_lib.theme.resDir}/Private/Templates/Standard2Col.html
+	
+	file.stdWrap.cObject = CASE
+	file.stdWrap.cObject {
+		
+		# Die Backend Layout ID definiert das Frontend Template
+        # An dieser Stelle sliden wir gerne, da Backend Layouts häufig auf Unterseiten vererbt werden.
+        # Diese Abfrage kann je nach Bedürfnissen angepasst werden.
+        # key.data = levelfield:-1, backend_layout, slide
+        
+		key.data = levelfield:-1, backend_layout_next_level, slide
+		key.override.field = backend_layout
+
+		
+		# Standard Layout
+        # Wenn keine spezielles Backend Layout definiert wurde
+        default = TEXT
+		default.value = {$plugin.generic_lib.theme.resDir}/Private/Templates/Standard1Col.html
+		
+		# Landing Page
+        # Da in Page TSConfig definiert, der ID "pagets__" voranstellen.
+        pagets__1 = TEXT
+		pagets__1.value       = {$plugin.generic_lib.theme.resDir}/Private/Templates/Home.html
+		
+		# Standard einspaltig (use this)
+		pagets__2 < .default
+		
+		# Erweitert (zweispaltig)
+		pagets__3 = TEXT
+		pagets__3.value       = {$plugin.generic_lib.theme.resDir}/Private/Templates/Standard2Col.html
+	}
+
+	
+	partialRootPath = {$plugin.generic_lib.theme.resDir}/Private/Partials
+	layoutRootPath = {$plugin.generic_lib.theme.resDir}/Private/Layouts
+		
+}
+
+
+

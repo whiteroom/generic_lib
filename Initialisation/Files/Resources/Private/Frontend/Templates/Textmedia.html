@@ -1,0 +1,79 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<article id="c{data.uid}" class="contObj textmedia">
+	<f:render partial="Header" arguments="{_all}" />
+
+	<f:switch expression="{data.layout}">
+	
+		<f:case value="0">
+			<section class="ce-{gallery.position.horizontal} clearfix">
+				<f:if condition="{gallery.position.horizontal} != 'right'">
+					<f:render partial="MediaGallery" arguments="{_all}" />
+				</f:if>
+				
+				
+				<f:switch expression="{gallery.position.horizontal}">
+					<f:case value="right">
+						<div class="ce-bodytext left">
+					</f:case>
+					<f:case value="left">
+						<div class="ce-bodytext right">
+					</f:case>
+					<f:case default="center">
+						<div class="ce-bodytext">
+					</f:case>
+				 </f:switch>
+		
+					<f:format.html>{data.bodytext}</f:format.html>
+				</div>
+		
+				<f:if condition="{gallery.position.horizontal} == 'right'">
+					<f:render partial="MediaGallery" arguments="{_all}" />
+				</f:if>
+			</section>
+		</f:case>
+		
+		<f:case value="110">
+			<section class="ce-{gallery.position.horizontal} clearfix">
+				<f:if condition="{gallery.position.horizontal} != 'right'">
+					<f:render partial="MediaGallery" arguments="{_all}" />
+				</f:if>
+				
+				
+				<f:switch expression="{gallery.position.horizontal}">
+					<f:case value="right">
+						<div class="ce-bodytext left">
+					</f:case>
+					<f:case value="left">
+						<div class="ce-bodytext right ident">
+					</f:case>
+					<f:case default="center">
+						<div class="ce-bodytext center ident">
+					</f:case>
+				 </f:switch>
+		
+					<f:format.html>{data.bodytext}</f:format.html>
+				</div>
+		
+				<f:if condition="{gallery.position.horizontal} == 'right'">
+					<f:render partial="MediaGallery" arguments="{_all}" />
+				</f:if>
+			</section>
+		</f:case>
+		
+		
+		
+		<f:case value="100">
+			<section class="ce-{gallery.position.horizontal} clearfix">
+				<f:render partial="MediaWookmark" arguments="{_all}" />
+			</section>
+		</f:case>
+		
+		
+	</f:switch>
+
+
+
+	<f:render partial="Footer" arguments="{_all}" />
+</article>
+</html>
+

@@ -1,0 +1,33 @@
+
+
+
+# Default PAGE object:
+#page = PAGE
+#page.10 = TEXT
+#page.10.value = HELLO V7!
+
+
+
+config {
+	
+	#compressCss = 0
+	#concatenateCss = 0
+	
+}
+
+
+# config.contentObjectExceptionHandler = 0
+
+
+[globalVar = TSFE : beUserLogin > 0] 
+
+	config.no_cache = 1
+	
+	page.headerData.21 = TEXT 
+	page.headerData.21.value = <style type="text/css"> .extbase-debugger { z-index: 9999!important; } </style>
+
+
+[end]
+
+
+

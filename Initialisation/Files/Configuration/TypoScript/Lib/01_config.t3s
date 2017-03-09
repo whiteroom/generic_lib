@@ -1,0 +1,61 @@
+# ******************************************************************************
+#	(c) 2014 Daniel Schoeneck <mail@whiteroom.cc>
+#
+#	You can redistribute it and/or modify it under the terms of the
+#	GNU General Public License as published by the Free Software Foundation;
+#	either version 2 of the License, or (at your option) any later version.
+# ******************************************************************************
+
+
+config {
+	
+	doctype = html5
+	
+	xmlprologue = none
+	renderCharset = utf-8
+	metaCharset = utf-8
+	
+	prefixLocalAnchors = all
+
+	removeDefaultJS = 0
+	inlineStyle2TempFile = 1
+	disablePrefixComment = 1
+	compressCss = 1
+	concatenateCss = 1
+	
+	compressJs = 1
+	concatenateJs = 1
+
+
+	moveJsFromHeaderToFooter = 0
+
+	
+	# RealURL
+	simulateStaticDocuments = 0
+	absRefPrefix = {$plugin.generic_lib.absRefPrefixRoot}
+	tx_realurl_enable = 0
+
+
+	# Spam
+	spamProtectEmailAddresses = 3
+	spamProtectEmailAddresses_atSubst = <!-- >@. -->@<!-- >@foo.com --><!-- >@. --><!-- >@. -->
+	
+
+	# Links & content sharing across domains
+	typolinkEnableLinksAcrossDomains = 1
+	typolinkCheckRootline = 1
+	content_from_pid_allowOutsideDomain = 1
+
+
+	# Cache
+	cache_clearAtMidnight = 1
+	cache_period = 1200
+	sendCacheHeaders = 1
+
+	headerComment = {$plugin.generic_lib.sitecredits.agency}
+
+	pageTitleFirst = 1
+	
+	
+	
+}

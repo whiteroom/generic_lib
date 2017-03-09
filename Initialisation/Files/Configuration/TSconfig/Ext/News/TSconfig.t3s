@@ -1,0 +1,93 @@
+TCAdefaults.tx_news_domain_model_news {
+	
+	# 1 = General/Agenda
+	categories = 1
+
+	istopnews = 0
+	hidden = 0
+	
+	# da mit sys_file_reference gearbeitet wird (alternative: tx_news_domain_model_media)
+	# showinpreview = 1
+	
+}
+
+TCAdefaults {
+	sys_file_reference.showinpreview = 1
+
+} 
+
+
+
+# TCEFORM.tx_news_domain_model_news.istopnews.label = Newsletter Record
+
+
+
+#Defaults
+
+TCEFORM.tx_news_domain_model_news {
+#	istopnews.disabled = 0
+#	teaser.disabled = 0
+#	bodytext.disabled = 0
+#	author.disabled = 0
+#	categories.disabled = 0
+#	related.disabled = 1
+#	relatedFrom.disabled = 1
+#	tags.disabled = 0
+#	keywords.disabled = 1
+#	related_from.disabled = 1
+#	media.disabled = 0
+#	media_records.disabled = 1
+#	related_files.disabled = 0
+#	related_links.disabled = 1
+#
+#	path_segment.disabled = 1
+#	sys_language_uid.disabled = 1
+#	
+#	type.disabled = 1
+#	#type.removeItems = 1,2
+		
+}
+
+
+
+
+
+# --- Add template layouts
+#
+tx_news{
+
+	templateLayouts {
+
+        1 = Artikel: zeigt Details
+        2 =  --div--,Zur Zeit nicht verfügbar:
+        3 = Special Use Cases
+	}
+	
+	predefine.archive = +1 day 6 hours
+	
+	
+	module {		
+		# redirectToPageOnStart = 1
+		
+		# If defined, the administration module will redirect the user always to the given page, no matter what defined in the page tree
+		allowedPage = 2
+		
+		# If no page is selected in the page tree, any record created in the administration module would otherwise be saved on the root page
+		defaultPid.tx_news_domain_model_news = 2
+		
+		
+		columns = uid,datetime,archive,teaser,categories,tags
+		
+		
+		# Predefine the form in the administration module (Filter anzeigen/verstecken)
+		preselect {
+            topNewsRestriction = 0
+            sortingField = datetime
+			sortingDirection = asc
+        }
+		
+	
+	}
+
+}
+

@@ -1,0 +1,28 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+	<f:layout name="Default" />
+
+	<f:section name="Main">
+	
+        <div class="main wrapper clearfix">
+	        
+	        <f:if condition="{contentMain}">
+	            <article>
+		            <f:format.raw value="{contentMain}" />
+	            </article>
+            </f:if>
+            
+			
+			<f:if condition="{contentAside}">
+	            <aside>
+		            <f:format.raw value="{contentAside}" />
+	            </aside>
+            </f:if>
+        </div>
+
+	</f:section>
+	
+	<f:section name="Vegas"></f:section>
+	
+</div>

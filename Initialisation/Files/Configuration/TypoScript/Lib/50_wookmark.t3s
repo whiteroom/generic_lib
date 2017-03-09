@@ -1,0 +1,30 @@
+# ******************************************************************************
+#	(c) 2014 Daniel Schoeneck <mail@whiteroom.cc>
+#
+#	You can redistribute it and/or modify it under the terms of the
+#	GNU General Public License as published by the Free Software Foundation;
+#	either version 2 of the License, or (at your option) any later version.
+# ******************************************************************************
+
+
+# **********************************************************
+# WOOKMARK Plugin 
+# **********************************************************
+
+
+
+	
+page.includeJSFooterlibs {
+		wookmark = {$plugin.generic_lib.theme.resDir}/Public/JavaScript/Lib/wookmark.min.js
+		wookmark.forceOnTop = 1
+		wookmark.disableCompression = 1
+        wookmark.excludeFromConcatenation = 1
+        wookmark.if.isTrue = {$plugin.generic_lib.settings.wookmark}
+
+		
+		imagesloaded = {$plugin.generic_lib.theme.resDir}/Public/JavaScript/Lib/imagesloaded.pkgd.min.js
+		imagesloaded.forceOnTop = 1
+		imagesloaded.disableCompression = 1
+        imagesloaded.excludeFromConcatenation = 1
+        imagesloaded.if.isTrue = {$plugin.generic_lib.settings.wookmark}
+}

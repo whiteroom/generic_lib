@@ -1,0 +1,103 @@
+# ******************************************************************************
+#	(c) 2014 Daniel Schoeneck <mail@whiteroom.cc>
+#
+#	You can redistribute it and/or modify it under the terms of the
+#	GNU General Public License as published by the Free Software Foundation;
+#	either version 2 of the License, or (at your option) any later version.
+# ******************************************************************************
+
+# **********************************************************
+# Multilanguage configuration
+# HTML Tag and Conditional Comments for Modernizr in TYPO3
+# **********************************************************
+
+
+# No need to do it like this
+# see solution below
+# ##############################################
+# config.doctype ( 
+# <!doctype html> 
+# <!--[if lt IE 7]>   <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="{$plugin.generic_lib.lang.localeShort}">   <![endif]--> 
+# <!--[if IE 7]>      <html class="no-js lt-ie9 lt-ie8" lang="{$plugin.generic_lib.lang.localeShort}">          <![endif]--> 
+# <!--[if IE 8]>      <html class="no-js lt-ie9" lang="{$plugin.generic_lib.lang.localeShort}">                 <![endif]--> 
+# <!--[if gt IE 8]><!-->
+# ) 
+
+
+# Default language
+config {
+	
+	sys_language_mode = content_fallback
+	
+	# Translations, show default language if not translated
+	# The default is that records with no translation will show up in the default language. Keyword "hideNonTranslated" does what it says
+	# Alle Elemente werden angezeigt (egal welche Spracheinstellung), falls eine Übersetzung existiert, wird diese angezeigt.
+	sys_language_overlay = 1
+	# sys_language_overlay = hideNonTranslated
+
+	sys_language_uid = 0
+    language = {$plugin.generic_lib.lang.localeShort}
+    locale_all = {$plugin.generic_lib.lang.locale}
+    
+		
+	# HTML5 Boilerplate specific language keys
+	htmlTag_setParams = none
+	htmlTag_stdWrap {
+	    setContentToCurrent = 1
+	    cObject = COA
+	    cObject {
+	        10 = TEXT
+	        10.value = class="no-js"
+	        10.noTrimWrap = | | |
+	        20 = TEXT
+	        20.value = lang="{$plugin.generic_lib.lang.localeShort}"
+	        
+	        # No need to do it like this
+	        # wrap = <html | ><!--<![endif]-->
+	        
+	        wrap = <html | >
+		}
+	}
+
+	# check for valid L-params
+	linkVars := addToList(L)
+}
+
+
+# # HTML5 Boilerplate specific
+# ##############################################
+# this is way better:
+[browser = msie] && [version < 7]
+config.htmlTag_stdWrap.cObject.10.value = class="no-js lt-ie9 lt-ie8 lt-ie7"
+[browser = msie] && [version = 7]
+config.htmlTag_stdWrap.cObject.10.value = class="no-js lt-ie9 lt-ie8"
+[browser = msie] && [version = 8]
+config.htmlTag_stdWrap.cObject.10.value = class="no-js lt-ie9"
+[global]
+
+
+# English
+[globalVar = GP:L=1]
+
+	config {
+		sys_language_uid = 1
+		language = en
+		locale_all = en_GB.UTF-8
+		htmlTag_langKey = en
+		htmlTag_stdWrap.cObject.20.value = lang="en"
+	}
+
+[global]
+
+# French
+[globalVar = GP:L=2]
+
+	
+	config {
+		sys_language_uid = 2
+		language = fr
+		locale_all = fr_FR.UTF-8
+		htmlTag_langKey = fr
+		htmlTag_stdWrap.cObject.20.value = lang="fr"
+	}
+[global]

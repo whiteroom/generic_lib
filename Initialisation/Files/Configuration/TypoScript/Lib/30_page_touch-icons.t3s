@@ -1,0 +1,120 @@
+# ******************************************************************************
+#	(c) 2014 Daniel Schoeneck <mail@whiteroom.cc>
+#
+#	You can redistribute it and/or modify it under the terms of the
+#	GNU General Public License as published by the Free Software Foundation;
+#	either version 2 of the License, or (at your option) any later version.
+# ******************************************************************************
+
+
+# **********************************************************
+# Touch Icons
+# **********************************************************
+
+
+page {
+	
+	headerData.20 = COA
+	headerData.20 {
+	    # Apple touch icons
+	    10 = IMG_RESOURCE
+	    10 {
+	        file = {$plugin.generic_lib.theme.resDir}/Public/Images/icon.png
+	        file {
+	            width = 57c
+	            height = 57c
+	        }
+	        stdWrap.dataWrap = <link rel="apple-touch-icon" sizes="{TSFE:lastImgResourceInfo|0}x{TSFE:lastImgResourceInfo|1}" href="|">
+	    }
+	
+	    20 < .10
+	    20.file {
+	        width = 76c
+	        height = 76c
+	    }
+	    
+	    30 < .10
+	    30.file {
+	        width = 120c
+	        height = 120c
+	    }
+	    
+	    40 < .10
+	    40.file {
+	        width = 152c
+	        height = 152c
+	    }
+	    
+	    50 < .10
+	    50.file {
+	        width = 167c
+	        height = 167c
+	    }
+	    
+	    60 < .10
+	    60.file {
+	        width = 180c
+	        height = 180c
+	    }
+
+	
+	    # ...
+	
+	    # Android icons
+	    80 < .10
+	    80 {
+	        file {
+	            width = 16c
+	            height = 16c
+	        }
+	        stdWrap.dataWrap = <link rel="icon" type="image/png" sizes="{TSFE:lastImgResourceInfo|0}x{TSFE:lastImgResourceInfo|1}" href="|">
+	    }
+	    
+	    90 < .80
+	    90.file {
+	        width = 128c
+	        height = 128c
+	    }
+	    
+	    100 < .80
+	    100.file {
+	        width = 192c
+	        height = 192c
+	    }
+	    
+	    
+	
+	    # ...
+	
+	    # Microsoft Application icons
+	    120 < .10
+	    120 {
+	        file {
+	            width = 70c
+	            height = 70c
+	        }
+	        stdWrap.dataWrap = <meta name="msapplication-square{TSFE:lastImgResourceInfo|0}x{TSFE:lastImgResourceInfo|1}logo" content="|"/>
+	    }
+	    
+	    130 < .120
+	    130.file {
+	        width = 150c
+	        height = 150c
+	    }
+	    
+	    140 < .120
+	    140.file {
+	        width = 310c
+	        height = 150c
+	    }
+	    140.stdWrap.dataWrap = <meta name="msapplication-wide{TSFE:lastImgResourceInfo|0}x{TSFE:lastImgResourceInfo|1}logo" content="|"/>
+	    
+	    150 < .120
+	    150.file {
+	        width = 310c
+	        height = 310c
+	    }	    
+	}
+
+}
+

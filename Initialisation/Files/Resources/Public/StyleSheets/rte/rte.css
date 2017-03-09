@@ -1,0 +1,50 @@
+html {
+	padding:1em
+
+}
+
+body > *{
+	font-family: "Helvetica Neue Regular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 120%;
+	line-height: 1.4;
+}
+
+
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #6d6e71;
+    margin: 2em 0;
+    padding: 0;
+}
+
+blockquote, blockquote p {
+	margin:0;
+	font-size: 46px;
+	line-height: 54px;
+	color: rgba(0, 0, 0, 0.9);
+	text-align: left;
+	font-weight: 700
+
+}
+
+/* table border only for RTE */
+table {
+     border-collapse: collapse;
+     width: 100%;
+}
+
+table caption, table th, th,
+table td, td {
+    vertical-align: top;
+    border: 1px dashed #CCCCCC;
+    padding: 1%;
+    height: 2em;
+    text-align: left;
+}
+
+p.align-justify {
+	text-align: justify
+}

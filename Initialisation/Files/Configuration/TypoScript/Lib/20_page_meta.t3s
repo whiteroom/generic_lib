@@ -1,0 +1,35 @@
+# ******************************************************************************
+#	(c) 2014 Daniel Schoeneck <mail@whiteroom.cc>
+#
+#	You can redistribute it and/or modify it under the terms of the
+#	GNU General Public License as published by the Free Software Foundation;
+#	either version 2 of the License, or (at your option) any later version.
+# ******************************************************************************
+
+
+# **********************************************************
+# Metatags configuration of a page
+# **********************************************************
+
+
+page {
+	
+	meta.viewport  = width=device-width, initial-scale=1
+	meta.robots = INDEX,FOLLOW
+	shortcutIcon = {$plugin.generic_lib.theme.resDir}/Public/Images/favicon.ico
+
+	
+	bodyTag >
+	bodyTagCObject = TEXT
+	bodyTagCObject.value.dataWrap = <body id="page-uid{page:uid}" class="pid{leveluid:1}">
+	
+
+	meta.X-UA-Compatible.httpEquivalent = 1
+	# W3C Validation fails otherwise
+	headerData.10 = TEXT
+	headerData.10.value (
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+	
+	)
+}
+

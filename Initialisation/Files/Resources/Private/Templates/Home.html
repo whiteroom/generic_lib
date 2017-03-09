@@ -1,0 +1,57 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+	<f:layout name="Default" />
+
+
+	<f:section name="Main">
+        <div class="inner">
+	        <f:format.raw value="{contentMain}" />
+        </div>
+	</f:section>
+
+	
+	<f:section name="Vegas">
+		<v:resource.record.fal table="pages" field="media" uid="{data.uid}" as="resources">
+			    <f:if condition="{resources}">
+				       
+				    <div id="vegas-helper">
+					    <ul>
+						<f:for each="{resources}" as="resource" iteration="iteration"><li><a href="#" class="jump" data-val="{iteration.index}"><i class="icon-generic-button"></i></a></li></f:for>
+						</ul>
+					</div>
+					
+				    <script type='text/javascript'>
+					    $(function () {
+						    $('body').vegas({
+							slides: [
+								
+								<f:alias map="{opencurlybracket: '{', closecurlybracket: '}'}">
+									<f:for each="{resources}" as="resource">{opencurlybracket} src:'{resource.url}' {closecurlybracket},</f:for>
+								</f:alias>
+
+							    ],
+							    slide: <f:count>{resources}</f:count>,
+							    timer: false,
+				                delay: 10000,
+							    autoplay: true
+							});
+														
+							$('.jump').click(function(e) {
+							    var which = $(this).data('val');
+							    $('body').vegas('jump', which);
+							    e.preventDefault();
+							});
+
+					    });
+					</script>
+		
+			    </f:if> 
+		</v:resource.record.fal>
+	</f:section>
+
+
+
+
+</div>

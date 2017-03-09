@@ -1,0 +1,146 @@
+plugin {
+  tx_news {
+    settings {
+      
+    }
+  }
+}
+
+
+plugin.tx_news {
+	
+	
+    settings {
+
+        cssFile >
+		startingpoint = {$plugin.tx_news.pid.storage_folder}
+                
+		archiveRestriction = active
+        
+        
+        topNewsFirst = 1
+        hidePagination = 1
+        
+      
+        cropMaxCharacters = 160
+        orderByAllowed = sorting,author,uid,title,teaser,author,tstamp,crdate,datetime,categories.title
+        orderBy = datetime 
+        orderDirection = asc
+  
+        # custom variable (show/hide more link)
+        showDetailsMore = 1
+        
+        
+        
+		# listPid stays unset
+        # use dynamic backPid
+		useStdWrap = backPid,actbackPid
+		backPid.data = GP : tx_news_pi1 | actbackPid
+		actbackPid = TEXT
+		actbackPid.data = page:uid
+      
+      
+        
+        search {
+			fields = teaser,title,bodytext
+		}
+
+        # don't use/show dummy image
+        displayDummyIfNoMedia = 1
+        # list view
+        list {
+            media {
+                image {
+                    
+                    maxWidth={$styles.content.textmedia.maxW}
+					maxHeight=
+					lightbox = lightbox[myImageSet]
+          
+                }
+                                
+                #dummyImage = EXT:generic_lib/Resources/Public/Images/dummy-preview-image.jpg
+                dummyImage = fileadmin/generic_lib/Resources/Public/Images/dummy-preview-image.jpg
+                
+            }
+            paginate {
+                itemsPerPage = 16
+                insertAbove = 0
+                insertBelow = 1
+                # add next/prev links in header (for screen reader?)
+                #prevNextHeaderTags = 1
+            }
+        }
+        
+        
+
+
+
+        
+
+        # detail view
+        detail {
+            media {
+                image {
+
+                    maxWidth = {$styles.content.textmedia.maxW}
+                    maxHeight =
+                    lightbox = {$plugin.generic_lib.settings.lightboxCssClass}
+                }
+                video {
+                    width = {$styles.content.textmedia.maxW}
+                    height = 
+                }
+            }
+            # don't use/show fb & twitter sharing plugins
+            showSocialShareButtons = 1
+            
+            showPrevNext = 1
+        }
+
+        # deactivate analytics for sharing
+        analytics {
+            social {
+                facebookLike = 1
+                facebookShare = 1
+                twitter = 1
+            }
+        }
+        
+        
+        facebookLocale = de_DE
+
+        
+    }
+
+
+
+	# check ext. newscustom for translations
+    _LOCAL_LANG {
+        default {
+
+        }
+        de {
+			dateFormat = %-d.&#8202;%-m.&#8201;%Y
+        }
+    }
+}
+
+
+# English
+[globalVar = GP:L=1]
+
+plugin.tx_news.settings.facebookLocale = en_GB
+
+[global]
+
+# French
+[globalVar = GP:L=2]
+
+plugin.tx_news.settings.facebookLocale = fr_FR
+	
+[global]
+
+
+
+
+

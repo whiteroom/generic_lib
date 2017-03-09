@@ -1,0 +1,28 @@
+# ******************************************************************************
+#	(c) 2014 Daniel Schoeneck <mail@whiteroom.cc>
+#
+#	You can redistribute it and/or modify it under the terms of the
+#	GNU General Public License as published by the Free Software Foundation;
+#	either version 2 of the License, or (at your option) any later version.
+# ******************************************************************************
+
+
+# **********************************************************
+# Vegas Plugin 
+# **********************************************************
+
+
+page.includeCSS {
+		vegas = {$plugin.generic_lib.theme.resDir}/Public/StyleSheets/vegas/vegas.min.css
+		vegas.if.isTrue = {$plugin.generic_lib.settings.vegas}
+		vegas.disableCompression = 1
+        vegas.excludeFromConcatenation = 1
+}
+	
+page.includeJSFooterlibs {
+
+		vegas = {$plugin.generic_lib.theme.resDir}/Public/JavaScript/Lib/vegas.min.js
+		vegas.if.isTrue = {$plugin.generic_lib.settings.vegas}
+		vegas.disableCompression = 1
+        vegas.excludeFromConcatenation = 1
+ }

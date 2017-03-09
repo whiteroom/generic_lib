@@ -1,0 +1,39 @@
+{
+    "modules": [],
+    "properties": {
+        "backendModules": [],
+        "description": "",
+        "emConf": {
+            "category": "distribution",
+            "custom_category": "",
+            "dependsOn": "typo3 => 7.6.0-7.6.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": false,
+            "sourceLanguage": "en",
+            "state": "alpha",
+            "targetVersion": "7.6.0-7.6.99",
+            "version": ""
+        },
+        "extensionKey": "generic_lib",
+        "name": "whiteRoom Project Kickstart",
+        "originalExtensionKey": "",
+        "originalVendorName": "",
+        "persons": [
+            {
+                "company": "whiteRoom",
+                "email": "",
+                "name": "Daniel Schoeneck",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [],
+        "vendorName": "Whiteroom"
+    },
+    "wires": [],
+    "log": {
+        "last_modified": "2016-11-24 11:15",
+        "extension_builder_version": "7.6.0",
+        "be_user": " (1)"
+    }
+}

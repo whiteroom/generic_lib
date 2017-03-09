@@ -1,0 +1,1 @@
+<INCLUDE_TYPOSCRIPT: source="DIR: ./Lib" extensions="t3s">

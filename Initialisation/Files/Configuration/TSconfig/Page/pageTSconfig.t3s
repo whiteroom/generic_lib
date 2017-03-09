@@ -1,0 +1,372 @@
+
+
+
+# --------------------------------------------------
+# mod
+#
+mod {
+	
+	SHARED {
+	  # Language configuration
+	  # defaultLanguageLabel = Deutsch
+	  # defaultLanguageFlag = de
+	}
+	
+	# configure the "Web > Page" module to display content elements in a way to make sure that each default element is shown and next to it any translation found.
+	web_layout.defLangBinding = 1
+	
+	## Backend-Layouts definieren
+	web_layout.BackendLayouts {
+	
+		1 {
+			title = Home (Landing Page)
+			config {
+				backend_layout {
+					colCount = 1
+					rowCount = 1
+					rows {
+						1 {
+							columns {
+								1 {
+									name = Content
+									colPos = 0
+								}
+							}
+						}
+					}
+				}
+			}
+			icon = ../fileadmin/generic_lib/Resources/Public/Backend/Icons/be_default_home.svg
+		}
+		
+		2 {
+			title = Standard (use this)
+			config {
+				backend_layout {
+					colCount = 1
+					rowCount = 1
+					rows {
+						1 {
+							columns {
+								1 {
+									name = Content
+									colPos = 0
+								}
+							}
+						}
+					}
+				}
+			}
+			icon = ../fileadmin/generic_lib/Resources/Public/Backend/Icons/be_1_columns.svg
+		}
+		
+		
+		3 {
+			title = Erweitert (zweispaltig)
+			config {
+				backend_layout {
+					colCount = 3
+					rowCount = 1
+					rows {
+						1 {
+							columns {
+								1 {
+									name = Content
+									colPos = 0
+									colspan = 2
+								}
+								2 {
+									name = Sidebar
+									colPos = 1
+								}
+							}
+						}
+					}
+				}
+			}
+            icon = ../fileadmin/generic_lib/Resources/Public/Backend/Icons/be_2_columns.svg
+		}
+
+
+
+
+
+	}
+	
+	
+	### Set the default image orientation (Nr. 25)
+	wizards.newContentElement.wizardItems.common.elements.textmedia.tt_content_defValues.imageorient = 25
+}
+
+
+
+# --------------------------------------------------
+# TCEMAIN
+#
+# Default backend usergroup and rights for new pages
+TCEMAIN {
+    permissions {
+        # default begroup owner of new pages
+        groupid = 1
+        user = show,editcontent,edit,delete,new
+        group = show,editcontent,edit,delete,new
+        everybody =
+    }
+    clearCacheCmd = all
+
+	preview {
+	    
+	}
+
+}
+
+
+
+
+
+
+# --------------------------------------------------
+# TCEFORM.tt_content
+#
+
+TCEFORM.tt_content {
+	
+	# bodytext.disabled = 1
+	imagewidth.disabled = 1
+	imageheight.disabled = 1
+	imageborder.disabled = 1
+	linkToTop.disabled = 1
+	sectionIndex.disabled = 1
+	categories.disabled = 1
+	editlock.disabled = 1
+	fe_group.disabled = 1
+	
+	
+    layout {
+	    disabled = 0
+	    removeItems = 1,2,3
+	    
+        types {
+	        header {
+                altLabels.0 = Standard Überschrift (Generic)
+            }
+
+
+            textmedia {
+	            altLabels.0 = Standard
+	            
+                addItems {
+                    100 = Kacheln (Generic)
+                }
+                
+                addItems {
+                    110 = Spezial (Text schmal)
+                }
+            }
+            
+            list {
+	            altLabels.0 = Standard
+	            
+                addItems {
+                    100 = Kacheln (News)
+                }
+                
+            }
+            
+
+            div {
+                altLabels.0 = Standard (Generic)
+            }
+        }
+	}
+
+	
+	imageorient {
+		disabled = 0
+		
+		
+		#keep: 0, 25, 26 (neben dem Text rechts/neben dem Text links)
+		removeItems = 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,27,28,29,30,31,32
+		
+		### Disable image orientation completly but have Nr. 25 override this setting (to use it as default)
+		# disabled = 1
+		# override = 25
+		
+		
+		altLabels.0 = Ganze Breite, kein Raster
+		altLabels.25 = Bilder/Videos neben dem Text rechts
+		altLabels.26 = Bilder/Videos neben dem Text links
+
+		
+	}
+	
+	imagecols {
+		
+		disabled = 0
+		removeItems = 5,6,7,8
+		
+	}
+
+	
+
+	
+	## Ueberschriften
+	header_layout{
+	     altLabels {
+	          0 = h1 - Seitenueberschrift
+	          1 =
+	          2 = h2 - Themenueberschrift
+	          3 = h3 - Standard Absatz
+	          4 = h4 - kleiner Titel
+	          5 = 
+	          100 = Verbergen: Diese Überschrift nicht mehr anzeigen
+	       }
+	     removeItems = 1,5
+	}
+
+}
+
+
+
+
+# --------------------------------------------------
+# TCAdefaults.tt_content
+#
+TCAdefaults.tt_content {
+    # Default header layout is h3
+    header_layout = 3
+    
+    
+    # default image cols (instead of 2)
+    imagecols = 1
+    
+    # enable
+    image_zoom = 1
+    
+	# neben dem Text rechts
+	imageorient = 25
+	
+	# neben dem Text links
+	# imageorient = 26
+
+	layout = 0
+
+}
+
+
+
+
+# --------------------------------------------------
+# TCEFORM.pages
+#
+TCEFORM.pages {
+    # sysfolder with backend layouts
+    # backend_layout.PAGE_TSCONFIG_ID = 2
+    # backend_layout_next_level.PAGE_TSCONFIG_ID = 2
+
+    #hide no backend layout label
+    #backend_layout_next_level.removeItems= -1
+	#backend_layout.removeItems= -1
+	#backend_layout.altLabels.0 = Standard
+    
+
+    # "Frontend" layout, used for body class
+    #layout {
+        # disable or
+        #disabled = 1
+        # change & remove
+        
+        #altLabels.0 = Standard
+        #removeItems = 1,2,3
+    #}
+
+}
+
+# --------------------------------------------------
+# RTE
+#
+
+
+RTE {
+
+	default {
+		# CSS file for RTE
+		contentCSS = fileadmin/generic_lib/Resources/Public/StyleSheets/rte/rte.css
+		
+		# use typical installation, add what is needed, remove unnecessary
+		# Available buttons are: blockstylelabel, blockstyle, textstylelabel, textstyle, fontstyle, fontsize, formatblock, blockquote, insertparagraphbefore, insertparagraphafter, lefttoright, righttoleft, language, showlanguagemarks, left, center, right, justifyfull, orderedlist, unorderedlist, definitionlist, definitionitem, outdent, indent, formattext, bidioverride, big, bold, citation, code, definition, deletedtext, emphasis, insertedtext, italic, keyboard, monospaced, quotation, sample, small, span, strikethrough, strong, subscript, superscript, underline, variable, textcolor, bgcolor, textindicator, editelement, showmicrodata, emoticon, insertcharacter, insertsofthyphen, line, link, unlink, image, table, user, abbreviation, findreplace, spellcheck, chMode, inserttag, removeformat, copy, cut, paste, pastetoggle, pastebehaviour, undo, redo, about, toggleborders, tableproperties, tablerestyle, rowproperties, rowinsertabove, rowinsertunder, rowdelete, rowsplit, columnproperties, columninsertbefore, columninsertafter, columndelete, columnsplit, cellproperties, cellinsertbefore, cellinsertafter, celldelete, cellsplit, cellmerge
+		showButtons := addToList(textcolor, line, justifyfull, insertsofthyphen, blockquote, insertparagraphbefore, insertparagraphafter)
+		showButtons := removeFromList(outdent, indent, italic, findreplace )
+		
+		# For clean copy / paste
+		showButtons := addToList(pastetoggle)
+		buttons.pastetoggle.setActiveOnRteOpen = 1
+		buttons.pastetoggle.hidden = 1
+		
+		buttons.image.options.magic.maxWidth = 600
+		buttons.image.options.magic.maxHeight = 600
+		buttons.image.options.plain.maxWidth = 600
+		buttons.image.options.plain.maxHeight = 600
+
+    
+		enableWordClean = 1
+		removeTrailingBR = 1
+		removeComments = 1
+		removeTags = center, font, o:p, sdfield, u
+		removeTagsAndContents = link, meta, script, style, title
+		
+		
+		proc.allowedClasses := addToList(align-justify)
+		
+		##assume any br is intentional
+		proc.dontConvBRtoParagraph = 1
+		
+
+		# Attribute in der RTE Tabelle entfernen
+		proc.entryHTMLparser_db.tags.table {
+		     fixAttrib.style.unset = 1
+		     fixAttrib.width.unset = 1
+		     fixAttrib.height.unset = 1
+		}
+		
+		proc.entryHTMLparser_db.tags.tr {
+		     fixAttrib.style.unset = 1
+		     fixAttrib.width.unset = 1
+		     fixAttrib.height.unset = 1
+		}
+		
+		proc.entryHTMLparser_db.tags.td {
+		     fixAttrib.style.unset = 1
+		     fixAttrib.width.unset = 1
+		     fixAttrib.height.unset = 1
+		}
+
+		# proc.transformBoldAndItalicTags = 1   #### not working 7.6.14
+		proc.exitHTMLparser_db.tags {
+			allowTags = p,b,i,strong,em,blockquote,pre,h1,h2,h3,h4,h5,h6,span,div,address,sub,sup,hr
+					b.remap = strong
+					i.remap = em
+				}
+
+		proc.exitHTMLparser_rte.tags {
+			allowTags = p,b,i,strong,em,blockquote,pre,h1,h2,h3,h4,h5,h6,span,div,address,sub,sup,hr
+					strong.remap = b
+					em.remap = i
+				}
+	}
+	
+	
+
+
+	
+	classes {
+	
+	}
+	
+	classesAnchor {
+	
+	}
+
+}
+
+

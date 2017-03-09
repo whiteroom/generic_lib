@@ -1,0 +1,82 @@
+# Check Condition is given: belongs to Usergroup Redaktoren (id = 2)
+# Otherwise ignore (Admin Users)
+##############################################################################
+[usergroup=2] 
+
+
+
+# General
+#################
+setup {
+	default {
+		condensedMode = 0
+		extendedView = 1
+	}
+	override {
+		condensedMode = 0
+		extendedView = 1
+		rteCleanPasteBehaviour = plainText
+	}
+	
+}
+
+options {
+
+	pageTree {
+		# Shows the user db mount path above the mount itself (useful if you work a lot with user db mounts)
+		showPathAboveMounts = 0
+
+		# Shows the page id as a prefix of the title
+		showPageIdWithTitle = 0
+
+		# Shows the navigation title instead of the title if available
+		showNavTitle = 1
+
+		# Disables the left click on an icon that opens the contextmenu
+		disableIconLinkToContextmenu = 0
+
+		# Disable the filter feature in the top panel
+		hideFilter = 1
+
+		# Shows the domain name as a suffix of the title if available
+		showDomainNameWithTitle = 1
+
+		#  List of pages with a dedicated color for permanent highlighting in the tree
+		backgroundColor.1=#f2f2e0
+		backgroundColor.2=#f4f400
+	}
+
+}
+
+
+
+# um PageTS zu überschreiben, prepend page Objekt
+page {
+
+	#Inhaltselemente
+	TCEFORM.tt_content.CType {
+	#header=Überschrift
+	#text=Text
+	#textpic=Text m/Bild
+	#image=Bild
+	#bullets=Punktliste
+	#table=Tabelle
+	#uploads=Dateilinks
+	#multimedia=Multimedia
+	#mailform=Formular
+	#search=Suchen
+	#login=Login
+	#menu=Menü/Sitemap
+	#shortcut=Datensatz einfügen
+	#list=Plugin einfügen
+	#html=HTML
+	#script=Skript
+	#splash=Textbox
+	#div=Trenner
+	#removeItems = header,multimedia,mailform,search,login,skript,splash,html,menu,div
+	}
+
+}
+
+
+[global]

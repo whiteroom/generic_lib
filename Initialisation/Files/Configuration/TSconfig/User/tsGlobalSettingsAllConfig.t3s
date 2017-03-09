@@ -1,0 +1,64 @@
+####################################################
+# TS-Config der Benutzergruppe _globalSettingsForAll
+# ONLY DEFAULTS here          ######################
+# everything else in Usergroup = 2 (Redaktoren) ####
+####################################################
+
+# Check Condition is given: belongs to Usergroup _globalSettingsForAll (id = 1)
+# Otherwise ignore (Admin Users)
+##############################################################################
+[usergroup=1] 
+
+
+options {
+	pageTree {
+		# pagetitles are too long, usually
+		showNavTitle = 1
+		
+		}
+
+	# Allow creation of new folders in Element Browser
+	createFoldersInEB = 1
+
+	# No alert box ad type change
+	alertPopups = 254
+	
+	clearCache.pages = 1 
+	clearCache.all = 1
+}
+
+page {
+
+			
+	TCEFORM.pages {
+		alias.disabled = 1
+		categories.disabled = 1
+		shortcut_mode.removeItems = 0
+		doktype.removeItems = 6
+	}
+	
+	TCAdefaults.pages {
+			doktype = 1
+	}
+	
+	TCAdefaults.tt_content {
+	    
+	    #overriding pageTSconfig settings here	
+	
+	}
+
+}
+
+
+
+
+
+
+#options.RTEkeyList = textstyle, textstylelabel, blockstyle, blockstylelabel, insertparagraphbefore, insertparagraphafter, undo, redo, table, toggleborders, tableproperties, rowproperties, rowinsertabove, rowinsertunder, rowdelete, rowsplit, columninsertbefore, columninsertafter, columndelete, columnsplit, cellproperties, cellinsertbefore, cellinsertafter, celldelete, cellsplit, cellmerge, insertcharacter, link, chMode, removeformat, bold, italic, underline, formatblock, image, unorderedlist, orderedlist, line
+#textstyle, textstylelabel, blockstyle, textcolor, blockstylelabel, bold, italic, underline, left, center, right, orderedlist, unorderedlist, insertcharacter, line, link, image, removeformat, table, toggleborders, tableproperties, rowproperties, rowinsertabove, rowinsertunder, rowdelete, rowsplit, columninsertbefore, columninsertafter, columndelete, columnsplit, cellproperties, cellinsertbefore, cellinsertafter, celldelete, cellsplit, cellmerge, findreplace, insertcharacter, undo, redo, showhelp, about, copy, cut, paste, fontstyle, formatblock, fontsize, strikethrough,lefttoright, righttoleft, bgcolor, textindicator, emoticon, user, spellcheck, chMode, inserttag, outdent, indent, justifyfull, subscript, superscript, acronym
+
+
+
+
+[global]
+

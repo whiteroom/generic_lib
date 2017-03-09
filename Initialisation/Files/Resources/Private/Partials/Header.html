@@ -1,0 +1,31 @@
+<f:layout name="Default"/>
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+    xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+
+	<f:section name="Header">
+
+		<!-- Default header -->
+		<div id="header-inner">
+			<div id="logo"><f:cObject typoscriptObjectPath="lib.logo" /></div>
+            <nav><f:cObject typoscriptObjectPath="lib.navbar" /></nav>
+            
+            <div id="page-subtitle">
+	            <h1><v:page.info as="page" pageUid="{pageUid}">
+	            	<f:if condition="{page.subtitle}">
+                        <f:then>
+                            <f:format.raw>{page.subtitle}</f:format.raw>
+                        </f:then>
+                        <f:else>
+                            <f:format.raw>{page.title}</f:format.raw>
+                        </f:else>
+                    </f:if>
+	            </v:page.info></h1>
+            </div>
+            
+            <div id="menu-toggle"><i class="icon-menu-bars"></i></div>
+		</div>
+
+	</f:section>
+</div>

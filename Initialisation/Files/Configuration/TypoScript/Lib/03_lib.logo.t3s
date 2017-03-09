@@ -1,0 +1,40 @@
+# ******************************************************************************
+#	(c) 2014 Daniel Schoeneck <mail@whiteroom.cc>
+#
+#	You can redistribute it and/or modify it under the terms of the
+#	GNU General Public License as published by the Free Software Foundation;
+#	either version 2 of the License, or (at your option) any later version.
+# ******************************************************************************
+
+# **********************************************************
+# Logo, Identity
+# 
+# **********************************************************
+
+# Default
+lib.logo = COA 
+lib.logo {
+	wrap = |
+
+	10 = TEXT 
+	10.value = <i class="icon-logo"></i>
+	#10.value = {$plugin.generic_lib.clientName}
+	#10.stdWrap.outerWrap = <span class="logo">|</span>
+	
+	10.typolink.parameter = 1
+	10.typolink.title = {$plugin.generic_lib.clientName}: zur Startseite 
+	10.typolink.ATagParams = class="title"
+
+}
+
+
+
+# English
+[globalVar = GP:L=1]
+	lib.logo.10.typolink.title = {$plugin.generic_lib.clientName}: link to the landing page 
+[global]
+
+# French
+[globalVar = GP:L=2]
+	lib.logo.10.typolink.title = {$plugin.generic_lib.clientName}: dirige vers la page d'accueil
+[global]
