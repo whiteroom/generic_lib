@@ -26,7 +26,7 @@
 ## generic_lib 1.0 (2016-12-06)
 
 - 	Version 1.0.0
-- 	Initial Release, fork of bsdist
+- 	Initial Release
 - 	Primary aims: create a distribution that could serve as a client's project kickstarter
 	Install TYPO3, create database, install extension generic_lib and start customizing
 - 	Minimal responsive css
