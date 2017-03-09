@@ -17,6 +17,8 @@ plugin.tx_news {
                 
 		archiveRestriction = active
         
+        # no needed here
+        # media.popup < lib.fluidContent.settings.media.popup
         
         topNewsFirst = 1
         hidePagination = 1

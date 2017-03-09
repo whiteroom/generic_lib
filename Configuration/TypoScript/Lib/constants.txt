@@ -136,8 +136,11 @@ plugin.tx_news {
 	# pid.listView = // no need to use this
 
         view {
-                templateRootPath = {$plugin.generic_lib.theme.resDir}/Private/Ext/News/Templates/
-                partialRootPath = {$plugin.generic_lib.theme.resDir}/Private/Ext/News/Partials/
-                layoutRootPath = {$plugin.generic_lib.theme.resDir}/Private/Ext/News/Layouts/
+                #templateRootPath = {$plugin.generic_lib.theme.resDir}/Private/Ext/News/Templates/
+                templateRootPath = EXT:generic_lib/Resources/Private/Ext/News/Templates/
+                #partialRootPath = {$plugin.generic_lib.theme.resDir}/Private/Ext/News/Partials/
+                partialRootPath = EXT:generic_lib/Resources/Private/Ext/News/Partials/
+                #layoutRootPath = {$plugin.generic_lib.theme.resDir}/Private/Ext/News/Layouts/
+                layoutRootPath = EXT:generic_lib/Resources/Private/Ext/News/Layouts/
         }
 }

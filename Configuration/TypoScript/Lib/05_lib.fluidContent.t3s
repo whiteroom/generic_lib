@@ -1,0 +1,48 @@
+# ******************************************************************************
+#	(c) 2014 Daniel Schoeneck <mail@whiteroom.cc>
+#
+#	You can redistribute it and/or modify it under the terms of the
+#	GNU General Public License as published by the Free Software Foundation;
+#	either version 2 of the License, or (at your option) any later version.
+# ******************************************************************************
+
+# **********************************************************
+# Fluid Styled Content CE
+# Overriding the FLUID templates
+# **********************************************************
+
+# Good-bye css_styled_content, check this for customized CE's
+	
+lib.fluidContent {
+   templateRootPaths {
+    	200 = EXT:generic_lib/Resources/Private/Frontend/Templates/
+	  	#200 = {$plugin.generic_lib.theme.resDir}/Private/Frontend/Templates/
+   }
+   partialRootPaths {
+    	200 = EXT:generic_lib/Resources/Private/Frontend/Partials/
+		#200 = {$plugin.generic_lib.theme.resDir}/Private/Frontend/Partials/
+   }
+   layoutRootPaths {
+    	200 = EXT:generic_lib/Resources/Private/Frontend/Layouts/
+		#200 = {$plugin.generic_lib.theme.resDir}/Private/Frontend/Layouts/
+   }
+   
+   
+   
+   #disable if you don't want to use titles in fancybox
+	settings.media.popup {
+		
+		bodyTag >
+		wrap = |
+	
+	
+		linkParams.ATagParams.dataWrap = class="{$styles.content.textmedia.linkWrap.lightboxCssClass}" rel="{$styles.content.textmedia.linkWrap.lightboxRelAttribute}"
+
+		linkParams.ATagParams.dataWrap.override = title="<strong>{file:current:title}</strong> &#124; {file:current:description}" class="{$styles.content.textmedia.linkWrap.lightboxCssClass}" rel="{$styles.content.textmedia.linkWrap.lightboxRelAttribute}"
+		linkParams.ATagParams.dataWrap.override.if.isTrue.data = file:current:description
+		
+		
+
+   }
+}
+

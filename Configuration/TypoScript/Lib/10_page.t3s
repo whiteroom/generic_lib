@@ -95,24 +95,32 @@ page.10 {
 		# Standard Layout
         # Wenn keine spezielles Backend Layout definiert wurde
         default = TEXT
-		default.value = {$plugin.generic_lib.theme.resDir}/Private/Templates/Standard1Col.html
+		#default.value = {$plugin.generic_lib.theme.resDir}/Private/Templates/Standard1Col.html
+		default.value = EXT:generic_lib/Resources/Private/Templates/Standard1Col.html
+		
 		
 		# Landing Page
         # Da in Page TSConfig definiert, der ID "pagets__" voranstellen.
         pagets__1 = TEXT
-		pagets__1.value       = {$plugin.generic_lib.theme.resDir}/Private/Templates/Home.html
+		#pagets__1.value       = {$plugin.generic_lib.theme.resDir}/Private/Templates/Home.html
+		pagets__1.value       = EXT:generic_lib/Resources/Private/Templates/Home.html
 		
 		# Standard einspaltig (use this)
 		pagets__2 < .default
 		
 		# Erweitert (zweispaltig)
 		pagets__3 = TEXT
-		pagets__3.value       = {$plugin.generic_lib.theme.resDir}/Private/Templates/Standard2Col.html
+		#pagets__3.value       = {$plugin.generic_lib.theme.resDir}/Private/Templates/Standard2Col.html
+		pagets__3.value       = EXT:generic_lib/Resources/Private/Templates/Standard2Col.html
 	}
 
 	
-	partialRootPath = {$plugin.generic_lib.theme.resDir}/Private/Partials
-	layoutRootPath = {$plugin.generic_lib.theme.resDir}/Private/Layouts
+	#partialRootPath = {$plugin.generic_lib.theme.resDir}/Private/Partials
+	partialRootPath = EXT:generic_lib/Resources/Private/Partials
+	
+	
+	#layoutRootPath = {$plugin.generic_lib.theme.resDir}/Private/Layouts
+	layoutRootPath = EXT:generic_lib/Resources/Private/Layouts
 		
 }
 
