@@ -1,16 +1,22 @@
 <f:layout name="Default"/>
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
-     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
-
+	xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+    xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+ 	
 	<f:section name="Footer">
-
+	
         <f:if condition="{contentFooter}">
-            <div class="inner">
-	            <f:format.raw value="{contentFooter}" />
-            </div>
+		<f:comment>Condition returns false unless variable is set in FLUIDTEMPLATE > page.10.variables</f:comment>
+		
+				<v:content.render pageUid="{pid_footerTop}" as="footerTop">
+					<f:if condition="{footerTop -> f:count()} > 0">
+						 <div class="footer-top"><article class="cols twocol"><v:content.render order="'sorting'" sortDirection="'ASC'" pageUid="{pid_footerTop}"></v:content.render></article></div>
+					</f:if>
+				</v:content.render>
+				
+
         </f:if>
-        
-        
+
 	</f:section>
 
 </div>

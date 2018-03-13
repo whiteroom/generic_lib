@@ -63,9 +63,24 @@ page.10 = FLUIDTEMPLATE
 page.10 {
 	
 	variables {
-		contentMain < styles.content.get
+
+		# Attention
+		# The predefined CONTENT objects styles.content.getLeft, styles.content.getRight and styles.content.getBorder 
+		# are not provided anymore. styles.content.get still exists for your convenience. 
+		# Most of the current websites are using "backend layouts", where the predefined numbering of the columns does not make sense.
+		
+ 		contentMain < styles.content.get
+
 		contentAside < styles.content.get
 		contentAside.select.where = colPos = 1
+
+
+
+		# enable contentFooter in constants and define PID, in order to get footer content from pages CE
+		#contentFooter = TEXT 
+		#contentFooter.value = {$plugin.generic_lib.settings.showFooterContent}
+		#pid_footerTop = TEXT
+		#pid_footerTop.value = {$plugin.generic_lib.settings.pid_footerTop}
 		
 		
 		layout = TEXT
