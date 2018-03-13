@@ -23,6 +23,13 @@
 		
 	}
 	
+	
+	//showViewPortSize(true);
+	
+	
+	
+	
+	
 })();
 
 
@@ -74,5 +81,51 @@ $(window).ready(function(event) {
 
 
 });
+
+
+
+
+
+
+Modernizr.addTest('mix-blend-mode', function(){
+    return Modernizr.testProp('mixBlendMode');
+});
+
+
+Modernizr.addTest('calcviewportunits', function(){
+    var computedHeight, 
+        div = document.createElement('div');
+
+    div.style.height = 'calc(10vh + 10vw)';
+    document.body.appendChild(div);
+    computedHeight = window.getComputedStyle(div).height;
+    document.body.removeChild(div);
+
+    return computedHeight !== "0px";
+});
+
+
+
+
+
+// -----------
+// Debugger that shows view port size. Helps when making responsive designs.
+// -----------
+
+function showViewPortSize(display) {
+	if (display) {
+		var height = window.innerHeight;
+		var width = window.innerWidth;
+		jQuery('body').prepend('<div id="viewportsize" style="z-index:9999;position:fixed;bottom:0px;left:0px;color:#fff;background:#000;padding:10px">Height: ' + height + '<br>Width: ' + width + '</div>');
+		jQuery(window).resize(function() {
+			height = window.innerHeight;
+			width = window.innerWidth;
+			jQuery('#viewportsize').html('Height: ' + height + '<br>Width: ' + width);
+		});
+	}
+}
+
+
+
 	
 	
