@@ -58,7 +58,54 @@ textarea {
 
 
 
+#browserupgrade {
+	
+	position: fixed;
+	width: 100%;
+	left:0;
+	top:0;
+	display: none;
+	background: #222;
+	color: white;
+	z-index: 9999;
+	margin: 0;
+	padding: 0.4rem 40px;
+	font-size: 0.8rem;
+	cursor: pointer;
+	
+}
 
+#browserupgrade a {
+    
+    box-shadow: inset 0 -0.5px rgba(255, 255, 255, 0.8);
+	-webkit-box-shadow: inset 0 -1px rgba(255, 255, 255, 0.8);
+    -moz-box-shadow: inset 0 -0.5px rgba(255, 255, 255, 0.8);
+    -o-box-shadow: inset 0 -0.5px rgba(255, 255, 255, 0.8);
+
+}
+
+/* USE modernizr to detect vh enabled 
+iOS does deliver false negativ results wher it shouldn't (.no-cssvhunit), 
+that's why calcviewportunits is used here
+*/
+.no-calcviewportunits #browserupgrade.generic, 
+#browserupgrade.IE {
+	display: block;	
+}
+
+.scrolled #browserupgrade {
+	display: none!important;	
+}
+
+
+@media screen and (max-width: 320px) {
+	
+	/* iPhone 4s and similar */
+	.no-calcviewportunits #browserupgrade {
+		bottom:0;
+		top:auto;
+	}
+}
 
 
 
