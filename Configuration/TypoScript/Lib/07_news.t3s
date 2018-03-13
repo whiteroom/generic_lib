@@ -26,7 +26,7 @@ plugin.tx_news {
       
         cropMaxCharacters = 160
         orderByAllowed = sorting,author,uid,title,teaser,author,tstamp,crdate,datetime,categories.title
-        orderBy = datetime 
+        orderBy = sorting,datetime 
         orderDirection = asc
   
         # custom variable (show/hide more link)

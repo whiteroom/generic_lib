@@ -30,19 +30,26 @@ lib.fluidContent {
    
    
    #disable if you don't want to use titles in fancybox
-	settings.media.popup {
-		
-		bodyTag >
-		wrap = |
+	settings.media  {
 	
+		popup {
+			
+			bodyTag >
+			wrap = |
+		
+		
+			linkParams.ATagParams.dataWrap = class="{$styles.content.textmedia.linkWrap.lightboxCssClass}" rel="{$styles.content.textmedia.linkWrap.lightboxRelAttribute}"
 	
-		linkParams.ATagParams.dataWrap = class="{$styles.content.textmedia.linkWrap.lightboxCssClass}" rel="{$styles.content.textmedia.linkWrap.lightboxRelAttribute}"
+			linkParams.ATagParams.dataWrap.override = title="<strong>{file:current:title}</strong> &#124; {file:current:description}" class="{$styles.content.textmedia.linkWrap.lightboxCssClass}" rel="{$styles.content.textmedia.linkWrap.lightboxRelAttribute}"
+			linkParams.ATagParams.dataWrap.override.if.isTrue.data = file:current:description
 
-		linkParams.ATagParams.dataWrap.override = title="<strong>{file:current:title}</strong> &#124; {file:current:description}" class="{$styles.content.textmedia.linkWrap.lightboxCssClass}" rel="{$styles.content.textmedia.linkWrap.lightboxRelAttribute}"
-		linkParams.ATagParams.dataWrap.override.if.isTrue.data = file:current:description
+	   }
+   
+
+		imageAltText = {$plugin.generic_lib.contentElements.imageAltText}
+		imageTitleText = {$plugin.generic_lib.contentElements.imageTitleText}
 		
 		
-
    }
+   
 }
-

@@ -9,6 +9,10 @@
 
 lib.parseFunc_RTE.externalBlocks.blockquote.callRecursive.tagStdWrap.HTMLparser.tags.blockquote.overrideAttribs = 
 
+lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines.encapsLinesStdWrap.H3.wrap = <h3><span>|</span></h3>
+
+
+
 
 # **********************************************************
 # fluid_styled_responsive_images
@@ -54,3 +58,5 @@ tt_content.textmedia {
         }
     }
 }
+
+
