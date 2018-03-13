@@ -53,6 +53,9 @@ plugin.generic_lib {
 		
 		lightboxCssClass = lightbox
 		
+		#showFooterContent = TRUE
+		#pid_footerTop = 100
+		
 	}
 	
 	
