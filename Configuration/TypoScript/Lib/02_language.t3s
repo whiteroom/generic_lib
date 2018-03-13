@@ -27,7 +27,15 @@
 # Default language
 config {
 	
-	sys_language_mode = content_fallback
+	
+	# check for valid L-params
+	#linkVars := addToList(L)
+	linkVars = L(0-1)
+	sys_language_mode = content_fallback; 0
+	
+	##### IMG_RESSOURCE not showing up in other languages! #########
+	### remove 'media' from [FE][pageOverlayFields]  ###############
+	
 	
 	# Translations, show default language if not translated
 	# The default is that records with no translation will show up in the default language. Keyword "hideNonTranslated" does what it says
@@ -59,8 +67,6 @@ config {
 		}
 	}
 
-	# check for valid L-params
-	linkVars := addToList(L)
 }
 
 
