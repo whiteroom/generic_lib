@@ -6,7 +6,6 @@
 #	either version 2 of the License, or (at your option) any later version.
 # ******************************************************************************
 
-
 config {
 	
 	doctype = html5
@@ -18,6 +17,7 @@ config {
 	prefixLocalAnchors = all
 
 	removeDefaultJS = 0
+	# removeDefaultCss = 0
 	inlineStyle2TempFile = 1
 	disablePrefixComment = 1
 	compressCss = 1
@@ -28,12 +28,11 @@ config {
 
 
 	moveJsFromHeaderToFooter = 0
-
 	
 	# RealURL
 	simulateStaticDocuments = 0
 	absRefPrefix = {$plugin.generic_lib.absRefPrefixRoot}
-	tx_realurl_enable = 0
+	tx_realurl_enable = 1
 
 
 	# Spam
@@ -55,7 +54,6 @@ config {
 	headerComment = {$plugin.generic_lib.sitecredits.agency}
 
 	pageTitleFirst = 1
-	
 	
 	
 }
