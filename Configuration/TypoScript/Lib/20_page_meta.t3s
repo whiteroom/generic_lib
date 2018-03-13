@@ -21,8 +21,8 @@ page {
 	
 	bodyTag >
 	bodyTagCObject = TEXT
-	bodyTagCObject.value.dataWrap = <body id="page-uid{page:uid}" class="pid{leveluid:1}">
-	
+	bodyTagCObject.value.dataWrap = <body id="page-uid{page:uid}" class="pid{leveluid:1}" x-ms-format-detection="none">
+
 
 	meta.X-UA-Compatible.httpEquivalent = 1
 	# W3C Validation fails otherwise
@@ -33,3 +33,47 @@ page {
 	)
 }
 
+# apply as a generic rule to all browsers
+# then hide element
+# and use modernizr to detect if vw/vh is enabled
+# move down to closing body tag (avoid conflicts with page indexing)
+page {
+  footerData.10 = TEXT
+  footerData.10.value (
+            <p id="browserupgrade" class="generic">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  )
+}
+
+
+# apply to less than IE 11 as a general rule
+[browser = msie]
+page {
+  bodyTagCObject.stdWrap.append = TEXT
+  bodyTagCObject.stdWrap.append.value (
+    <!--[if lte IE 11]>
+            <p id="browserupgrade" class="IE">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+  )
+}
+[global]
+
+
+
+
+
+
+# individual css background-image - from IMG_RESOURCE
+#page.headerData.15 = COA 
+#page.headerData.15  {
+
+#  wrap = <style>body, body:after { background-image: url('/|')}</style>
+
+#  10 = FILES
+#  10 {
+#   references.data = levelmedia:-1,slide
+#   references.listNum = 0
+#	eventually: references.listNum = rand
+#   renderObj = TEXT
+#   renderObj.data = file:current:publicUrl
+#  }
+#}
