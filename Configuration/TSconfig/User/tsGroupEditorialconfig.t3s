@@ -52,6 +52,22 @@ options {
 
 # um PageTS zu überschreiben, prepend page Objekt
 page {
+	
+	
+	TCEFORM.tt_content {
+	
+
+	#colPos.disabled = 1
+	starttime.disabled = 1
+	endtime.disabled = 1
+	image_zoom.disabled = 1
+	header_link.disabled = 1
+	#sys_language_uid.disabled = 1
+	#CType.disabled = 1
+	#layout.disabled = 1
+	
+	
+	}
 
 	#Inhaltselemente
 	TCEFORM.tt_content.CType {

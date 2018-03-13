@@ -4,6 +4,13 @@
 # everything else in Usergroup = 2 (Redaktoren) ####
 ####################################################
 
+
+options {
+	pageTree {
+		# pagetitles are too long, usually
+		showNavTitle = 1
+	}
+}
 # Check Condition is given: belongs to Usergroup _globalSettingsForAll (id = 1)
 # Otherwise ignore (Admin Users)
 ##############################################################################
@@ -11,11 +18,7 @@
 
 
 options {
-	pageTree {
-		# pagetitles are too long, usually
-		showNavTitle = 1
-		
-		}
+
 
 	# Allow creation of new folders in Element Browser
 	createFoldersInEB = 1

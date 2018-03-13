@@ -121,8 +121,8 @@ TCEMAIN {
 }
 
 
-
-
+TCEFORM.pages.subtitle.label = Untertitel
+TCEFORM.pages.nav_title.label = Navigationstitel
 
 
 # --------------------------------------------------
@@ -137,9 +137,12 @@ TCEFORM.tt_content {
 	imageborder.disabled = 1
 	linkToTop.disabled = 1
 	sectionIndex.disabled = 1
-	categories.disabled = 1
+	#categories.disabled = 1
 	editlock.disabled = 1
 	fe_group.disabled = 1
+	rowDescription.disabled = 1
+	date.disabled = 1
+	
 	
 	
     layout {
@@ -215,11 +218,11 @@ TCEFORM.tt_content {
 	     altLabels {
 	          0 = h1 - Seitenueberschrift
 	          1 =
-	          2 = h2 - Themenueberschrift
+	          2 = h2 - Themenueberschriften
 	          3 = h3 - Standard Absatz
 	          4 = h4 - kleiner Titel
 	          5 = 
-	          100 = Verbergen: Diese Überschrift nicht mehr anzeigen
+	          100 = Verbergen, Titel nicht zeigen
 	       }
 	     removeItems = 1,5
 	}
@@ -227,13 +230,11 @@ TCEFORM.tt_content {
 }
 
 
-
-
 # --------------------------------------------------
 # TCAdefaults.tt_content
 #
 TCAdefaults.tt_content {
-    # Default header layout is h3
+    # Default header layout is h3 for CE's
     header_layout = 3
     
     
@@ -295,8 +296,8 @@ RTE {
 		
 		# use typical installation, add what is needed, remove unnecessary
 		# Available buttons are: blockstylelabel, blockstyle, textstylelabel, textstyle, fontstyle, fontsize, formatblock, blockquote, insertparagraphbefore, insertparagraphafter, lefttoright, righttoleft, language, showlanguagemarks, left, center, right, justifyfull, orderedlist, unorderedlist, definitionlist, definitionitem, outdent, indent, formattext, bidioverride, big, bold, citation, code, definition, deletedtext, emphasis, insertedtext, italic, keyboard, monospaced, quotation, sample, small, span, strikethrough, strong, subscript, superscript, underline, variable, textcolor, bgcolor, textindicator, editelement, showmicrodata, emoticon, insertcharacter, insertsofthyphen, line, link, unlink, image, table, user, abbreviation, findreplace, spellcheck, chMode, inserttag, removeformat, copy, cut, paste, pastetoggle, pastebehaviour, undo, redo, about, toggleborders, tableproperties, tablerestyle, rowproperties, rowinsertabove, rowinsertunder, rowdelete, rowsplit, columnproperties, columninsertbefore, columninsertafter, columndelete, columnsplit, cellproperties, cellinsertbefore, cellinsertafter, celldelete, cellsplit, cellmerge
-		showButtons := addToList(textcolor, line, justifyfull, insertsofthyphen, blockquote, insertparagraphbefore, insertparagraphafter)
-		showButtons := removeFromList(outdent, indent, italic, findreplace )
+		showButtons := addToList(textcolor, line, justifyfull, insertsofthyphen, blockquote, insertparagraphbefore, insertparagraphafter, italic)
+		showButtons := removeFromList(outdent, indent, findreplace )
 		
 		# For clean copy / paste
 		showButtons := addToList(pastetoggle)
@@ -307,6 +308,11 @@ RTE {
 		buttons.image.options.magic.maxHeight = 600
 		buttons.image.options.plain.maxWidth = 600
 		buttons.image.options.plain.maxHeight = 600
+		
+		
+		buttons.blockstyle.tags.div.allowedClasses = collapsed
+		buttons.blockstyle.tags.h3.allowedClasses = collapsed
+		buttons.blockstyle.tags.p.allowedClasses = align-justify, collapsed
 
     
 		enableWordClean = 1
@@ -315,8 +321,7 @@ RTE {
 		removeTags = center, font, o:p, sdfield, u
 		removeTagsAndContents = link, meta, script, style, title
 		
-		
-		proc.allowedClasses := addToList(align-justify)
+		proc.allowedClasses := addToList(align-justify, collapsed)
 		
 		##assume any br is intentional
 		proc.dontConvBRtoParagraph = 1
@@ -340,6 +345,9 @@ RTE {
 		     fixAttrib.width.unset = 1
 		     fixAttrib.height.unset = 1
 		}
+		
+		proc.entryHTMLparser_db.tags.span.fixAttrib.style.unset >
+
 
 		# proc.transformBoldAndItalicTags = 1   #### not working 7.6.14
 		proc.exitHTMLparser_db.tags {
