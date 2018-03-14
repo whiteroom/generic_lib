@@ -26,11 +26,16 @@
 - tx_realurl_enable by default
 - Display browsehappy based on Modernizr, added tests (mix-blend-mode, vh/vw)
 
+
 ## generic_lib 1.2.1
 
 - Moved to github
-- first fully functional version
 
+
+## generic_lib 1.1.7
+
+- preProductive Version v7 whiteroom
+- first fully functional version
 
 
 ## generic_lib 1.1.0
@@ -51,6 +56,7 @@
 ## Alpha features
 
 - 	Version 1.0.1 to 1.0.4, fixed many bugs and issues
+
 
 ## generic_lib 1.0 (2016-12-06)
 
