@@ -233,6 +233,13 @@ TCEFORM.tt_content {
 # --------------------------------------------------
 # TCAdefaults.tt_content
 #
+
+# https als Standard-Protokoll festlegen (AB TYPO3 v8 NICHT MEHR MÖGLICH)
+# neu angelegten Seiten automatisch auf https umstellen
+TCAdefaults.pages.url_scheme = 2
+
+
+
 TCAdefaults.tt_content {
     # Default header layout is h3 for CE's
     header_layout = 3
