@@ -59,6 +59,8 @@ page.includeJSFooter {
 }
 
 
+[globalVar = TSFE:beUserLogin > 0] 
+
 page.10 = FLUIDTEMPLATE
 page.10 {
 	
@@ -138,6 +140,36 @@ page.10 {
 	layoutRootPath = EXT:generic_lib/Resources/Private/Layouts
 		
 }
+
+
+
+[else]
+page.10 >
+page.10 = TEXT
+page.10.value ( 
+<main class="clearfix">
+    <div>
+        <h1>whiteroom<br>Strategie.Design.Konzepte</h1>
+        <!-- <p>This is a static placeholder preview</p> -->
+    </div>
+    <div style="padding-top: 64px">
+        <p>St. Johanns-Vorstadt 15 
+            <br> CH-4056 Basel</p>
+        <p>T +41 (0)61 263 30 90</p>
+        <p><a href="mailto:mail@whiteroom.cc">mail@whiteroom.cc</a><br>whiteroom.ch</p>
+    </div>
+</main>
+)
+
+page.includeCSS >
+page.includeCSS {
+    normalize = fileadmin/generic_lib/Resources/Public/Static/normalize.min.css
+    client = fileadmin/generic_lib/Resources/Public/Static/_preview.css
+}
+
+
+
+[end]
 
 
 
