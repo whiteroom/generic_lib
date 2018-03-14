@@ -149,10 +149,10 @@ page.10 = TEXT
 page.10.value ( 
 <main class="clearfix">
     <div>
-        <h1>whiteroom<br>Strategie.Design.Konzepte</h1>
-        <!-- <p>This is a static placeholder preview</p> -->
+        <h1>whiteroom</h1>
+        <h5>Strategie.Design.Konzepte</h5>
     </div>
-    <div style="padding-top: 64px">
+    <div>
         <p>St. Johanns-Vorstadt 15 
             <br> CH-4056 Basel</p>
         <p>T +41 (0)61 263 30 90</p>
