@@ -3,7 +3,7 @@
 
 ## Beta features
 
-## generic_lib 1.4.1
+## generic_lib 1.4.2
 
 - corrected dependencies
 - Design styling static placeholdern
