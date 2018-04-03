@@ -35,7 +35,7 @@ plugin.generic_lib {
 	pagemeta.author = whiteRoom | schoeneck stauffer, St. Johanns-Vorstadt 15, 4056 Basel
 	
 	# cat=plugin.generic_lib/page/10; type=string; label=Site credits : Agency/Partners
-	sitecredits.agency = Konzept und Design: whiteroom, Basel | Umsetzung: Daniel Schoeneck, https://www.whiteRoom.ch
+	sitecredits.agency = Konzept und Design: whiteroom, Basel | Umsetzung: Daniel Schoeneck, https://whiteRoom.ch
 	
 	theme {
 		baseDir = 	fileadmin/generic_lib
