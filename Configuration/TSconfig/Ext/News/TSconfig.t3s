@@ -11,8 +11,8 @@ TCAdefaults.tx_news_domain_model_news {
 	
 }
 
-TCAdefaults {
-	sys_file_reference.showinpreview = 1
+TCAdefaults.sys_file_reference {
+	showinpreview = 1
 
 } 
 
@@ -22,8 +22,8 @@ TCAdefaults {
 
 
 
-#Defaults
-
+# Defaults all ON
+# disable on userTSConfig
 TCEFORM.tx_news_domain_model_news {
 #	istopnews.disabled = 0
 #	teaser.disabled = 0
