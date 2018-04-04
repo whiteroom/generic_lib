@@ -53,6 +53,10 @@ options {
 # um PageTS zu überschreiben, prepend page Objekt
 page {
 	
+	TCEFORM.fe_users {
+		usergroup.disabled = 1
+	}
+	
 	
 	TCEFORM.tt_content {
 	
@@ -69,28 +73,40 @@ page {
 	
 	}
 
-	#Inhaltselemente
-	TCEFORM.tt_content.CType {
-	#header=Überschrift
-	#text=Text
-	#textpic=Text m/Bild
-	#image=Bild
-	#bullets=Punktliste
-	#table=Tabelle
-	#uploads=Dateilinks
-	#multimedia=Multimedia
-	#mailform=Formular
-	#search=Suchen
-	#login=Login
-	#menu=Menü/Sitemap
-	#shortcut=Datensatz einfügen
-	#list=Plugin einfügen
-	#html=HTML
-	#script=Skript
-	#splash=Textbox
-	#div=Trenner
-	#removeItems = header,multimedia,mailform,search,login,skript,splash,html,menu,div
+	#Inhaltselemente, content elements
+	# enable all and disable here
+	TCEFORM.tt_content.CType.removeItems (
+	    bullets, table, uploads, menu, mailform, list, div, search, login, splash, script
+
+	)
+	
+	TCEFORM.tx_news_domain_model_news {
+		istopnews.disabled = 1
+	#	teaser.disabled = 0
+		bodytext.disabled = 1
+		
+	#	author.disabled = 0
+	#	categories.disabled = 0
+	#	related.disabled = 1
+	#	relatedFrom.disabled = 1
+	#	tags.disabled = 0
+	#	keywords.disabled = 1
+	#	related_from.disabled = 1
+	#	media.disabled = 0
+	#	media_records.disabled = 1
+	#	related_files.disabled = 0
+	#	related_links.disabled = 1
+	#
+	#	path_segment.disabled = 1
+	#	sys_language_uid.disabled = 1
+	#	
+		type.disabled = 1
+	#	#type.removeItems = 1,2
+			
 	}
+	
+	
+	
 
 }
 
