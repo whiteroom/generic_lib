@@ -80,28 +80,49 @@ page {
 
 	)
 	
+	
+	# content elements
+	# enable all and disable here
 	TCEFORM.tx_news_domain_model_news {
-		istopnews.disabled = 1
-	#	teaser.disabled = 0
-		bodytext.disabled = 1
 		
-	#	author.disabled = 0
-	#	categories.disabled = 0
-	#	related.disabled = 1
-	#	relatedFrom.disabled = 1
-	#	tags.disabled = 0
-	#	keywords.disabled = 1
-	#	related_from.disabled = 1
-	#	media.disabled = 0
-	#	media_records.disabled = 1
-	#	related_files.disabled = 0
-	#	related_links.disabled = 1
-	#
-	#	path_segment.disabled = 1
-	#	sys_language_uid.disabled = 1
-	#	
-		type.disabled = 1
-	#	#type.removeItems = 1,2
+		istopnews.disabled = 1
+		teaser.disabled = 0
+		bodytext.disabled = 0
+		
+		author.disabled = 1
+		author_email.disabled = 1
+		
+		content_elements.disabled = 1
+		
+		editlock.disabled = 1
+		starttime.disabled = 1
+		endtime.disabled = 1
+		fe_group.disabled = 1
+
+		
+		tags.disabled = 0
+		categories.disabled = 0
+		
+		related.disabled = 1
+		related_from.disabled = 1
+		
+		related_links.disabled = 1
+		fal_related_files.disabled = 1
+		
+		fal_media.disabled = 0
+		
+		path_segment.disabled = 1
+		sys_language_uid.disabled = 1
+		type.disabled = 0
+		#type.removeItems = 1,2
+		
+		alternative_title.disabled = 1
+		keywords.disabled = 1
+		description.disabled = 1
+		
+		notes.disabled = 1
+		
+	
 			
 	}
 	
