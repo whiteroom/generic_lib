@@ -1,59 +1,65 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:ce="http://typo3.org/ns/TYPO3/CMS/FluidStyledContent/ViewHelpers" data-namespace-typo3-fluid="true">
 
 <f:if condition="{gallery.rows}">
-	<div class="ce-gallery{f:if(condition: '{gallery.position.horizontal} != "right"', then: ' left',else:' right')}" data-ce-columns="{gallery.count.columns}" data-ce-images="{gallery.count.files}">
-		<f:if condition="{gallery.position.horizontal} == 'center'">
-			<div class="ce-outer">
-				<div class="ce-inner">
-		</f:if>
-		<f:for each="{gallery.rows}" as="row">
-			<div class="ce-row clearfix">
-				<f:for each="{row.columns}" as="column">
-					<f:if condition="{column.media}">
-						<f:cycle values="{0: 'odd', 1: 'even'}" as="zebraClass">                 
-							<div class="{f:if(condition: '{gallery.count.columns} > 1', then: 'ce-column {zebraClass}',else:'ce-no-column')}">
-								<figure>
-									<f:switch expression="{column.media.type}">
-										<f:case value="3">
-											<f:render section="audioType" arguments="{_all}" />
-										</f:case>
-										<f:case value="4">
-											<f:render section="videoType" arguments="{_all}" />
-										</f:case>
-										<f:case default="TRUE">
-											<f:render section="imageType" arguments="{_all}" />
-										</f:case>
-									 </f:switch>
 		
+	<f:switch expression="{gallery.position.horizontal}">
+		<f:case value="right">
+			<div class="ce-gallery right" data-ce-columns="{gallery.count.columns}" data-ce-images="{gallery.count.files}">
+		</f:case>
+		<f:case value="left">
+			<div class="ce-gallery left" data-ce-columns="{gallery.count.columns}" data-ce-images="{gallery.count.files}">
+		</f:case>
+		<f:case default="center">
+			<div class="ce-gallery" data-ce-columns="{gallery.count.columns}" data-ce-images="{gallery.count.files}">
+		</f:case>
+	</f:switch>	
+		
+		
+		<f:if condition="{gallery.position.horizontal} == 'center'"><div class="ce-outer"><div class="ce-inner"></f:if>
+			
+			<f:for each="{gallery.rows}" as="row">
+				<div class="ce-row clearfix">
+					<f:for each="{row.columns}" as="column">
+						<f:if condition="{column.media}">
+							<f:cycle values="{0: 'odd', 1: 'even'}" as="zebraClass">                 
+								<div class="{f:if(condition: '{gallery.count.columns} > 1', then: 'ce-column {zebraClass}',else:'ce-no-column')}">
 									
+									<figure>
+										<f:switch expression="{column.media.type}">
+											<f:case value="3">
+												<f:render section="audioType" arguments="{_all}" />
+											</f:case>
+											<f:case value="4">
+												<f:render section="videoType" arguments="{_all}" />
+											</f:case>
+											<f:case default="TRUE">
+												<f:render section="imageType" arguments="{_all}" />
+											</f:case>
+										</f:switch>
+			
+										<f:if condition="{0: column.media.title, 1: column.media.description} != {0: '', 1: ''}">
+											<f:then>
+												<figcaption>
+													<f:if condition="{column.media.title}">
+														<h4>{column.media.title}</h4>
+													</f:if>
+													<f:if condition="{column.media.description}">
+														<p>{column.media.description}</p>
+													</f:if>										   
+												</figcaption>
+											</f:then>
+										</f:if>
+									</figure>
 									
-									<f:if condition="{0: column.media.title, 1: column.media.description} != {0: '', 1: ''}">
-										<f:then>
-											<figcaption>
-												<f:if condition="{column.media.title}">
-													<h4>{column.media.title}</h4>
-												</f:if>
-												<f:if condition="{column.media.description}">
-													<p>{column.media.description}</p>
-												</f:if>										   
-											</figcaption>
-										</f:then>
-									</f:if>
-									
-									
-									
-									
-								</figure>
-							</div>
-						</f:cycle>
-					</f:if>
-				</f:for>
-			</div>
-		</f:for>
-		<f:if condition="{gallery.position.horizontal} == 'center'">
+								</div>
+							</f:cycle>
+						</f:if>
+					</f:for>
 				</div>
-			</div>
-		</f:if>
+			</f:for>
+			
+		<f:if condition="{gallery.position.horizontal} == 'center'"></div></div></f:if>
+		
 	</div>
 </f:if>
 
