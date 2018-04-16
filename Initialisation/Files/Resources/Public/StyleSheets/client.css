@@ -198,6 +198,25 @@ dd {
 dd p { margin-bottom: 0px; }
 
 
+.ce-bullets p { margin: 0!important; }
+
+.ce-bullets {
+	width: 100%;
+	margin: 0;
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.ce-bullets dt {
+    grid-column: 1;
+}
+
+.ce-bullets dt,
+.ce-bullets dd {
+	border-bottom: 1px solid rgb(107, 108, 112)
+	padding: 0.3em 0;
+	margin: 0!important;
+}
 
 
 ::-webkit-input-placeholder {
@@ -619,7 +638,8 @@ figcaption h4 + p {
 	color:rgba(76, 77, 81, 1); letter-spacing: normal;
 }
 
-.ce-bodytext a::before, .ce-bodytext a::after {
+.ce-bodytext a::before, .ce-bodytext a::after,
+.ce-bullets a::before, .ce-bullets a::after {
 
 	font-family: 'icomoon' !important;
 	speak: none;
@@ -640,13 +660,30 @@ figcaption h4 + p {
 .ce-bodytext  a[href$='.pdf']::after { content: '\eadf'; color:rgb(0, 51, 51);}
 
 .ce-bodytext  a[href$='.xls']::after,
-.ce-bodytext  a[href$='.xlsx']::after,
+.ce-bodytext  a[href$='.xls']::after,
 .ce-bodytext  a[href$='.doc']::after,
-.ce-bodytext  a[href$='.docx']::after { content: '\e924'; color:rgb(0, 51, 51);}
+.ce-bodytext  a[href$='.docx']::after{ content: '\e924';  color: rgb(0, 51, 51);}
 
 
 
+.ce-bullets  a[href$='.pdf']::after { content: '\eadf'; color:rgb(0, 51, 51); float:right;}
 
+.ce-bullets  a[href$='.xls']::after,
+.ce-bullets  a[href$='.xls']::after,
+.ce-bullets  a[href$='.doc']::after,
+.ce-bullets  a[href$='.docx']::after { content: '\e924';  color: rgb(0, 51, 51); float:right;}
+
+/* .ce-bullets a[href^='http']:after { content: '\e91c';  color: rgb(109, 122, 116); float:right;} */
+
+	
+.ce-menu {
+	list-style-type: none;
+}
+.ce-menu li {
+	list-style-type: none;
+	padding: 0;
+	margin: 0
+}
 
 .ce-bodytext ul  {
 	margin: 2em 0;
