@@ -258,6 +258,9 @@ TCAdefaults.tt_content {
 	# imageorient = 26
 
 	layout = 0
+	
+	# LISTINGS: Use a definition-list by default
+	bullets_type = 2
 
 }
 

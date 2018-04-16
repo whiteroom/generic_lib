@@ -32,5 +32,25 @@ $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['backend'] = serialize([
 ]);
 
 
+<<<<<<< HEAD
 // add mp3 audio
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['FileInfo']['fileExtensionToMimeType']['mp3'] = 'audio/mpeg';
+=======
+
+
+# MediaViewHelper in the core 
+# define a list of file extensions of the files that can be handled by these. 
+# This list can then be used in the TCA for allowing sys_file_references to these files.
+# Comma list of file extensions perceived as media files by TYPO3 (lowercase and no spaces between)
+# $GLOBALS['TYPO3_CONF_VARS']['SYS']['mediafile_ext'] = 'gif,jpg,jpeg,bmp,png,pdf,svg,ai,mov,avi';
+
+# Register a file extension as allowed media file (valid for >= TYPO3 CMS 7.5)
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['mediafile_ext'] .= ',eps';
+
+
+# Backwards-Compatability, this is how it was/is done before
+# Register your custom file extension as allowed media file (< TYPO3 CMS 7.5)
+$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'] .= ',eps';
+
+
+>>>>>>> 1ce07b6fb0daab73b1f293f1f37d963922434817
