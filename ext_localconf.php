@@ -32,3 +32,5 @@ $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['backend'] = serialize([
 ]);
 
 
+// add mp3 audio
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['FileInfo']['fileExtensionToMimeType']['mp3'] = 'audio/mpeg';
