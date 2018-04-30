@@ -32,10 +32,8 @@ $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['backend'] = serialize([
 ]);
 
 
-<<<<<<< HEAD
 // add mp3 audio
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['FileInfo']['fileExtensionToMimeType']['mp3'] = 'audio/mpeg';
-=======
 
 
 # MediaViewHelper in the core 
@@ -52,5 +50,3 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['mediafile_ext'] .= ',eps';
 # Register your custom file extension as allowed media file (< TYPO3 CMS 7.5)
 $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'] .= ',eps';
 
-
->>>>>>> 1ce07b6fb0daab73b1f293f1f37d963922434817
