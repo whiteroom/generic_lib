@@ -660,7 +660,7 @@ figcaption h4 + p {
 .ce-bodytext  a[href$='.pdf']::after { content: '\eadf'; color:rgb(0, 51, 51);}
 
 .ce-bodytext  a[href$='.xls']::after,
-.ce-bodytext  a[href$='.xls']::after,
+.ce-bodytext  a[href$='.xlsx']::after,
 .ce-bodytext  a[href$='.doc']::after,
 .ce-bodytext  a[href$='.docx']::after{ content: '\e924';  color: rgb(0, 51, 51);}
 
@@ -669,7 +669,7 @@ figcaption h4 + p {
 .ce-bullets  a[href$='.pdf']::after { content: '\eadf'; color:rgb(0, 51, 51); float:right;}
 
 .ce-bullets  a[href$='.xls']::after,
-.ce-bullets  a[href$='.xls']::after,
+.ce-bullets  a[href$='.xlsx']::after,
 .ce-bullets  a[href$='.doc']::after,
 .ce-bullets  a[href$='.docx']::after { content: '\e924';  color: rgb(0, 51, 51); float:right;}
 
