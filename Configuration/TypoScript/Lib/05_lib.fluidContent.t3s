@@ -13,7 +13,9 @@
 
 # Good-bye css_styled_content, check this for customized CE's
 	
-lib.fluidContent {
+lib.contentElement {	
+	
+#lib.fluidContent {
    templateRootPaths {
     	200 = EXT:generic_lib/Resources/Private/Frontend/Templates/
 	  	#200 = {$plugin.generic_lib.theme.resDir}/Private/Frontend/Templates/
