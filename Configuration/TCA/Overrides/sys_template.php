@@ -10,7 +10,7 @@ defined('TYPO3_MODE') || die();
 
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-	$_EXTKEY, 
+	'generic_lib', 
 	'Configuration/TypoScript', 
 	'whiteRoom'
 );
