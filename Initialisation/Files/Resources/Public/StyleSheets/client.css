@@ -253,7 +253,7 @@ dd p { margin-bottom: 0px; }
 
 
 
-header {
+#header {
     position: fixed;
     top: 0;
     left: 0;
@@ -828,7 +828,7 @@ figcaption h4 + p {
 
 /* scrolled */
 
-.scrolled header {
+.scrolled #header {
     height: 50px
 }
 .scrolled #menu-toggle {
@@ -941,7 +941,7 @@ figcaption h4 + p {
         display: block
     }
     
-    header {
+    #header {
         height: 60px
     }
     #header-inner {
@@ -987,7 +987,7 @@ figcaption h4 + p {
         display: block
     }
     
-    header {
+    #header {
         height: 60px
     }
     
