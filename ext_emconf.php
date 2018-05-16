@@ -27,14 +27,14 @@ $EM_CONF[$_EXTKEY] = array(
 			'php' => '7.0.0-7.1.99',
 			'typo3' => '8.7.00-8.7.99',
 			'fluid_styled_content' => '8.7.0-8.7.99',
+			'fluid_styled_responsive_images' => '8.7.0-8.7.99',
 			//'flux' => '',
 			//'fluidpages' => '',
 			//'fluidcontent' => '',
 			//'fluidcontent_core' => '',
 			'news' => '7.0.0-7.0.99',
+			'rx_shariff' => '11.0.0-11.99.99',
 			'realurl' => '2.3.2',
-			'metaseo' => '3.0.0-3.0.99',
-			'fluid_styled_responsive_images' => '8.7.0-8.7.99',
 			'vhs' => '4.4.0',
 			
 		),
@@ -43,7 +43,7 @@ $EM_CONF[$_EXTKEY] = array(
 
 		),
 		'suggests' => array(
-			'fluid_styled_content' => '',	
+			'metaseo' => '3.0.0-3.0.99',	
 		),
 	),
 );

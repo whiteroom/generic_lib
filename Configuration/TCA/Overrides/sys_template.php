@@ -1,10 +1,16 @@
 <?php
 defined('TYPO3_MODE') || die();
 
+
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('fluid_styled_content', 'Configuration/TypoScript/Static/', 'Content Elements');
+
+
+
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-    'fluid_styled_content',
-    'Configuration/TypoScript',
-    'Fluid Content Elements'
+    'rx_shariff',
+    'Configuration/TypoScript/WithoutJQueryAndFontawesome',
+    'Shariff: Plugin settings, FE styles incl. Font-Awesome, jQuery not included'
 );
 
 
