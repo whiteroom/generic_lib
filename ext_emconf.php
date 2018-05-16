@@ -43,7 +43,8 @@ $EM_CONF[$_EXTKEY] = array(
 
 		),
 		'suggests' => array(
-			'metaseo' => '3.0.0-3.0.99',	
+			'metaseo' => '3.0.0-3.0.99',
+			'dd_googlesitemap' => '2.0.5-2.99.99',
 		),
 	),
 );
