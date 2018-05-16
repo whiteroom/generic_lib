@@ -13,6 +13,9 @@ config {
 	#compressCss = 0
 	#concatenateCss = 0
 	
+	#compressJs = 1
+    #concatenateJs = 1
+	
 }
 
 

@@ -26,7 +26,7 @@ page.includeCSS {
 		client = {$plugin.generic_lib.theme.resDir}/Public/StyleSheets/client.css
 }
 	
-page.includeJSlibs {
+page.includeJSLibs {
 		modernizr = {$plugin.generic_lib.theme.resDir}/Public/JavaScript/Vendor/modernizr-2.8.3-respond-1.4.2.min.js
 		modernizr.async = 1
 		modernizr.disableCompression = 1
