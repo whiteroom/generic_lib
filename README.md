@@ -18,6 +18,8 @@ Structure..
   * realurl
   * news
   * metaseo
+  * rx_shariff
+  * google sitemaps
   * vhs
   provides a full working website including templates etc.
 
