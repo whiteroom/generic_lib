@@ -1,12 +1,3 @@
-plugin {
-  tx_news {
-    settings {
-      
-    }
-  }
-}
-
-
 plugin.tx_news {
 	
 	
