@@ -1,4 +1,16 @@
 plugin.tx_news {
+
+	view {
+		templateRootPaths {
+			200 = EXT:generic_lib/Resources/Private/Ext/News/Templates/
+		}
+		partialRootPaths {
+			200 = EXT:generic_lib/Resources/Private/Ext/News/Partials/
+		}
+		layoutRootPaths {
+			200 = EXT:generic_lib/Resources/Private/Ext/News/Layouts/
+		}
+	}
 	
 	
     settings {
