@@ -122,20 +122,5 @@ plugin.tx_news {
 	
 	# Consider this as a FALLBACK here
 	pid.storage_folder = 2
-	
-	
-	
-	
-	# pid.defaultBack // forget about that and use dynamic backPid via {settings.actbackPid} in TS
-	# ############################################################################################ #
-	# then use: 
-	# <n:link newsItem="{newsItem}" settings="{settings}" class="more" title="{newsItem.title}" configuration="{additionalParams:'&tx_news_pi1[actbackPid]={settings.actbackPid}'}"><f:translate key="more-link"/></n:link>
-
-	
-	
-	
-	
-	
-	# pid.listView = // no need to use this
 
 }
