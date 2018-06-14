@@ -713,9 +713,17 @@ figcaption h4 + p {
 .wookmark {
     position: relative;
 }
+
 .wookmark .project-item,
 .news .wookmark article {
-    background: white;
+	background: white;
+	opacity: 0;
+	transition: all 0.3s ease-out;
+}
+
+.wookmark-initialised .project-item,
+.news .wookmark-initialised article {
+	opacity: 1;
 }
 
 .wookmark .project-item img,
