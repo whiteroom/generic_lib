@@ -17,7 +17,27 @@ page {
 
 }
 
+plugin.tx_indexedsearch {
+	
+	settings {
+		displayRules = 0
+		displayAdvancedSearchLink = 0
+		defaultOptions.numberOfResults = 100
+	}
 
+	view {
+		templateRootPaths {
+			200 = EXT:generic_lib/Resources/Private/Ext/Indexed_Search/Templates/
+		}
+		partialRootPaths {
+			200 = EXT:generic_lib/Resources/Private/Ext/Indexed_Search/Partials/
+		}
+		layoutRootPaths {
+			200 = EXT:generic_lib/Resources/Private/Ext/Indexed_Search/Layouts/
+		}
+	}
+
+}
 
 plugin.tx_indexedsearch._DEFAULT_PI_VARS.lang = 0
 
