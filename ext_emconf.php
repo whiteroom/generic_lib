@@ -28,6 +28,7 @@ $EM_CONF[$_EXTKEY] = array(
 			'typo3' => '8.7.00-8.7.99',
 			'fluid_styled_content' => '8.7.0-8.7.99',
 			'fluid_styled_responsive_images' => '8.7.0-8.7.99',
+			'indexed_search' => '8.7.0-8.7.99',
 			//'flux' => '',
 			//'fluidpages' => '',
 			//'fluidcontent' => '',
