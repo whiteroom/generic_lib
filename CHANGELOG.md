@@ -5,14 +5,18 @@
 
 ## generic_lib 2.1.0
 
-- Fully functional on TYPO3 CMS 8.7 lTS
+- Fully functional on TYPO3 CMS 8.7 LTS
 - Minimizing filesize of the extension, general improvements on setup
 - omitting data.t3s, using ext_tables_static+adt.sql
 
 ## generic_lib 2.0.0.
 
-- Moving Project to TYPO3 CMS 8.7 lTS
+- Moving Project to TYPO3 CMS 8.7 LTS
 - Many improvements
+
+## generic_lib 1.4.3
+
+- Last version that supports TYPO3 CMS 7.6 LTS
 
 ## generic_lib 1.4.2
 
