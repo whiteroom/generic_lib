@@ -16,12 +16,11 @@ config {
 	
 	prefixLocalAnchors = all
 
-	removeDefaultJS = 0
 	# removeDefaultCss = 0
 	inlineStyle2TempFile = 1
 	disablePrefixComment = 1
-	compressCss = 1
-	concatenateCss = 1
+	compressCss = 0
+	concatenateCss = 0
 	
 	compressJs = 1
 	concatenateJs = 1
