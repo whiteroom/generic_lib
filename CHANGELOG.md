@@ -3,6 +3,10 @@
 
 ## Beta features
 
+## generic_lib 1.4.3
+
+- Last version that supports TYPO3 CMS 7.6 LTS
+
 ## generic_lib 1.4.2
 
 - corrected dependencies
