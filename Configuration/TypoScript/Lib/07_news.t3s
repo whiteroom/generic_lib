@@ -16,7 +16,6 @@ plugin.tx_news {
     settings {
 
         cssFile >
-		startingpoint = {$plugin.tx_news.pid.storage_folder}
                 
 		archiveRestriction = active
         
