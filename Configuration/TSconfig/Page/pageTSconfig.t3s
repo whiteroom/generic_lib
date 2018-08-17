@@ -216,15 +216,15 @@ TCEFORM.tt_content {
 	## Ueberschriften
 	header_layout{
 	     altLabels {
-	          0 = h1 - Seitenueberschrift
-	          1 =
-	          2 = h2 - Themenueberschriften
+	          0 = 
+	          1 = h1 - Themenueberschriften
+	          2 = h2 - Untertitel
 	          3 = h3 - Standard Absatz
 	          4 = h4 - kleiner Titel
 	          5 = 
 	          100 = Verbergen, Titel nicht zeigen
 	       }
-	     removeItems = 1,5
+	     removeItems = 0,5
 	}
 
 }
