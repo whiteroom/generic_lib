@@ -1,0 +1,25 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Main">
+
+	<f:if condition="{menu}">
+		<ul>
+			<f:for each="{menu}" as="page">
+				<li class="nav_item firstlevel{f:if(condition: '{v:page.info(field: "uid")} == {page.uid}', then: ' active')}">
+					<a href="{page.link}"{f:if(condition: page.target, then: ' target="{page.target}"')} title="{page.title}">
+						<f:if condition="{page.nav_title}">
+							<f:then>
+								<span>{page.nav_title}</span>
+							</f:then>
+							<f:else>
+								<span>{page.title}</span>
+							</f:else>
+						</f:if>
+					</a>
+				</li>
+			</f:for>
+		</ul>
+	</f:if>
+
+</f:section>
+</html>
