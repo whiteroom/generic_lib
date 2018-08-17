@@ -36,7 +36,7 @@ mod {
 					}
 				}
 			}
-			icon = ../fileadmin/generic_lib/Resources/Public/Backend/Icons/be_default_home.svg
+			icon = EXT:generic_lib/Resources/Public/Backend/Icons/be_default_home.svg
 		}
 		
 		2 {
@@ -57,7 +57,7 @@ mod {
 					}
 				}
 			}
-			icon = ../fileadmin/generic_lib/Resources/Public/Backend/Icons/be_1_columns.svg
+			icon = EXT:generic_lib/Resources/Public/Backend/Icons/be_1_columns.svg
 		}
 		
 		
@@ -84,7 +84,7 @@ mod {
 					}
 				}
 			}
-            icon = ../fileadmin/generic_lib/Resources/Public/Backend/Icons/be_2_columns.svg
+            icon = EXT:generic_lib/Resources/Public/Backend/Icons/be_2_columns.svg
 		}
 
 
