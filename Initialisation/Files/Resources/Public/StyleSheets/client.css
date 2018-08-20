@@ -213,7 +213,7 @@ dd p { margin-bottom: 0px; }
 
 .ce-bullets dt,
 .ce-bullets dd {
-	border-bottom: 1px solid rgb(107, 108, 112)
+	border-bottom: 1px solid rgb(107, 108, 112);
 	padding: 0.3em 0;
 	margin: 0!important;
 }
