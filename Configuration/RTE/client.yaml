@@ -1,0 +1,56 @@
+# Load default processing options
+imports:
+- { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+- { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+- { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+
+
+editor:
+  config:
+    contentsCss: "EXT:generic_lib/Resources/Public/StyleSheets/rte/rte.css"
+    stylesSet:
+    # block level styles
+#       - { name: "Lead", element: "blockquote", attributes: { class: "my_fancy_css_class"} }
+    # Inline styles
+      - { name: "Orange Marker", element: "span", attributes: { class: "orange"}}
+
+
+    format_tags: "p;h3;h5;pre"
+
+    toolbarGroups:
+      - { name: basicstyles, groups: [ blocks, basicstyles ] }
+      - { name: paragraph, groups: [ list, align ] }
+      - { name: links, groups: [ links ] }
+      - { name: clipboard, groups: [ clipboard, cleanup, undo ] }
+      - { name: editing, groups: [ spellchecker ] }
+      - { name: insert, groups: [ insert ] }
+      - { name: tools, groups: [ table, specialchar ] }
+      - { name: document, groups: [ mode ] }
+      - { name: styles, groups: [ styles, format ] }
+
+    justifyClasses:
+      - text-left
+      - text-center
+      - text-right
+      - text-justify
+
+    extraPlugins:
+      - justify
+
+    removePlugins:
+      - image
+
+    removeButtons:
+      - Strike
+      - Italic
+      - Underline
+      - Subscript
+      - Outdent
+      - Indent
+
+      
+      
+      
+
+      
+      

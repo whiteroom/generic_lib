@@ -61,3 +61,6 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['mediafile_ext'] .= ',eps';
 # Register your custom file extension as allowed media file (< TYPO3 CMS 7.5)
 $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'] .= ',eps';
 
+
+#  register the rte_ckeditor yaml files via ext_localconf.php.
+$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['client_default'] = 'EXT:generic_lib/Configuration/RTE/client.yaml';

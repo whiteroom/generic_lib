@@ -36,7 +36,7 @@ mod {
 					}
 				}
 			}
-			icon = ../fileadmin/generic_lib/Resources/Public/Backend/Icons/be_default_home.svg
+			icon = EXT:generic_lib/Resources/Public/Backend/Icons/be_default_home.svg
 		}
 		
 		2 {
@@ -57,7 +57,7 @@ mod {
 					}
 				}
 			}
-			icon = ../fileadmin/generic_lib/Resources/Public/Backend/Icons/be_1_columns.svg
+			icon = EXT:generic_lib/Resources/Public/Backend/Icons/be_1_columns.svg
 		}
 		
 		
@@ -84,7 +84,7 @@ mod {
 					}
 				}
 			}
-            icon = ../fileadmin/generic_lib/Resources/Public/Backend/Icons/be_2_columns.svg
+            icon = EXT:generic_lib/Resources/Public/Backend/Icons/be_2_columns.svg
 		}
 
 
@@ -216,18 +216,121 @@ TCEFORM.tt_content {
 	## Ueberschriften
 	header_layout{
 	     altLabels {
-	          0 = h1 - Seitenueberschrift
-	          1 =
-	          2 = h2 - Themenueberschriften
+	          0 = 
+	          1 = h1 - Themenueberschriften
+	          2 = h2 - Untertitel
 	          3 = h3 - Standard Absatz
 	          4 = h4 - kleiner Titel
 	          5 = 
 	          100 = Verbergen, Titel nicht zeigen
 	       }
-	     removeItems = 1,5
+	     removeItems = 0,5
 	}
 
 }
+
+
+## Default Image cropping ##
+TCEFORM.sys_file_reference.crop.config.cropVariants {
+	default {
+# 		title = Desktop
+		title = Bildbeschnitt
+		selectedRatio = NaN
+		allowedAspectRatios {
+			NaN {
+			title = Frei
+			value = 0.0
+			}
+			21:9 {
+			title = 21:9
+			value = 2.3333333
+			}
+			16:9 {
+			title = 16:9
+			value = 1.7777777
+			}
+			4:3 {
+			title = 4:3
+			value = 1.3333333
+			}
+			3:2 {
+			title = 3:2
+			value = 1.5
+			}
+			1:1 {
+			title = 1:1
+			value = 1
+			}
+		}
+	 }
+	 
+	 /* TO DO
+	 
+	 tablet {
+		title = Tablet
+		selectedRatio = NaN
+		allowedAspectRatios {
+			NaN {
+			title = Frei
+			value = 0.0
+			}
+			21:9 {
+			title = 21:9
+			value = 2.3333333
+			}
+			16:9 {
+			title = 16:9
+			value = 1.7777777
+			}
+			4:3 {
+			title = 4:3
+			value = 1.3333333
+			}
+			3:2 {
+			title = 3:2
+			value = 1.5
+			}
+			1:1 {
+			title = 1:1
+			value = 1
+			}
+		}
+	}
+	mobile {
+		title = Mobile
+		selectedRatio = NaN
+			allowedAspectRatios {
+			NaN {
+			title = Frei
+			value = 0.0
+			}
+			21:9 {
+			title = 21:9
+			value = 2.3333333
+			}
+			16:9 {
+			title = 16:9
+			value = 1.7777777
+			}
+			4:3 {
+			title = 4:3
+			value = 1.3333333
+			}
+			3:2 {
+			title = 3:2
+			value = 1.5
+			}
+			1:1 {
+			title = 1:1
+			value = 1
+			}
+		}
+	}
+	
+	
+	*/
+}
+
 
 
 # --------------------------------------------------
@@ -299,91 +402,20 @@ TCEFORM.pages {
 
 
 RTE {
+	
+	default.preset = minimal
 
-	default {
-		# CSS file for RTE
-		contentCSS = fileadmin/generic_lib/Resources/Public/StyleSheets/rte/rte.css
+	config {
 		
-		# use typical installation, add what is needed, remove unnecessary
-		# Available buttons are: blockstylelabel, blockstyle, textstylelabel, textstyle, fontstyle, fontsize, formatblock, blockquote, insertparagraphbefore, insertparagraphafter, lefttoright, righttoleft, language, showlanguagemarks, left, center, right, justifyfull, orderedlist, unorderedlist, definitionlist, definitionitem, outdent, indent, formattext, bidioverride, big, bold, citation, code, definition, deletedtext, emphasis, insertedtext, italic, keyboard, monospaced, quotation, sample, small, span, strikethrough, strong, subscript, superscript, underline, variable, textcolor, bgcolor, textindicator, editelement, showmicrodata, emoticon, insertcharacter, insertsofthyphen, line, link, unlink, image, table, user, abbreviation, findreplace, spellcheck, chMode, inserttag, removeformat, copy, cut, paste, pastetoggle, pastebehaviour, undo, redo, about, toggleborders, tableproperties, tablerestyle, rowproperties, rowinsertabove, rowinsertunder, rowdelete, rowsplit, columnproperties, columninsertbefore, columninsertafter, columndelete, columnsplit, cellproperties, cellinsertbefore, cellinsertafter, celldelete, cellsplit, cellmerge
-		showButtons := addToList(textcolor, line, justifyfull, insertsofthyphen, blockquote, insertparagraphbefore, insertparagraphafter, italic)
-		showButtons := removeFromList(outdent, indent, findreplace )
+	
+		tt_content.bodytext.preset = client_default
+		# tt_content.bodytext.preset = full
+		tx_news_domain_model_news.bodytext.preset = default
 		
-		# For clean copy / paste
-		showButtons := addToList(pastetoggle)
-		buttons.pastetoggle.setActiveOnRteOpen = 1
-		buttons.pastetoggle.hidden = 1
-		
-		buttons.image.options.magic.maxWidth = 600
-		buttons.image.options.magic.maxHeight = 600
-		buttons.image.options.plain.maxWidth = 600
-		buttons.image.options.plain.maxHeight = 600
-		
-		
-		buttons.blockstyle.tags.div.allowedClasses = collapsed
-		buttons.blockstyle.tags.h3.allowedClasses = collapsed
-		buttons.blockstyle.tags.p.allowedClasses = align-justify, collapsed
-
-    
-		enableWordClean = 1
-		removeTrailingBR = 1
-		removeComments = 1
-		removeTags = center, font, o:p, sdfield, u
-		removeTagsAndContents = link, meta, script, style, title
-		
-		proc.allowedClasses := addToList(align-justify, collapsed)
-		
-		##assume any br is intentional
-		proc.dontConvBRtoParagraph = 1
 		
 
-		# Attribute in der RTE Tabelle entfernen
-		proc.entryHTMLparser_db.tags.table {
-		     fixAttrib.style.unset = 1
-		     fixAttrib.width.unset = 1
-		     fixAttrib.height.unset = 1
-		}
-		
-		proc.entryHTMLparser_db.tags.tr {
-		     fixAttrib.style.unset = 1
-		     fixAttrib.width.unset = 1
-		     fixAttrib.height.unset = 1
-		}
-		
-		proc.entryHTMLparser_db.tags.td {
-		     fixAttrib.style.unset = 1
-		     fixAttrib.width.unset = 1
-		     fixAttrib.height.unset = 1
-		}
-		
-		proc.entryHTMLparser_db.tags.span.fixAttrib.style.unset >
-
-
-		# proc.transformBoldAndItalicTags = 1   #### not working 7.6.14
-		proc.exitHTMLparser_db.tags {
-			allowTags = p,b,i,strong,em,blockquote,pre,h1,h2,h3,h4,h5,h6,span,div,address,sub,sup,hr
-					b.remap = strong
-					i.remap = em
-				}
-
-		proc.exitHTMLparser_rte.tags {
-			allowTags = p,b,i,strong,em,blockquote,pre,h1,h2,h3,h4,h5,h6,span,div,address,sub,sup,hr
-					strong.remap = b
-					em.remap = i
-				}
 	}
-	
-	
 
-
-	
-	classes {
-	
-	}
-	
-	classesAnchor {
-	
-	}
 
 }
 
