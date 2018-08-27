@@ -18,7 +18,7 @@
 										<f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" width="{settings.list.media.image.maxWidth}" height="{settings.list.media.image.maxHeight}"/>
 							</f:if>
 							<f:if condition="{mediaElement.originalResource.type} == 4">
-								<f:render partial="Detail/FalMediaVideo" arguments="{mediaElement: mediaElement}"/>
+								<f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement}"/>
 							</f:if>
 							<f:if condition="{mediaElement.originalResource.type} == 5">
 								<f:comment><f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{settings.list.media.image.maxWidth}" maxHeight="{settings.list.media.image.maxHeight}"/></f:comment>

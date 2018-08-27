@@ -56,7 +56,7 @@ plugin.tx_news {
             media {
                 image {
                     
-                    maxWidth={$styles.content.textmedia.maxW}
+                    maxWidth = 747
 					maxHeight=
 					lightbox = lightbox[myImageSet]
           
@@ -86,7 +86,7 @@ plugin.tx_news {
             media {
                 image {
 
-                    maxWidth = {$styles.content.textmedia.maxW}
+                    maxWidth = 747
                     maxHeight =
                     lightbox = {$plugin.generic_lib.settings.lightboxCssClass}
                 }
