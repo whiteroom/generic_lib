@@ -7,10 +7,6 @@
 # ******************************************************************************
 
 
-lib.parseFunc_RTE.externalBlocks.blockquote.callRecursive.tagStdWrap.HTMLparser.tags.blockquote.overrideAttribs = 
-
-
-
 
 # **********************************************************
 # fluid_styled_responsive_images
@@ -24,31 +20,37 @@ tt_content.textmedia {
 
             sourceCollection {
                 10 {
+                    dataKey = desktop
                     width = 1260m
                     srcset = 1260w
                 }
 
                 20 {
+                    dataKey = table
                     width = 960m
                     srcset = 960w
                 }
 
                 30 {
+                    dataKey = tablet-small
                     width = 720m
                     srcset = 720w
                 }
 
                 40 {
+                    dataKey = medium
                     width = 640m
                     srcset = 640w
                 }
 
                 50 {
+                    dataKey = medium-phone
                     width = 360m
                     srcset = 360w
                 }
 
                 60 {
+                    dataKey = small
                     width = 320m
                     srcset = 320w
                 }
@@ -56,5 +58,8 @@ tt_content.textmedia {
         }
     }
 }
+
+
+tt_content.image.settings.responsive_image_rendering < tt_content.textmedia.settings.responsive_image_rendering
 
 

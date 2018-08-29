@@ -1,0 +1,55 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{file.alternative}">
+	<f:then>
+		<f:if condition="{file.title}">
+			<f:then>
+				<f:media
+					class="image-embed-item"
+					file="{file}"
+					width="{dimensions.width}"
+					height="{dimensions.height}"
+					alt="{file.alternative}"
+					title="{file.title}"
+				/>			
+			</f:then>
+			<f:else>
+				<f:media
+					class="image-embed-item"
+					file="{file}"
+					width="{dimensions.width}"
+					height="{dimensions.height}"
+					alt="{file.alternative}"
+					title="{settings.media.imageTitleText"
+					
+				/>			
+			</f:else>
+		</f:if>
+	</f:then>
+	<f:else>
+
+		<f:if condition="{file.title}">
+			<f:then>
+				<f:media						
+					class="image-embed-item"
+					file="{file}"
+					width="{dimensions.width}"
+					height="{dimensions.height}"
+					alt="{file.name}"
+					title="{file.title}"
+				/>			
+			</f:then>
+			<f:else>
+				<f:media
+					class="image-embed-item"
+					file="{file}"
+					width="{dimensions.width}"
+					height="{dimensions.height}"
+					alt="{file.name}"
+					title="{settings.media.imageTitleText}"
+				/>			
+			</f:else>
+		</f:if>
+	</f:else>
+</f:if>	
+
+</html>

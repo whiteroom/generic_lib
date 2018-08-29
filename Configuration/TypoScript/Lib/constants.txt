@@ -78,11 +78,18 @@ styles.content {
 	
 	uploads.filesizeBytesLabels = " | kB| MB| GB"
 	loginform.pid = 0
+	
 
 	textmedia {
 		
-		maxW = 747c
-		maxWInText = 747c
+		#CType IMAGE
+		# keep value high and install Extension fluid_styled_responsive_images
+		maxW = 2560c
+		
+		#CType TEXTMEDIA 
+		# keep value high and install Extension fluid_styled_responsive_images
+		maxWInText = 2560c
+		
 
 		columnSpacing = 0
 		borderWidth = 0

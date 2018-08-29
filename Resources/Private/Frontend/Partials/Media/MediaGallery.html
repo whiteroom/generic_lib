@@ -21,35 +21,12 @@
 				<div class="ce-row clearfix">
 					<f:for each="{row.columns}" as="column">
 						<f:if condition="{column.media}">
+						
+						
 							<f:cycle values="{0: 'odd', 1: 'even'}" as="zebraClass">                 
 								<div class="{f:if(condition: '{gallery.count.columns} > 1', then: 'ce-column {zebraClass}',else:'ce-no-column')}">
 									
-									<figure>
-										<f:switch expression="{column.media.type}">
-											<f:case value="3">
-												<f:render section="audioType" arguments="{_all}" />
-											</f:case>
-											<f:case value="4">
-												<f:render section="videoType" arguments="{_all}" />
-											</f:case>
-											<f:case default="TRUE">
-												<f:render section="imageType" arguments="{_all}" />
-											</f:case>
-										</f:switch>
-			
-										<f:if condition="{0: column.media.title, 1: column.media.description} != {0: '', 1: ''}">
-											<f:then>
-												<figcaption>
-													<f:if condition="{column.media.title}">
-														<h4>{column.media.title}</h4>
-													</f:if>
-													<f:if condition="{column.media.description}">
-														<p>{column.media.description}</p>
-													</f:if>										   
-												</figcaption>
-											</f:then>
-										</f:if>
-									</figure>
+									<f:render partial="Media/Type" arguments="{file: column.media, dimensions: column.dimensions, data: data, settings: settings}" />
 									
 								</div>
 							</f:cycle>
@@ -63,92 +40,6 @@
 	</div>
 </f:if>
 
-<f:section name="imageType">
-	<f:if condition="{column.media.link}">
-		<f:then>
-			<f:link.typolink parameter="{column.media.link}">
-				<f:render section="media" arguments="{_all}" />
-			</f:link.typolink>
-		</f:then>
-		<f:else>
-			<f:if condition="{data.image_zoom}">
-				<f:then>
-					<ce:link.clickEnlarge image="{column.media}" configuration="{settings.media.popup}">
-						<f:render section="media" arguments="{_all}" />
-					</ce:link.clickEnlarge>
-				</f:then>
-				<f:else>
-					<f:render section="media" arguments="{_all}" />
-				</f:else>
-			</f:if>
-		</f:else>
-	</f:if>
-</f:section>
-
-<f:section name="audioType">
-	<f:render section="media" arguments="{_all}" />
-</f:section>
-
-<f:section name="videoType">
-	<f:render section="media" arguments="{_all}" />
-</f:section>
-
-
-
-<f:comment> image altText solved  </f:comment>
-<f:section name="media">
-	<f:if condition="{column.media.alternative}">
-		<f:then>
-		
-			<f:if condition="{column.media.title}">
-				<f:then>
-					<f:media
-						file="{column.media}"
-						width="{column.dimensions.width}"
-						height="{column.dimensions.height}"
-						alt="{column.media.alternative}"
-						title="{column.media.title}"
-					/>			
-				</f:then>
-				<f:else>
-					<f:media
-						file="{column.media}"
-						width="{column.dimensions.width}"
-						height="{column.dimensions.height}"
-						alt="{column.media.alternative}"
-						title="{settings.media.imageTitleText}"
-					/>			
-				</f:else>
-			</f:if>	
-			
-		</f:then>
-		<f:else>
-
-		<f:if condition="{column.media.title}">
-				<f:then>
-					<f:comment> alternatively use: alt="{settings.media.imageAltText}" </f:comment>
-					<f:media
-						file="{column.media}"
-						width="{column.dimensions.width}"
-						height="{column.dimensions.height}"
-						alt="{data.header}"
-						title="{column.media.title}"
-					/>			
-				</f:then>
-				<f:else>
-					<f:comment> alternatively use: alt="{settings.media.imageAltText}" </f:comment>
-					<f:media
-						file="{column.media}"
-						width="{column.dimensions.width}"
-						height="{column.dimensions.height}"
-						alt="{data.header}"
-						title="{settings.media.imageTitleText}"
-					/>			
-				</f:else>
-			</f:if>
-		</f:else>
-	</f:if>
-</f:section>
 </html>
 
 

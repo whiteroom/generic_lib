@@ -61,6 +61,14 @@ a.current, a.active, a:hover {
     color: rgb(171, 171, 171);
 }
 
+figure {
+	margin:0
+}
+
+
+audio {
+	width:100%;
+}
 
 sup { font-size: 0.6em; }
 
@@ -595,9 +603,6 @@ figcaption h4 + p {
 	
 }
 
-.ce-gallery figure {
-	margin:0
-}
 
 .ce-gallery img {
     max-width: 100%;
