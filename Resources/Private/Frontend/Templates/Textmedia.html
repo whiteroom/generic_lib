@@ -36,7 +36,7 @@
 		<f:case value="110">
 			<section class="ce-{gallery.position.horizontal} clearfix">
 				<f:if condition="{gallery.position.horizontal} != 'right'">
-					<f:render partial="MediaGallery" arguments="{_all}" />
+					<f:render partial="Media/MediaGallery" arguments="{_all}" />
 				</f:if>
 				
 				
@@ -56,7 +56,7 @@
 				</div>
 		
 				<f:if condition="{gallery.position.horizontal} == 'right'">
-					<f:render partial="Medie/MediaGallery" arguments="{_all}" />
+					<f:render partial="Media/MediaGallery" arguments="{_all}" />
 				</f:if>
 			</section>
 		</f:case>
