@@ -249,13 +249,21 @@ TCEFORM.sys_file_reference.crop.config.cropVariants {
 			title = 16:9
 			value = 1.7777777
 			}
-			4:3 {
-			title = 4:3
-			value = 1.3333333
+			5:3 {
+			title = 5:3
+			value = 1.6666667
 			}
 			3:2 {
 			title = 3:2
 			value = 1.5
+			}
+			4:3 {
+			title = 4:3
+			value = 1.3333333
+			}
+			5:4 {
+			title = 5:4
+			value = 1.25
 			}
 			1:1 {
 			title = 1:1
