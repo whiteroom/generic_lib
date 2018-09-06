@@ -21,7 +21,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'uploadfolder' => '0',
 	'createDirs' => '',
 	'clearCacheOnLoad' => 0,
-	'version' => '2.2.1',
+	'version' => '2.2.2',
 	'constraints' => array(
 		'depends' => array(
 			'php' => '7.0.0-7.1.99',
@@ -35,8 +35,8 @@ $EM_CONF[$_EXTKEY] = array(
 			//'fluidcontent_core' => '',
 			'news' => '7.0.0-7.0.99',
 			'rx_shariff' => '11.0.0-11.99.99',
-			'realurl' => '2.3.2',
-			'vhs' => '4.4.0',
+			'realurl' => '2.4.0',
+			'vhs' => '5.0.0-5.99.99',
 			
 		),
 		'conflicts' => array(
