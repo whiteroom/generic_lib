@@ -1,12 +1,22 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <figure class="video">
+
 	<div class="video-embed">
 		<f:render partial="Media/Rendering/Video" arguments="{file: file, dimensions: dimensions, settings: settings}" />
 	</div>
-	<f:if condition="{file.description}">
-		<figcaption class="video-caption">
-			{file.description}
-		</figcaption>
+	
+	<f:if condition="{0: file.title, 1: file.description} != {0: '', 1: ''}">
+		<f:then>
+			<figcaption class="video-caption">
+				<f:if condition="{file.title}">
+					<h4>{file.title}</h4>
+				</f:if>
+				<f:if condition="{file.description}">
+					<p>{file.description}</p>
+				</f:if>										   
+			</figcaption>
+		</f:then>
 	</f:if>
+	
 </figure>
 </html>

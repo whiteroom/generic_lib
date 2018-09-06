@@ -1,7 +1,4 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:ce="http://typo3.org/ns/TYPO3/CMS/FluidStyledContent/ViewHelpers" data-namespace-typo3-fluid="true">
-	<f:coomment><f:if condition="{file.title}">
-		<p class="image-title">{file.title}</p>
-	</f:if></f:coomment>
 	<figure>
 	
 	<f:if condition="{file.link}">
@@ -23,10 +20,21 @@
 			</f:if>
 		</f:else>
 	</f:if>
-	<f:if condition="{file.description}">
-		<figcaption class="image-caption">
-			<p>{file.description}</p>
-		</figcaption>
+	
+	<f:if condition="{0: file.title, 1: file.description} != {0: '', 1: ''}">
+		<f:then>
+			<figcaption>
+				<f:if condition="{file.title}">
+					<h4>{file.title}</h4>
+				</f:if>
+				<f:if condition="{file.description}">
+					<p>{file.description}</p>
+				</f:if>										   
+			</figcaption>
+		</f:then>
 	</f:if>
+	
+	
+	
 </figure>
 </html>
