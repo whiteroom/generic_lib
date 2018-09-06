@@ -6,11 +6,11 @@
 	}
 	
 	var wookmark;
-	// 	only if .wookmark is found
-	if($('.wookmark').length == 1) {
+	$('.wookmark').each(function(i, obj) {
 		
-		imagesLoaded('.wookmark', function() {
-			wookmark = new Wookmark('.wookmark', {
+		imagesLoaded(obj, function() {
+    		
+			wookmark = new Wookmark(obj, {
 				align: 'left',
 			    itemWidth: 294,
 			    outerOffset: 0,
@@ -20,8 +20,7 @@
 			    }
 			});
 		});
-		
-	}
+	});
 	
 	
 	//showViewPortSize(true);

@@ -1,6 +1,5 @@
 
 
-
 # --------------------------------------------------
 # mod
 #
@@ -131,6 +130,10 @@ TCEFORM.pages.nav_title.label = Navigationstitel
 
 TCEFORM.tt_content {
 	
+	#disable generally, we don't need this
+	CType.removeItems := addToList(textpic)
+	
+	
 	# bodytext.disabled = 1
 	imagewidth.disabled = 1
 	imageheight.disabled = 1
@@ -151,15 +154,26 @@ TCEFORM.tt_content {
 	    
         types {
 	        header {
-                altLabels.0 = Standard Überschrift (Generic)
+                altLabels.0 = Standard (Generic Layout)
             }
-
-
-            textmedia {
-	            altLabels.0 = Standard
+            
+            text {
+                altLabels.0 = Standard (Generic Layout)
+            }
+            
+            image {
+	            altLabels.0 = Standard (Generic Layout)
 	            
                 addItems {
-                    100 = Kacheln (Generic)
+                    100 = Kacheln (Image Gallery)
+                }
+            }
+
+            textmedia {
+	            altLabels.0 = Standard (Generic Layout)
+	            
+                addItems {
+                    100 = Kacheln (Image Gallery)
                 }
                 
                 addItems {
@@ -168,17 +182,20 @@ TCEFORM.tt_content {
             }
             
             list {
-	            altLabels.0 = Standard
+	            altLabels.0 = Standard (Generic Layout)
 	            
                 addItems {
                     100 = Kacheln (News)
                 }
                 
             }
-            
 
-            div {
-                altLabels.0 = Standard (Generic)
+            table {
+                altLabels.0 = Standard (Generic Layout)
+            }
+            
+            uploads {
+                altLabels.0 = Standard (Generic Layout)
             }
         }
 	}
@@ -214,7 +231,8 @@ TCEFORM.tt_content {
 
 	
 	## Ueberschriften
-	header_layout{
+	header_layout {
+
 	     altLabels {
 	          0 = 
 	          1 = h1 - Themenueberschriften
@@ -224,7 +242,25 @@ TCEFORM.tt_content {
 	          5 = 
 	          100 = Verbergen, Titel nicht zeigen
 	       }
-	     removeItems = 0,5
+	     removeItems = 5
+
+	     
+	     types {
+		     
+		    header {
+			    altLabels {
+				    
+				}
+				removeItems = 4,5
+		    }
+		     
+		    textmedia.removeItems = 0,1,2,5
+		    text.removeItems = 0,1,2,5
+		    image.removeItems = 0,1,2,5
+		    table.removeItems = 0,1,2,5
+			bullets.removeItems = 0,1,2,5
+		}
+		
 	}
 
 }
