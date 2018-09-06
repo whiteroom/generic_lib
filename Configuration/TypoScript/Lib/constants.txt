@@ -52,6 +52,7 @@ plugin.generic_lib {
 		wookmark = 1
 		
 		lightboxCssClass = lightbox
+		lightboxTitle = enlarge image on click
 		
 		#showFooterContent = TRUE
 		#pid_footerTop = 100
