@@ -723,7 +723,7 @@ figcaption h4 + p {
 .news .wookmark article {
 	background: white;
 	opacity: 0;
-	transition: all 0.3s ease-out;
+	transition: top 0.3s ease-out;
 }
 
 .wookmark-initialised .project-item,
