@@ -1,17 +1,31 @@
 (function() {
 	
 	
-	function getWindowWidth() {
-		return Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
-	}
 	
 	var wookmark;
 	$('.wookmark').each(function(i, obj) {
 		
 		imagesLoaded(obj, function() {
+			
+			function comparatorIsTopNews(a, b) {
+				var $a = $(a), $b = $(b);
+				// Check if tile should be the first one
+				if (!$a.hasClass('topnews') && $b.hasClass('topnews'))
+					return 1;
+				
+				return -1;
+			}
+			
+			
+			function getWindowWidth() {
+				return Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
+			}
+	
+	
     		
 			wookmark = new Wookmark(obj, {
 				align: 'left',
+				comparator: comparatorIsTopNews,
 			    itemWidth: 294,
 			    outerOffset: 0,
 			    offset: 8,

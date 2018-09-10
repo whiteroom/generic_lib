@@ -2,7 +2,7 @@
 	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
 	  data-namespace-typo3-fluid="true">
 
-
+<f:comment> Alternatively/additionally use data-sort and rewrite comparator function in wookmark //// data-sort="{f:if(condition: '{newsItem.istopnews}', then: '1',else:'{f:format.date(date: newsItem.datetime, format: "%Y%m%d")}')}" </f:comment>
 <article class="article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
 	<n:excludeDisplayedNews newsItem="{newsItem}"/>
 
