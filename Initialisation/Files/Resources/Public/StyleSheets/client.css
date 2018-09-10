@@ -1028,8 +1028,12 @@ figcaption h4 + p {
     .ce-bodytext {
         float: none;
         width: 100%;
-        margin: 0 0 10px
+        margin: 0 0 10px;
+        
+		/* allow overflowing tables to be scrolled */
+		overflow-x: scroll;
     }
+    
     
     .ce-gallery {
         float: none;
