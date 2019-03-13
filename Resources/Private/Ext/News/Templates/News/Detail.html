@@ -209,7 +209,7 @@
 			
 			
 			<f:if condition="{settings.detail.showPrevNext}">
-				<n:simplePrevNext pidList="{newsItem.pid}" news="{newsItem}" as="paginated" sortField="datetime">
+				<n:simplePrevNext pidList="{newsItem.pid}" news="{newsItem}" as="paginated" sortField="{settings.orderBy}">
 					<f:if condition="{paginated}">
 						<ul class="pager">
 							<f:if condition="{paginated.prev}">
