@@ -20,6 +20,7 @@ lib.logo {
 	10.value = <i class="icon-logo"></i>
 	#10.value = {$plugin.generic_lib.clientName}
 	#10.stdWrap.outerWrap = <span class="logo">|</span>
+	#SEO: consider putting content in header logo
 	
 	10.typolink.parameter = 1
 	10.typolink.title = {$plugin.generic_lib.clientName}: zur Startseite 

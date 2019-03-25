@@ -1,0 +1,74 @@
+
+
+# TypoScript added by extension "metaseo"
+plugin.metaseo =
+plugin.metaseo {
+
+
+    metaTags {
+        opengraph {
+            site_name = TEXT
+            site_name {
+                data = TSFE:tmpl|sitetitle
+            }
+
+			title = TEXT
+            title {
+                field = subtitle//title
+            }
+
+          
+        }
+
+
+        # basic configuration for metatag information
+        conf {
+            description_page.field = description
+            keywords_page.field = keywords
+            title_page.field = title
+            author_page.field = author
+            email_page.field = author_email
+
+
+        }
+
+
+    }
+
+    services {
+        googleAnalytics {
+
+            ## google analytics template code
+            template = COA
+            template {
+                10 = FLUIDTEMPLATE
+                10 {
+                    file = EXT:metaseo/Resources/Private/Templates/PageParts/ServiceGoogleAnalytics.html
+                    variables {
+                        gaCode = TEXT
+                        gaCode.field = gaCode
+
+                        gaCustomizationCode = TEXT
+                        gaCustomizationCode.field = gaCustomizationCode
+
+                        gaIsAnonymize = TEXT
+                        gaIsAnonymize.field = gaIsAnonymize
+
+                        gaDomainName = TEXT
+                        gaDomainName.field = gaDomainName
+
+                        gaUseUniversalAnalytics = TEXT
+                        gaUseUniversalAnalytics.field = gaUseUniversalAnalytics
+                    }
+                }
+            }
+        }
+
+
+    }
+
+
+
+}
+
+

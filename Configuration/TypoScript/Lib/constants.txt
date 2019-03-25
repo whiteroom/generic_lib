@@ -12,8 +12,15 @@ plugin.generic_lib {
 	# cat=plugin.generic_lib/page/01; type=string; label=Website : Client name of this website
 	clientName = whiteroom 
 	
-	clientWebsite = whiteroom.cc
+	clientWebsite = whiteroom.ch
 	clientEmail = mail@whiteroom.cc
+
+
+	client.geoPositionLatitude =  47.562866
+	client.geoPositionLongitude = 7.584796
+	client.geoRegion = CH-BS
+	client.geoPlacename = Basel
+	client.googleAnalytics.uid = UA-XXXXXX-2
 	
 	#absRefPrefixRoot = /~sed2/dev/v8/
 	absRefPrefixRoot = auto
@@ -25,7 +32,7 @@ plugin.generic_lib {
 	lang.locale = de_DE.UTF-8
 
 	contentElements.clickenlarge.windowtitle = whiteRoom | schoeneck stauffer, Design und Konzepte 
-	contentElements.imageAltText = whiteRoom | schoeneck stauffer, @2014, all rights reserved
+	contentElements.imageAltText = whiteRoom | schoeneck stauffer, CH-4056 Basel, all rights reserved
 	contentElements.imageTitleText = whiteRoom studio
 	contentElements.logo.AltText = whiteRoom | schoeneck stauffer, Basel
 	contentElements.logo.TitleText.en = Home
@@ -132,3 +139,74 @@ plugin.tx_news {
 	pid.storage_folder = 2
 
 }
+
+
+
+############################################
+#############  METASEO       ###############
+############################################
+
+
+plugin.metaseo {
+	metaTags.description = Dieser Beschreibungstext wird als Zusammenfassung in der Vorschau von Google-Suche angezeigt. Er hat im optimalerweise so zwischen 150 und 160 Zeichen.
+	metaTags.keywords =     straight, substantial, calculating, disagreeable, direful, panoramic, distinct, jittery, sleet, sound, aftermath, slow, CMS, Content Management, TYPO3
+	metaTags.copyright = {$plugin.generic_lib.contentElements.imageAltText}: %YEAR% 
+	#metaTags.email = {$plugin.generic_lib.clientEmail}
+	metaTags.author = {$plugin.generic_lib.contentElements.logo.ATagtitle}
+	metaTags.publisher = {$plugin.generic_lib.contentElements.logo.AltText}
+	
+	#metaTags.language = DE
+	metaTags.distribution = Global
+	metaTags.rating =
+	metaTags.revisit = 30
+	metaTags.geoPositionLatitude =  {plugin.generic_lib.client.geoPositionLatitude}
+	metaTags.geoPositionLongitude = {plugin.generic_lib.client.geoPositionLongitude}
+	metaTags.geoRegion = {plugin.generic_lib.client.geoRegion}
+	metaTags.geoPlacename = {plugin.generic_lib.client.geoPlacename}
+	metaTags.picsLabel =
+	metaTags.p3pCP =
+	metaTags.p3pPolicyUrl =
+	
+	metaTags.useLastUpdate = 1
+	metaTags.useDetectLanguage = 1
+	metaTags.useCanonical = 1
+	metaTags.useCanonical.strict = 1
+	metaTags.useExpire = 1
+	metaTags.linkGeneration = 1
+	metaTags.enableDC  = 1
+
+	metaTags.robotsEnable = 1
+	metaTags.robotsIndex = 1
+	metaTags.robotsFollow = 1
+	metaTags.robotsArchive = 1
+	metaTags.robotsSnippet = 1
+	metaTags.robotsNoImageindex = 1
+	
+	userAgent.ieCompatibilityMode = 0
+
+	metaTags.googleVerification = 
+	metaTags.msnVerification =
+	metaTags.yahooVerification =
+	metaTags.wotVerification =
+	
+	services.enableIfHeaderIsDisabled = 0
+	services.googleAnalytics = {$plugin.generic_lib.client.googleAnalytics.uid}
+	services.googleAnalytics.domainName = 
+	services.googleAnalytics.anonymizeIp = 1
+	services.googleAnalytics.trackDownloads = 1
+	
+	social.googleplus.profilePageId = 
+	
+	pageTitle.applySitetitleToPagetitle = 0
+	pageTitle.applySitetitleToPrefixSuffix = 0
+	pageTitle.sitetitleGlue = |
+	pageTitle.sitetitleGlueSpaceBefore = 1
+	pageTitle.sitetitleGlueSpaceAfter = 1
+	pageTitle.sitetitlePosition = 0
+	pageTitle.sitetitle = {$plugin.generic_lib.clientName}
+	
+	sitemap.changeFrequency =
+	sitemap.index.fileExtension >
+}
+
+

@@ -254,11 +254,12 @@ TCEFORM.tt_content {
 				removeItems = 4,5
 		    }
 		     
-		    textmedia.removeItems = 0,1,2,5
-		    text.removeItems = 0,1,2,5
-		    image.removeItems = 0,1,2,5
-		    table.removeItems = 0,1,2,5
-			bullets.removeItems = 0,1,2,5
+		    textmedia.removeItems = 0,1,5
+		    text.removeItems = 0,1,5
+		    image.removeItems = 0,1,5
+		    table.removeItems = 0,1,5
+			bullets.removeItems = 0,1,5
+			list.removeItems = 0,1,5
 		}
 		
 	}
@@ -405,6 +406,9 @@ TCAdefaults.tt_content {
 	# imageorient = 26
 
 	layout = 0
+	frame_class = none
+	spaceBefore = 0
+	spaceAfter = 0
 	
 	# LISTINGS: Use a definition-list by default
 	bullets_type = 2

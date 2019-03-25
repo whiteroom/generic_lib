@@ -17,6 +17,7 @@ page {
 	meta.viewport  = width=device-width, initial-scale=1
 	meta.robots = INDEX,FOLLOW
 	shortcutIcon = {$plugin.generic_lib.theme.resDir}/Public/Images/favicon.ico
+	meta.apple-mobile-web-app-capable = yes
 
 	
 	bodyTag >

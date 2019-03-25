@@ -49,3 +49,73 @@ lib.navbar {
 }
 
 
+
+# add manually if needed
+lib.languageswitch = HMENU 
+lib.languageswitch {
+	
+	
+		special = language
+		special.value = 0,1,2		
+	
+		wrap = <ul>|</ul>
+	
+		1 = TMENU
+		1 {
+
+			
+			NO = 1
+			NO {
+				
+				doNotLinkIt = 1
+				linkWrap = <li class="nav_item language firstlevel">|</li>
+				
+				stdWrap.override = d || e || f
+				stdWrap {
+					case = upper
+					#current = 1
+					
+					typolink {
+                        parameter.data = page:uid
+                        additionalParams = &L=0 || &L=1 || &L=2
+                        ATagParams = hreflang="de-DE" || hreflang="en-GB" || hreflang="fr-FR"
+                        addQueryString = 1
+                        addQueryString.exclude = L,id,no_cache
+                        addQueryString.method = GET
+                        no_cache = 0
+                        #useCacheHash = 1
+                    }
+					
+				}
+			
+			}
+			
+	
+			# Aktive Sprache
+			ACT < .NO
+			ACT.linkWrap = <li class="nav_item language firstlevel active">|</li>
+			ACT.stdWrap.dataWrap = <span class="text-muted">|</span>
+			
+			
+			# Nur anzeigen falls übersetzt
+			# NO + Übersetzung nicht vorhanden
+			USERDEF1 < .NO
+			USERDEF1.stdWrap.typolink >
+			USERDEF1 {
+                linkWrap = <li class="nav_item language">|</li>
+                stdWrap.dataWrap = <span class="text-muted">|</span>
+                stdWrap.typolink >
+            }
+			
+			
+			# ACT + Übersetzung nicht vorhanden
+			USERDEF2 < .ACT
+			USERDEF2 {
+                linkWrap = <li class="nav_item language">|</li>
+                stdWrap.dataWrap = <span class="text-muted">|</span>
+                stdWrap.typolink >
+            }
+			
+		}
+	
+}

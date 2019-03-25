@@ -1,3 +1,80 @@
+tx_news{
+	
+	
+	tagPid = 1
+
+
+	# --- Add template layouts
+	#
+	templateLayouts {
+
+        1 = Listenansicht mit Details
+        2 =  --div--,Zur Zeit nicht verfügbar:
+        3 = Swiper Gallery
+	}
+	
+	predefine.archive = +6 years 6 hours
+	
+	
+	module {		
+
+		# Sorting etc.
+		controlPanels = 1
+
+		# If defined, the administration module will redirect the user always to the given page, no matter what defined in the page tree
+		allowedPage = 2
+
+		#If no page is selected, the user will be redirected to the given page.
+		redirectToPageOnStart = 2
+
+
+		# If no page is selected in the page tree, any record created in the administration module would otherwise be saved on the root page
+		defaultPid.tx_news_domain_model_news = 2
+		
+
+		columns = uid,datetime,archive,teaser,categories,tags
+		
+		#hide Localization/Translation
+		localizationView = 0
+		
+		
+		
+		
+		# Predefine the form in the administration module (Filter anzeigen/verstecken)
+		preselect {
+
+        
+            topNewsRestriction = 0
+            sortingField = datetime
+			sortingDirection = desc
+			#archived = 1
+        }
+        
+        
+        filters {
+                
+			    searchWord = 1
+			    timeRestriction = 0
+			    topNewsRestriction = 0
+			    hidden = 0
+			    archived = 1
+			    sortingField = 1
+			    number = 0
+			    categories = 1
+			    categoryConjunction = 0
+			    includeSubCategories = 0
+
+        }
+        
+		#hide filter
+		alwaysShowFilter = 1
+		
+	
+	}
+
+}
+
+
 TCAdefaults.tx_news_domain_model_news {
 	
 	# 1 = General/Agenda
@@ -52,42 +129,5 @@ TCEFORM.tx_news_domain_model_news {
 
 
 
-# --- Add template layouts
-#
-tx_news{
 
-	templateLayouts {
-
-        1 = Artikel: zeigt Details
-        2 =  --div--,Zur Zeit nicht verfügbar:
-        3 = Special Use Cases
-	}
-	
-	predefine.archive = +1 day 6 hours
-	
-	
-	module {		
-		# redirectToPageOnStart = 1
-		
-		# If defined, the administration module will redirect the user always to the given page, no matter what defined in the page tree
-		allowedPage = 2
-		
-		# If no page is selected in the page tree, any record created in the administration module would otherwise be saved on the root page
-		defaultPid.tx_news_domain_model_news = 2
-		
-		
-		columns = uid,datetime,archive,teaser,categories,tags
-		
-		
-		# Predefine the form in the administration module (Filter anzeigen/verstecken)
-		preselect {
-            topNewsRestriction = 0
-            sortingField = datetime
-			sortingDirection = asc
-        }
-		
-	
-	}
-
-}
 
