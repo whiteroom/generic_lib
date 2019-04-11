@@ -21,7 +21,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'uploadfolder' => '0',
 	'createDirs' => '',
 	'clearCacheOnLoad' => 0,
-	'version' => '2.2.2',
+	'version' => '2.2.3',
 	'constraints' => array(
 		'depends' => array(
 			'php' => '7.0.0-7.2.99',
@@ -33,10 +33,11 @@ $EM_CONF[$_EXTKEY] = array(
 			//'fluidpages' => '',
 			//'fluidcontent' => '',
 			//'fluidcontent_core' => '',
-			'news' => '7.0.0-7.1.99',
+			'news' => '7.1.0-7.1.99',
 			'rx_shariff' => '11.0.0-11.99.99',
-			'realurl' => '2.4.0',
+			'realurl' => '2.5.0-2.5.99',
 			'vhs' => '5.0.0-5.99.99',
+			'metaseo' => '3.0.0-3.0.99',
 			
 		),
 		'conflicts' => array(
@@ -44,7 +45,7 @@ $EM_CONF[$_EXTKEY] = array(
 
 		),
 		'suggests' => array(
-			'metaseo' => '3.0.0-3.0.99',
+			
 			'dd_googlesitemap' => '2.0.5-2.99.99',
 		),
 	),
