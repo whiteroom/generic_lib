@@ -148,11 +148,11 @@ page {
 	
 	#	    header,text,textpic,image,textmedia
 	#		menu_abstract,menu_categorized_content,menu_categorized_pages,menu_pages,menu_subpages,menu_recently_updated,menu_related_pages,menu_section,menu_section_pages,menu_sitemap,menu_sitemap_pages,
-	# 		div, login, form_formframework, uploads, bullets, list, table, images, shortcut, html
+	# 		div, login, form_formframework, uploads, bullets, list, table, image, shortcut, html
 
 	TCEFORM.tt_content.CType.removeItems (
 	    html, textpic, list, div, login, form_formframework, 
-	    menu_abstract,menu_categorized_content,menu_categorized_pages,menu_pages,menu_subpages,menu_recently_updated,menu_related_pages,menu_section,menu_section_pages,menu_sitemap,menu_sitemap_pages
+	    menu_abstract,menu_categorized_content,menu_categorized_pages,menu_recently_updated,menu_related_pages,menu_section,menu_section_pages,menu_sitemap,menu_sitemap_pages
 		
 
 	)
