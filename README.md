@@ -28,7 +28,6 @@ Structure..
 To Do..
 
 * Add more Templates
-* Add a working RealURL Config
 * etc
 
 
