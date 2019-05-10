@@ -28,7 +28,7 @@
 							slides: [
 								
 								<f:alias map="{opencurlybracket: '{', closecurlybracket: '}'}">
-									<f:for each="{resources}" as="resource">{opencurlybracket} src:'{resource.url}' {closecurlybracket},</f:for>
+									<f:for each="{resources}" as="resource">{opencurlybracket} src:'{v:site.url()}{resource.url}', link:'{resource.link}', title: '{resource.title}', description: '{resource.description}' {closecurlybracket},</f:for>
 								</f:alias>
 
 							    ],
