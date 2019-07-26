@@ -9,9 +9,10 @@
 # this file is UTF-8, check!
 
 plugin.generic_lib {
-	# cat=plugin.generic_lib/page/01; type=string; label=Website : Client name of this website
+	# cat=plugin.generic_lib/page/01; type=string; label=Client : Client name of this website
 	clientName = whiteroom 
-	
+	# cat=plugin.generic_lib/page/01; type=string; label=Name of this website
+	clientWebsiteName = whiteroom Basel
 	clientWebsite = whiteroom.cc
 	clientEmail = mail@whiteroom.cc
 	
@@ -25,7 +26,7 @@ plugin.generic_lib {
 	lang.locale = de_DE.UTF-8
 
 	contentElements.clickenlarge.windowtitle = whiteRoom | schoeneck stauffer, Design und Konzepte 
-	contentElements.imageAltText = whiteRoom | schoeneck stauffer, @2014, all rights reserved
+	contentElements.copyright = whiteRoom | schoeneck stauffer, CH-4056 Basel, all rights reserved
 	contentElements.imageTitleText = whiteRoom studio
 	contentElements.logo.AltText = whiteRoom | schoeneck stauffer, Basel
 	contentElements.logo.TitleText.en = Home
@@ -33,6 +34,23 @@ plugin.generic_lib {
 	contentElements.logo.ATagtitle = whiteRoom | schoeneck stauffer
 	
 	pagemeta.author = whiteRoom | schoeneck stauffer, St. Johanns-Vorstadt 15, 4056 Basel
+	pagemeta.googleVerification = 
+	
+	# cat=plugin.generic_lib/page/01; type=string; label=Google Analytics : Tracking Code
+	pagemeta.googleAnalytics = UX-XXXXXX-X
+	
+	# cat=plugin.generic_lib/page/01; type=string; label=Geoposition : Latitude
+	pagemeta.geoPositionLatitude =  47.562866
+	
+	# cat=plugin.generic_lib/page/01; type=string; label=Geoposition : Longitude
+	pagemeta.geoPositionLongitude = 7.584796
+	
+	# cat=plugin.generic_lib/page/01; type=string; label=GeoRegion : Regioncode
+	pagemeta.geoRegion = CH-BS
+	
+	# cat=plugin.generic_lib/page/01; type=string; label=GeoPlace : Placename
+	pagemeta.geoPlacename = Basel
+	
 	
 	# cat=plugin.generic_lib/page/10; type=string; label=Site credits : Agency/Partners
 	sitecredits.agency = Konzept und Design: whiteroom, Basel | Umsetzung: Daniel Schoeneck, https://whiteRoom.ch
@@ -131,4 +149,61 @@ plugin.tx_news {
 	# Consider this as a FALLBACK here
 	pid.storage_folder = 2
 
+}
+
+
+
+############################################
+#############  METASEO       ###############
+############################################
+
+
+plugin.metaseo {
+	metaTags.description = Die Länge der Meta Descriptions sollte 160 Zeichen nicht überschreiten. Eine Meta Description Länge von 130 bis 160 Zeichen ist optimal.
+	metaTags.keywords = Obsolete, Google, will, ignore
+	metaTags.copyright = {$plugin.generic_lib.contentElements.copyright}: %YEAR% 
+	#metaTags.email = {$plugin.generic_lib.clientEmail}
+	metaTags.author = {$plugin.generic_lib.pagemeta.author}
+	metaTags.publisher = {$plugin.generic_lib.pagemeta.author}
+	
+	metaTags.revisit = 30
+	metaTags.geoPositionLatitude =  {$plugin.generic_lib.pagemeta.geoPositionLatitude}
+	metaTags.geoPositionLongitude = {$plugin.generic_lib.pagemeta.geoPositionLongitude}
+	metaTags.geoRegion = {$plugin.generic_lib.pagemeta.geoRegion}
+	metaTags.geoPlacename = {$plugin.generic_lib.pagemeta.geoPlacename}
+		
+	metaTags.useLastUpdate = 1
+	metaTags.useDetectLanguage = 1
+	metaTags.useCanonical = 1
+	metaTags.useCanonical.strict = 1
+	metaTags.useExpire = 1
+	metaTags.linkGeneration = 1
+	metaTags.enableDC = 1
+
+	metaTags.robotsEnable = 1
+	metaTags.robotsIndex = 1
+	metaTags.robotsFollow = 1
+	metaTags.robotsArchive = 1
+	metaTags.robotsSnippet = 1
+	metaTags.robotsNoImageindex = 1
+	
+	userAgent.ieCompatibilityMode = 0
+	metaTags.googleVerification = {$plugin.generic_lib.pagemeta.googleVerification}
+	
+	services.enableIfHeaderIsDisabled = 0
+	services.googleAnalytics = {$plugin.generic_lib.pagemeta.googleAnalytics}
+	services.googleAnalytics.domainName = 
+	services.googleAnalytics.anonymizeIp = 1
+	services.googleAnalytics.trackDownloads = 1	
+		
+	pageTitle.applySitetitleToPagetitle = 0
+	pageTitle.applySitetitleToPrefixSuffix = 0
+	pageTitle.sitetitleGlue = :
+	pageTitle.sitetitleGlueSpaceBefore = 0
+	pageTitle.sitetitleGlueSpaceAfter = 1
+	pageTitle.sitetitlePosition = 1
+	pageTitle.sitetitle = {$plugin.generic_lib.clientWebsiteName}
+	
+	sitemap.changeFrequency =
+	sitemap.index.fileExtension >
 }

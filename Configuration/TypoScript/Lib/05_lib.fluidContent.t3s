@@ -48,7 +48,7 @@ lib.contentElement {
 	   }
    
 
-		imageAltText = {$plugin.generic_lib.contentElements.imageAltText}
+		imageAltText = {$plugin.generic_lib.contentElements.copyright}
 		imageTitleText = {$plugin.generic_lib.contentElements.imageTitleText}
 		
 		
