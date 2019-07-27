@@ -3,6 +3,10 @@
 
 ## Beta features
 
+## generic_lib 2.3.0
+
+- Includes a working contact form
+
 ## generic_lib 2.2.0
 
 - Corrected many issues related to TYPO3 CMS 8.7 LTS
