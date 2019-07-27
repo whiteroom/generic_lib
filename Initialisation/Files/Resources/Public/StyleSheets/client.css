@@ -206,6 +206,8 @@ dd {
 dd p { margin-bottom: 0px; }
 
 
+.error {color:red;}
+
 .ce-bullets p { margin: 0!important; }
 
 .ce-bullets {
