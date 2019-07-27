@@ -1,6 +1,6 @@
 
 renderingOptions:
-  submitButtonLabel: Submit
+  submitButtonLabel: Abschicken
 identifier: contactformgeneric_lib
 label: 'Contactform generic_lib'
 type: Form
@@ -23,7 +23,7 @@ finishers:
     identifier: EmailToReceiver
   -
     options:
-      message: 'Herzlichen Dso rasch wie möglich.'
+      message: 'Herzlichen Dank für die Nachricht.'
     identifier: Confirmation
 renderables:
   -
