@@ -227,6 +227,10 @@ dd p { margin-bottom: 0px; }
 }
 
 
+
+:focus {outline: 0;}
+
+
 ::-webkit-input-placeholder {
     color: #9a9c9e;
     opacity: 1
@@ -710,6 +714,62 @@ figcaption h4 + p {
 	border-bottom: 1px solid rgb(107, 108, 112);
 	
 	
+}
+
+
+textarea,
+input:matches([type="password"], [type="search"], [type="text"]) {
+    -webkit-appearance: textfield;
+    color: inherit;
+    background-color: white;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(196, 196, 196, 1);
+}
+
+.form-group {
+    font-weight: inherit;
+    line-height: inherit;
+    margin: 1em 0;
+}
+
+.form-group textarea {
+    min-height: 15em;
+}
+
+
+.form-group input[type="text"], input[type="password"], input.text, input.title, textarea, select {
+    margin: 0.5em 0;
+    padding: 0.5em;
+    width: 100%;
+    
+}
+
+.form-group .form-check{
+    display: inline-block;
+    margin-right: 1em;
+}
+
+.form-group input[type="checkbox"],
+.form-group input[type="radio"] {
+    margin: 0 0.5em;
+}
+
+.form-navigation button[type="submit"],
+.form-navigation button[type="button"] {
+    font: 1em/1.5em "Helvetica Neue", Helvetica, sans-serif !important;
+    margin: 1em 0;
+    cursor: pointer;
+    padding: 0.66667em 1em;
+    background: #333333;
+    border: 1px solid #333333;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.75);
+    color: white;
 }
 
 

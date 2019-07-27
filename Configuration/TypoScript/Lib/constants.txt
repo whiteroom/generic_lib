@@ -25,6 +25,10 @@ plugin.generic_lib {
 	# cat=plugin.generic_lib/page/03; type=string; label=Language Internationalization : Default Language Localization
 	lang.locale = de_DE.UTF-8
 
+
+	formSuccessMessage = Herzlichen Dank für die Nachricht. Wir melden uns so rasch wie möglich.
+	
+
 	contentElements.clickenlarge.windowtitle = whiteRoom | schoeneck stauffer, Design und Konzepte 
 	contentElements.copyright = whiteRoom | schoeneck stauffer, CH-4056 Basel, all rights reserved
 	contentElements.imageTitleText = whiteRoom studio

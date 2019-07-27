@@ -1,0 +1,62 @@
+module.tx_form.settings.yamlConfigurations.100 = EXT:generic_lib/Configuration/Form/Yaml/Setup.yaml
+
+
+
+
+plugin.tx_form {
+    view {
+	    
+	    # Note that this configuration only affects the EXT:Form plugin
+        # template (form/Resources/Private/Frontend/Templates/Render.html)
+        # The fluid paths for the formelements reside within the yaml settings.
+        # @see TYPO3.CMS.Form.<prototypeName>.standard.formElementsDefinition.Form.renderingOptions
+        #
+        # That means: If you want to override the formelement templates
+        # then change them within the yaml settings, not here.
+        
+        # This simply does not work, ok.
+        # Adpat additional RootPaths in EXT:generic_lib/Configuration/Form/Yaml/Setup.yaml
+        
+		templateRootPaths {
+			#100 = EXT:generic_lib/Resources/Private/Ext/Form/Templates/
+		}
+		partialRootPaths {
+			#100 = EXT:generic_lib/Resources/Private/Ext/Form/Partials/
+		}
+		layoutRootPaths {
+			#200 = EXT:generic_lib/Resources/Private/Ext/Form/Layouts/
+		}
+
+    }
+    
+    settings {
+        yamlConfigurations {
+            100 = EXT:generic_lib/Configuration/Form/Yaml/Setup.yaml
+            #200 = EXT:generic_lib/Configuration/Form/Yaml/FormEngineSetup.yaml
+        }
+        
+        formDefinitionOverrides {
+	    
+			contactformgeneric_lib {
+				finishers {
+                    0 {
+                        options {
+                            recipientAddress = {$plugin.generic_lib.clientEmail}
+							recipientName = {$plugin.generic_lib.clientName}
+                        }
+                    }
+                    
+                    1 {
+                        options {
+                            message = {$plugin.generic_lib.formSuccessMessage}
+                        }
+                    }
+                }   
+		    }
+		}
+	
+    }
+}
+
+
+

@@ -1,0 +1,108 @@
+
+renderingOptions:
+  submitButtonLabel: Submit
+identifier: contactformgeneric_lib
+label: 'Contactform generic_lib'
+type: Form
+prototypeName: standard
+finishers:
+  -
+    options:
+      subject: 'Ihre Nachricht: {subject}'
+      recipientAddress: your.company@example.com
+      recipientName: 'Your Company name'
+      senderAddress: '{email}'
+      senderName: '{name}'
+      replyToAddress: ''
+      carbonCopyAddress: ''
+      blindCarbonCopyAddress: ''
+      format: html
+      attachUploads: true
+      translation:
+        language: ''
+    identifier: EmailToReceiver
+  -
+    options:
+      message: 'Herzlichen Dso rasch wie möglich.'
+    identifier: Confirmation
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: Zurück
+      nextButtonLabel: Weiter
+    identifier: page-1
+    label: Kontaktformular
+    type: Page
+    renderables:
+      -
+        properties:
+          options:
+            Herr: Herr
+            Frau: Frau
+            Ohne: 'Keine Anrede'
+        type: RadioButton
+        identifier: anrede-1
+        label: Anrede
+      -
+        defaultValue: ''
+        identifier: name
+        label: Name
+        type: Text
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: Name
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        identifier: email
+        label: Email
+        type: Text
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: 'Email Adresse'
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+          -
+            identifier: EmailAddress
+      -
+        defaultValue: ''
+        identifier: subject
+        label: Subject
+        type: Text
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: Betreff
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        identifier: message
+        label: Nachricht
+        type: Textarea
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: ''
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        type: Checkbox
+        identifier: newsletter-1
+        label: Newsletter
+        properties:
+          elementDescription: 'Ich möchte mit dem Newsletter über die wichtigsten Veranstaltungen informiert werden'
+  -
+    renderingOptions:
+      previousButtonLabel: Zurück
+      nextButtonLabel: Weiter
+    identifier: summarypage
+    label: 'Ihre Nachricht:'
+    type: SummaryPage

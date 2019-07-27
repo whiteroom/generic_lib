@@ -1,0 +1,26 @@
+TYPO3:
+  CMS:
+    Form:
+      persistenceManager:
+        allowedFileMounts:
+          20: 1:/generic_lib/Resources/Public/Forms/
+        allowSaveToExtensionPaths: false
+        allowDeleteFromExtensionPaths: false
+        #allowedExtensionPaths:
+          #10: EXT:generic_lib/Resources/Private/Ext/Form/
+
+      prototypes:
+        standard:
+
+          ########### DEFAULT FORM ELEMENT DEFINITIONS ###########
+          formElementsDefinition:
+
+            ### BASE ELEMENTS ###
+            Form:
+              renderingOptions:
+                templateRootPaths:
+                  100: 'EXT:generic_lib/Resources/Private/Ext/Form/Templates/'
+                partialRootPaths:
+                  100: 'EXT:generic_lib/Resources/Private/Ext/Form/Partials/'
+                layoutRootPaths:
+                  100: 'EXT:generic_lib/Resources/Private/Ext/Form/Layouts/'
