@@ -3,7 +3,21 @@
 	<f:if condition="{data.frame_class} != none">
 		<f:then>
 
-			<article id="c{data.uid}" class="contObj {data.CType} contObj-{data.frame_class} contObj-type-{data.CType} contObj-layout-{data.layout}{f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}">
+			<f:if condition="{data.list_type} == 'news_pi1'">
+			
+				<f:then>
+					<section id="c{data.uid}" class="{data.CType}-{data.list_type} contObj-{data.frame_class} contObj-type-{data.CType} contObj-layout-{data.layout}{f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}">
+				</f:then>
+				
+				<f:else>
+					<article id="c{data.uid}" class="contObj {data.CType} contObj-{data.frame_class} contObj-type-{data.CType} contObj-layout-{data.layout}{f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}">
+				</f:else>
+			
+			</f:if>
+
+
+
+			
 				<f:if condition="{data._LOCALIZED_UID}">
 					<a id="c{data._LOCALIZED_UID}"></a>
 				</f:if>
