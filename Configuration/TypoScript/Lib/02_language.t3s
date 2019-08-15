@@ -30,7 +30,7 @@ config {
 	
 	# check for valid L-params
 	#linkVars := addToList(L)
-	linkVars = L(0-1)
+	linkVars = L(0-2)
 	sys_language_mode = content_fallback; 0
 	
 	##### IMG_RESSOURCE not showing up in other languages! #########
