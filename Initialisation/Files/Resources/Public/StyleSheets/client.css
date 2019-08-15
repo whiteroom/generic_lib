@@ -304,21 +304,28 @@ dd p { margin-bottom: 0px; }
 
 #logo i {
     font-size: 28px;
+    font-style: normal!important;
     -webkit-transition: all .2s ease-out;
     -moz-transition: all .2s ease-out;
     -o-transition: all .2s ease-out;
     transition: all .2s ease-out
 }
 
-nav {
+
+nav#language {
+	display: block;
     position: absolute;
     right: 0;
-    top: 20px;
+    top: 10px;
     width: 747px
 }
 
-
-
+nav#navigation {
+    position: absolute;
+    right: 0;
+    top: 33px;
+    width: 747px
+}
 
 nav ul {
     float: left;
@@ -364,6 +371,21 @@ nav ul ul li a {
 
 nav ul ul li.current {
 /* 	display:none */
+}
+
+nav#language ul {
+    float: right;
+    width: auto;
+}
+
+nav#language ul li {
+    float: none;
+    display:inline;
+    width: auto;
+    margin: 0 0 0 10px;
+    font-weight: 400;
+    font-size: 12px;
+
 }
 
 
@@ -498,6 +520,11 @@ nav ul ul li.current {
 }
 
 
+#mobile-menu .nav_item.language {
+	
+	width:auto;
+	margin: 20px 27px 0 0
+}
 
 
 main, footer {
@@ -916,12 +943,16 @@ input:matches([type="password"], [type="search"], [type="text"]) {
 .scrolled #logo { top: 17px }
 .scrolled #logo i { font-size: 16px }
 
-.scrolled nav {
+.scrolled nav#navigation {
     top: 17px;
     -webkit-transition: all .2s ease-out;
     -moz-transition: all .2s ease-out;
     -o-transition: all .2s ease-out;
     transition: all .2s ease-out
+}
+
+.scrolled nav#language {
+	display:none;
 }
 
 .scrolled #page-subtitle, .scrolled nav ul ul {
@@ -1003,7 +1034,8 @@ input:matches([type="password"], [type="search"], [type="text"]) {
 
 @media screen and (max-width:1060px) {
     
-    nav {
+    nav#navigation,
+    nav#language {
         display: none
     }
     

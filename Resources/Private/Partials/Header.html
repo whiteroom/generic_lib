@@ -9,7 +9,8 @@
 		<!-- Default header -->
 		<div id="header-inner">
 			<div id="logo"><f:cObject typoscriptObjectPath="lib.logo" /></div>
-            <nav><f:cObject typoscriptObjectPath="lib.navbar" /></nav>
+            <nav id="language" class="menu"><f:cObject typoscriptObjectPath="lib.languageSwitch" /></nav>
+            <nav id="navigation" class="menu"><f:cObject typoscriptObjectPath="lib.navbar" /></nav>
             
             <div id="page-subtitle">
 	            <h1><v:page.info as="page" pageUid="{pageUid}">

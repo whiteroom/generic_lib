@@ -87,10 +87,10 @@ config.htmlTag_stdWrap.cObject.10.value = class="no-js lt-ie9"
 
 	config {
 		sys_language_uid = 1
-		language = en
-		locale_all = en_GB.UTF-8
-		htmlTag_langKey = en
-		htmlTag_stdWrap.cObject.20.value = lang="en"
+		language = {$plugin.generic_lib.lang1.localeShort}
+		locale_all = {$plugin.generic_lib.lang1.locale}
+		htmlTag_langKey = {$plugin.generic_lib.lang1.localeShort}
+		htmlTag_stdWrap.cObject.20.value = lang="{$plugin.generic_lib.lang1.localeShort}"
 	}
 
 [global]
@@ -101,9 +101,9 @@ config.htmlTag_stdWrap.cObject.10.value = class="no-js lt-ie9"
 	
 	config {
 		sys_language_uid = 2
-		language = fr
-		locale_all = fr_FR.UTF-8
-		htmlTag_langKey = fr
-		htmlTag_stdWrap.cObject.20.value = lang="fr"
+		language = {$plugin.generic_lib.lang2.localeShort}
+		locale_all = {$plugin.generic_lib.lang2.locale}
+		htmlTag_langKey = {$plugin.generic_lib.lang2.localeShort}
+		htmlTag_stdWrap.cObject.20.value = lang="{$plugin.generic_lib.lang2.localeShort}"
 	}
 [global]

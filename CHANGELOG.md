@@ -3,6 +3,10 @@
 
 ## Beta features
 
+## generic_lib 2.4.0
+
+- Includes a working language switch
+
 ## generic_lib 2.3.0
 
 - Includes a working contact form

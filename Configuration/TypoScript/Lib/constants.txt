@@ -24,6 +24,14 @@ plugin.generic_lib {
 	
 	# cat=plugin.generic_lib/page/03; type=string; label=Language Internationalization : Default Language Localization
 	lang.locale = de_DE.UTF-8
+	
+	
+	lang1.localeShort = en
+	lang1.locale = en_EN.UTF-8
+	
+	lang2.localeShort = fr
+	lang2.locale = fr_FR.UTF-8
+	
 
 
 	formSuccessMessage = Herzlichen Dank für die Nachricht. Wir melden uns so rasch wie möglich.
