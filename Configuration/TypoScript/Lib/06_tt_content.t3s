@@ -66,3 +66,9 @@ tt_content.image.settings.responsive_image_rendering < tt_content.textmedia.sett
 # set the new sorting direction of filelinks CE (if selected)
 tt_content.uploads.dataProcessing.10.sorting.direction = descending 
 tt_content.uploads.dataProcessing.10.sorting.direction.if.isTrue.field = filelink_sorting_direction 
+
+
+# CKeditor - set table classes in YAML file without adjusting lib.parseFunc_RTE settings will fail :-((
+lib.parseFunc_RTE.externalBlocks.table.stdWrap.HTMLparser.tags.table.fixAttrib.class.list := addToList(contenttable, contenttable--borderless)
+
+

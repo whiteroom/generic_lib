@@ -178,11 +178,21 @@ caption, thead td, thead th, tfoot td, tfoot th {
 	border-bottom: 1px solid rgb(107, 108, 112)
 }
 
+table.contenttable--borderless caption, table.contenttable--borderless thead td, table.contenttable--borderless thead th, table.contenttable--borderless tfoot td, table.contenttable--borderless tfoot th {
+	border:0;
+	padding:0;
+}
+
 td, th {
 	text-align: left;
 	vertical-align: top;
 	padding: 8px 4px;
 	border-bottom: 1px solid rgb(107, 108, 112)
+}
+
+table.contenttable--borderless td, table.contenttable--borderless th {
+	border:0;
+	padding:0;
 }
 
 td:empty {

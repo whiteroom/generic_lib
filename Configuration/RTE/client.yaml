@@ -10,7 +10,7 @@ editor:
     contentsCss: ["EXT:rte_ckeditor/Resources/Public/Css/contents.css", "EXT:generic_lib/Resources/Public/Stylesheets/Rte/rte.css"]
     stylesSet:
     # block level styles
-#       - { name: "Lead", element: "blockquote", attributes: { class: "my_fancy_css_class"} }
+      - { name: "Borderless Table", element: "table", attributes: { class: "contenttable--borderless"} }
     # Inline styles
       - { name: "Orange Marker", element: "span", attributes: { class: "orange"}}
 
