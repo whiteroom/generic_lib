@@ -55,3 +55,11 @@ lib.contentElement {
    }
    
 }
+
+
+# CKeditor - set table classes in YAML file without adjusting lib.parseFunc_RTE settings will fail :-((
+lib.parseFunc_RTE.externalBlocks.table.stdWrap.HTMLparser.tags.table.fixAttrib.class.list := addToList(contenttable, contenttable--borderless)
+
+# Avoid paragraph wrap <p> in definition lists
+lib.parseFunc_RTE.externalBlocks.dl.callRecursive >
+lib.parseFunc_RTE.externalBlocks.dl.stdWrap.parseFunc =< lib.parseFunc

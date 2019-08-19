@@ -44,6 +44,22 @@ table td, td {
     text-align: left;
 }
 
+dl {
+	
+}
+
+dt {
+	padding: 0.7em 0;
+	font-weight: 700;
+}
+
+dd {
+	margin:0;
+	padding: 0.3em 0;
+	border-top: 1px solid rgb(107, 108, 112);
+
+}
+
 .text-justify {
 	text-align: justify
 }

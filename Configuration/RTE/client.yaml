@@ -50,7 +50,6 @@ editor:
 
       
       
-      
-
-      
-      
+  externalPlugins:
+    descriptionlist:
+      resource: "EXT:generic_lib/Resources/Public/ckeditor-plugin-descriptionlist/plugin.js"
