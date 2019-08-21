@@ -91,13 +91,15 @@ h6 {
 
 blockquote {
 	display: grid;
-	height: calc( 100vh - 490px );
+	height: 50vh;
 	margin: 0;
 	place-items: center center;
 }
 
 blockquote p {
 	margin:0;
+	padding-top: 1em;
+
 	font-size: 7.4vw;
 	line-height: 7.4vw;
 	color: rgba(255, 255, 255, 0.8);
