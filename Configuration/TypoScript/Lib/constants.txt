@@ -34,7 +34,7 @@ plugin.generic_lib {
 	
 
 
-	formSuccessMessage = Herzlichen Dank für die Nachricht. Wir melden uns so rasch wie möglich.
+	formSuccessMessage = Herzlichen Dank für die Nachricht. Wir melden uns so rasch wie möglich. <br>In order to respond to your enquiry, we will process the personal data you have supplied in accordance with our privacy policy (available on request). You can unsubscribe or change your preferences at any time by clicking the link in any emails. 
 	
 
 	contentElements.clickenlarge.windowtitle = whiteRoom | schoeneck stauffer, Design und Konzepte 
