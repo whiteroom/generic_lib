@@ -26,11 +26,6 @@ $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['realurl'] = serialize([
 ]);
 
 
-$GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['rtehtmlarea'] = serialize([
-    'enableImages' => 1,
-    'enableInlineElements' => 1
-]);
-
 $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['news'] = serialize([
     'manualSorting' => 1
 ]);
