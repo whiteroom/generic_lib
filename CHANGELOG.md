@@ -3,6 +3,11 @@
 
 ## Beta features
 
+## generic_lib 3.0.0.
+
+- Moving Project to TYPO3 CMS 9.5 LTS
+- Branching support for TYPO3 CMS 8.7 LTS into 8.7.LTS
+
 ## generic_lib 2.4.0
 
 - Includes a working language switch

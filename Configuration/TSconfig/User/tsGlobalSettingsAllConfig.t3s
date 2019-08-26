@@ -10,6 +10,9 @@ options {
 		# pagetitles are too long, usually
 		showNavTitle = 1
 	}
+	
+	#showDuplicate = 1
+	showDuplicate.tt_content = 1
 }
 # Check Condition is given: belongs to Usergroup _globalSettingsForAll (id = 1)
 # Otherwise ignore (Admin Users)
