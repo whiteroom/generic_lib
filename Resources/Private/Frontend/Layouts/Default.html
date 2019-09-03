@@ -34,7 +34,21 @@
 				<f:render section="After" optional="true">
 					<f:render partial="DropIn/After/All" arguments="{_all}" />
 				</f:render>
-			</article>
+				
+				
+
+			<f:if condition="{data.list_type} == 'news_pi1'">
+			
+				<f:then>
+					</section>
+				</f:then>
+				
+				<f:else>
+					</article>
+				</f:else>
+			
+			</f:if>
+
 
 		</f:then>
 		<f:else>
