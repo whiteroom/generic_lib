@@ -571,6 +571,51 @@ main .inner, footer .inner{
 
 
 /* TYPO3 CE */
+
+.frame-space-before-extra-small {
+	margin-top: 0.2em!important
+}
+
+.frame-space-before-small {
+	margin-top: 0.5em!important
+}
+
+.frame-space-before-medium {
+	margin-top: 1em!important
+}
+
+.frame-space-before-large {
+	margin-top: 2em!important
+}
+
+.frame-space-before-extra-large {
+	margin-top: 4em!important
+}
+
+
+
+.frame-space-after-extra-small {
+	margin-bottom: 0.2em!important
+}
+
+.frame-space-after-small {
+	margin-bottom: 0.5em!important
+}
+
+.frame-space-after-medium {
+	margin-bottom: 1em!important
+}
+
+.frame-space-after-large {
+	margin-bottom: 2em!important
+}
+
+.frame-space-after-extra-large {
+	margin-bottom: 4em!important
+}
+
+
+
 .contObj {
 	padding-bottom: 80px;
 	padding-left: 0;

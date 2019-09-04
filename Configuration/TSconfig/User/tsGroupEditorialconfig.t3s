@@ -129,8 +129,8 @@ page {
 		#Beschreibung
 		rowDescription.disabled = 1
 
-		space_before_class.disabled = 1
-		space_after_class.disabled = 1
+		space_before_class.disabled = 0
+		space_after_class.disabled = 0
 		frame_class.disabled = 1
 			
 			
