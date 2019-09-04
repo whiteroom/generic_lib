@@ -166,56 +166,60 @@ plugin.tx_news {
 
 
 ############################################
-#############  METASEO       ###############
+#############      SEO       ###############
 ############################################
 
 
-plugin.metaseo {
-	metaTags.description = Die Länge der Meta Descriptions sollte 160 Zeichen nicht überschreiten. Eine Meta Description Länge von 130 bis 160 Zeichen ist optimal.
-	metaTags.keywords = Obsolete, Google, will, ignore
-	metaTags.copyright = {$plugin.generic_lib.contentElements.copyright}: %YEAR% 
-	#metaTags.email = {$plugin.generic_lib.clientEmail}
-	metaTags.author = {$plugin.generic_lib.pagemeta.author}
-	metaTags.publisher = {$plugin.generic_lib.pagemeta.author}
+plugin.tx_seo {
 	
-	metaTags.revisit = 30
-	metaTags.geoPositionLatitude =  {$plugin.generic_lib.pagemeta.geoPositionLatitude}
-	metaTags.geoPositionLongitude = {$plugin.generic_lib.pagemeta.geoPositionLongitude}
-	metaTags.geoRegion = {$plugin.generic_lib.pagemeta.geoRegion}
-	metaTags.geoPlacename = {$plugin.generic_lib.pagemeta.geoPlacename}
-		
-	metaTags.useLastUpdate = 1
-	metaTags.useDetectLanguage = 1
-	metaTags.useCanonical = 1
-	metaTags.useCanonical.strict = 1
-	metaTags.useExpire = 1
-	metaTags.linkGeneration = 1
-	metaTags.enableDC = 1
-
-	metaTags.robotsEnable = 1
-	metaTags.robotsIndex = 1
-	metaTags.robotsFollow = 1
-	metaTags.robotsArchive = 1
-	metaTags.robotsSnippet = 1
-	metaTags.robotsNoImageindex = 1
+# future settings?
 	
-	userAgent.ieCompatibilityMode = 0
-	metaTags.googleVerification = {$plugin.generic_lib.pagemeta.googleVerification}
 	
-	services.enableIfHeaderIsDisabled = 0
-	services.googleAnalytics = {$plugin.generic_lib.pagemeta.googleAnalytics}
-	services.googleAnalytics.domainName = 
-	services.googleAnalytics.anonymizeIp = 1
-	services.googleAnalytics.trackDownloads = 1	
-		
-	pageTitle.applySitetitleToPagetitle = 0
-	pageTitle.applySitetitleToPrefixSuffix = 0
-	pageTitle.sitetitleGlue = :
-	pageTitle.sitetitleGlueSpaceBefore = 0
-	pageTitle.sitetitleGlueSpaceAfter = 1
-	pageTitle.sitetitlePosition = 1
-	pageTitle.sitetitle = {$plugin.generic_lib.clientWebsiteName}
-	
-	sitemap.changeFrequency =
-	sitemap.index.fileExtension >
+# 	metaTags.description = Die Länge der Meta Descriptions sollte 160 Zeichen nicht überschreiten. Eine Meta Description Länge von 130 bis 160 Zeichen ist optimal.
+# 	metaTags.keywords = Obsolete, Google, will, ignore
+# 	metaTags.copyright = {$plugin.generic_lib.contentElements.copyright}: %YEAR% 
+# 	#metaTags.email = {$plugin.generic_lib.clientEmail}
+# 	metaTags.author = {$plugin.generic_lib.pagemeta.author}
+# 	metaTags.publisher = {$plugin.generic_lib.pagemeta.author}
+# 	
+# 	metaTags.revisit = 30
+# 	metaTags.geoPositionLatitude =  {$plugin.generic_lib.pagemeta.geoPositionLatitude}
+# 	metaTags.geoPositionLongitude = {$plugin.generic_lib.pagemeta.geoPositionLongitude}
+# 	metaTags.geoRegion = {$plugin.generic_lib.pagemeta.geoRegion}
+# 	metaTags.geoPlacename = {$plugin.generic_lib.pagemeta.geoPlacename}
+# 		
+# 	metaTags.useLastUpdate = 1
+# 	metaTags.useDetectLanguage = 1
+# 	metaTags.useCanonical = 1
+# 	metaTags.useCanonical.strict = 1
+# 	metaTags.useExpire = 1
+# 	metaTags.linkGeneration = 1
+# 	metaTags.enableDC = 1
+# 
+# 	metaTags.robotsEnable = 1
+# 	metaTags.robotsIndex = 1
+# 	metaTags.robotsFollow = 1
+# 	metaTags.robotsArchive = 1
+# 	metaTags.robotsSnippet = 1
+# 	metaTags.robotsNoImageindex = 1
+# 	
+# 	userAgent.ieCompatibilityMode = 0
+# 	metaTags.googleVerification = {$plugin.generic_lib.pagemeta.googleVerification}
+# 	
+# 	services.enableIfHeaderIsDisabled = 0
+# 	services.googleAnalytics = {$plugin.generic_lib.pagemeta.googleAnalytics}
+# 	services.googleAnalytics.domainName = 
+# 	services.googleAnalytics.anonymizeIp = 1
+# 	services.googleAnalytics.trackDownloads = 1	
+# 		
+# 	pageTitle.applySitetitleToPagetitle = 0
+# 	pageTitle.applySitetitleToPrefixSuffix = 0
+# 	pageTitle.sitetitleGlue = :
+# 	pageTitle.sitetitleGlueSpaceBefore = 0
+# 	pageTitle.sitetitleGlueSpaceAfter = 1
+# 	pageTitle.sitetitlePosition = 1
+# 	pageTitle.sitetitle = {$plugin.generic_lib.clientWebsiteName}
+# 	
+# 	sitemap.changeFrequency =
+# 	sitemap.index.fileExtension >
 }

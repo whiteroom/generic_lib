@@ -21,21 +21,16 @@ $EM_CONF[$_EXTKEY] = array(
 	'uploadfolder' => '0',
 	'createDirs' => '',
 	'clearCacheOnLoad' => 0,
-	'version' => '3.0.2',
+	'version' => '3.0.3',
 	'constraints' => array(
 		'depends' => array(
 			'php' => '7.2.0-7.2.99',
 			'typo3' => '9.5.00-9.5.99',
 			'fluid_styled_responsive_images' => '8.7.0-8.7.99',
 			'indexed_search' => '9.5.00-9.5.99',
-			//'flux' => '',
-			//'fluidpages' => '',
-			//'fluidcontent' => '',
-			//'fluidcontent_core' => '',
 			'news' => '7.2.0-7.2.99',
 			'rx_shariff' => '12.0.0-12.99.99',
 			'vhs' => '5.2.0-5.2.99',
-			//'metaseo' => '3.0.0-3.0.99',
 			
 		),
 		'conflicts' => array(
@@ -43,7 +38,6 @@ $EM_CONF[$_EXTKEY] = array(
 		),
 		'suggests' => array(
 			
-			'dd_googlesitemap' => '2.0.5-2.99.99',
 		),
 	),
 );
