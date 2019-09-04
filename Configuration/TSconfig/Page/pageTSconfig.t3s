@@ -246,8 +246,8 @@ TCEFORM.tt_content {
 	          0 = 
 	          1 = h1 - Themenueberschriften
 	          2 = h2 - Untertitel
-	          3 = h3 - Standard Absatz
-	          4 = h4 - kleiner Titel
+	          3 = h3 - Standard Absatz (gross)
+	          4 = h4 - kleiner Titel (fett)
 	          5 = 
 	          100 = Verbergen, Titel nicht zeigen
 	       }
