@@ -223,3 +223,30 @@ plugin.tx_seo {
 # 	sitemap.changeFrequency =
 # 	sitemap.index.fileExtension >
 }
+
+
+
+# Install extension dp_cookieconsent
+plugin.tx_cookieconsent {
+    
+    settings {
+        
+        url = 0
+        theme = classic
+        position = bottom
+        
+        dismissOnScroll = 120
+        revokable = false
+        
+        
+        palette {
+            
+            popup.background = #222222
+            popup.text = #FFFFFF
+            button.background = #FFFFFF
+            button.text = #000000
+            
+        } 
+    }
+}
+
