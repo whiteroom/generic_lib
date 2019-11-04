@@ -20,7 +20,38 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['de']['EXT:news/Resou
 $customChanges = array(
 	'SYS' => array(
 		'systemMaintainers' => [
+    		#  Admin Users are also SystemMaintainers
             1,2,
+        ],
+        
+        'FileInfo' => [
+            'fileExtensionToMimeType' => [
+                // add mp3 audio
+                'mp3' => 'audio/mpeg',
+            ]
+        ],
+        
+	),
+	
+	
+	'RTE' => array(
+		'Presets' => [
+    		#  register the rte_ckeditor yaml files
+        	'client_default' => 'EXT:generic_lib/Configuration/RTE/client.yaml',
+    	],
+        
+	),
+
+
+	'EXTENSIONS' => array(
+    	
+    	'news' => [
+        	'manualSorting' => 1
+    	],
+    	
+		'backend' => [
+            'loginLogo' => 'fileadmin/generic_lib/Resources/Public/Images/login-logo.svg',
+            'loginBackgroundImage' => 'fileadmin/generic_lib/Resources/Public/Images/img_102515664287.jpg',
         ],
 	)
 );
@@ -28,37 +59,14 @@ $GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive($GLOBALS['TYPO3_CONF_VARS'
 
 
 
-$GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['news'] = serialize([
-    'manualSorting' => 1
-]);
-
-
-$GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['backend'] = serialize([
-    'loginLogo' => 'fileadmin/' . $_EXTKEY . '/Resources/Public/Images/login-logo.svg',
-    //'loginHighlightColor' => '#17385E',
-    'loginBackgroundImage' => 'fileadmin/' . $_EXTKEY . '/Resources/Public/Images/img_102515664287.jpg',
-]);
-
-
-// add mp3 audio
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['FileInfo']['fileExtensionToMimeType']['mp3'] = 'audio/mpeg';
-
-
 # MediaViewHelper in the core 
-# define a list of file extensions of the files that can be handled by these. 
-# This list can then be used in the TCA for allowing sys_file_references to these files.
-# Comma list of file extensions perceived as media files by TYPO3 (lowercase and no spaces between)
-# $GLOBALS['TYPO3_CONF_VARS']['SYS']['mediafile_ext'] = 'gif,jpg,jpeg,bmp,png,pdf,svg,ai,mov,avi';
-
+# Comma separated list of file extensions perceived as media files by TYPO3 (lowercase and no spaces between)
 # Register a file extension as allowed media file (valid for >= TYPO3 CMS 7.5)
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['mediafile_ext'] .= ',eps';
-
 
 # Backwards-Compatability, this is how it was/is done before
 # Register your custom file extension as allowed media file (< TYPO3 CMS 7.5)
 $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'] .= ',eps';
 
 
-#  register the rte_ckeditor yaml files via ext_localconf.php.
-$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['client_default'] = 'EXT:generic_lib/Configuration/RTE/client.yaml';
 })();
