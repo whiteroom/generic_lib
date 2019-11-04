@@ -235,7 +235,7 @@ plugin.tx_cookieconsent {
         theme = classic
         position = bottom
         
-        dismissOnScroll = 120
+        # dismissOnScroll = 120
         revokable = false
         
         

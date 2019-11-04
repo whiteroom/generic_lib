@@ -100,7 +100,7 @@ body:after {
 a, a:link, a:visited, a:hover {
     
     text-decoration: none;
-    color:inherit!important;
+    color:inherit;
 }
 
 
