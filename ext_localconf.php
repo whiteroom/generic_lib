@@ -17,6 +17,14 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['de']['EXT:news/Resou
 
 
 
+$customChanges = array(
+	'SYS' => array(
+		'systemMaintainers' => [
+            1,2,
+        ],
+	)
+);
+$GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive($GLOBALS['TYPO3_CONF_VARS'], (array)$customChanges);
 
 
 
