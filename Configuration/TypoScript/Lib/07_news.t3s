@@ -124,7 +124,7 @@ plugin.tx_news {
 
         }
         de {
-			dateFormat = %-d. %-m. Y
+			dateFormat = %-d. %-m. %Y
         }
     }
 }

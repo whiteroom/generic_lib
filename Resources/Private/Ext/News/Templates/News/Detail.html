@@ -214,7 +214,7 @@
 						<ul class="pager">
 							<f:if condition="{paginated.prev}">
 								<li class="previous">
-									<n:link newsItem="{paginated.prev}" settings="{settings}" title="{newsItem.title}" 
+									<n:link newsItem="{paginated.prev}" settings="{settings}" 
   configuration="{additionalParams:'&tx_news_pi1[actbackPid]={settings.actbackPid}'}">
 										<span aria-hidden="true">&larr; </span>{paginated.prev.title}
 									</n:link>
@@ -222,7 +222,7 @@
 							</f:if>
 							<f:if condition="{paginated.next}">
 								<li class="next">
-									<n:link newsItem="{paginated.next}" settings="{settings}" title="{newsItem.title}" 
+									<n:link newsItem="{paginated.next}" settings="{settings}" 
   configuration="{additionalParams:'&tx_news_pi1[actbackPid]={settings.actbackPid}'}" class="next">
 										{paginated.next.title} <span aria-hidden="true"> &rarr;</span>
 									</n:link>

@@ -21,7 +21,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'uploadfolder' => '0',
 	'createDirs' => '',
 	'clearCacheOnLoad' => 0,
-	'version' => '3.0.6',
+	'version' => '3.0.7',
 	'constraints' => array(
 		'depends' => array(
 			'php' => '7.2.0-7.2.99',
@@ -38,7 +38,7 @@ $EM_CONF[$_EXTKEY] = array(
 		),
 		'suggests' => array(
 
-			'dp_cookieconsent' => '9.7.0-9.7.99',
+			'dp_cookieconsent' => '9.8.0-9.8.99',
 			
 		),
 	),
