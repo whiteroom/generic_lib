@@ -3,6 +3,7 @@
 <f:section name="Main">
 
 	<f:if condition="{menu}">
+		<f:comment><h3><f:translate key="menu-page-dummy" extensionName="generic_lib" /></h3></f:comment>
 		<ul>
 			<f:for each="{menu}" as="page">
 				<li class="nav_item firstlevel{f:if(condition: '{v:page.info(field: "uid")} == {page.uid}', then: ' active')}">

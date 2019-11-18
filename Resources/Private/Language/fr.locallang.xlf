@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+    <file source-language="en" target-language="fr" datatype="plaintext" original="messages" product-name="generic_lib" date="2019-05-05T12:31:24+02:00">
+        <header/>
+        <body>
+
+            <trans-unit id="menu-page-dummy" xml:space="preserve">
+                <source>foo</source>
+                <target>bar</target>
+            </trans-unit>
+
+            <trans-unit id="textmedia-dummy" xml:space="preserve">
+                <source>foo</source>
+                <target>bar</target>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>
