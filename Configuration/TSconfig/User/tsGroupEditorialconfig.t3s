@@ -161,8 +161,8 @@ page {
 
 
 		nav_title.disabled = 0
-		nav_hide.disabled = 0
-		subtitle.disabled = 1
+		nav_hide.disabled = 1
+		subtitle.disabled = 0
 		
 		doktype.disabled = 0
 		shortcut_mode.disabled = 0
