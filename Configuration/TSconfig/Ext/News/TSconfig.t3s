@@ -63,11 +63,16 @@ tx_news{
         3 = Special Use Cases
 	}
 	
+
+	
 	predefine.archive = +1 day 6 hours
 	
 	
 	module {		
 		# redirectToPageOnStart = 1
+		
+		manualSorting = 1
+
 		
 		# If defined, the administration module will redirect the user always to the given page, no matter what defined in the page tree
 		allowedPage = 2

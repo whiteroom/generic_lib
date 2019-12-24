@@ -25,7 +25,7 @@
 				<!-- author -->
 				<f:if condition="{newsItem.author}">
 					<span class="news-list-author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
-						<f:translate key="author_simple" /> <span itemprop="name">{newsItem.author}</span>
+						<f:translate key="author_simple" />: <span itemprop="name">{newsItem.author}</span>
 					</span> &#124;
 				</f:if>
 				<!-- date -->
@@ -216,15 +216,15 @@
 								<li class="previous">
 									<n:link newsItem="{paginated.prev}" settings="{settings}" 
   configuration="{additionalParams:'&tx_news_pi1[actbackPid]={settings.actbackPid}'}">
-										<span aria-hidden="true">&larr; </span>{paginated.prev.title}
+										<span aria-hidden="true" class="icon-paginated_prev pr-3"></span>{paginated.prev.title}
 									</n:link>
 								</li>
 							</f:if>
 							<f:if condition="{paginated.next}">
 								<li class="next">
-									<n:link newsItem="{paginated.next}" settings="{settings}" 
+									<n:link newsItem="{paginated.next}" settings="{settings}"  
   configuration="{additionalParams:'&tx_news_pi1[actbackPid]={settings.actbackPid}'}" class="next">
-										{paginated.next.title} <span aria-hidden="true"> &rarr;</span>
+										{paginated.next.title}<span aria-hidden="true" class="icon-paginated_next pl-3"></span>
 									</n:link>
 								</li>
 							</f:if>

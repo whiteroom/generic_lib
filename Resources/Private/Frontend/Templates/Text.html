@@ -1,0 +1,24 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Main">
+
+
+    <f:switch expression="{data.layout}">
+	
+		<f:case value="0">
+		    <div class="ce-bodytext">
+		</f:case>
+		
+		<f:case value="110">
+		    <div class="ce-bodytext center ident">
+		</f:case>
+		
+	</f:switch>
+		
+		<f:format.html>{data.bodytext}</f:format.html>
+		</div>
+
+	
+
+</f:section>
+</html>

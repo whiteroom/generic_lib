@@ -3,11 +3,11 @@
 	  data-namespace-typo3-fluid="true">
 
 <f:comment> Alternatively/additionally use data-sort and rewrite comparator function in wookmark //// data-sort="{f:if(condition: '{newsItem.istopnews}', then: '1',else:'{f:format.date(date: newsItem.datetime, format: "%Y%m%d")}')}" </f:comment>
-<article class="article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}{f:if(condition: '{contentObjectData.layout} == 100', then: '',else:' contObj clearfix')}" itemscope="itemscope" itemtype="http://schema.org/Article">
+<article class="article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}{f:if(condition: '{contentObjectData.layout} == 105', then: '',else:' contObj clearfix')}" itemscope="itemscope" itemtype="http://schema.org/Article">
 	<n:excludeDisplayedNews newsItem="{newsItem}"/>
 	
 	
-	<f:if condition="{contentObjectData.layout} != 100">
+	<f:if condition="{contentObjectData.layout} != 105">
 		<header>
 			<h3>
 			<f:if condition="{settings.showDetailsMore}">
@@ -28,7 +28,7 @@
 
 	<f:if condition="{newsItem.falMedia}">
 		<!-- fal media preview element -->
-		<div class="news-img-wrap{f:if(condition: '{contentObjectData.layout} == 100', then: '',else:' ce-gallery left')}">
+		<div class="news-img-wrap{f:if(condition: '{contentObjectData.layout} == 105', then: '',else:' ce-gallery left')}">
 			<f:if condition="{newsItem.falMediaPreviews}">
 				<f:then>
 					<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" configuration="{additionalParams:'&tx_news_pi1[actbackPid]={settings.actbackPid}'}">
@@ -62,9 +62,9 @@
 	</f:if>
 	
 
-	<div class="news-text-wrap{f:if(condition: '{newsItem.falMedia}', then: ' description',else:' description no-image')}{f:if(condition: '{contentObjectData.layout} == 100', then: '',else:' ce-bodytext right')}" itemprop="description">
+	<div class="news-text-wrap{f:if(condition: '{newsItem.falMedia}', then: ' description',else:' description no-image')}{f:if(condition: '{contentObjectData.layout} == 105', then: '',else:' ce-bodytext right')}" itemprop="description">
 		
-		<f:if condition="{contentObjectData.layout} == 100">
+		<f:if condition="{contentObjectData.layout} == 105">
 		
 			<f:then>
 			

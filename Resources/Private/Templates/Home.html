@@ -2,7 +2,7 @@
 	xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
 	xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
-	<f:layout name="Default" />
+	<f:layout name="Landing" />
 
 
 	<f:section name="Main">
@@ -34,8 +34,12 @@
 							    ],
 							    slide: <f:count>{resources}</f:count>,
 							    timer: false,
-				                delay: 10000,
-							    autoplay: true
+				                delay: 7000,
+							    autoplay: true,
+
+							    //cover: false,
+							    color: 'rgb(23, 30, 35)',
+							    shuffle: true
 							});
 														
 							$('.jump').click(function(e) {

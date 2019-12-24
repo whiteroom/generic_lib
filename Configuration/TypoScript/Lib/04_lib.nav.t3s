@@ -41,10 +41,10 @@ lib.navbar {
 	}
 	
 	2<.1
-    2.wrap = <ul>|</ul>
-    2.NO.wrapItemAndSub = <li class="nav_item secondlevel">|</li>
-    2.ACT.wrapItemAndSub = <li class="nav_item secondlevel active">|</li>
-    2.CUR.wrapItemAndSub = <li class="nav_item secondlevel current">|</li>
+    2.wrap = <ul class="flex flex-column">|</ul>
+    2.NO.wrapItemAndSub = <li class="flex-item secondlevel">|</li>
+    2.ACT.wrapItemAndSub = <li class="flex-item secondlevel active">|</li>
+    2.CUR.wrapItemAndSub = <li class="flex-item secondlevel current">|</li>
 	    
 }
 

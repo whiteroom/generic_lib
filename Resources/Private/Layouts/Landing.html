@@ -1,0 +1,26 @@
+<f:layout name="Default" />
+
+<div id="header">
+	<f:render section="Header" partial="Header" />
+</div>
+
+<div id="mobile-menu">
+	<f:render section="Mobile" partial="Mobile" />
+</div>
+
+
+<!--TYPO3SEARCH_begin-->
+<main>
+	<f:render section="Main"/>
+</main>
+<!--TYPO3SEARCH_end-->
+
+
+
+
+
+<f:if condition="{vegas} == '1'">
+	<f:if condition="{data.backend_layout } == 'pagets__1'">
+		<f:render section="Vegas"/>
+	</f:if>
+</f:if>

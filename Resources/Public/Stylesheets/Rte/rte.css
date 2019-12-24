@@ -8,7 +8,36 @@ body > *{
 	line-height: 1.4;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: rgb(35, 31, 32);
+    margin: 0 0 20px;
+    padding: 0;
+    line-height: 1.1;
+    letter-spacing: .01em;
+    font-size: 20px;
+    font-style: normal;   
+    font-weight: 300
+}
 
+h4,
+h5,
+h6 {
+    font-size: 16px;
+}
+
+h4 {
+    font-weight: 700;
+}
+
+h5,
+h6 {
+    margin: 0;
+}
 
 hr {
     display: block;

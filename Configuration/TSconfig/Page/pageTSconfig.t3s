@@ -134,25 +134,21 @@ TCEFORM.tt_content {
 	CType.removeItems := addToList(textpic)
 	
 	
-	# bodytext.disabled = 1
 	imagewidth.disabled = 1
 	imageheight.disabled = 1
 	imageborder.disabled = 1
 	linkToTop.disabled = 1
 	sectionIndex.disabled = 1
-	#categories.disabled = 1
 	editlock.disabled = 1
 	fe_group.disabled = 1
-	rowDescription.disabled = 1
 	date.disabled = 1
-	
+	frame_class.disabled = 1
 
-
+	rowDescription.disabled = 0
 	spaceBefore.disabled = 0
 	spaceAfter.disabled = 0
 	space_before_class.disabled = 0
 	space_after_class.disabled = 0
-	frame_class.disabled = 1
 
 	
 	
@@ -168,13 +164,19 @@ TCEFORM.tt_content {
             
             text {
                 altLabels.0 = Standard (Generic Layout)
+                
+                addItems {
+                    110 = Spezial (Text schmal)
+                }
+
+
             }
             
             image {
 	            altLabels.0 = Standard (Generic Layout)
 	            
                 addItems {
-                    100 = Kacheln (Image Gallery)
+                    105 = Bilder-Galerie (Kacheln)
                 }
             }
 
@@ -182,7 +184,7 @@ TCEFORM.tt_content {
 	            altLabels.0 = Standard (Generic Layout)
 	            
                 addItems {
-                    100 = Kacheln (Image Gallery)
+                    # 105 = Bilder-Galerie (Kacheln)
                 }
                 
                 addItems {
@@ -194,7 +196,7 @@ TCEFORM.tt_content {
 	            altLabels.0 = Standard (Generic Layout)
 	            
                 addItems {
-                    100 = Kacheln (News)
+                    105 = Projekt (Kacheln)
                 }
                 
             }
@@ -275,6 +277,9 @@ TCEFORM.tt_content {
 }
 
 
+
+
+
 ## Default Image cropping ##
 TCEFORM.sys_file_reference.crop.config.cropVariants {
 	default {
@@ -317,71 +322,71 @@ TCEFORM.sys_file_reference.crop.config.cropVariants {
 		}
 	 }
 	 
-	 /* TO DO
-	 
-	 tablet {
-		title = Tablet
-		selectedRatio = NaN
-		allowedAspectRatios {
-			NaN {
-			title = Frei
-			value = 0.0
-			}
-			21:9 {
-			title = 21:9
-			value = 2.3333333
-			}
-			16:9 {
-			title = 16:9
-			value = 1.7777777
-			}
-			4:3 {
-			title = 4:3
-			value = 1.3333333
-			}
-			3:2 {
-			title = 3:2
-			value = 1.5
-			}
-			1:1 {
-			title = 1:1
-			value = 1
-			}
-		}
-	}
-	mobile {
-		title = Mobile
-		selectedRatio = NaN
-			allowedAspectRatios {
-			NaN {
-			title = Frei
-			value = 0.0
-			}
-			21:9 {
-			title = 21:9
-			value = 2.3333333
-			}
-			16:9 {
-			title = 16:9
-			value = 1.7777777
-			}
-			4:3 {
-			title = 4:3
-			value = 1.3333333
-			}
-			3:2 {
-			title = 3:2
-			value = 1.5
-			}
-			1:1 {
-			title = 1:1
-			value = 1
-			}
-		}
-	}
-	
-	
-	*/
+# 	 /* TO DO
+# 	 
+# 	 tablet {
+# 		title = Tablet
+# 		selectedRatio = NaN
+# 		allowedAspectRatios {
+# 			NaN {
+# 			title = Frei
+# 			value = 0.0
+# 			}
+# 			21:9 {
+# 			title = 21:9
+# 			value = 2.3333333
+# 			}
+# 			16:9 {
+# 			title = 16:9
+# 			value = 1.7777777
+# 			}
+# 			4:3 {
+# 			title = 4:3
+# 			value = 1.3333333
+# 			}
+# 			3:2 {
+# 			title = 3:2
+# 			value = 1.5
+# 			}
+# 			1:1 {
+# 			title = 1:1
+# 			value = 1
+# 			}
+# 		}
+# 	}
+# 	mobile {
+# 		title = Mobile
+# 		selectedRatio = NaN
+# 			allowedAspectRatios {
+# 			NaN {
+# 			title = Frei
+# 			value = 0.0
+# 			}
+# 			21:9 {
+# 			title = 21:9
+# 			value = 2.3333333
+# 			}
+# 			16:9 {
+# 			title = 16:9
+# 			value = 1.7777777
+# 			}
+# 			4:3 {
+# 			title = 4:3
+# 			value = 1.3333333
+# 			}
+# 			3:2 {
+# 			title = 3:2
+# 			value = 1.5
+# 			}
+# 			1:1 {
+# 			title = 1:1
+# 			value = 1
+# 			}
+# 		}
+# 	}
+# 	
+# 	
+# 	*/
 }
 
 

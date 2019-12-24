@@ -80,7 +80,7 @@ page {
 		header_position.disabled = 1
 		
 		subheader.disabled = 0
-		
+
 		
 		
 		layout.disabled = 0
@@ -91,8 +91,10 @@ page {
 		image_zoom.disabled = 1
 		imageorient.disabled = 0
 		imageborder.disabled = 1
-			
 		
+		#Beschreibung
+		rowDescription.disabled = 0
+				
 		#Bearbeitung erfordert Admin-Rechte
 		editlock.disabled = 1
 		
@@ -126,8 +128,7 @@ page {
 		table_enclosure.disabled = 1
 		#Feldbegrenzer
 		table_delimiter.disabled = 1
-		#Beschreibung
-		rowDescription.disabled = 1
+
 
 		space_before_class.disabled = 0
 		space_after_class.disabled = 0
@@ -151,7 +152,7 @@ page {
 	# 		div, login, form_formframework, uploads, bullets, list, table, image, shortcut, html
 
 	TCEFORM.tt_content.CType.removeItems (
-	    html, textpic, list, div, login, form_formframework, 
+	    html, textpic, list, div, login, 
 	    menu_abstract,menu_categorized_content,menu_categorized_pages,menu_recently_updated,menu_related_pages,menu_section,menu_section_pages,menu_sitemap,menu_sitemap_pages
 		
 
@@ -159,9 +160,8 @@ page {
 	
 	TCEFORM.pages {
 
-
-		nav_title.disabled = 0
-		nav_hide.disabled = 1
+		nav_title.disabled = 1
+		nav_hide.disabled = 0
 		subtitle.disabled = 0
 		
 		doktype.disabled = 0
@@ -171,6 +171,24 @@ page {
 		hidden.disabled = 0
 		
 		
+		og_title.disabled = 1
+		og_description.disabled = 1
+		og_image.disabled = 1
+		
+		
+        twitter_title.disabled = 1
+		twitter_description.disabled = 1
+		twitter_image.disabled = 1
+		
+		
+		canonical_link.disabled = 1
+		no_follow.disabled = 1
+		no_search.disabled = 1
+		
+		
+		shortcut_mode.disabled = 1
+		target.disabled = 1
+				
 		author_email.disabled = 1
 		keywords.disabled = 1
 		description.disabled = 1
