@@ -28,6 +28,7 @@ $EM_CONF[$_EXTKEY] = array(
 			'typo3' => '9.5.00-9.5.99',
 			'fluid_styled_responsive_images' => '8.7.0-8.7.99',
 			'indexed_search' => '9.5.00-9.5.99',
+			'fluid_styled_content' => '9.5.00-9.5.99',
 			'news' => '7.3.0-7.3.99',
 			'rx_shariff' => '12.0.0-12.99.99',
 			'vhs' => '5.2.0-5.2.99',
