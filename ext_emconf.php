@@ -24,11 +24,11 @@ $EM_CONF[$_EXTKEY] = array(
 	'version' => '4.0.2',
 	'constraints' => array(
 		'depends' => array(
-			'php' => '7.2.0-7.3.99',
+			'php' => '7.2.0-7.2.99',
 			'typo3' => '9.5.00-9.5.99',
 			'fluid_styled_responsive_images' => '8.7.0-8.7.99',
 			'indexed_search' => '9.5.00-9.5.99',
-			'news' => '7.2.0-7.2.99',
+			'news' => '7.3.0-7.3.99',
 			'rx_shariff' => '12.0.0-12.99.99',
 			'vhs' => '5.2.0-5.2.99',
 			
