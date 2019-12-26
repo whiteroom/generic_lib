@@ -25,7 +25,7 @@
     		
 			wookmark = new Wookmark(obj, {
 				align: 'left',
-				comparator: comparatorIsTopNews,
+				// comparator: comparatorIsTopNews,  // not used here, BREAKS sort order of EXT:news
 			    itemWidth: 294,
 			    outerOffset: 0,
 			    offset: 8,
