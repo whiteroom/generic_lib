@@ -12,42 +12,78 @@ TCAdefaults.tx_news_domain_model_news {
 }
 
 TCAdefaults.sys_file_reference {
+	# da mit sys_file_reference gearbeitet wird (alternative: tx_news_domain_model_media)
 	showinpreview = 1
-
 } 
 
 
 
-# TCEFORM.tx_news_domain_model_news.istopnews.label = Newsletter Record
+TCEFORM {
+    
+    # Defaults all ON
+    # disable on userTSConfig
+    tx_news_domain_model_news {
+        #	istopnews.disabled = 0
+        #   istopnews.label = Newsletter Record
+        #	teaser.disabled = 0
+        #	bodytext.disabled = 0
+        #	author.disabled = 0
+        #	categories.disabled = 0
+        #	related.disabled = 1
+        #	relatedFrom.disabled = 1
+        #	tags.disabled = 0
+        #	keywords.disabled = 1
+        #	related_from.disabled = 1
+        #	media.disabled = 0
+        #	media_records.disabled = 1
+        #	related_files.disabled = 0
+        #	related_links.disabled = 1
+        #
+        #	path_segment.disabled = 1
+        #	sys_language_uid.disabled = 1
+        #	
+        #	type.disabled = 1
+        #	#type.removeItems = 1,2
+    		
+    }
+    
+    tt_content {
+        pi_flexform {
+            news_pi1 {
+                
+                # ATTENTION: The dot inside the field name has to be escaped!
+                # To identify the key of the tab (e.g. sDEF) and the field name (e.g. settings.orderBy) look either 
+                # in the source code while checking the flexforms or 
+                # look into the configuration itself which can be found at EXT:news/Configuration/FlexForms/flexform_news.xml
+                
+                
+                sDEF {
+                  settings\.categoryConjunction.disabled = 1
+                  settings\.categories.disabled = 1
+                  settings\.includeSubCategories.disabled = 1
+                  
+                  settings\.orderDirection.disabled = 0
+                  settings\.orderBy.addItems {
+                    categories = Kategorien
+                  }
+                }
+                
+                additional {
+                  settings\.excludeAlreadyDisplayedNews.disabled = 1
 
+                }
+                
+                template {
+                  settings\.media\.maxWidth.disabled = 1
+                  settings\.media\.maxHeight.disabled = 1
+                  settings\.cropMaxCharacters.disabled = 0
+                  settings\.templateLayout.disabled = 0
 
-
-# Defaults all ON
-# disable on userTSConfig
-TCEFORM.tx_news_domain_model_news {
-#	istopnews.disabled = 0
-#	teaser.disabled = 0
-#	bodytext.disabled = 0
-#	author.disabled = 0
-#	categories.disabled = 0
-#	related.disabled = 1
-#	relatedFrom.disabled = 1
-#	tags.disabled = 0
-#	keywords.disabled = 1
-#	related_from.disabled = 1
-#	media.disabled = 0
-#	media_records.disabled = 1
-#	related_files.disabled = 0
-#	related_links.disabled = 1
-#
-#	path_segment.disabled = 1
-#	sys_language_uid.disabled = 1
-#	
-#	type.disabled = 1
-#	#type.removeItems = 1,2
-		
+                }
+            }
+        }
+    }
 }
-
 
 
 
@@ -62,17 +98,18 @@ tx_news{
         2 =  --div--,Zur Zeit nicht verfügbar:
         3 = Special Use Cases
 	}
-	
 
-	
-	predefine.archive = +1 day 6 hours
+
+	predefine.archive = +40 weeks 2 days 4 hours
+	#predefine.archive = next year
+	# As value you can use anything which can be interpreted by 
+	# the php function strtotime (http://de2.php.net/manual/en/function.strtotime.php)
 	
 	
 	module {		
 		# redirectToPageOnStart = 1
 		
 		manualSorting = 1
-
 		
 		# If defined, the administration module will redirect the user always to the given page, no matter what defined in the page tree
 		allowedPage = 2
@@ -88,11 +125,9 @@ tx_news{
 		preselect {
             topNewsRestriction = 0
             sortingField = datetime
-			sortingDirection = asc
+			sortingDirection = desc
         }
 		
-	
 	}
 
 }
-
