@@ -21,15 +21,18 @@ plugin.tx_news {
         
         # no needed here
         # media.popup < lib.fluidContent.settings.media.popup
-        
-        topNewsFirst = 1
+
         hidePagination = 1
         
       
         cropMaxCharacters = 160
         orderByAllowed = sorting,author,uid,title,teaser,author,tstamp,crdate,datetime,categories.title
-        orderBy = sorting 
-        orderDirection = asc
+        
+        # orderBy datetime/desc, which is default tx_news and topNewsFirst = 0
+        # because anything else causes troubles with prev/next viewhelper (detailview)
+        topNewsFirst = 0
+        orderBy = datetime 
+        orderDirection = desc
   
         # custom variable (show/hide more link)
         showDetailsMore = 1

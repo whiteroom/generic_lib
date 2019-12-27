@@ -25,7 +25,8 @@
     		
 			wookmark = new Wookmark(obj, {
 				align: 'left',
-				comparator: comparatorIsTopNews,
+				//comparator: comparatorIsTopNews, // avoid: leads to misleading prev/next in news detailview
+				comparator: null,
 			    itemWidth: 294,
 			    outerOffset: 0,
 			    offset: 8,

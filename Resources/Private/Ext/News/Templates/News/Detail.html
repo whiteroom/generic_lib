@@ -212,22 +212,24 @@
 				<n:simplePrevNext pidList="{newsItem.pid}" news="{newsItem}" as="paginated" sortField="{settings.orderBy}">
 					<f:if condition="{paginated}">
 						<ul class="pager">
+							
 							<f:if condition="{paginated.prev}">
-								<li class="previous">
-									<n:link newsItem="{paginated.prev}" settings="{settings}" 
-  configuration="{additionalParams:'&tx_news_pi1[actbackPid]={settings.actbackPid}'}">
-										<span aria-hidden="true" class="icon-paginated_prev pr-3"></span>{paginated.prev.title}
+								<li class="next">
+									<n:link newsItem="{paginated.prev}" settings="{settings}"  
+  configuration="{additionalParams:'&tx_news_pi1[actbackPid]={settings.actbackPid}'}" class="prev">
+										{paginated.prev.title}<span aria-hidden="true" class="icon-paginated_prev pl-3"></span>
 									</n:link>
 								</li>
 							</f:if>
 							<f:if condition="{paginated.next}">
-								<li class="next">
-									<n:link newsItem="{paginated.next}" settings="{settings}"  
+								<li class="previous">
+									<n:link newsItem="{paginated.next}" settings="{settings}" 
   configuration="{additionalParams:'&tx_news_pi1[actbackPid]={settings.actbackPid}'}" class="next">
-										{paginated.next.title}<span aria-hidden="true" class="icon-paginated_next pl-3"></span>
+										<span aria-hidden="true" class="icon-paginated_next pr-3"></span>{paginated.next.title}
 									</n:link>
 								</li>
 							</f:if>
+
 						</ul>
 					</f:if>
 				</n:simplePrevNext>

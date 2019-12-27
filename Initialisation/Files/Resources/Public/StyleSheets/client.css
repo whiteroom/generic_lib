@@ -1057,6 +1057,16 @@ input:matches([type="password"], [type="search"], [type="text"]) {
 }
 
 
+/* FIX for prev/next in detail view */
+
+.news.news-single .icon-paginated_next:before {
+  content: "\e90b";
+}
+.news.news-single .icon-paginated_prev:before {
+  content: "\e90a";
+}
+
+
 /* scrolled */
 
 .scrolled #header {
