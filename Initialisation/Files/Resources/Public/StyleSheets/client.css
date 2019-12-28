@@ -1099,6 +1099,9 @@ input:matches([type="password"], [type="search"], [type="text"]) {
     width: 50px;
     height: 50px
 }
+.scrolled #mobile-menu {
+    top: 50px;
+}
 .scrolled #menu-toggle i {
     margin: 12px 0 0 16px
 }
