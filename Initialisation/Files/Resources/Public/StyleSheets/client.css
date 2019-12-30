@@ -176,9 +176,6 @@ p:empty {
    display: none;
 }
 
-p.align-justify {
-	text-align: justify
-}
 
 ol, ul {
 
@@ -721,7 +718,6 @@ figcaption h4 + p {
 
 .ce-bodytext.center.ident {
 	width: 906px;
-	text-align: justify;
 }
 
 .ce-gallery.left {
@@ -1311,6 +1307,8 @@ input:matches([type="password"], [type="search"], [type="text"]) {
         overflow-x: scroll;
     }
     
+    .text-justify {text-align: left!important} /* no justified—text on narrow screens */
+
     
     .ce-gallery {
         float: none;
