@@ -1,0 +1,46 @@
+rootPageId: 1
+base: /
+baseVariants: {  }
+languages:
+  -
+    title: German
+    enabled: true
+    languageId: '0'
+    base: /
+    typo3Language: default
+    locale: de_DE.UTF-8
+    iso-639-1: de
+    navigationTitle: Deutsch
+    hreflang: de-DE
+    direction: ''
+    flag: de
+  -
+    title: English
+    enabled: true
+    languageId: '1'
+    base: /en/
+    typo3Language: en
+    locale: en_US.UTF-8
+    iso-639-1: en
+    navigationTitle: Deutsch
+    hreflang: en-US
+    direction: ''
+    fallbackType: fallback
+    fallbacks: '1,0'
+    flag: us
+  -
+    title: French
+    enabled: true
+    languageId: '2'
+    base: /fr/
+    typo3Language: fr
+    locale: fr_FR.UTF-8
+    iso-639-1: fr
+    navigationTitle: Français
+    hreflang: fr-FR
+    direction: ''
+    fallbackType: fallback
+    fallbacks: '1,0'
+    flag: fr
+errorHandling: {  }
+routes: {  }
