@@ -1154,7 +1154,46 @@ input:matches([type="password"], [type="search"], [type="text"]) {
 
 	
 
+/* EXT: dp_cookieconsent     */
 
+.cc-revoke,
+.cc-window {
+
+ font-family:inherit!important;
+ font-size:inherit!important;
+ line-height:inherit!important;
+ font-weight:inherit!important;
+
+}
+
+.cc-btn:hover, .cc-btn:focus {
+    background-color: rgba(241, 196, 15, 0.8)!important;
+}
+
+.cc-link {
+    padding: 0;
+    text-decoration: none;
+}
+
+.cc-link::before {
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    
+    content: '\ea3c';
+    color: rgb(107, 108, 112);
+    color: inherit;
+    font-size: 80%;
+    padding-right: 5px;
+
+}
 
 
 

@@ -231,7 +231,7 @@ plugin.tx_cookieconsent {
     
     settings {
         
-        url = 0
+        url = 9
         theme = classic
         position = bottom
         
@@ -243,7 +243,9 @@ plugin.tx_cookieconsent {
             
             popup.background = #222222
             popup.text = #FFFFFF
-            button.background = #FFFFFF
+            
+            # USE brandcolor
+            button.background = rgb(241, 196, 15)
             button.text = #000000
             
         } 
