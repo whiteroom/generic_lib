@@ -21,7 +21,7 @@ $customChanges = array(
 	'SYS' => array(
 		'systemMaintainers' => [
     		#  Admin Users are also SystemMaintainers
-            1,2,
+            1,
         ],
         
         'FileInfo' => [
