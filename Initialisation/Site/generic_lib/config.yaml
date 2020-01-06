@@ -1,13 +1,13 @@
-rootPageId: 1
 base: /
 baseVariants: {  }
+errorHandling: {  }
 languages:
   -
     title: German
     enabled: true
     languageId: '0'
     base: /
-    typo3Language: default
+    typo3Language: de
     locale: de_DE.UTF-8
     iso-639-1: de
     navigationTitle: Deutsch
@@ -19,14 +19,14 @@ languages:
     enabled: true
     languageId: '1'
     base: /en/
-    typo3Language: en
+    typo3Language: default
     locale: en_US.UTF-8
     iso-639-1: en
     navigationTitle: Deutsch
     hreflang: en-US
     direction: ''
     fallbackType: fallback
-    fallbacks: '1,0'
+    fallbacks: '0'
     flag: us
   -
     title: French
@@ -42,5 +42,5 @@ languages:
     fallbackType: fallback
     fallbacks: '1,0'
     flag: fr
-errorHandling: {  }
+rootPageId: 1
 routes: {  }
