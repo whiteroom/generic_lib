@@ -1,3 +1,5 @@
+-- --------------------------------------------------------
+-- generic_lib
 --
 -- Tabellenstruktur für Tabelle `be_groups`
 --
