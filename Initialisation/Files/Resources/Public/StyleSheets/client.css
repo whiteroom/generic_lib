@@ -859,46 +859,179 @@ figcaption h4 + p {
 }
 
 
-textarea,
-input:matches([type="password"], [type="search"], [type="text"]) {
-    -webkit-appearance: textfield;
-    color: inherit;
-    background-color: white;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(196, 196, 196, 1);
+
+
+/* ###################### */
+/* ####### form ######### */
+/* ###################### */
+
+form > legend {
+    margin-bottom: 3em;
 }
 
 .form-group {
     font-weight: inherit;
     line-height: inherit;
-    margin: 1em 0;
+    padding: 1em 0;
 }
 
-.form-group textarea {
-    min-height: 15em;
+
+
+
+.form-group input[type="text"], 
+.form-group input[type="password"], 
+.form-group input.text, 
+.form-group input.title, 
+.form-group textarea, 
+.form-group select {
+
+    padding: 0.5em;
+    width: 80%;
 }
+
+
+.form-group .form-check {
+    margin: 1em 0;
+    margin-right: 1em;
+}
+
+
+
+/* ###################### */
+/* ####### label ######## */
+/* ###################### */
+
+.form-group .control-label {
+    display: block;
+}
+
+.form-group .control-label.type-text {
+    display: none;
+}
+
+
+
+.form-group .control-label.type-multicheckbox,
+.form-group .control-label.type-textarea,
+.form-group .control-label.type-singleselect {
+
+    margin: 1em 0;
+
+}
+
+
+
+
+/* ###################### */
+/* ####### radio ######## */
+/* ###################### */
 
 .form-group .radio {
     display: inline-block
 }
-
-.form-group input[type="text"], input[type="password"], input.text, input.title, textarea, select {
-    margin: 0.5em 0;
-    padding: 0.5em;
-    width: 100%;
-    
+.form-group .radio .radiobutton-option {
+    padding: 0 1.5em 0 0.5em
 }
 
-.form-group .form-check{
-    display: inline-block;
-    margin-right: 1em;
-}
-
-.form-group input[type="checkbox"],
 .form-group input[type="radio"] {
-    margin: 0 0.5em;
+
 }
+
+
+
+/* ###################### */
+/* #### input, text ##### */
+/* ###################### */
+
+
+.form-group input[type="password"], 
+.form-group input[type="search"], 
+.form-group input[type="text"]{
+    
+    
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    -o-appearance: textfield;
+    appearance:textfield;
+    
+    
+    box-shadow: none!important;
+    color: inherit;
+    background-color: white;
+    border-style: solid;
+
+    border-width: 0 0 1px 0;
+    border-color: rgb(35, 31, 32);
+
+}
+
+
+
+/* ###################### */
+/* ##### textarea ####### */
+/* ###################### */
+
+
+.form-group textarea {
+    min-height: 15em;
+    
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    -o-appearance: textfield;
+    appearance:textfield;
+
+    box-shadow: none!important;
+    color: inherit;
+    background-color: white;
+    border: 1px solid rgb(35, 31, 32);
+}
+
+
+
+
+
+.form-group select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance:none;
+    outline: 0;
+    box-shadow: none!important;
+    background: rgba(222, 222, 222, 1);
+    border:0;
+    
+    line-height: 2em;
+    
+    padding: 0.5em 1em;
+    
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 2ex;
+    background-origin: content-box;
+    background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgdmVyc2lvbj0iMS4xIgogICBpZD0ic3ZnMiIKICAgdmlld0JveD0iMCAwIDM1Ljk3MDk4MyAyMy4wOTE1MTgiCiAgIGhlaWdodD0iNi41MTY5Mzk2bW0iCiAgIHdpZHRoPSIxMC4xNTE4MTFtbSI+CiAgPGRlZnMKICAgICBpZD0iZGVmczQiIC8+CiAgPG1ldGFkYXRhCiAgICAgaWQ9Im1ldGFkYXRhNyI+CiAgICA8cmRmOlJERj4KICAgICAgPGNjOldvcmsKICAgICAgICAgcmRmOmFib3V0PSIiPgogICAgICAgIDxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PgogICAgICAgIDxkYzp0eXBlCiAgICAgICAgICAgcmRmOnJlc291cmNlPSJodHRwOi8vcHVybC5vcmcvZGMvZGNtaXR5cGUvU3RpbGxJbWFnZSIgLz4KICAgICAgICA8ZGM6dGl0bGU+PC9kYzp0aXRsZT4KICAgICAgPC9jYzpXb3JrPgogICAgPC9yZGY6UkRGPgogIDwvbWV0YWRhdGE+CiAgPGcKICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjAyLjAxNDUxLC00MDcuMTIyMjUpIgogICAgIGlkPSJsYXllcjEiPgogICAgPHRleHQKICAgICAgIGlkPSJ0ZXh0MzMzNiIKICAgICAgIHk9IjYyOS41MDUwNyIKICAgICAgIHg9IjI5MS40Mjg1NiIKICAgICAgIHN0eWxlPSJmb250LXN0eWxlOm5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7Zm9udC1zaXplOjQwcHg7bGluZS1oZWlnaHQ6MTI1JTtmb250LWZhbWlseTpzYW5zLXNlcmlmO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O2ZpbGw6IzAwMDAwMDtmaWxsLW9wYWNpdHk6MTtzdHJva2U6bm9uZTtzdHJva2Utd2lkdGg6MXB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEiCiAgICAgICB4bWw6c3BhY2U9InByZXNlcnZlIj48dHNwYW4KICAgICAgICAgeT0iNjI5LjUwNTA3IgogICAgICAgICB4PSIyOTEuNDI4NTYiCiAgICAgICAgIGlkPSJ0c3BhbjMzMzgiPjwvdHNwYW4+PC90ZXh0PgogICAgPGcKICAgICAgIGlkPSJ0ZXh0MzM0MCIKICAgICAgIHN0eWxlPSJmb250LXN0eWxlOm5vcm1hbDtmb250LXZhcmlhbnQ6bm9ybWFsO2ZvbnQtd2VpZ2h0Om5vcm1hbDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZTo0MHB4O2xpbmUtaGVpZ2h0OjEyNSU7Zm9udC1mYW1pbHk6Rm9udEF3ZXNvbWU7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjpGb250QXdlc29tZTtsZXR0ZXItc3BhY2luZzowcHg7d29yZC1zcGFjaW5nOjBweDtmaWxsOiMwMDAwMDA7ZmlsbC1vcGFjaXR5OjE7c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjFweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxIj4KICAgICAgPHBhdGgKICAgICAgICAgaWQ9InBhdGgzMzQ1IgogICAgICAgICBzdHlsZT0iZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxIgogICAgICAgICBkPSJtIDIzNy41NjY5Niw0MTMuMjU1MDcgYyAwLjU1ODA0LC0wLjU1ODA0IDAuNTU4MDQsLTEuNDczMjIgMCwtMi4wMzEyNSBsIC0zLjcwNTM1LC0zLjY4MzA0IGMgLTAuNTU4MDQsLTAuNTU4MDQgLTEuNDUwOSwtMC41NTgwNCAtMi4wMDg5MywwIEwgMjIwLDQxOS4zOTM0NiAyMDguMTQ3MzIsNDA3LjU0MDc4IGMgLTAuNTU4MDMsLTAuNTU4MDQgLTEuNDUwODksLTAuNTU4MDQgLTIuMDA4OTMsMCBsIC0zLjcwNTM1LDMuNjgzMDQgYyAtMC41NTgwNCwwLjU1ODAzIC0wLjU1ODA0LDEuNDczMjEgMCwyLjAzMTI1IGwgMTYuNTYyNSwxNi41NDAxNyBjIDAuNTU4MDMsMC41NTgwNCAxLjQ1MDg5LDAuNTU4MDQgMi4wMDg5MiwwIGwgMTYuNTYyNSwtMTYuNTQwMTcgeiIgLz4KICAgIDwvZz4KICA8L2c+Cjwvc3ZnPgo=");
+}
+
+/*
+    -webkit-padding-end: 20px;
+    -moz-padding-end: 20px;
+    -webkit-padding-start: 20px;
+    -moz-padding-start: 20px;
+*/
+
+}
+
+.form-group select::-ms-expand {
+    display: none; /* Hide the default arrow in Internet Explorer 10 and Internet Explorer 11 */
+}
+
+
+.form-group select option {
+    display:block;
+    margin: 1em 0;
+}
+
+
+
 
 .form-navigation button[type="submit"],
 .form-navigation button[type="button"] {
@@ -928,17 +1061,89 @@ input:matches([type="password"], [type="search"], [type="text"]) {
 
 }
 
-.form-group input[type="checkbox"] {
+
+
+
+
+
+
+/* ###################### */
+/* ###### checkbox ###### */
+/* ###################### */
+
+
+.form-group .form-check > *{
+    cursor: pointer!important;
+}
+
+
+.form-group input[type="checkbox"]{
+        
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance:none;
     
-    width: 1.2em;
-    height: 1.2em;
-    margin-left: 0;
+    pointer-events: none;
+    user-select: none;
+    outline: 0;
+    box-shadow: none!important;
+
+    position: absolute;
+    left: 0;
+    top:-6px;
     
+    width: 32px !important;
+    height: 32px !important;
+
+    border: 1px solid rgb(35, 31, 32);
+   
+}
+
+.form-group input[type="checkbox"] + span {
+    
+    display: inline-block;
+    margin: 0 0 0 60px;
+    line-height: 32px;
+}
+
+.form-group label.form-check-label {
+    
+    position: relative;
+    user-select: none;
+}
+
+.form-group label.form-check-label:after {
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+    width: 30px;
+    height: 30px;
+    
+    border: 0;
+    
+}
+
+
+.form-group input[type="checkbox"]:checked{
+
+    background: #fff url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIzMHB4IiBoZWlnaHQ9IjMwcHgiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzAgMzAiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cG9seWdvbiBmaWxsPSIjMUQxRDFCIiBwb2ludHM9IjI1LjQyNCw1LjI1MiAyNC43NDgsNC41NzYgMTUsMTQuMzI0IDUuMjUyLDQuNTc3IDQuNTc2LDUuMjUyIDE0LjMyNCwxNSA0LjU3NiwyNC43NDggNS4yNTIsMjUuNDI0IAoJMTUsMTUuNjc2IDI0Ljc0OCwyNS40MjUgMjUuNDI0LDI0Ljc0OSAxNS42NzYsMTUgIi8+Cjwvc3ZnPg==')!important;
+
 } 
 
-.form-group input[type="checkbox"]:checked {
-  background:rgb(35, 31, 32)!important;
-} 
+
+.form-group input[type="checkbox"]:checked{
+    
+    /*
+    outline:3px solid #fff;
+    outline-offset: -3px;
+    */
+}
+
+
+
 
 
 
@@ -1291,6 +1496,15 @@ input:matches([type="password"], [type="search"], [type="text"]) {
         float: none;
         width: auto!important;
         text-align: left;
+    }
+    .form-group input[type="text"], 
+    .form-group input[type="password"], 
+    .form-group input.text, 
+    .form-group input.title, 
+    .form-group textarea, 
+    .form-group select {
+    
+        width: 100%;
     }
 
 }

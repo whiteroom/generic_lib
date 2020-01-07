@@ -52,6 +52,7 @@ renderables:
           fluidAdditionalAttributes:
             placeholder: Name
             required: required
+          elementDescription: ''
         validators:
           -
             identifier: NotEmpty
@@ -64,6 +65,7 @@ renderables:
           fluidAdditionalAttributes:
             placeholder: 'Email Adresse'
             required: required
+          elementDescription: ''
         validators:
           -
             identifier: NotEmpty
@@ -84,21 +86,55 @@ renderables:
       -
         defaultValue: ''
         identifier: message
-        label: Nachricht
+        label: 'Ihre Mitteilung'
         type: Textarea
         properties:
           fluidAdditionalAttributes:
             placeholder: ''
+      -
+        properties:
+          options:
+            16.2.20: 16.2.20
+            17.2.20: 17.2.20
+            18.2.20: 18.2.20
+            19.2.20: 19.2.20
+            20.2.20: 20.2.20
+          fluidAdditionalAttributes:
             required: required
+          prependOptionLabel: 'bitte auswählen:'
+          elementDescription: ''
+        type: SingleSelect
+        identifier: besuchstag
+        label: 'Ihr bevorzugter Termin'
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        properties:
+          options:
+            Beratung: Beratung
+            Planung: Planung
+            Projektabwicklung: Projektabwicklung
+            Sonderleuchten: Sonderleuchten
+            Konzeption: Konzeption
+          elementDescription: ''
+        type: MultiCheckbox
+        identifier: multicheckbox-1
+        label: 'Zu welchem Thema möchten Sie mehr von uns wissen?'
         validators:
           -
             identifier: NotEmpty
       -
         type: Checkbox
         identifier: newsletter-1
-        label: Newsletter
+        label: 'Ich habe die Datenschutzbestimmungen zur Kenntnis genommen und stimme Ihnen zu'
         properties:
-          elementDescription: 'Ich möchte mit dem Newsletter über die wichtigsten Veranstaltungen informiert werden'
+          elementDescription: ''
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
   -
     renderingOptions:
       previousButtonLabel: Zurück

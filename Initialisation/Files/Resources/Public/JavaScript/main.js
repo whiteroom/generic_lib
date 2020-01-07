@@ -93,6 +93,14 @@ $(window).ready(function(event) {
 		}
 	});
 
+	// 	Make placeholder text (input) in forms functional
+	$("input").each(function(){
+        if($(this).attr('required') == 'required'){
+            var req = $(this).attr('placeholder') + ' *';
+            $(this).attr('placeholder', req);
+        }
+    });
+
 
 });
 
