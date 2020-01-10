@@ -10,7 +10,7 @@
 				</f:then>
 				
 				<f:else>
-					<article id="c{data.uid}" class="contObj {data.CType} contObj-{data.frame_class} contObj-type-{data.CType} contObj-layout-{data.layout}{f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}{f:if(condition: data.assets, then: ' hasMedia', else: ' noMedia')}">
+					<article id="c{data.uid}" class="contObj {data.CType} contObj-{data.frame_class} contObj-type-{data.CType} contObj-layout-{data.layout}{f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}{f:if(condition:'{data.image} || {data.assets}', then:' hasMedia', else: ' noMedia')}">
 				</f:else>
 			
 			</f:if>
