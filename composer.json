@@ -1,0 +1,38 @@
+{
+    "name": "whiteroom/generic_lib",
+    "type": "typo3-cms-extension",
+    "description": "FLUID Templates & TypoScript",
+    "homepage": "https://whiteroom.ch/",
+    "keywords": [
+        "TYPO3",
+        "CMS",
+        "extension"
+    ],
+    "authors": [
+        {
+            "name": "whiteroom",
+            "role": "Developer",
+            "homepage": "https://whiteroom.ch/"
+        }
+    ],
+    "license": [
+        "GPL-2.0-or-later"
+    ],
+    "require": {
+        "typo3/cms-core": "~9.5.0||~10.0.0||dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Whiteroom\\GenericLib\\": "Classes/"
+        }
+    },
+    "replace": {
+        "generic_lib": "self.version",
+        "typo3-ter/generic_lib": "self.version"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "generic_lib"
+        }
+    }
+}
