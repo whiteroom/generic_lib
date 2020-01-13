@@ -670,7 +670,7 @@ figcaption h4 {
     font-weight: 700;
 }
 
-figcaption p, p.news-img-caption {
+figcaption p {
 	margin: 7px 0 16px 0!important;
 }
 
@@ -1314,6 +1314,19 @@ form > legend {
 .news .wookmark article .description p.readon,
 .news .wookmark article .description p.meta {
 	margin-top: 8px;
+}
+
+
+.news p.news-img-caption {
+    margin: 7px 0 16px 0!important;
+}
+
+.news .mediaelement {
+    padding-bottom: 27px
+}
+
+.news .mediaelement + p.news-img-caption {
+    margin-top: -20px!important
 }
 
 .news a.more {
