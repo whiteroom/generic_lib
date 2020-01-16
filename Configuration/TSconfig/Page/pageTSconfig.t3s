@@ -478,7 +478,7 @@ RTE {
 		
 	
 		tt_content.bodytext.preset = client_default
-		# tt_content.bodytext.preset = full
+		tx_news_domain_model_news.teaser.preset = client_default
 		tx_news_domain_model_news.bodytext.preset = client_default
 		
 		
