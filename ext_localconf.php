@@ -45,9 +45,14 @@ $customChanges = array(
 
 	'EXTENSIONS' => array(
     	
-    	'news' => [
-        	'manualSorting' => 1
-    	],
+    	'generic_lib' => [
+            'enableDummySetting' => 0,
+        ],
+        'news' => [
+            'manualSorting' => 1,
+            'rteForTeaser' => 0,
+            'contentElementRelation' => 0,
+        ],
     	
 		'backend' => [
             'loginLogo' => 'fileadmin/generic_lib/Resources/Public/Images/login-logo.svg',

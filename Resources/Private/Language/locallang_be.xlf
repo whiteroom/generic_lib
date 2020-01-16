@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2020-01-05T16:26:24Z" product-name="generic_lib">
+        <header/>
+        <body>
+            <trans-unit id="extconf.enableDummySetting" xml:space="preserve">
+                <source>Enable a dummy setting never being used (Demo only)</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,2 @@
+# cat=basic/enable; type=boolean; label=LLL:EXT:generic_lib/Resources/Private/Language/locallang_be.xlf:extconf.enableDummySetting
+enableDummySetting = 0
