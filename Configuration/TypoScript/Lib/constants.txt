@@ -86,6 +86,8 @@ plugin.generic_lib {
 		
 		#showFooterContent = TRUE
 		#pid_footerTop = 100
+
+		showLanguageSwitch = TRUE
 		
 	}
 	

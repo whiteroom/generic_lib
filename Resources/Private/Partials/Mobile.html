@@ -6,6 +6,6 @@
 
 	<f:section name="Mobile">
 		<div><f:cObject typoscriptObjectPath="lib.navbar" /></div>
-		<nav><f:cObject typoscriptObjectPath="lib.languageSwitch" /></nav>
+		<f:if condition="{languageSwitch}"><nav><f:cObject typoscriptObjectPath="lib.languageSwitch" /></nav></f:if>
 	</f:section>
 </div>
