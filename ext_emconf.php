@@ -32,7 +32,7 @@ $EM_CONF[$_EXTKEY] = array(
 			'news' => '7.3.0-7.3.99',
 			'rx_shariff' => '12.0.0-12.99.99',
 			'vhs' => '5.2.0-5.2.99',
-			'dp_cookieconsent' => '10.2.0-10.2.99',
+			'dp_cookieconsent' => '10.3.0-10.3.99',
 	        'fluid_styled_responsive_images' => '9.5.0-9.5.99'
 	    ],
 	    'conflicts' => [
