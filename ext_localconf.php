@@ -17,35 +17,38 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['de']['EXT:news/Resou
 
 
 
-$customChanges = array(
-	'SYS' => array(
-		'systemMaintainers' => [
-    		#  Admin Users are also SystemMaintainers
+$customChanges = [
+    'SYS' => [
+        'systemMaintainers' => [
+            #  Admin Users are also SystemMaintainers
             1,
         ],
         
         'FileInfo' => [
             'fileExtensionToMimeType' => [
-                // add mp3 audio
+                # add mp3 audio
                 'mp3' => 'audio/mpeg',
             ]
         ],
         
-	),
-	
-	
-	'RTE' => array(
-		'Presets' => [
-    		#  register the rte_ckeditor yaml files
-        	'client_default' => 'EXT:generic_lib/Configuration/RTE/client.yaml',
-    	],
+    ],
+    
+    'BE' => [
+        'lockSSL' => true,
+    ],
+    
+    
+    'RTE' => [
+        'Presets' => [
+            #  register the rte_ckeditor yaml files
+            'client_default' => 'EXT:generic_lib/Configuration/RTE/client.yaml',
+        ],
+    ],
+
+
+    'EXTENSIONS' => [
         
-	),
-
-
-	'EXTENSIONS' => array(
-    	
-    	'generic_lib' => [
+        'generic_lib' => [
             'enableDummySetting' => 0,
         ],
         'news' => [
@@ -53,13 +56,13 @@ $customChanges = array(
             'rteForTeaser' => 0,
             'contentElementRelation' => 0,
         ],
-    	
-		'backend' => [
+        
+        'backend' => [
             'loginLogo' => 'fileadmin/generic_lib/Resources/Public/Images/login-logo.svg',
             'loginBackgroundImage' => 'fileadmin/generic_lib/Resources/Public/Images/img_102515664287.jpg',
         ],
-	)
-);
+    ]
+];
 $GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive($GLOBALS['TYPO3_CONF_VARS'], (array)$customChanges);
 
 
