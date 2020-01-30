@@ -276,9 +276,9 @@ CREATE TABLE IF NOT EXISTS `sys_category` (
 --
 
 INSERT INTO `sys_category` (`uid`, `pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `starttime`, `endtime`, `t3ver_oid`, `t3ver_id`, `t3ver_wsid`, `t3ver_label`, `t3ver_state`, `t3ver_stage`, `t3ver_count`, `t3ver_tstamp`, `t3ver_move_id`, `t3_origuid`, `sorting`, `sys_language_uid`, `l10n_parent`, `l10n_diffsource`, `title`, `description`, `parent`, `items`, `l10n_state`, `fe_group`, `images`, `single_pid`, `shortcut`, `import_id`, `import_source`, `seo_title`, `seo_description`, `seo_headline`, `seo_text`, `slug`) VALUES
-(1, 1, 1528987737, 1528987737, 1, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 256, 0, 0, 0x613a313a7b733a353a226974656d73223b4e3b7d, 'Portfolio', '', 0, 3, NULL, '0', 0, 0, 0, '', '', '', '', '', '', '1'),
-(2, 1, 1528987737, 1528987737, 1, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 128, 0, 0, 0x613a313a7b733a353a226974656d73223b4e3b7d, 'Projekte', '', 0, 6, NULL, '0', 0, 0, 0, '', '', '', '', '', '', ''),
-(3, 1, 1528987737, 1528987737, 1, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 64, 0, 0, 0x613a313a7b733a353a226974656d73223b4e3b7d, 'Exhibitions', '', 0, 2, NULL, '0', 0, 0, 0, '', '', '', '', '', '', '/');
+(1, 1, 1528987737, 1528987737, 1, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 256, 0, 0, 0x613a313a7b733a353a226974656d73223b4e3b7d, 'Portfolio', '', 0, 3, NULL, '0', 0, 0, 0, '', '', '', '', '', '', 'portfolio'),
+(2, 1, 1528987737, 1528987737, 1, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 128, 0, 0, 0x613a313a7b733a353a226974656d73223b4e3b7d, 'Projekte', '', 0, 6, NULL, '0', 0, 0, 0, '', '', '', '', '', '', 'projekte'),
+(3, 1, 1528987737, 1528987737, 1, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 64, 0, 0, 0x613a313a7b733a353a226974656d73223b4e3b7d, 'Exhibitions', '', 0, 2, NULL, '0', 0, 0, 0, '', '', '', '', '', '', 'exhibitions');
 
 -- --------------------------------------------------------
 
