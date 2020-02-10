@@ -170,7 +170,7 @@ page.includeCSS {
     client = fileadmin/generic_lib/Resources/Public/Static/_preview.css
 }
 
-
+page.includeJSFooter.dp_cookieconsent >
 
 [end]
 

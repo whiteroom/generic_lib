@@ -75,18 +75,17 @@
 body {
     padding: 48px;
     font: 20px/28px AkkuratLight;
-    font: 3vh/3.75vh AkkuratLight;
 }
 
 body:after {
     content: "";
     position: fixed;
             
-    background: #88700d;
-    background: -moz-linear-gradient(top, #88700d 0%, #75621a 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #88700d 0%,#75621a 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #88700d 0%,#75621a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#88700d', endColorstr='#75621a',GradientType=0 ); /* IE6-9 */
+    background: #9b300c;
+    background: -moz-linear-gradient(top, #9b300c 0%,#c5660c 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #9b300c 0%,#c5660c 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #9b300c 0%,#c5660c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9b300c', endColorstr='#c5660c',GradientType=0 ); /* IE6-9 */
     bottom: 0;
     left: 0;
     right: 0;
@@ -114,14 +113,12 @@ hr {
 
 h1 {
     margin:0;
-    font: 48px/52px AkkuratBold;
-    font: 7.3334vh/7.6667vh AkkuratBold;
+    font: 20px/28px AkkuratBold;
 }
 
 h2, h3, h4, h5 {
     margin:0;
     font: 20px/28px AkkuratLight;
-    font: 3vh/3.75vh AkkuratLight;
 }
 
 main div + div {
