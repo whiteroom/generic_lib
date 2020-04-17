@@ -33,10 +33,6 @@ $customChanges = [
         
     ],
     
-    'BE' => [
-        'lockSSL' => true,
-    ],
-    
     
     'RTE' => [
         'Presets' => [

@@ -80,6 +80,7 @@ plugin.generic_lib {
 		vegas = 1
 		fancybox = 1
 		wookmark = 1
+		showLanguageSwitch = 1
 		
 		lightboxCssClass = lightbox
 		lightboxTitle = enlarge image on click
@@ -87,7 +88,6 @@ plugin.generic_lib {
 		#showFooterContent = TRUE
 		#pid_footerTop = 100
 
-		showLanguageSwitch = TRUE
 		
 	}
 	
