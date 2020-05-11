@@ -51,6 +51,8 @@ TCEFORM {
         pi_flexform {
             news_pi1 {
                 
+                # News Plug-In Flexform Settings
+
                 # ATTENTION: The dot inside the field name has to be escaped!
                 # To identify the key of the tab (e.g. sDEF) and the field name (e.g. settings.orderBy) look either 
                 # in the source code while checking the flexforms or 
@@ -64,7 +66,14 @@ TCEFORM {
                   
                   settings\.orderDirection.disabled = 0
                   settings\.orderBy.addItems {
-                    categories = Kategorien
+                    # Nice idea but cannot be translated easily in BE
+                    # Use ext_tables instead
+                    
+                    #categories = Kategorien
+                    #author = Autor des Eintrags
+                    #categories\.slug = Kategorien (Sprungmarken)
+                    #uid = UID
+
                   }
                 }
                 
