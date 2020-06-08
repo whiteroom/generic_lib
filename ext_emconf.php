@@ -33,7 +33,7 @@ $EM_CONF[$_EXTKEY] = array(
 			'rx_shariff' => '13.0.0-13.99.99',
 			'vhs' => '6.0.0-6.0.99',
 			'dp_cookieconsent' => '10.5.0-10.5.99',
-	        'fluid-styled-responsive-images' => '10.2.0-10.2.99'
+	        	'fluid-styled-responsive-images' => '10.2.0-10.2.99'
 	    ],
 	    'conflicts' => [
 
