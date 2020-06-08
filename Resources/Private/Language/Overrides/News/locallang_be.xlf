@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-05-09T11:47:18Z" product-name="news">
+		<header/>
+		<body>
+			<trans-unit id="flexforms_general.orderBy.author" xml:space="preserve">
+				<source>Author of this entry</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.orderBy.categories.slug" xml:space="preserve">
+				<source>Category short (URL Slug)</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

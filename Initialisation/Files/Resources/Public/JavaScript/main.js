@@ -38,7 +38,7 @@
 	});
 	
 	
-	//showViewPortSize(true);
+	showViewPortSize(false);
 	
 	
 	

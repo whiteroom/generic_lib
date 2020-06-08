@@ -40,9 +40,9 @@ lib.contentElement {
 			wrap = |
 		
 		
-			linkParams.ATagParams.dataWrap = title="{$plugin.generic_lib.settings.lightboxTitle}" class="{$styles.content.textmedia.linkWrap.lightboxCssClass}" rel="{$styles.content.textmedia.linkWrap.lightboxRelAttribute}"
+			linkParams.ATagParams.dataWrap = title="{$plugin.generic_lib.settings.lightboxTitle}" class="{$styles.content.textmedia.linkWrap.lightboxCssClass}" data-fancybox="lightbox[{file:current:uid_foreign}]"
 	
-			linkParams.ATagParams.dataWrap.override = title="{file:current:title}" class="{$styles.content.textmedia.linkWrap.lightboxCssClass}" rel="{$styles.content.textmedia.linkWrap.lightboxRelAttribute}"
+			linkParams.ATagParams.dataWrap.override = title="{file:current:title}" class="{$styles.content.textmedia.linkWrap.lightboxCssClass}" data-fancybox="lightbox[{file:current:uid_foreign}]"
 			linkParams.ATagParams.dataWrap.override.if.isTrue.data = file:current:title
 
 	   }

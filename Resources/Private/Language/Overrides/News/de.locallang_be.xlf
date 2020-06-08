@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2014-06-02T11:47:18Z" product-name="news" target-language="de">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-05-09T11:47:18Z" product-name="news" target-language="de">
 		<header/>
 		<body>
 			<trans-unit id="pi1_title" xml:space="preserve" approved="yes">
@@ -84,6 +84,12 @@
 			<trans-unit id="flexforms_general.orderBy.title" xml:space="preserve" approved="yes">
 				<source>Title</source>
 			<target state="translated">Titel</target></trans-unit>
+			<trans-unit id="flexforms_general.orderBy.author" xml:space="preserve">
+			    <source>Author</source>
+			<target state="translated">Autor des Eintrags</target></trans-unit>
+			<trans-unit id="flexforms_general.orderBy.categories.slug" xml:space="preserve">
+			    <source>Category short (URL Slug)</source>
+			<target state="translated">Kategorie kurze (URL)</target></trans-unit>
 			<trans-unit id="flexforms_general.orderDirection" xml:space="preserve" approved="yes">
 				<source>Sort direction</source>
 			<target state="translated">Sortierung</target></trans-unit>

@@ -8,12 +8,12 @@
 
 
 # **********************************************************
-# Fancybox Plugin 
+# FancyBox3 Plugin 
 # **********************************************************
 
 
 page.includeCSS {
-		fancybox = {$plugin.generic_lib.theme.resDir}/Public/JavaScript/Lib/fancybox/jquery.fancybox.css
+		fancybox = {$plugin.generic_lib.theme.resDir}/Public/JavaScript/Lib/fancybox/jquery.fancybox.min.css
 		fancybox.forceOnTop = 1
 		fancybox.if.isTrue = {$plugin.generic_lib.settings.fancybox}
 		fancybox.disableCompression = 1
@@ -21,7 +21,7 @@ page.includeCSS {
 }
 	
 page.includeJSFooterlibs {
-		fancybox = {$plugin.generic_lib.theme.resDir}/Public/JavaScript/Lib/fancybox/jquery.fancybox.pack.js
+		fancybox = {$plugin.generic_lib.theme.resDir}/Public/JavaScript/Lib/fancybox/jquery.fancybox.min.js
 		fancybox.forceOnTop = 1
 		fancybox.if.isTrue = {$plugin.generic_lib.settings.fancybox}
 		fancybox.disableCompression = 1

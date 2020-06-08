@@ -1387,35 +1387,26 @@ form > legend {
 }
 
 
-.fancybox-prev span {
-	text-align: left
-}
-.fancybox-prev span:before {
-  content: "\ea40";
-}
-
-.fancybox-next span {
-	text-align: right
-}
-.fancybox-next span:before {
-  content: "\ea3c";
-}
-
-
-
 .fancybox-prev span, .fancybox-next span {
-	background-image: none;
-	font-size: 160%;
-	font-family: 'icomoon' !important;
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    background-image: none;
+    font-size: 160%;
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fancybox-caption,
+.fancybox-caption p {
+    background: transparent;
+    color: #eee;
+
 }
 
 	
@@ -1459,18 +1450,6 @@ form > legend {
     font-size: 80%;
     padding-right: 5px;
 
-}
-
-
-
-/*Retina graphics!*/
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-	   only screen and (min--moz-device-pixel-ratio: 1.5),
-	   only screen and (min-device-pixel-ratio: 1.5){
-
-	.fancybox-prev span, .fancybox-next span {
-			background-image: none;
-	}
 }
 
 

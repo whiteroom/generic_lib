@@ -82,7 +82,7 @@ plugin.generic_lib {
 		wookmark = 1
 		showLanguageSwitch = 1
 		
-		lightboxCssClass = lightbox
+		lightboxCssClass = fancybox
 		lightboxTitle = enlarge image on click
 		
 		#showFooterContent = TRUE
