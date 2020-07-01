@@ -59,7 +59,7 @@ page.includeJSFooter {
 }
 
 
-[globalVar = TSFE:beUserLogin > 0] 
+[getTSFE() && getTSFE().isBackendUserLoggedIn()] 
 
 page.10 = FLUIDTEMPLATE
 page.10 {
@@ -146,7 +146,7 @@ page.10 {
 
 
 
-[else]
+[ELSE]
 page.10 >
 page.10 = TEXT
 page.10.value ( 
@@ -172,7 +172,7 @@ page.includeCSS {
 
 page.includeJSFooter.dp_cookieconsent >
 
-[end]
+[END]
 
 
 

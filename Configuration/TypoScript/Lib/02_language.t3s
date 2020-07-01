@@ -75,15 +75,17 @@ config {
 # this is way better:
 [browser = msie] && [version < 7]
 config.htmlTag_stdWrap.cObject.10.value = class="no-js lt-ie9 lt-ie8 lt-ie7"
+[END]
 [browser = msie] && [version = 7]
 config.htmlTag_stdWrap.cObject.10.value = class="no-js lt-ie9 lt-ie8"
+[END]
 [browser = msie] && [version = 8]
 config.htmlTag_stdWrap.cObject.10.value = class="no-js lt-ie9"
-[global]
+[END]
 
 
 # English
-[globalVar = GP:L=1]
+[siteLanguage("locale") == "en_US.UTF-8"]
 
 	config {
 		sys_language_uid = 1
@@ -93,10 +95,10 @@ config.htmlTag_stdWrap.cObject.10.value = class="no-js lt-ie9"
 		htmlTag_stdWrap.cObject.20.value = lang="{$plugin.generic_lib.lang1.localeShort}"
 	}
 
-[global]
+[END]
 
 # French
-[globalVar = GP:L=2]
+[siteLanguage("locale") == "fr_FR.UTF-8"]
 
 	
 	config {
@@ -106,4 +108,4 @@ config.htmlTag_stdWrap.cObject.10.value = class="no-js lt-ie9"
 		htmlTag_langKey = {$plugin.generic_lib.lang2.localeShort}
 		htmlTag_stdWrap.cObject.20.value = lang="{$plugin.generic_lib.lang2.localeShort}"
 	}
-[global]
+[END]

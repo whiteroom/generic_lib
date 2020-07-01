@@ -30,11 +30,11 @@ lib.logo {
 
 
 # English
-[globalVar = GP:L=1]
+[siteLanguage("locale") == "en_US.UTF-8"]
 	lib.logo.10.typolink.title = {$plugin.generic_lib.clientName}: link to the landing page 
-[global]
+[END]
 
 # French
-[globalVar = GP:L=2]
+[siteLanguage("locale") == "fr_FR.UTF-8"]
 	lib.logo.10.typolink.title = {$plugin.generic_lib.clientName}: dirige vers la page d'accueil
-[global]
+[END]

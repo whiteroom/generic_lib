@@ -22,7 +22,7 @@ config {
 # config.contentObjectExceptionHandler = 0
 
 
-[globalVar = TSFE : beUserLogin > 0] 
+[getTSFE() && getTSFE().isBackendUserLoggedIn()] 
 
 	config.no_cache = 1
 	
@@ -30,7 +30,7 @@ config {
 	page.headerData.21.value = <style type="text/css"> .extbase-debugger { z-index: 9999!important; } </style>
 
 
-[end]
+[END]
 
 
 

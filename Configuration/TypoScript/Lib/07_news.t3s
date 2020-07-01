@@ -134,18 +134,22 @@ plugin.tx_news {
 
 
 # English
-[globalVar = GP:L=1]
+[siteLanguage("locale") == "en_US.UTF-8"]
 
 plugin.tx_news.settings.facebookLocale = en_GB
 
-[global]
+[END]
 
 # French
-[globalVar = GP:L=2]
+[siteLanguage("locale") == "fr_FR.UTF-8"]
 
 plugin.tx_news.settings.facebookLocale = fr_FR
 	
-[global]
+[END]
+
+
+
+
 
 
 

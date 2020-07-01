@@ -41,11 +41,16 @@ plugin.tx_indexedsearch {
 
 plugin.tx_indexedsearch._DEFAULT_PI_VARS.lang = 0
 
-[globalVar = GP:L=1]
+[siteLanguage("locale") == "en_US.UTF-8"]
 	plugin.tx_indexedsearch._DEFAULT_PI_VARS.lang = 1
-[global]
+[END]
 
 
-[globalVar = GP:L=2]
+[siteLanguage("locale") == "fr_FR.UTF-8"]
 	plugin.tx_indexedsearch._DEFAULT_PI_VARS.lang = 2
-[global]
+[END]
+
+
+
+
+
