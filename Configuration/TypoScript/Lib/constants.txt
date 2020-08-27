@@ -73,6 +73,7 @@ plugin.generic_lib {
 		#resDir = EXT:generic_lib/Resources
 		resDir = 	fileadmin/generic_lib/Resources
 		
+		logo-tilecolor = #000000
 	}
 	
 	settings {

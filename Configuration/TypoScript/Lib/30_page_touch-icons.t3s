@@ -16,70 +16,124 @@ page {
 	
 	headerData.20 = COA
 	headerData.20 {
-	    # Apple touch icons
-	    10 = IMG_RESOURCE
-	    10 {
+		
+		# icon
+	    5 = IMG_RESOURCE
+	    5 {
 	        file = {$plugin.generic_lib.theme.resDir}/Public/Images/icon.png
 	        file {
+	            width = 64c
+	            height = 64
+	        }
+	        stdWrap.dataWrap = <link rel="icon" sizes="{TSFE:lastImgResourceInfo|0}x{TSFE:lastImgResourceInfo|1}" href="|">
+	    }
+	    
+	    
+	    # Apple touch icons
+	    10 < .5
+	    10 {
+	        file {
 	            width = 57c
-	            height = 57c
+	            height = 57
 	        }
 	        stdWrap.dataWrap = <link rel="apple-touch-icon" sizes="{TSFE:lastImgResourceInfo|0}x{TSFE:lastImgResourceInfo|1}" href="|">
 	    }
 	
 	    20 < .10
 	    20.file {
-	        width = 76c
-	        height = 76c
+	        width = 60c
+	        height = 60
 	    }
 	    
-	    30 < .10
+		30 < .10
 	    30.file {
-	        width = 120c
-	        height = 120c
+	        width = 72c
+	        height = 72
 	    }
 	    
 	    40 < .10
 	    40.file {
-	        width = 152c
-	        height = 152c
+	        width = 76c
+	        height = 76
 	    }
 	    
 	    50 < .10
 	    50.file {
-	        width = 167c
-	        height = 167c
+	        width = 114c
+	        height = 114
 	    }
 	    
 	    60 < .10
 	    60.file {
+	        width = 120c
+	        height = 120
+	    }
+	    
+	    70 < .10
+	    70.file {
+	        width = 144c
+	        height = 144
+	    }
+	    
+	    80 < .10
+	    80.file {
+	        width = 152c
+	        height = 152
+	    }
+	    
+	    90 < .10
+	    90.file {
 	        width = 180c
-	        height = 180c
+	        height = 180
+	    }
+	    
+	    100 < .10
+	    100.file {
+	        width = 192c
+	        height = 192
 	    }
 
 	
 	    # ...
 	
 	    # Android icons
-	    80 < .10
-	    80 {
+	    110 < .10
+	    110 {
 	        file {
-	            width = 16c
-	            height = 16c
+	            width = 36c
+	            height = 36
 	        }
 	        stdWrap.dataWrap = <link rel="icon" type="image/png" sizes="{TSFE:lastImgResourceInfo|0}x{TSFE:lastImgResourceInfo|1}" href="|">
 	    }
 	    
-	    90 < .80
-	    90.file {
-	        width = 128c
-	        height = 128c
+	    120 < .110
+	    120.file {
+	        width = 48c
+	        height = 48
 	    }
 	    
-	    100 < .80
-	    100.file {
+	    130 < .110
+	    130.file {
+	        width = 72c
+	        height = 72
+	    }
+	    
+	    140 < .110
+	    140.file {
+	        width = 96c
+	        height = 96
+	    }
+	    
+	    150 < .110
+	    150.file {
+	        width = 144c
+	        height = 144
+	    }
+	    
+	    160 < .110
+	    160.file {
 	        width = 192c
-	        height = 192c
+	        height = 192
 	    }
 	    
 	    
@@ -87,34 +141,41 @@ page {
 	    # ...
 	
 	    # Microsoft Application icons
-	    120 < .10
-	    120 {
+	    170 < .10
+	    170 {
 	        file {
 	            width = 70c
-	            height = 70c
+	            height = 70
 	        }
 	        stdWrap.dataWrap = <meta name="msapplication-square{TSFE:lastImgResourceInfo|0}x{TSFE:lastImgResourceInfo|1}logo" content="|"/>
 	    }
 	    
-	    130 < .120
-	    130.file {
+	    180 < .170
+	    180.file {
 	        width = 150c
-	        height = 150c
+	        height = 150
 	    }
 	    
-	    140 < .120
-	    140.file {
+	    190 < .170
+	    190.file {
 	        width = 310c
-	        height = 150c
+	        height = 310
 	    }
-	    140.stdWrap.dataWrap = <meta name="msapplication-wide{TSFE:lastImgResourceInfo|0}x{TSFE:lastImgResourceInfo|1}logo" content="|"/>
+	    	    
+	    200 < .170
+	    200 {
+	    	file = {$plugin.generic_lib.theme.resDir}/Public/Images/icon-wide.png
+	    	file {
+		        width = 310c
+		        height = 150
+		    }
+			stdWrap.dataWrap = <meta name="msapplication-wide{TSFE:lastImgResourceInfo|0}x{TSFE:lastImgResourceInfo|1}logo" content="|"/>
 	    
-	    150 < .120
-	    150.file {
-	        width = 310c
-	        height = 310c
-	    }	    
+	    }
+	    
+	    300 = TEXT 
+	    300.value = <meta name="msapplication-TileColor" content="{$plugin.generic_lib.theme.logo-tilecolor}">
+
 	}
 
 }
-
