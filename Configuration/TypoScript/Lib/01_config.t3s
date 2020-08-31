@@ -44,6 +44,7 @@ config {
 	typolinkCheckRootline = 1
 	content_from_pid_allowOutsideDomain = 1
 
+    extTarget = _blank
 
 	# Cache
 	cache_clearAtMidnight = 1

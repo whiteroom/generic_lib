@@ -216,6 +216,11 @@ caption, thead td, thead th, tfoot td, tfoot th {
 	border-bottom: 1px solid rgb(107, 108, 112)
 }
 
+caption {
+    /* safety, Bootstrap Reset sets this to bottom */
+    caption-side: top;
+}
+
 table.contenttable--borderless caption, table.contenttable--borderless thead td, table.contenttable--borderless thead th, table.contenttable--borderless tfoot td, table.contenttable--borderless tfoot th {
 	border:0;
 	padding:0;
