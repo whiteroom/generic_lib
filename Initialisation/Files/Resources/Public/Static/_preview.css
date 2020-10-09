@@ -71,10 +71,13 @@
 
 /* @end */
 
+html {
+    font-size: 16px
+}
 
 body {
-    padding: 48px;
-    font: 20px/28px AkkuratLight;
+    padding: 2rem;
+    font: 1rem/1.4rem AkkuratLight;
 }
 
 body:after {
@@ -108,19 +111,37 @@ a, a:link, a:visited, a:hover {
 }
 
 hr {
-    margin: 30px 0;
+    margin: 2rem 0;
 }
 
 h1 {
     margin:0;
-    font: 20px/28px AkkuratBold;
+    font-size: inherit;
+    font-family: AkkuratBold;
+    font-weight: normal;
 }
 
 h2, h3, h4, h5 {
     margin:0;
-    font: 20px/28px AkkuratLight;
+    font-size: inherit;
+    font-family: AkkuratLight;
+    font-weight: normal;
 }
 
 main div + div {
     padding-top: 2vh;
+}
+
+
+@media only screen and (min-width: 400px) {
+    
+    html {
+        font-size: calc(16px + 3 * (100vw - 400px) / 700);
+    }
+    
+    body {
+        padding: 3rem;
+        font-size: 1.25rem;
+        line-height: 1.4;
+    }
 }
