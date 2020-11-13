@@ -17,7 +17,7 @@ options {
 # Check Condition is given: belongs to Usergroup _globalSettingsForAll (id = 1)
 # Otherwise ignore (Admin Users)
 ##############################################################################
-[usergroup=1] 
+[usergroup("1")]
 
 
 options {
@@ -66,5 +66,5 @@ page {
 
 
 
-[global]
+[END]
 

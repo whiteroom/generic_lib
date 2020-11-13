@@ -1,8 +1,7 @@
 # Check Condition is given: belongs to Usergroup Redaktoren (id = 2)
 # Otherwise ignore (Admin Users)
 ##############################################################################
-[usergroup=2] 
-
+[usergroup("2")]
 
 
 # General
@@ -289,4 +288,4 @@ page {
 }
 
 
-[global]
+[END]
