@@ -429,7 +429,7 @@ TCAdefaults.tt_content {
 
 }
 
-[globalVar = GP:defVals|tt_content|CType == textmedia]
+[request.getQueryParams()['defVals']['tt_content']['CType'] == 'textmedia']
 
 	# frame_class is condition in Frontend Layouts Default.html <f:if condition="{data.frame_class} != none">
 	TCAdefaults.tt_content.frame_class = default
