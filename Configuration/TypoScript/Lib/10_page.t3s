@@ -27,10 +27,6 @@ page.includeCSS {
 }
 	
 page.includeJSLibs {
-		modernizr = {$plugin.generic_lib.theme.resDir}/Public/JavaScript/Vendor/modernizr-2.8.3-respond-1.4.2.min.js
-		#modernizr.async = 1
-		modernizr.disableCompression = 1
-        modernizr.excludeFromConcatenation = 1
 		
 		jquery = //ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js
 		jquery.external = 1
@@ -52,6 +48,12 @@ page.jsInline{
 }
 
 page.includeJSFooter {
+
+		modernizr = {$plugin.generic_lib.theme.resDir}/Public/JavaScript/Vendor/modernizr-2.8.3-respond-1.4.2.min.js
+		#modernizr.async = 1
+		modernizr.disableCompression = 1
+        modernizr.excludeFromConcatenation = 1
+        
 		1 = {$plugin.generic_lib.theme.resDir}/Public/JavaScript/main.js
 		
 		2 = {$plugin.generic_lib.theme.resDir}/Public/JavaScript/fancybox-options.js

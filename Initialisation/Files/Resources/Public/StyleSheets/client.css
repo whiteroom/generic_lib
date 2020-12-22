@@ -168,6 +168,7 @@ p {
     letter-spacing: .04em
 }
 
+
 p strong {
     font-weight: 700
 }
@@ -189,6 +190,16 @@ ul {
 margin: 1em 0;
 padding: 0 0 0 15px;
 }
+
+
+p + ul {
+    margin-top: 1em;
+}
+
+ul + p {
+    margin-top: 2em!important;
+}
+
 
 input,
 textarea {

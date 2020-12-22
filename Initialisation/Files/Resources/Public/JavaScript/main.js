@@ -39,10 +39,26 @@
 	
 	
 	showViewPortSize(false);
-	
-	
-	
-	
+		
+
+
+	Modernizr.addTest('mix-blend-mode', function(){
+	    return Modernizr.testProp('mixBlendMode');
+	});
+
+
+	Modernizr.addTest('calcviewportunits', function(){
+	    var computedHeight, 
+	        div = document.createElement('div');
+
+	    div.style.height = 'calc(10vh + 10vw)';
+	    document.body.appendChild(div);
+	    computedHeight = window.getComputedStyle(div).height;
+	    document.body.removeChild(div);
+
+	    return computedHeight !== "0px";
+	});
+
 	
 })();
 
@@ -106,25 +122,6 @@ $(window).ready(function(event) {
 
 
 
-
-
-
-Modernizr.addTest('mix-blend-mode', function(){
-    return Modernizr.testProp('mixBlendMode');
-});
-
-
-Modernizr.addTest('calcviewportunits', function(){
-    var computedHeight, 
-        div = document.createElement('div');
-
-    div.style.height = 'calc(10vh + 10vw)';
-    document.body.appendChild(div);
-    computedHeight = window.getComputedStyle(div).height;
-    document.body.removeChild(div);
-
-    return computedHeight !== "0px";
-});
 
 
 

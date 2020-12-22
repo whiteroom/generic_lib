@@ -11,8 +11,10 @@ editor:
     stylesSet:
     # block level styles
       - { name: "Borderless Table", element: "table", attributes: { class: "contenttable--borderless"} }
+      - { name: "Abstand Oben", element: "p", attributes: { class: "mt-5"} }
+      - { name: "Abstand Unten", element: "p", attributes: { class: "mb-5"} }
     # Inline styles
-      - { name: "Orange Marker", element: "span", attributes: { class: "orange"}}
+      - { name: "Logo Color Marker", element: "span", attributes: { class: "brandcolor"}}
 
 
     format_tags: "p;h3;h4;pre"

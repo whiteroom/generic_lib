@@ -1,11 +1,20 @@
 html {
-	padding:1em
-
+    font-size: 14px!important;
 }
 
-body > *{
-	font-family: "Helvetica Neue Regular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	line-height: 1.4;
+
+body,
+body > * {
+    font-family: "Helvetica Neue Regular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif!important;
+}
+
+
+body,
+.cke_editable {
+    line-height: 1.4;
+    font-size: 1rem!important;  
+    margin:40px!important;
+    font-weight: 300
 }
 
 h1,
@@ -15,11 +24,11 @@ h4,
 h5,
 h6 {
     color: rgb(35, 31, 32);
-    margin: 0 0 20px;
+    margin: 0 0 1.6rem;
     padding: 0;
     line-height: 1.1;
-    letter-spacing: .01em;
-    font-size: 20px;
+    letter-spacing: .01rem;
+    font-size: 1.6rem;
     font-style: normal;   
     font-weight: 300
 }
@@ -27,7 +36,7 @@ h6 {
 h4,
 h5,
 h6 {
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 h4 {
@@ -39,19 +48,34 @@ h6 {
     margin: 0;
 }
 
+p {margin: 0 0 1.4rem 0;}
+
+p + ul {
+    margin-top: -1rem!important;
+}
+
+ul + p {
+    margin-top: 2rem!important;
+}
+
+p:empty {
+   display: none;
+}
+
+
 hr {
     display: block;
     height: 1px;
     border: 0;
     border-top: 1px solid #6d6e71;
-    margin: 2em 0;
+    margin: 1.6rem 0;
     padding: 0;
 }
 
 blockquote, blockquote p {
 	margin:0;
-	font-size: 46px;
-	line-height: 54px;
+	font-size: 3.333rem;
+	line-height: 3.75rem;
 	color: rgba(0, 0, 0, 0.9);
 	text-align: left;
 	font-weight: 700
@@ -69,7 +93,7 @@ table td, td {
     vertical-align: top;
     border: 1px dashed #CCCCCC;
     padding: 1%;
-    height: 2em;
+    height: 1.6rem;
     text-align: left;
 }
 
@@ -78,17 +102,20 @@ dl {
 }
 
 dt {
-	padding: 0.7em 0;
+	padding: 0.7rem 0;
 	font-weight: 700;
 }
 
 dd {
 	margin:0;
-	padding: 0.3em 0;
+	padding: 0.3rem 0;
 	border-top: 1px solid rgb(107, 108, 112);
 
 }
 
-.orange {
-	color: rgb(239,133,51)
-}
+.brandcolor { color:rgb(241, 196, 15) }
+
+.mb-5{margin-bottom:3rem}
+.mt-5{margin-top:3rem}
+
+

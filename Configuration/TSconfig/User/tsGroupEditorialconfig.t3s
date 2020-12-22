@@ -158,79 +158,93 @@ page {
 	)
 	
 	TCEFORM.pages {
-
+		
+		#GENERAL TAB
+		doktype.disabled = 0
+		slug.disabled = 0
 		nav_title.disabled = 1
-		nav_hide.disabled = 0
 		subtitle.disabled = 0
 		
-		doktype.disabled = 0
+		# attention to unintended disabling, specific page types require this
+		shortcut.disabled = 0
 		shortcut_mode.disabled = 0
+		url.disabled = 0
 		target.disabled = 0
-		media.disabled = 0
-		hidden.disabled = 0
+		mount_pid_ol.disabled = 0
+		mount_pid.disabled = 0
+		
+
+		#SEO TAB
+		seo_title.disabled = 0
+		description.disabled = 1
+		no_index.disabled = 0
+		no_follow.disabled = 0
+		canonical_link.disabled = 1
+		sitemap_changefreq.disabled = 1
+		sitemap_priority.disabled = 1
 		
 		
+		#Social Media TAB
 		og_title.disabled = 1
 		og_description.disabled = 1
 		og_image.disabled = 1
-		
-		
         twitter_title.disabled = 1
 		twitter_description.disabled = 1
 		twitter_image.disabled = 1
+		twitter_card.disabled = 1
 		
 		
-		canonical_link.disabled = 1
-		no_follow.disabled = 1
-		no_search.disabled = 1
-		
-		
-		shortcut_mode.disabled = 1
-		target.disabled = 1
-				
-		author_email.disabled = 1
+		#Metadata TAB
+		abstract.disabled = 1
 		keywords.disabled = 1
-		description.disabled = 1
-		categories.disabled = 1
-		layout.disabled = 1
-		newUntil.disabled = 1
-		alias.disabled = 1
-		fe_login_mode.disabled = 1
 		author.disabled = 1
+		author_email.disabled = 1
+		lastUpdated.disabled = 1
 		
-		backend_layout_next_level.disabled = 1
+
+		#Appearance TAB
+		layout.disabled = 1
 		backend_layout.disabled = 1
-		editlock.disabled = 1
-		
+		backend_layout_next_level.disabled = 1
+		content_from_pid.disabled = 1
+		newUntil.disabled = 1
+
+
+		#Behaviour TAB
+		target.disabled = 1
 		cache_timeout.disabled = 1
 		cache_tags.disabled = 1
-		
-		no_cache.disabled = 1
+		is_siteroot.disabled = 1
 		no_search.disabled = 1
-		
-		url_scheme.disabled = 1
-		
-		
-		TSconfig.disabled = 1
-		
-		fe_group.disabled = 1
-		tsconfig_includes.disabled = 1
 		php_tree_stop.disabled = 1
+		module.disabled = 1
 		
-		
+
+		#Resources TAB
+		media.disabled = 0
+		tsconfig_includes.disabled = 1
+		TSconfig.disabled = 1
+
+		#Language TAB
+		l18n_cfg.disabled = 1
+
+		#Access TAB
+		hidden.disabled = 0
+		nav_hide.disabled = 0
 		starttime.disabled = 1
 		endtime.disabled = 1
-		
-		
-		lastUpdated.disabled = 1
-		l18n_cfg.disabled = 1
-		mount_pid_ol.disabled = 1
-		module.disabled = 1
-		content_from_pid.disabled = 1
-		abstract.disabled = 1
 		extendToSubpages.disabled = 1
-		is_siteroot.disabled = 1
+		fe_group.disabled = 1
+		fe_login_mode.disabled = 1
+		editlock.disabled = 1
+		
 
+		#Categories TAB
+		categories.disabled = 1
+		
+
+		#Notes TAB
+		rowDescription.disabled = 1
 
 		
 	}
@@ -241,45 +255,52 @@ page {
 	# enable all and disable here
 	TCEFORM.tx_news_domain_model_news {
 		
-		istopnews.disabled = 1
+		#GENERAL TAB
+		istopnews.disabled = 0
+ 		type.disabled = 0
+ 		#type.removeItems = 1,2
+		title.disabled = 0
+		path_segment.disabled = 0
 		teaser.disabled = 0
+		datetime.disabled = 0
+		archive.disabled = 0
 		bodytext.disabled = 0
+
+		#Media TAB
+		fal_media.disabled = 0
+		fal_related_files.disabled = 1
 		
-		author.disabled = 1
-		author_email.disabled = 1
+		#Categories TAB
+		categories.disabled = 1
 		
-		content_elements.disabled = 1
+		#Relations TAB
+		related.disabled = 1
+		related_from.disabled = 1
+		related_links.disabled = 1
+		tags.disabled = 1
 		
-		editlock.disabled = 1
+		#Metadata TAB
+		author.disabled = 0
+		author_email.disabled = 0
+		keywords.disabled = 1
+		description.disabled = 1
+		alternative_title.disabled = 1
+
+		#Language TAB
+		sys_language_uid.disabled = 1
+
+		#Access TAB
+		hidden.disabled = 0
 		starttime.disabled = 1
 		endtime.disabled = 1
 		fe_group.disabled = 1
+		editlock.disabled = 1
 
-		
-		tags.disabled = 0
-		categories.disabled = 0
-		
-		related.disabled = 1
-		related_from.disabled = 1
-		
-		related_links.disabled = 1
-		fal_related_files.disabled = 1
-		
-		fal_media.disabled = 0
-		
-		path_segment.disabled = 1
-		sys_language_uid.disabled = 1
-		type.disabled = 0
-		#type.removeItems = 1,2
-		
-		alternative_title.disabled = 1
-		keywords.disabled = 1
-		description.disabled = 1
-		
-		notes.disabled = 1
-		
+		#Notes TAB
+		rowDescription.disabled = 1
 	
-			
+		content_elements.disabled = 0
+
 	}
 	
 	

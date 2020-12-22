@@ -47,7 +47,7 @@ routes:
   -
     route: robots.txt
     type: staticText
-    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /typo3_src/\r\nAllow: /typo3/sysext/frontend/Resources/Public/*\r\n\r\n# Only allow URLs generated with RealURL\r\nDisallow: /*?id=*\r\nDisallow: /*&id=*\r\n\r\n# L=0 is the default language\r\nDisallow: /*?L=0*\r\nDisallow: /*&L=0*\r\n\r\n# typeNum = 98 is usually the print version.\r\nDisallow: /*?type=98*\r\nDisallow: /*&type=98*\r\n\r\n# Should always be protected (.htaccess)\r\nDisallow: /*/Private/*\r\nDisallow: /*/Configuration/*\r\nDisallow: /*/Initialisation/*\r\n\r\nAllow: /fileadmin/generic_lib/Resources/Public/*\r\n\r\nDisallow: /typo3temp/*\r\nAllow: /typo3temp/*.css\r\nAllow: /typo3temp/*.css.*.gzip\r\nAllow: /typo3temp/*.js\r\nAllow: /typo3temp/*.js.*.gzip\r\nAllow: /typo3temp/*.jpg\r\nAllow: /typo3temp/*.gif\r\nAllow: /typo3temp/*.png\r\n\r\nDisallow: *.sql\r\nDisallow: *.sql.gz\r\n\r\n\r\nSitemap: https://schoeneck.ch/sitemap.xml\r\n\r\nUser-agent: EmailCollector\r\nDisallow: /"
+    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /typo3_src/\r\nAllow: /typo3/sysext/frontend/Resources/Public/*\r\n\r\n# Only allow URLs generated with RealURL\r\nDisallow: /*?id=*\r\nDisallow: /*&id=*\r\n\r\n# L=0 is the default language\r\nDisallow: /*?L=0*\r\nDisallow: /*&L=0*\r\n\r\n# typeNum = 98 is usually the print version.\r\nDisallow: /*?type=98*\r\nDisallow: /*&type=98*\r\n\r\n# Should always be protected (.htaccess)\r\nDisallow: /*/Private/*\r\nDisallow: /*/Configuration/*\r\nDisallow: /*/Initialisation/*\r\n\r\nAllow: /fileadmin/generic_lib/Resources/Public/*\r\n\r\nDisallow: /typo3temp/*\r\nAllow: /typo3temp/*.css\r\nAllow: /typo3temp/*.css.*.gzip\r\nAllow: /typo3temp/*.js\r\nAllow: /typo3temp/*.js.*.gzip\r\nAllow: /typo3temp/*.jpg\r\nAllow: /typo3temp/*.gif\r\nAllow: /typo3temp/*.png\r\n\r\nDisallow: *.sql\r\nDisallow: *.sql.gz\r\n\r\n\r\nSitemap: https://whiteroom.ch/sitemap.xml\r\n\r\nUser-agent: EmailCollector\r\nDisallow: /"
   -
     route: sitemap.xml
     type: uri
@@ -57,6 +57,11 @@ routes:
     type: uri
     source: 't3://page?type=1533906435'
 routeEnhancers:
+  PageTypeSuffix:
+    type: PageType
+    default: ''
+    map:
+      'ics': 9819
   News:
     type: Extbase
     limitToPages:

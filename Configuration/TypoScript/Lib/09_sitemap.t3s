@@ -5,7 +5,7 @@ plugin.tx_seo {
                 pages { 
                     config {
                         #excludedDoktypes = 9818, 500
-                        additionalWhere = AND no_index = 0
+                        additionalWhere = AND (no_index = 0 OR no_follow = 0)
                     }
                 }
                 news {
