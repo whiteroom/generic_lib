@@ -1620,7 +1620,7 @@ form > legend {
         margin: 0 0 10px;
         
         /* allow overflowing tables to be scrolled */
-        overflow-x: scroll;
+        overflow-x: auto;
     }
     
     .text-justify {text-align: left!important} /* no justified—text on narrow screens */
