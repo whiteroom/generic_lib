@@ -27,13 +27,15 @@ $EM_CONF[$_EXTKEY] = array(
 	        'php' => '7.2.0-7.4.99',
 			'typo3' => '10.4.1-10.4.99',
 			'indexed_search' => '10.4.1-10.4.99',
+			'form' => '10.4.1-10.4.99',
+			'seo' => '10.4.1-10.4.99',
 			'fluid_styled_content' => '10.4.1-10.4.99',
 			'impexp' => '10.4.1-10.4.99',
 			'news' => '8.5.0-8.5.99',
 			'rx_shariff' => '13.0.0-13.99.99',
 			'vhs' => '6.0.0-6.0.99',
 			'dp_cookieconsent' => '10.6.0-10.6.99',
-	        'fluid-styled-responsive-images' => '10.4.0-10.4.99'
+	        'fluid_styled_responsive_images' => '10.4.0-10.4.99'
 	    ],
 	    'conflicts' => [
 

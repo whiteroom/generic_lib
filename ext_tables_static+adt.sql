@@ -722,7 +722,7 @@ CREATE TABLE `sys_template` (
 --
 
 INSERT INTO `sys_template` (`uid`, `pid`, `t3ver_oid`, `t3ver_wsid`, `t3ver_state`, `t3ver_stage`, `t3ver_count`, `t3ver_tstamp`, `t3ver_move_id`, `t3_origuid`, `tstamp`, `sorting`, `crdate`, `cruser_id`, `title`, `sitetitle`, `hidden`, `starttime`, `endtime`, `root`, `clear`, `include_static_file`, `constants`, `config`, `description`, `basedOn`, `deleted`, `includeStaticAfterBasedOn`, `static_file_mode`, `tx_impexp_origuid`) VALUES
-(1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1528979718, 256, 1526489637, 1, 'whiteroom generic', 'whiteRoom', 0, 0, 0, 1, 3, 'EXT:news/Configuration/TypoScript,EXT:fluid_styled_content/Configuration/TypoScript/,EXT:rx_shariff/Configuration/TypoScript/WithoutJQueryAndFontawesome,EXT:indexed_search/Configuration/TypoScript,EXT:form/Configuration/TypoScript/,EXT:dp_cookieconsent/Configuration/TypoScript,EXT:generic_lib/Configuration/TypoScript', '\r\n', '\r\n', NULL, '', 0, 0, 0, 1);
+(1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1528979718, 256, 1526489637, 1, 'whiteroom generic', 'whiteRoom', 0, 0, 0, 1, 3, 'EXT:news/Configuration/TypoScript,EXT:fluid_styled_content/Configuration/TypoScript/,EXT:rx_shariff/Configuration/TypoScript/WithoutJQueryAndFontawesome,EXT:indexed_search/Configuration/TypoScript,EXT:form/Configuration/TypoScript/,EXT:dp_cookieconsent/Configuration/TypoScript,EXT:seo/Configuration/TypoScript/XmlSitemap,EXT:fluid_styled_responsive_images/Configuration/TypoScript,EXT:generic_lib/Configuration/TypoScript', '\r\n', '\r\n', NULL, '', 0, 0, 0, 1);
 
 -- --------------------------------------------------------
 
