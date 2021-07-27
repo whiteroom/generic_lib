@@ -63,10 +63,6 @@ tt_content.textmedia {
 tt_content.image.settings.responsive_image_rendering < tt_content.textmedia.settings.responsive_image_rendering
 
 
-# set the new sorting direction of filelinks CE (if selected)
-tt_content.uploads.dataProcessing.10.sorting.direction = descending 
-tt_content.uploads.dataProcessing.10.sorting.direction.if.isTrue.field = filelink_sorting_direction 
-
 
 
 
