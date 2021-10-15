@@ -8,7 +8,7 @@
 	<f:switch expression="{data.layout}">
 	
 		<f:case value="0">
-			<section class="ce-{gallery.position.horizontal} clearfix">
+			<div class="ce-{gallery.position.horizontal} clearfix">
 				<f:if condition="{gallery.position.horizontal} != 'right'">
 					<f:render partial="Media/MediaGallery" arguments="{_all}" />
 				</f:if>
@@ -32,11 +32,11 @@
 				<f:if condition="{gallery.position.horizontal} == 'right'">
 					<f:render partial="Media/MediaGallery" arguments="{_all}" />
 				</f:if>
-			</section>
+			</div>
 		</f:case>
 		
 		<f:case value="110">
-			<section class="ce-{gallery.position.horizontal} clearfix">
+			<div class="ce-{gallery.position.horizontal} clearfix">
 				<f:if condition="{gallery.position.horizontal} != 'right'">
 					<f:render partial="Media/MediaGallery" arguments="{_all}" />
 				</f:if>
@@ -60,15 +60,15 @@
 				<f:if condition="{gallery.position.horizontal} == 'right'">
 					<f:render partial="Media/MediaGallery" arguments="{_all}" />
 				</f:if>
-			</section>
+			</div>
 		</f:case>
 		
 		
 		
 		<f:case value="105">
-			<section class="ce-{gallery.position.horizontal} clearfix">
+			<div class="ce-{gallery.position.horizontal} clearfix">
 				<f:render partial="Media/MediaWookmark" arguments="{_all}" />
-			</section>
+			</div>
 		</f:case>
 		
 		
