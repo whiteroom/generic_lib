@@ -28,10 +28,16 @@ page.includeCSS {
 	
 page.includeJSLibs {
 		
-		jquery = //ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js
+		jquery = //ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js
 		jquery.external = 1
 		jquery.disableCompression = 1
         jquery.excludeFromConcatenation = 1
+
+
+		modernizr = {$plugin.generic_lib.theme.resDir}/Public/JavaScript/Vendor/modernizr-3.6.0-respond-1.4.2.min.js
+		modernizr.async = 0
+		modernizr.disableCompression = 1
+        modernizr.excludeFromConcatenation = 1
 }
 
 
@@ -43,16 +49,12 @@ page.jsInline{
 	# Reason: vegas slideshow JS will be rendered from fluid-template and has to load after
 	10 = TEXT
 	10.value (
-		window.jQuery || document.write('<script src="{$plugin.generic_lib.theme.resDir}/Public/JavaScript/Vendor/jquery-3.4.1.min.js"><\/script>');
+		window.jQuery || document.write('<script src="{$plugin.generic_lib.theme.resDir}/Public/JavaScript/Vendor/jquery-3.6.0.min.js"><\/script>');
 	)
 }
 
 page.includeJSFooter {
 
-		modernizr = {$plugin.generic_lib.theme.resDir}/Public/JavaScript/Vendor/modernizr-2.8.3-respond-1.4.2.min.js
-		#modernizr.async = 1
-		modernizr.disableCompression = 1
-        modernizr.excludeFromConcatenation = 1
         
 		1 = {$plugin.generic_lib.theme.resDir}/Public/JavaScript/main.js
 		
