@@ -22,7 +22,7 @@ languages:
     typo3Language: default
     locale: en_US.UTF-8
     iso-639-1: en
-    navigationTitle: Deutsch
+    navigationTitle: English
     hreflang: en-US
     direction: ''
     fallbackType: fallback
