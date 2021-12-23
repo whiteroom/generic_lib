@@ -1097,6 +1097,13 @@ form > legend {
     cursor: auto;
 }
 
+.form-group select:active,
+.form-group select:hover,
+.form-group select:focus {
+    color: rgb(35, 31, 32);
+}
+
+
 .form-group select:focus option{
 /*     color: rgb(241, 196, 15); */
     color: inherit;
