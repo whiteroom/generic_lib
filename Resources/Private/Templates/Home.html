@@ -16,11 +16,13 @@
 		<v:resource.record.fal table="pages" field="media" uid="{data.uid}" as="resources">
 			    <f:if condition="{resources}">
 				       
-				    <div id="vegas-helper">
-					    <ul>
-						<f:for each="{resources}" as="resource" iteration="iteration"><li><a href="#" class="jump" data-val="{iteration.index}"><i class="icon-generic-button"></i></a></li></f:for>
-						</ul>
-					</div>
+				    <f:if condition="{resources -> f:count()} > 1">
+					    <div id="vegas-helper">
+						    <ul>
+							<f:for each="{resources}" as="resource" iteration="iteration"><li><a href="#" class="jump" data-val="{iteration.index}"><i class="icon-generic-button"></i></a></li></f:for>
+							</ul>
+						</div>
+					</f:if>
 					
 				    <script type='text/javascript'>
 					    $(function () {
