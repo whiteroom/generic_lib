@@ -28,9 +28,12 @@ plugin.tx_news {
         cropMaxCharacters = 160
         orderByAllowed = sorting,author,uid,title,teaser,author,tstamp,crdate,datetime,categories.slug
         
+        
+        topNewsFirst = 0
+
         # orderBy datetime/desc, which is default tx_news and topNewsFirst = 0
         # because anything else causes troubles with prev/next viewhelper (detailview)
-        topNewsFirst = 0
+        # but this does also work: orderBy = categories.slug,datetime | first by category name, then by date (used in item-lists by categories for example)
         orderBy = datetime 
         orderDirection = desc
   
