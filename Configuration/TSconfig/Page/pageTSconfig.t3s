@@ -184,7 +184,7 @@ TCEFORM.tt_content {
 	            altLabels.0 = Standard (Generic Layout)
 	            
                 addItems {
-                    # 105 = Bilder-Galerie (Kacheln)
+                    105 = Bilder-Galerie (Kacheln)
                 }
                 
                 addItems {
