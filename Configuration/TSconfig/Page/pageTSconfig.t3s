@@ -413,7 +413,7 @@ TCAdefaults.tt_content {
     image_zoom = 1
     
 	# neben dem Text rechts
-	imageorient = 25
+	# imageorient = 25   --> doesn't work anymore, see solution line 97
 	
 	# neben dem Text links
 	# imageorient = 26
