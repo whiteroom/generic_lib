@@ -8,7 +8,6 @@ Goal..
   * Templates
   * ContentElements
   * fully responsive without bootstrap css/js
-  * adieu css_styled_content
   * ..
 
 
