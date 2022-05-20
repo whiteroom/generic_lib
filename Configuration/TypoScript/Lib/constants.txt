@@ -10,29 +10,40 @@
 
 plugin.generic_lib {
 	# cat=plugin.generic_lib/page/01; type=string; label=Client : Client name of this website
-	clientName = whiteroom 
+	clientName = whiteroom
 	# cat=plugin.generic_lib/page/01; type=string; label=Name of this website
 	clientWebsiteName = whiteroom Basel
-	clientWebsite = whiteroom.cc
-	clientEmail = mail@whiteroom.cc
-	
-	#absRefPrefixRoot = /~sed2/dev/v8/
-	absRefPrefixRoot = auto
-		
 	# cat=plugin.generic_lib/page/02; type=string; label=Language of the website : Default Language
 	lang.localeShort = de
-	
 	# cat=plugin.generic_lib/page/03; type=string; label=Language Internationalization : Default Language Localization
 	lang.locale = de_DE.UTF-8
-	
+	# cat=plugin.generic_lib/page/01; type=string; label= Facebook URL : Default = https://www.facebook.com/whiteroombasel/
+	facebook.url = https://www.facebook.com/whiteroombasel/
+	# cat=plugin.generic_lib/page/01; type=string; label= Twitter URL : Default = https://twitter.com/whiteroombasel
+	twitter.url = https://twitter.com/whiteroombasel
+	# cat=plugin.generic_lib/page/01; type=string; label=Google Analytics : Tracking Code
+	pagemeta.googleAnalytics = UX-XXXXXX-X
+	# cat=plugin.generic_lib/page/01; type=string; label=Geoposition : Latitude
+	pagemeta.geoPositionLatitude =  47.562866
+	# cat=plugin.generic_lib/page/01; type=string; label=Geoposition : Longitude
+	pagemeta.geoPositionLongitude = 7.584796
+	# cat=plugin.generic_lib/page/01; type=string; label=GeoRegion : Regioncode
+	pagemeta.geoRegion = CH-BS
+	# cat=plugin.generic_lib/page/01; type=string; label=GeoPlace : Placename
+	pagemeta.geoPlacename = Basel
+	# cat=plugin.generic_lib/page/10; type=string; label=Site credits : Agency/Partners
+	sitecredits.agency = Konzept und Design: whiteroom, Basel | Umsetzung: Daniel Schoeneck, https://whiteRoom.ch
 	
 	lang1.localeShort = en
 	lang1.locale = en_EN.UTF-8
 	
 	lang2.localeShort = fr
-	lang2.locale = fr_FR.UTF-8
+	lang2.locale = fr_FR.UTF-8	
 	
-
+	clientWebsite = whiteroom.cc
+	clientEmail = mail@whiteroom.cc
+	
+	absRefPrefixRoot = auto
 
 	formSuccessMessage = Herzlichen Dank für die Nachricht. Wir melden uns so rasch wie möglich. <br>In order to respond to your enquiry, we will process the personal data you have supplied in accordance with our privacy policy (available on request). You can unsubscribe or change your preferences at any time by clicking the link in any emails. 
 	
@@ -48,29 +59,9 @@ plugin.generic_lib {
 	pagemeta.author = whiteRoom | schoeneck stauffer, St. Johanns-Vorstadt 15, 4056 Basel
 	pagemeta.googleVerification = 
 	
-	# cat=plugin.generic_lib/page/01; type=string; label=Google Analytics : Tracking Code
-	pagemeta.googleAnalytics = UX-XXXXXX-X
-	
-	# cat=plugin.generic_lib/page/01; type=string; label=Geoposition : Latitude
-	pagemeta.geoPositionLatitude =  47.562866
-	
-	# cat=plugin.generic_lib/page/01; type=string; label=Geoposition : Longitude
-	pagemeta.geoPositionLongitude = 7.584796
-	
-	# cat=plugin.generic_lib/page/01; type=string; label=GeoRegion : Regioncode
-	pagemeta.geoRegion = CH-BS
-	
-	# cat=plugin.generic_lib/page/01; type=string; label=GeoPlace : Placename
-	pagemeta.geoPlacename = Basel
-	
-	
-	# cat=plugin.generic_lib/page/10; type=string; label=Site credits : Agency/Partners
-	sitecredits.agency = Konzept und Design: whiteroom, Basel | Umsetzung: Daniel Schoeneck, https://whiteRoom.ch
 	
 	theme {
 		baseDir = 	fileadmin/generic_lib
-		
-		#resDir = EXT:generic_lib/Resources
 		resDir = 	fileadmin/generic_lib/Resources
 		
 		logo-tilecolor = #000000
@@ -88,21 +79,8 @@ plugin.generic_lib {
 		
 		#showFooterContent = TRUE
 		#pid_footerTop = 100
-
 		
-	}
-	
-	
-	# cat=plugin.generic_lib/page/01; type=string; label= Facebook URL : Default = https://www.facebook.com/whiteroombasel/
-	facebook.url = https://www.facebook.com/whiteroombasel/
-	
-	# cat=plugin.generic_lib/page/01; type=string; label= Twitter URL : Default = https://twitter.com/whiteroombasel
-	twitter.url = https://twitter.com/whiteroombasel
-	
-	
-	
-	
-	
+	}	
 }
 
 
@@ -113,7 +91,6 @@ styles.content {
 	uploads.filesizeBytesLabels = " | kB| MB| GB"
 	loginform.pid = 0
 	
-
 	textmedia {
 		
 		#CType IMAGE
@@ -124,11 +101,9 @@ styles.content {
 		# keep value high and install Extension fluid_styled_responsive_images
 		maxWInText = 2560c
 		
-
 		columnSpacing = 0
 		borderWidth = 0
 		borderPadding = 0
-
 
 		# cat=content/cTextmedia/c4; type=boolean; label= Lightbox click-enlarge rendering: Whether media elements with click-enlarge checked should be rendered lightbox-compliant
 		linkWrap.lightboxEnabled = {$plugin.generic_lib.settings.fancybox}
@@ -149,8 +124,6 @@ styles.content {
 		defaultAudioWidth = 747
 		defaultAudioHeight = 60
 	}
-
-	
 }
 
 
@@ -166,71 +139,13 @@ plugin.tx_news {
 
 }
 
-
-
 ############################################
-#############      SEO       ###############
+#######  dp_cookieconsent          #########
 ############################################
 
-
-plugin.tx_seo {
-	
-# future settings?
-	
-	
-# 	metaTags.description = Die Länge der Meta Descriptions sollte 160 Zeichen nicht überschreiten. Eine Meta Description Länge von 130 bis 160 Zeichen ist optimal.
-# 	metaTags.keywords = Obsolete, Google, will, ignore
-# 	metaTags.copyright = {$plugin.generic_lib.contentElements.copyright}: %YEAR% 
-# 	#metaTags.email = {$plugin.generic_lib.clientEmail}
-# 	metaTags.author = {$plugin.generic_lib.pagemeta.author}
-# 	metaTags.publisher = {$plugin.generic_lib.pagemeta.author}
-# 	
-# 	metaTags.revisit = 30
-# 	metaTags.geoPositionLatitude =  {$plugin.generic_lib.pagemeta.geoPositionLatitude}
-# 	metaTags.geoPositionLongitude = {$plugin.generic_lib.pagemeta.geoPositionLongitude}
-# 	metaTags.geoRegion = {$plugin.generic_lib.pagemeta.geoRegion}
-# 	metaTags.geoPlacename = {$plugin.generic_lib.pagemeta.geoPlacename}
-# 		
-# 	metaTags.useLastUpdate = 1
-# 	metaTags.useDetectLanguage = 1
-# 	metaTags.useCanonical = 1
-# 	metaTags.useCanonical.strict = 1
-# 	metaTags.useExpire = 1
-# 	metaTags.linkGeneration = 1
-# 	metaTags.enableDC = 1
-# 
-# 	metaTags.robotsEnable = 1
-# 	metaTags.robotsIndex = 1
-# 	metaTags.robotsFollow = 1
-# 	metaTags.robotsArchive = 1
-# 	metaTags.robotsSnippet = 1
-# 	metaTags.robotsNoImageindex = 1
-# 	
-# 	userAgent.ieCompatibilityMode = 0
-# 	metaTags.googleVerification = {$plugin.generic_lib.pagemeta.googleVerification}
-# 	
-# 	services.enableIfHeaderIsDisabled = 0
-# 	services.googleAnalytics = {$plugin.generic_lib.pagemeta.googleAnalytics}
-# 	services.googleAnalytics.domainName = 
-# 	services.googleAnalytics.anonymizeIp = 1
-# 	services.googleAnalytics.trackDownloads = 1	
-# 		
-# 	pageTitle.applySitetitleToPagetitle = 0
-# 	pageTitle.applySitetitleToPrefixSuffix = 0
-# 	pageTitle.sitetitleGlue = :
-# 	pageTitle.sitetitleGlueSpaceBefore = 0
-# 	pageTitle.sitetitleGlueSpaceAfter = 1
-# 	pageTitle.sitetitlePosition = 1
-# 	pageTitle.sitetitle = {$plugin.generic_lib.clientWebsiteName}
-# 	
-# 	sitemap.changeFrequency =
-# 	sitemap.index.fileExtension >
-}
-
-
-
-# Install extension dp_cookieconsent
 plugin.tx_cookieconsent {
+
+	#view.partialRootPath = EXT:generic_lib/Resources/Private/Ext/dp_cookieconsent/Partials/
     
     settings {
         
