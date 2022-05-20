@@ -54,6 +54,8 @@ config {
 	headerComment = {$plugin.generic_lib.sitecredits.agency}
 
 	pageTitleFirst = 1
+	pageTitleSeparator = |
+    pageTitleSeparator.noTrimWrap = | | |
 	
 	
 }
