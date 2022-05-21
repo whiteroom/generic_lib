@@ -71,7 +71,7 @@ plugin.generic_lib {
 		
 		vegas = 1
 		fancybox = 1
-		wookmark = 1
+		isotope = 1
 		showLanguageSwitch = 1
 		
 		lightboxCssClass = fancybox

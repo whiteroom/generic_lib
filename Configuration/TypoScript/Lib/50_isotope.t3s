@@ -8,23 +8,21 @@
 
 
 # **********************************************************
-# WOOKMARK Plugin 
+# ISOTOPE UI Library 
 # **********************************************************
 
-
-
-	
 page.includeJSFooterlibs {
-		wookmark = {$plugin.generic_lib.theme.resDir}/Public/JavaScript/Lib/wookmark.min.js
-		wookmark.forceOnTop = 1
-		wookmark.disableCompression = 1
-        wookmark.excludeFromConcatenation = 1
-        wookmark.if.isTrue = {$plugin.generic_lib.settings.wookmark}
-
-		
-		imagesloaded = {$plugin.generic_lib.theme.resDir}/Public/JavaScript/Lib/imagesloaded.pkgd.min.js
-		imagesloaded.forceOnTop = 1
-		imagesloaded.disableCompression = 1
-        imagesloaded.excludeFromConcatenation = 1
-        imagesloaded.if.isTrue = {$plugin.generic_lib.settings.wookmark}
+	isotope = {$plugin.generic_lib.theme.resDir}/Public/JavaScript/Lib/isotope.pkgd.min.js
+	isotope.forceOnTop = 1
+	isotope.disableCompression = 1
+	isotope.excludeFromConcatenation = 1
+	isotope.if.isTrue = {$plugin.generic_lib.settings.isotope}
+	
+	imagesloaded = {$plugin.generic_lib.theme.resDir}/Public/JavaScript/Lib/imagesloaded.pkgd.min.js
+	imagesloaded.forceOnTop = 1
+	imagesloaded.disableCompression = 1
+    imagesloaded.excludeFromConcatenation = 1
+    imagesloaded.if.isTrue = {$plugin.generic_lib.settings.isotope}
+        
+        
 }

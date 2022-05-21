@@ -1,51 +1,34 @@
 (function() {
 	
-	
-	
-	var wookmark;
-	$('.wookmark').each(function(i, obj) {
-		
-		imagesLoaded(obj, function() {
-			
-			function comparatorIsTopNews(a, b) {
-				var $a = $(a), $b = $(b);
-				// Check if tile should be the first one
-				if (!$a.hasClass('topnews') && $b.hasClass('topnews'))
-					return 1;
-				
-				return -1;
-			}
-			
-			
-			function getWindowWidth() {
-				return Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
-			}
-	
-	
-    		
-			wookmark = new Wookmark(obj, {
-				align: 'left',
-				//comparator: comparatorIsTopNews, // avoid: leads to misleading prev/next in news detailview
-				comparator: null,
-			    itemWidth: 294,
-			    outerOffset: 0,
-			    offset: 8,
-			    flexibleWidth: function () {
-			        return getWindowWidth() < 1024 ? '100%' : '50%';
-			    }
-			});
-		});
+	var $grid = $('.grid').prepend('<div class="grid-sizer"></div>');
+
+	$grid.isotope({
+    	
+		itemSelector: '.grid-item',
+		percentPosition: true,
+
+		masonry: {
+    		columnWidth: '.grid-sizer',
+			gutter: 8
+		}
 	});
-	
-	
+
+
+	document.addEventListener('lazyloaded', function(e){
+		$grid.isotope('layout');
+	});
+
+    $grid.imagesLoaded().progress( function() {
+        $grid.isotope('layout');
+    });
+
+
+
 	showViewPortSize(false);
 		
-
-
 	Modernizr.addTest('mix-blend-mode', function(){
 	    return Modernizr.testProp('mixBlendMode');
 	});
-
 
 	Modernizr.addTest('calcviewportunits', function(){
 	    var computedHeight, 
@@ -58,7 +41,6 @@
 
 	    return computedHeight !== "0px";
 	});
-
 	
 })();
 
@@ -83,7 +65,7 @@ $(window).ready(function(event) {
 	
 
 	// 	only if a description has been found
-	$('.project-item').filter(function () {
+	$('.grid-item').filter(function () {
 			return $(this).find('.description').length == 1
 		}).on({
 			mouseover: function () {
@@ -91,7 +73,7 @@ $(window).ready(function(event) {
 			$(this).siblings().removeClass('hovered');
 		},
 			mouseout: function () {
-			$(".project-item").removeClass('hovered');
+			$(".grid-item").removeClass('hovered');
 		}
 	});
 	
