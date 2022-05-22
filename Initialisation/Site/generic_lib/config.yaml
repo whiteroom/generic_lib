@@ -5,7 +5,7 @@ languages:
   -
     title: German
     enabled: true
-    languageId: '0'
+    languageId: 0
     base: /
     typo3Language: de
     locale: de_DE.UTF-8
@@ -17,7 +17,7 @@ languages:
   -
     title: English
     enabled: true
-    languageId: '1'
+    languageId: 1
     base: /en/
     typo3Language: default
     locale: en_US.UTF-8
@@ -31,7 +31,7 @@ languages:
   -
     title: French
     enabled: true
-    languageId: '2'
+    languageId: 2
     base: /fr/
     typo3Language: fr
     locale: fr_FR.UTF-8
@@ -43,25 +43,13 @@ languages:
     fallbacks: '1,0'
     flag: fr
 rootPageId: 1
-routes:
-  -
-    route: robots.txt
-    type: staticText
-    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /typo3_src/\r\nAllow: /typo3/sysext/frontend/Resources/Public/*\r\n\r\n# Only allow URLs generated with RealURL\r\nDisallow: /*?id=*\r\nDisallow: /*&id=*\r\n\r\n# L=0 is the default language\r\nDisallow: /*?L=0*\r\nDisallow: /*&L=0*\r\n\r\n# typeNum = 98 is usually the print version.\r\nDisallow: /*?type=98*\r\nDisallow: /*&type=98*\r\n\r\n# Should always be protected (.htaccess)\r\nDisallow: /*/Private/*\r\nDisallow: /*/Configuration/*\r\nDisallow: /*/Initialisation/*\r\n\r\nAllow: /fileadmin/generic_lib/Resources/Public/*\r\n\r\nDisallow: /typo3temp/*\r\nAllow: /typo3temp/*.css\r\nAllow: /typo3temp/*.css.*.gzip\r\nAllow: /typo3temp/*.js\r\nAllow: /typo3temp/*.js.*.gzip\r\nAllow: /typo3temp/*.jpg\r\nAllow: /typo3temp/*.gif\r\nAllow: /typo3temp/*.png\r\n\r\nDisallow: *.sql\r\nDisallow: *.sql.gz\r\n\r\n\r\nSitemap: https://whiteroom.ch/sitemap.xml\r\n\r\nUser-agent: EmailCollector\r\nDisallow: /"
-  -
-    route: sitemap.xml
-    type: uri
-    source: 't3://page?type=1533906435'
-  -
-    route: sitemap_index.xml
-    type: uri
-    source: 't3://page?type=1533906435'
 routeEnhancers:
   PageTypeSuffix:
     type: PageType
     default: ''
     map:
-      'ics': 9819
+      sitemap.xml: 1533906435
+      ics: 9819
   News:
     type: Extbase
     limitToPages:
@@ -69,19 +57,23 @@ routeEnhancers:
     extension: News
     plugin: Pi1
     routes:
-      - routePath: '/{page}'
+      -
+        routePath: '/{page}'
         _controller: 'News::list'
         _arguments:
           page: '@widget_0/currentPage'
-      - routePath: '/{news_title}'
+      -
+        routePath: '/{news_title}'
         _controller: 'News::detail'
         _arguments:
           news_title: news
-      - routePath: '/{category_name}'
+      -
+        routePath: '/{category_name}'
         _controller: 'News::list'
         _arguments:
           category_name: overwriteDemand/categories
-      - routePath: '/{tag_name}'
+      -
+        routePath: '/{tag_name}'
         _controller: 'News::list'
         _arguments:
           tag_name: overwriteDemand/tags
@@ -108,3 +100,9 @@ routeEnhancers:
         type: PersistedAliasMapper
         tableName: tx_news_domain_model_tag
         routeFieldName: slug
+routes:
+  -
+    route: robots.txt
+    type: staticText
+    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /typo3_src/\r\nAllow: /typo3/sysext/frontend/Resources/Public/*\r\n\r\n# Only allow URLs generated with RealURL\r\nDisallow: /*?id=*\r\nDisallow: /*&id=*\r\n\r\n# L=0 is the default language\r\nDisallow: /*?L=0*\r\nDisallow: /*&L=0*\r\n\r\n# typeNum = 98 is usually the print version.\r\nDisallow: /*?type=98*\r\nDisallow: /*&type=98*\r\n\r\n# Should always be protected (.htaccess)\r\nDisallow: /*/Private/*\r\nDisallow: /*/Configuration/*\r\nDisallow: /*/Initialisation/*\r\n\r\nAllow: /fileadmin/generic_lib/Resources/Public/*\r\n\r\nDisallow: /typo3temp/*\r\nAllow: /typo3temp/*.css\r\nAllow: /typo3temp/*.css.*.gzip\r\nAllow: /typo3temp/*.js\r\nAllow: /typo3temp/*.js.*.gzip\r\nAllow: /typo3temp/*.jpg\r\nAllow: /typo3temp/*.gif\r\nAllow: /typo3temp/*.png\r\n\r\nDisallow: *.sql\r\nDisallow: *.sql.gz\r\n\r\n\r\nSitemap: https://whiteroom.ch/sitemap.xml\r\n\r\nUser-agent: EmailCollector\r\nDisallow: /"
+websiteTitle: ''
