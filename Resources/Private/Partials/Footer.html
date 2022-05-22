@@ -3,12 +3,10 @@
 	xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
  	
-	<!-- Condition returns false unless variable is set in FLUIDTEMPLATE > page.10.variables -->
+	<!-- set condition "showFooter" and "pidFooter" in constants -->
  	
 	<f:section name="Footer">
-        <f:if condition="{contentFooter}">
-			<div class="inner"><v:content.render column="0" order="sorting" sortDirection="ASC" pageUid="{pid_footerTop}"></v:content.render></div>
-        </f:if>
+		<div class="inner"><v:content.render column="2" order="sorting" sortDirection="ASC" pageUid="{pidFooter}"></v:content.render></div>
 	</f:section>
 
 </div>

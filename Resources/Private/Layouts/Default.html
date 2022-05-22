@@ -17,9 +17,9 @@
 
 
 
-<footer>
-	<f:render section="Footer" partial="Footer" arguments="{_all}" />
-</footer>
+<f:if condition="{showFooter} == '1'">
+	<footer><f:render section="Footer" partial="Footer" arguments="{_all}" /></footer>
+</f:if>
 
 
 

@@ -77,8 +77,9 @@ plugin.generic_lib {
 		lightboxCssClass = fancybox
 		lightboxTitle = enlarge image on click
 		
-		#showFooterContent = TRUE
-		#pid_footerTop = 100
+		# pid of Footer Content (default = Home)
+		pidFooter = 1
+		showFooter = 0
 		
 	}	
 }

@@ -80,13 +80,12 @@ page.10 {
 		contentAside < styles.content.get
 		contentAside.select.where = colPos = 1
 
-
-
-		# enable contentFooter in constants and define PID, in order to get footer content from pages CE
-		#contentFooter = TEXT 
-		#contentFooter.value = {$plugin.generic_lib.settings.showFooterContent}
-		#pid_footerTop = TEXT
-		#pid_footerTop.value = {$plugin.generic_lib.settings.pid_footerTop}
+		# enable showFooter in constants and define PID, in order to get footer content from pages
+		# Footer-Content is rendered then v:content.render, colPos (default = 2, defined in BE-Layout) on selected pageUid (Default = Home, defined in constants)
+		pidFooter = TEXT
+		pidFooter.value = {$plugin.generic_lib.settings.pidFooter}
+		showFooter = TEXT 
+		showFooter.value = {$plugin.generic_lib.settings.showFooter}
 		
 		# enable LanguageSwitch in constants
 		languageSwitch = TEXT 
