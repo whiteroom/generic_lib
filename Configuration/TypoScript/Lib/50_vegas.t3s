@@ -13,16 +13,15 @@
 
 
 page.includeCSS {
-		vegas = {$plugin.generic_lib.theme.resDir}/Public/StyleSheets/vegas/vegas.min.css
+		vegas = {$plugin.generic_lib.theme.resDir}/Public/JavaScript/Lib/vegas/vegas.min.css
 		vegas.if.isTrue = {$plugin.generic_lib.settings.vegas}
 		vegas.disableCompression = 1
         vegas.excludeFromConcatenation = 1
 }
 	
 page.includeJSFooterlibs {
-
-		vegas = {$plugin.generic_lib.theme.resDir}/Public/JavaScript/Lib/vegas.min.js
+		vegas = {$plugin.generic_lib.theme.resDir}/Public/JavaScript/Lib/vegas/vegas.min.js
 		vegas.if.isTrue = {$plugin.generic_lib.settings.vegas}
 		vegas.disableCompression = 1
         vegas.excludeFromConcatenation = 1
- }
+}

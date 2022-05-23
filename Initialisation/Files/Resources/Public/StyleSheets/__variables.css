@@ -1,0 +1,47 @@
+:root {
+  --fonts-generic:"Helvetica Neue Regular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  --fonts-generic-weight: 300;
+  
+   
+  --black: #000;
+  --white: #fff;
+  --yellow: rgb(241, 196, 15);
+  --dark-roasted: rgb(35, 31, 32);
+  --light-roasted: rgb(242, 240, 239);
+  --light-neutral: rgb(171, 171, 171);
+  --light-blueish: rgb(107, 108, 112);
+  --dark-deepsea: rgb(0, 51, 51);
+  
+  --primary-color: rgb(255, 55, 34);
+
+
+  
+  --bg-page: var(--light-roasted);
+  --bg-dark: var(--dark-roasted);
+  
+  --text-readable: var(--dark-roasted);
+  --text-hover: var(--light-neutral);
+  --text-selection: var(--yellow);
+  
+  --typographic-lines: var(--light-blueish);
+  
+  
+
+  
+
+
+  
+  --white-80percent: rgba(255, 255, 255, 0.8);
+  
+  
+  
+  --page-width-xl: 1200px;
+  --page-width-lg: 1024px;
+  --page-width-md: 100%;
+  --page-width-sm: 100%;
+  --page-width-xs: 100%;
+  
+  
+  
+  
+}

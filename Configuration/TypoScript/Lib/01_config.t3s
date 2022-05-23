@@ -19,8 +19,8 @@ config {
 	# removeDefaultCss = 0
 	inlineStyle2TempFile = 1
 	disablePrefixComment = 1
-	compressCss = 0
-	concatenateCss = 0
+	compressCss = 1
+	concatenateCss = 1
 	
 	compressJs = 1
 	concatenateJs = 1

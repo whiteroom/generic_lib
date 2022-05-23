@@ -19,11 +19,12 @@ page = PAGE
 page.typeNum = 0
 
 page.includeCSS {
-		normalize = {$plugin.generic_lib.theme.resDir}/Public/StyleSheets/normalize.min.css
+		normalize = {$plugin.generic_lib.theme.resDir}/Public/StyleSheets/components/normalize.min.css
 		normalize.disableCompression = 1
-		main = {$plugin.generic_lib.theme.resDir}/Public/StyleSheets/main.css
+		main = {$plugin.generic_lib.theme.resDir}/Public/StyleSheets/components/main.css
 		icomoon = {$plugin.generic_lib.theme.resDir}/Public/Fonts/style.css
-		client = {$plugin.generic_lib.theme.resDir}/Public/StyleSheets/client.css
+		theme = {$plugin.generic_lib.theme.resDir}/Public/StyleSheets/client.css
+		theme.excludeFromConcatenation = 1
 }
 	
 page.includeJSLibs {
