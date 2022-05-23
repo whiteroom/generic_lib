@@ -177,7 +177,7 @@ td:empty {
 .text-right {text-align: right}
 .text-center {text-align: center}
 
-.text-justify {text-align: left!important} /* no justified—text on narrow screens */
+.text-justify {text-align: left} /* no justified—text on narrow screens */
 @media screen and (min-width:641px) { .text-justify {text-align:justify }}
 
 

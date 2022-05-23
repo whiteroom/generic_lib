@@ -14,8 +14,6 @@
 @import url("_modules.css");
 
 
-@import url('min.css');
-
 /* **** */
 
 #header {
@@ -165,6 +163,7 @@ main .inner, footer .inner{
     
     #page-subtitle h1, #page-subtitle h2 {
         margin: 0;
+        font-size: 24px;
     }
 }
 
