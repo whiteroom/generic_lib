@@ -4,27 +4,41 @@ plugin.tx_dp_cookieconsent {
             
             default {
                 message = We use cookies and other tracking technologies to personalize and improve your experience. By continuing to use our website you consent to this.
-                dismiss = Allow cookies
                 link = Privacy policy
+                
+                dpRequire = Necessary
+                dpStatistik = Statistics
+                dpMarketing = Marketing
+                
                 deny = Ablehnen
                 allowall = Allow all
+                allow = Save selection
             }
             
             de {
                 message = Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.
-                dismiss = Cookies zulassen
-                link = Datenschutzerklärung
-                deny = Ablehnen
+                link = unsere Datenschutzerklärung
+                
+                dpRequire = Notwendig
+                dpStatistik = Statistiken
+                dpMarketing = Marketing
+                
                 allowall = Alle akzeptieren
+                allow = Auswahl speichern
+                deny = Ablehnen
             }
             
             fr {
                 message = Ce site utilise des cookies pour améliorer le site et votre expérience utilisateur. En utilisant nos services, vous consentez expressément à l’utilisation des cookies. 
-                dismiss = Accepter les cookies
                 link = Politique en matière de cookies
-                #link = En savoir plus
-                deny = Refuser
-                allowall = Accepter tout
+                
+                dpRequire = Strictement nécessaires
+                dpStatistik = Analyse d’audience & performance
+                dpMarketing = Personnalisation de contenus
+                
+                allowall = Tout accepter
+                allow = Enregistrer la sélection
+                deny = Tout refuser
             }
     
     }

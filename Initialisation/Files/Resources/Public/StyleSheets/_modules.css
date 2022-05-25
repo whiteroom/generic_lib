@@ -705,6 +705,7 @@ form > legend {
 /* EXT: dp_cookieconsent     */
 .cc-body {
 	align-items:flex-start!important;
+    font-size: 80%;
 }
 
 .cc-revoke,
@@ -735,6 +736,7 @@ form > legend {
     color: inherit;
     padding-left: 5px;
     padding-right: 5px;
+    vertical-align: bottom;
 }
 .cc-btn.cc-allow,
 .cc-btn.cc-deny {
@@ -758,7 +760,7 @@ form > legend {
 .dp--cookie-check label {
 	position: relative;
 	padding-left: 50px!important;
-	padding-right: 5vw!important;
+	padding-right: 2vw!important;
 }
 .dp--cookie-check input[type="checkbox"]{
 
@@ -786,7 +788,7 @@ form > legend {
 
 
 
-@media (min-width: 768px) {
+@media (min-width: 1061px) {
 	.dp--cookie-check {
 	display: flex!important;
 	align-items: unset!important;
