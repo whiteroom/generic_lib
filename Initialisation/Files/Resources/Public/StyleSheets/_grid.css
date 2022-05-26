@@ -6,15 +6,15 @@
 .isotope .grid-item { margin-bottom: 8px; }
 .isotope .grid-sizer, .isotope .grid-item { width: 100%; }
 
-@media screen and (min-width:641px) {
+@media screen and (min-width:640px) {
     .isotope .grid-sizer, .isotope .grid-item { width: calc(50% - 4px); }
 }
 
-@media screen and (min-width:1061px) {
+@media screen and (min-width:1080px) {
     .isotope .grid-sizer, .isotope .grid-item { width: 336px; }
 }
 
-@media screen and (min-width:1301px) {
+@media screen and (min-width:1300px) {
     .isotope .grid-sizer, .isotope .grid-item { width: 294px; }
 }
 

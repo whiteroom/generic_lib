@@ -21,8 +21,8 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px;
-    background-color: #fff;
+    height: var(--toggle-size);
+    background-color: var(--white);
     z-index: 1000;
     -webkit-transition: all .2s ease-out;
     -moz-transition: all .2s ease-out;
@@ -30,9 +30,9 @@
     transition: all .2s ease-out
 }
 
-@media screen and (min-width:641px) { }
+@media screen and (min-width:640px) { }
 
-@media screen and (min-width:1061px) {
+@media screen and (min-width:1080px) {
 
     #header {
         height: 170px
@@ -43,7 +43,7 @@
     }
 }
 
-@media screen and (min-width:1301px) { }
+@media screen and (min-width:1300px) { }
 
 
 /* **** */
@@ -54,16 +54,16 @@
     position: relative
 }
 
-@media screen and (min-width:641px) { }
+@media screen and (min-width:640px) { }
 
-@media screen and (min-width:1061px) {
+@media screen and (min-width:1080px) {
 
     #header-inner {
         width: var(--page-width-lg)
     }
 }
 
-@media screen and (min-width:1301px) {
+@media screen and (min-width:1300px) {
     
 	#header-inner {
         width: var(--page-width-xl)
@@ -77,7 +77,7 @@ main, footer {
 }
 
 main {
-    margin: 60px 0 0;
+    margin: var(--toggle-size) 0 0;
     border-top: 1px solid rgba(107, 108, 112, 0.5);
 }
 
@@ -86,7 +86,7 @@ main {
 footer {
     margin: 80px 0 0;
 }
-@media screen and (min-width:641px) {
+@media screen and (min-width:640px) {
 
     main {
         padding: 20px;
@@ -96,7 +96,7 @@ footer {
     }
 }
 
-@media screen and (min-width:1061px) {
+@media screen and (min-width:1080px) {
 
     main, footer {
         border: 0;
@@ -106,7 +106,7 @@ footer {
     }
 }
 
-@media screen and (min-width:1301px) { }
+@media screen and (min-width:1300px) { }
 
 
 /* **** */
@@ -117,19 +117,19 @@ main .inner, footer .inner{
     
 }
 
-@media screen and (min-width:641px) {
+@media screen and (min-width:640px) {
 
 
 }
 
-@media screen and (min-width:1061px) { 
+@media screen and (min-width:1080px) { 
     main .inner, footer .inner {
         margin: 0 auto;
         width: var(--page-width-lg)
     }
 }
 
-@media screen and (min-width:1301px) {
+@media screen and (min-width:1300px) {
 
     main .inner, footer .inner {
         width: var(--page-width-xl)
@@ -144,9 +144,9 @@ main .inner, footer .inner{
     display: none;
 }
 
-@media screen and (min-width:641px) { }
+@media screen and (min-width:640px) { }
 
-@media screen and (min-width:1061px) {
+@media screen and (min-width:1080px) {
 
     #page-subtitle {
         display: block;
@@ -168,7 +168,8 @@ main .inner, footer .inner{
 }
 
 
-@media screen and (min-width:1301px) { }
+@media screen and (min-width:1300px) { }
+
 
 
 /* **** */
@@ -176,48 +177,52 @@ main .inner, footer .inner{
 #logo {
     position: absolute;
     left:10px;
-    top: 16px;
-    
-    -webkit-transition: all .2s ease-out;
-    -moz-transition: all .2s ease-out;
-    -o-transition: all .2s ease-out;
-    transition: all .2s ease-out
+    top: 0;
+}
+.scrolled #logo { top: -4px }
+
+#logo i {
+    font-size: 28px;
+    line-height: var(--toggle-size);
+    font-style: normal!important;
+}
+.scrolled #logo i { font-size: 32px; }
+
+#logo, #logo i { -webkit-transition: all .2s ease-out; -moz-transition: all .2s ease-out; -o-transition: all .2s ease-out; transition: all .2s ease-out }
+
+
+.scrolled #logo i.icon-logo::before {
+  content: "\e905";
 }
 
-.scrolled #logo { top: 16px }
 
 
 #logo a,
 #logo a:hover { color: var(--text-readable)!important }
 
-#logo i {
-    font-size: 28px;
-    font-style: normal!important;
-    -webkit-transition: all .2s ease-out;
-    -moz-transition: all .2s ease-out;
-    -o-transition: all .2s ease-out;
-    transition: all .2s ease-out
-}
 
-.scrolled #logo i { font-size: 16px }
-
-
-@media screen and (min-width:641px) {
+@media screen and (min-width:640px) {
 
     #logo {
         left: 20px;
     }
 }
 
-@media screen and (min-width:1061px) {
+@media screen and (min-width:1080px) {
 
     #logo {
-        top: 92px;
+        top: 76px;
         left: 0;
     }
+    .scrolled #logo { top: -6px }
     
-    .scrolled #logo { top: 17px }
+    
+    #logo i {
+        font-size: 34px;
+    }
+    .scrolled #logo i { font-size: 22px; }
 }
+
 
 
 
@@ -260,7 +265,7 @@ main .inner, footer .inner{
 
 
 /* **** */
-/* Iamge Galleries */
+/* Image Galleries */
 
 .ce-gallery, .ce-bodytext {
     font-size: inherit;
@@ -318,16 +323,12 @@ main .inner, footer .inner{
 	
 
 
-@media screen and (min-width:641px) {
+@media screen and (min-width:640px) {
     
 
     
     .ce-gallery .ce-row {
-    	margin-bottom: 8px;
-    }
-
-    .ce-gallery {
-        margin: 0 -4px;
+    	margin: 0 -4px 8px -4px;
     }
     
     .ce-gallery .ce-column {
@@ -360,58 +361,35 @@ main .inner, footer .inner{
 
 }
 
-@media screen and (min-width:1061px) { 
+@media screen and (min-width:1080px) {
     
-    .ce-bodytext.left {
-        border-top: 1px solid var(--light-blueish);
+    :root {
+        --content-spread: var(--page-width-lg)
     }
     
-    .ce-bodytext.right.ident {
-    	width: 444px;
-		float:right;
+    .ce-gallery.left, .ce-bodytext.left { 
+        width: calc(444px - 2*var(--gutter-size)) 
     }
     
-    
-    .ce-gallery.right {
-		width: 579px;
-		float:right;
-	}
-	.ce-bodytext.left {
-    	width: 444px;
-    	float:left;
-        padding: 13px 0 0
+    .ce-gallery.right, .ce-bodytext.right {
+        width: calc(var(--content-spread) - 444px)
     }
-    
-    
-    .ce-gallery.left {
-    	width: 452px;
-    	float: left;
-    	margin-top: 4px;
-    }
-	.ce-bodytext.right {
-		width: 571px;
-		float: right;
-	}
-    
-    
+
+    .ce-gallery.left { margin-top: 4px; margin-right: calc(2*var(--gutter-size)) }
+    .ce-bodytext.left { border-top: 1px solid var(--light-blueish); padding: 13px 0 0 0; margin-right: calc(2*var(--gutter-size)) }
+    .ce-gallery.left, .ce-bodytext.left {float:left;}
+    .ce-gallery.right, .ce-bodytext.right {float:right;}
 }
 
-@media screen and (min-width:1301px) {
-
+@media screen and (min-width:1300px) {
     
-    .ce-gallery.right {
-    	width: 755px;
-    }
-    
-    .ce-bodytext.right {
-    	width: 747px;
-        margin: 0;
+    :root {
+        --content-spread: var(--page-width-xl)
     }
     
     .ce-bodytext.center.ident {
-    	width: 906px;
+        width: 906px;
     }
-    
 }
 
 

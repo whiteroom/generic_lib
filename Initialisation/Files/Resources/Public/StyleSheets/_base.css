@@ -146,18 +146,6 @@ td:empty {
 
 
 
-.clearfix:before,
-.clearfix:after {
-
-    display: block;
-    content: "";
-    clear: both;
-    
-}
-
-
-
-
 /* Base Class Definitions */
 
 .transition {
@@ -178,7 +166,7 @@ td:empty {
 .text-center {text-align: center}
 
 .text-justify {text-align: left} /* no justified—text on narrow screens */
-@media screen and (min-width:641px) { .text-justify {text-align:justify }}
+@media screen and (min-width:640px) { .text-justify {text-align:justify }}
 
 
 

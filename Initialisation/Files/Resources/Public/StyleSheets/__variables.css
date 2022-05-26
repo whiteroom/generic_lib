@@ -40,8 +40,9 @@
   --page-width-md: 100%;
   --page-width-sm: 100%;
   --page-width-xs: 100%;
-  
-  
+
+  --gutter-size: 8px;
+  --toggle-size:  60px;
   
   
 }
