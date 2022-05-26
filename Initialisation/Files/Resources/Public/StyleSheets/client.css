@@ -371,14 +371,19 @@ main .inner, footer .inner{
         width: calc(444px - 2*var(--gutter-size)) 
     }
     
-    .ce-gallery.right, .ce-bodytext.right {
+    .ce-gallery.right, .ce-bodytext.right, .ce-bodytext.right.ident {
         width: calc(var(--content-spread) - 444px)
+    }
+    
+    .ce-bodytext.right.ident {
+        width: calc(var(--content-spread) - 444px - 210px);
+        margin-right: 210px;
     }
 
     .ce-gallery.left { margin-top: 4px; margin-right: calc(2*var(--gutter-size)) }
     .ce-bodytext.left { border-top: 1px solid var(--light-blueish); padding: 13px 0 0 0; margin-right: calc(2*var(--gutter-size)) }
     .ce-gallery.left, .ce-bodytext.left {float:left;}
-    .ce-gallery.right, .ce-bodytext.right {float:right;}
+    .ce-gallery.right, .ce-bodytext.right, .ce-bodytext.right.ident {float:right;}
 }
 
 @media screen and (min-width:1300px) {
