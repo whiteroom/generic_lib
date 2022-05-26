@@ -35,21 +35,21 @@ a:hover {
 }
 
 
-::-moz-selection, ::selection { background:var(--text-selection); color:var(--black)}
+::-moz-selection, ::selection { background:var(--text-selection)!important; color:var(--black)!important}
 :focus {outline: 0;}
 
 ::-webkit-input-placeholder, ::-moz-placeholder {
-    color: var(--text-hover);
+    color: var(--text-hover)!important;
     opacity: 1
 }
 
 :-moz-placeholder {
-    color: var(--text-hover);
+    color: var(--text-hover)!important;
     opacity: 1
 }
 
 :-ms-input-placeholder {
-    color: var(--text-hover);
+    color: var(--text-hover)!important;
     opacity: 1
 }
 
