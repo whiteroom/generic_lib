@@ -121,7 +121,7 @@ nav ul ul li.flex-item {
         position: absolute;
         right: 0;
         top: 33px;
-        width: 747px;
+        width: calc(var(--content-spread) - 444px);
 
         -webkit-transition: all .2s ease-out;
         -moz-transition: all .2s ease-out;

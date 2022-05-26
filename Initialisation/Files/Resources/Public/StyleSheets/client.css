@@ -154,7 +154,7 @@ main .inner, footer .inner{
         right: 0;
         top: 90px;
         margin-right: 302px;
-        width: 445px;
+        width: calc(var(--content-spread) - 444px - 302px);
     }
     
     .scrolled #page-subtitle {
