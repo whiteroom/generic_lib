@@ -72,7 +72,7 @@ plugin.generic_lib {
 		vegas = 1
 		fancybox = 1
 		isotope = 1
-		showLanguageSwitch = 1
+		showLanguages = 1
 		
 		lightboxCssClass = fancybox
 		lightboxTitle = enlarge image on click

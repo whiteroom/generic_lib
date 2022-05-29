@@ -141,7 +141,7 @@ nav ul ul li.flex-item {
 
 
 
-#menu-toggle {
+#menu-icon {
     display: block;
     position: absolute;
     top: 0;
@@ -156,31 +156,79 @@ nav ul ul li.flex-item {
     cursor: pointer
 }
 
-#menu-toggle:hover {
+#menu-icon.active, #menu-icon:hover {
     background-color: var(--primary-color)
 }
 
-
-#menu-toggle i {
-    font-size: calc(var(--toggle-size)/2.6667);
-    color: #000;
+.navicon ,
+.navicon:before,
+.navicon:after {
+    background: var(--dark-roasted);
+    display: block;
 }
-#menu-toggle:hover i {
+.navicon {
+    background: var(--dark-roasted);
+    height: 2px;
+    position: relative;
+    width: calc(var(--toggle-size)/3);
+}
+.navicon:before,
+.navicon:after {
+    background: var(--dark-roasted);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.navicon:before {
+    top: calc(var(--toggle-size)/12);
+}
+.navicon:after {
+    top: calc(var(--toggle-size)/-12);
+}
+.navicon.active {
+    background: transparent!important;
+}
+.navicon.active:before {
+    top: 0;
+    background: var(--white);
+    transform:rotate(45deg);
+}
+.navicon.active:after {
+    top: 0;
+    background: var(--white);
+    transform:rotate(-45deg);
+}
+
+
+#menu-icon:hover .navicon,
+#menu-icon:hover .navicon:before,
+#menu-icon:hover .navicon:after {
+    background: var(--white);
+}
+
+/* keep for backwards compatibility with icomoon '.icon-menu-bars' */
+#menu-icon i.icon-menu-bars {
+    font-size: calc(var(--toggle-size)/2.6667);
+    color: var(--dark-roasted);
+}
+#menu-icon:hover i {
     color: #fff
 }
 
 
-#menu-toggle, #menu-toggle i {
-    -webkit-transition: all .2s ease-out;
-    -moz-transition: all .2s ease-out;
-    -o-transition: all .2s ease-out;
-    transition: all .2s ease-out;
+#menu-icon, #menu-icon i, .navicon , .navicon:before, .navicon:after {
+    -webkit-transition: background .2s ease-out;
+    -moz-transition: background .2s ease-out;
+    -o-transition: background .2s ease-out;
+    transition: background .2s ease-out;
 }
 
 
 @media screen and (min-width:1080px) {
 
-    #menu-toggle,
+    #menu-icon,
     .shownav #mobile-menu {
         display: none
     }

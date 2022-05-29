@@ -57,7 +57,7 @@ lib.languageSwitch {
 	special = language
 	special.value = 0,1,2		
 
-	wrap = <ul>|</ul>
+	wrap = <ul class="clearfix">|</ul>
 
 	1 = TMENU
 	1 {

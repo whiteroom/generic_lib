@@ -48,9 +48,23 @@
 
 $(window).ready(function(event) {
 
-	$('#menu-toggle').on('click',function(){
+	$('#menu-icon').click(function () {
+		
+		$(this).toggleClass('active').find('.navicon').toggleClass('active')
 		$('body').toggleClass('shownav');
 	});
+	
+	function resizedw(){
+		$('#menu-icon').removeClass('active');
+		$('.navicon').removeClass('active');
+		$('body').removeClass('shownav');
+	}
+
+	var doit;
+	window.onresize = function(){
+	  clearTimeout(doit);
+	  doit = setTimeout(resizedw, 25);
+	};
 	
 	
 	$(window).scroll( function() {

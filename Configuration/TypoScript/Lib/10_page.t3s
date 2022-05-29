@@ -89,8 +89,8 @@ page.10 {
 		showFooter.value = {$plugin.generic_lib.settings.showFooter}
 		
 		# enable LanguageSwitch in constants
-		languageSwitch = TEXT 
-		languageSwitch.value = {$plugin.generic_lib.settings.showLanguageSwitch}
+		showLanguages = TEXT 
+		showLanguages.value = {$plugin.generic_lib.settings.showLanguages}
 		
 		layout = TEXT
 		layout.data = levelfield:-2,backend_layout_next_level,slide
