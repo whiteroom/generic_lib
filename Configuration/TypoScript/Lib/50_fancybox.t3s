@@ -12,12 +12,12 @@
 # **********************************************************
 
 
-page.includeCSS {
+page.includeCSSLibs {
 		fancybox = {$plugin.generic_lib.theme.resDir}/Public/JavaScript/Lib/fancybox/jquery.fancybox.min.css
-		fancybox.forceOnTop = 1
+		#fancybox.forceOnTop = 1
 		fancybox.if.isTrue = {$plugin.generic_lib.settings.fancybox}
-		fancybox.disableCompression = 1
-        fancybox.excludeFromConcatenation = 1
+		#fancybox.disableCompression = 1
+        #fancybox.excludeFromConcatenation = 1
 }
 	
 page.includeJSFooterlibs {

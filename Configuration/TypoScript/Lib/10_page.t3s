@@ -18,13 +18,15 @@
 page = PAGE 	
 page.typeNum = 0
 
-page.includeCSS {
+page.includeCSSLibs {
 		normalize = {$plugin.generic_lib.theme.resDir}/Public/StyleSheets/components/normalize.min.css
 		normalize.disableCompression = 1
 		main = {$plugin.generic_lib.theme.resDir}/Public/StyleSheets/components/main.css
 		icomoon = {$plugin.generic_lib.theme.resDir}/Public/Fonts/style.css
+}
+page.includeCSS {
 		theme = {$plugin.generic_lib.theme.resDir}/Public/StyleSheets/client.css
-		theme.excludeFromConcatenation = 1
+		theme.forceOnTop = 1
 }
 	
 page.includeJSLibs {

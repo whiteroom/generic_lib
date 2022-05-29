@@ -150,7 +150,7 @@ TCEFORM.tt_content {
 	editlock.disabled = 1
 	fe_group.disabled = 1
 	date.disabled = 1
-	frame_class.disabled = 1
+	frame_class.disabled = 0
 
 	rowDescription.disabled = 0
 	spaceBefore.disabled = 0

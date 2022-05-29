@@ -12,11 +12,11 @@
 # **********************************************************
 
 
-page.includeCSS {
+page.includeCSSLibs {
 		vegas = {$plugin.generic_lib.theme.resDir}/Public/JavaScript/Lib/vegas/vegas.min.css
 		vegas.if.isTrue = {$plugin.generic_lib.settings.vegas}
-		vegas.disableCompression = 1
-        vegas.excludeFromConcatenation = 1
+		#vegas.disableCompression = 1
+        #vegas.excludeFromConcatenation = 1
 }
 	
 page.includeJSFooterlibs {
