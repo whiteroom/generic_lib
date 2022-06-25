@@ -60,9 +60,9 @@ TCEFORM {
                 
                 
                 sDEF {
-                  settings\.categoryConjunction.disabled = 1
-                  settings\.categories.disabled = 1
-                  settings\.includeSubCategories.disabled = 1
+                  settings\.categoryConjunction.disabled = 0
+                  settings\.categories.disabled = 0
+                  settings\.includeSubCategories.disabled = 0
                   
                   settings\.orderDirection.disabled = 0
                   settings\.orderBy.addItems {
