@@ -21,7 +21,7 @@ page {
 	
 	bodyTag >
 	bodyTagCObject = TEXT
-	bodyTagCObject.value.dataWrap = <body id="page-uid{page:uid}" class="pid{leveluid:1}" x-ms-format-detection="none">
+	bodyTagCObject.value.dataWrap = <body id="page-uid{page:uid}" class="pid-{leveluid:1 // leveluid:0} {page:backend_layout}" x-ms-format-detection="none">
 
 
 	meta.X-UA-Compatible.httpEquivalent = 1
