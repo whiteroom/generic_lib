@@ -98,6 +98,8 @@ page.10 {
 		layout.data = levelfield:-2,backend_layout_next_level,slide
 		layout.override.field = backend_layout
 		
+		feLayout = TEXT
+		feLayout.field = layout
 		
 		vegas = TEXT 
 	    vegas.value = {$plugin.generic_lib.settings.vegas}

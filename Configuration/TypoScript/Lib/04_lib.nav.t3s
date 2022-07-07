@@ -111,3 +111,23 @@ lib.languageSwitch {
         }
 	}
 }
+
+
+# Section Index Jump Menu (optional, set on condition - FELayout)
+lib.sectionIndexNavigation = HMENU
+lib.sectionIndexNavigation {
+
+	special = list
+	special.value.data = page:uid
+	wrap = <ul>|</ul>
+
+	1 = TMENU
+	1 {
+		sectionIndex = 1
+		sectionIndex.type = header
+		sectionIndex.useColPos = -1
+
+		NO.wrapItemAndSub = <li>|</li>
+		No.ATagBeforeWrap = 1
+	}
+}

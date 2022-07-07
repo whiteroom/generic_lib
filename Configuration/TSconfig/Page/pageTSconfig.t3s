@@ -128,8 +128,26 @@ TCEMAIN {
 }
 
 
-TCEFORM.pages.subtitle.label = Untertitel
-TCEFORM.pages.nav_title.label = Navigationstitel
+
+# --------------------------------------------------
+# TCEFORM.pages
+#
+
+TCEFORM.pages {
+	
+	subtitle.label = Untertitel
+	nav_title.label = Navigationstitel
+	
+	layout {
+		altLabels.0 = Standard Layout
+		altLabels.1 = Show CE Jump Menu on this page
+
+		removeItems = 2,3
+
+	}
+
+}
+
 
 
 # --------------------------------------------------
@@ -446,32 +464,6 @@ TCAdefaults.tt_content {
 
 
 
-
-# --------------------------------------------------
-# TCEFORM.pages
-#
-TCEFORM.pages {
-    # sysfolder with backend layouts
-    # backend_layout.PAGE_TSCONFIG_ID = 2
-    # backend_layout_next_level.PAGE_TSCONFIG_ID = 2
-
-    #hide no backend layout label
-    #backend_layout_next_level.removeItems= -1
-	#backend_layout.removeItems= -1
-	#backend_layout.altLabels.0 = Standard
-    
-
-    # "Frontend" layout, used for body class
-    #layout {
-        # disable or
-        #disabled = 1
-        # change & remove
-        
-        #altLabels.0 = Standard
-        #removeItems = 1,2,3
-    #}
-
-}
 
 # --------------------------------------------------
 # RTE
