@@ -12,7 +12,7 @@
 # **********************************************************
 
 # Default
-lib.navbar = HMENU 
+lib.navbar = COA  
 lib.navbar {
 	
 	wrap = <ul>|</ul>
