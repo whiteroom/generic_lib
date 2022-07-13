@@ -84,7 +84,7 @@ audio {
 }
 
 hr {
-    border-color: var(--text-readable);
+    border-color: var(--light-light-neutral);
 }
 
 p:empty {

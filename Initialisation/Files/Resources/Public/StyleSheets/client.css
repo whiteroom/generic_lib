@@ -376,8 +376,8 @@ main .inner, footer .inner{
     }
     
     .ce-bodytext.right.ident {
-        width: calc(var(--content-spread) - 444px - 210px);
-        margin-right: 210px;
+        /*width: calc(var(--content-spread) - 444px - 210px);
+        margin-right: 210px;*/
     }
 
     .ce-gallery.left { margin-top: 4px; margin-right: calc(2*var(--gutter-size)) }
