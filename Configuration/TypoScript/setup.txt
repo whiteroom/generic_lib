@@ -2,4 +2,4 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:seo/Configuration/TypoScript/XmlSitemap/setup.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:form/Configuration/TypoScript/setup.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:indexed_search/Configuration/TypoScript/setup.typoscript">
-<INCLUDE_TYPOSCRIPT: source="DIR: ./Lib" extensions="t3s">
+<INCLUDE_TYPOSCRIPT: source="DIR: ./Lib" extensions="typoscript">
