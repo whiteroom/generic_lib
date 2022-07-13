@@ -17,6 +17,9 @@ body,
     font-weight: 300
 }
 
+::-moz-selection, ::selection { background:rgb(241, 196, 15); color:inherit}
+:focus {outline: 0;}
+
 h1,
 h2,
 h3,
@@ -24,7 +27,7 @@ h4,
 h5,
 h6 {
     color: rgb(35, 31, 32);
-    margin: 0 0 1.6rem;
+    margin: 1rem 0 0.4rem;
     padding: 0;
     line-height: 1.1;
     letter-spacing: .01rem;
@@ -48,10 +51,10 @@ h6 {
     margin: 0;
 }
 
-p {margin: 0 0 1.4rem 0;}
+p {margin: 0 0 0.4rem 0;}
 
 p + ul {
-    margin-top: -1rem!important;
+    margin-top: 1rem!important;
 }
 
 ul + p {
@@ -62,6 +65,9 @@ p:empty {
    display: none;
 }
 
+strong {
+    font-weight: 700
+}
 
 hr {
     display: block;
@@ -118,4 +124,8 @@ dd {
 .mb-5{margin-bottom:3rem}
 .mt-5{margin-top:3rem}
 
-
+.box {
+    padding: 1rem;
+    background: lightgrey;
+    margin: 1rem;
+}
