@@ -2,9 +2,9 @@
 defined('TYPO3_MODE') or die();
 
 (function () {
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="DIR:EXT:generic_lib/Configuration/TSconfig/Page" extensions="t3s">');
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="DIR:EXT:generic_lib/Configuration/TSconfig/Ext/News" extensions="t3s">');
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('<INCLUDE_TYPOSCRIPT: source="DIR:EXT:generic_lib/Configuration/TSconfig/User" extensions="t3s">');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="DIR:EXT:generic_lib/Configuration/TSconfig/Page" extensions="tsconfig">');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="DIR:EXT:generic_lib/Configuration/TSconfig/Ext/News" extensions="tsconfig">');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('<INCLUDE_TYPOSCRIPT: source="DIR:EXT:generic_lib/Configuration/TSconfig/User" extensions="tsconfig">');
 
 
 
