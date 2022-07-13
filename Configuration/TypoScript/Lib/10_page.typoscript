@@ -20,7 +20,6 @@ page.typeNum = 0
 
 page.includeCSSLibs {
 		normalize = {$plugin.generic_lib.theme.resDir}/Public/StyleSheets/components/normalize.min.css
-		normalize.disableCompression = 1
 		main = {$plugin.generic_lib.theme.resDir}/Public/StyleSheets/components/main.css
 		icomoon = {$plugin.generic_lib.theme.resDir}/Public/Fonts/style.css
 }
@@ -31,7 +30,7 @@ page.includeCSS {
 	
 page.includeJSLibs {
 		
-		jquery = //ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js
+		jquery = https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js
 		jquery.external = 1
 		jquery.disableCompression = 1
         jquery.excludeFromConcatenation = 1
@@ -58,11 +57,9 @@ page.jsInline{
 
 page.includeJSFooter {
 
-        
 		1 = {$plugin.generic_lib.theme.resDir}/Public/JavaScript/main.js
-		
 		2 = {$plugin.generic_lib.theme.resDir}/Public/JavaScript/fancybox-options.js
-		2.if.isTrue = {$plugin.generic_lib.settings.fancybox}
+			2.if.isTrue = {$plugin.generic_lib.settings.fancybox}
 }
 
 
@@ -72,11 +69,6 @@ page.10 = FLUIDTEMPLATE
 page.10 {
 	
 	variables {
-
-		# Attention
-		# The predefined CONTENT objects styles.content.getLeft, styles.content.getRight and styles.content.getBorder 
-		# are not provided anymore. styles.content.get still exists for your convenience. 
-		# Most of the current websites are using "backend layouts", where the predefined numbering of the columns does not make sense.
 		
  		contentMain < styles.content.get
 
@@ -87,10 +79,10 @@ page.10 {
 		# Footer-Content is rendered then v:content.render, colPos (default = 2, defined in BE-Layout) on selected pageUid (Default = Home, defined in constants)
 		pidFooter = TEXT
 		pidFooter.value = {$plugin.generic_lib.settings.pidFooter}
+
 		showFooter = TEXT 
 		showFooter.value = {$plugin.generic_lib.settings.showFooter}
 		
-		# enable LanguageSwitch in constants
 		showLanguages = TEXT 
 		showLanguages.value = {$plugin.generic_lib.settings.showLanguages}
 		
@@ -111,26 +103,14 @@ page.10 {
 	file.stdWrap.cObject = CASE
 	file.stdWrap.cObject {
 		
-		# Die Backend Layout ID definiert das Frontend Template
-        # An dieser Stelle sliden wir gerne, da Backend Layouts häufig auf Unterseiten vererbt werden.
-        # Diese Abfrage kann je nach Bedürfnissen angepasst werden.
-        # key.data = levelfield:-1, backend_layout, slide
-        
 		key.data = levelfield:-1, backend_layout_next_level, slide
 		key.override.field = backend_layout
 
-		
-		# Standard Layout
-        # Wenn keine spezielles Backend Layout definiert wurde
         default = TEXT
-		#default.value = {$plugin.generic_lib.theme.resDir}/Private/Templates/Standard1Col.html
 		default.value = EXT:generic_lib/Resources/Private/Templates/Standard1Col.html
 		
-		
 		# Landing Page
-        # Da in Page TSConfig definiert, der ID "pagets__" voranstellen.
         pagets__1 = TEXT
-		#pagets__1.value       = {$plugin.generic_lib.theme.resDir}/Private/Templates/Home.html
 		pagets__1.value       = EXT:generic_lib/Resources/Private/Templates/Home.html
 		
 		# Standard einspaltig (use this)
@@ -138,16 +118,10 @@ page.10 {
 		
 		# Erweitert (zweispaltig)
 		pagets__3 = TEXT
-		#pagets__3.value       = {$plugin.generic_lib.theme.resDir}/Private/Templates/Standard2Col.html
 		pagets__3.value       = EXT:generic_lib/Resources/Private/Templates/Standard2Col.html
 	}
 
-	
-	#partialRootPath = {$plugin.generic_lib.theme.resDir}/Private/Partials
 	partialRootPath = EXT:generic_lib/Resources/Private/Partials
-	
-	
-	#layoutRootPath = {$plugin.generic_lib.theme.resDir}/Private/Layouts
 	layoutRootPath = EXT:generic_lib/Resources/Private/Layouts
 		
 }

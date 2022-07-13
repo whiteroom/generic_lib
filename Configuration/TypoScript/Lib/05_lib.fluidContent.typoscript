@@ -11,24 +11,18 @@
 # Overriding the FLUID templates
 # **********************************************************
 
-# Good-bye css_styled_content, check this for customized CE's
 	
 lib.contentElement {	
 	
-#lib.fluidContent {
    templateRootPaths {
     	200 = EXT:generic_lib/Resources/Private/Frontend/Templates/
-	  	#200 = {$plugin.generic_lib.theme.resDir}/Private/Frontend/Templates/
    }
    partialRootPaths {
     	200 = EXT:generic_lib/Resources/Private/Frontend/Partials/
-		#200 = {$plugin.generic_lib.theme.resDir}/Private/Frontend/Partials/
    }
    layoutRootPaths {
     	200 = EXT:generic_lib/Resources/Private/Frontend/Layouts/
-		#200 = {$plugin.generic_lib.theme.resDir}/Private/Frontend/Layouts/
    }
-   
    
    
    #disable if you don't want to use titles in fancybox
@@ -50,7 +44,6 @@ lib.contentElement {
 
 		imageAltText = {$plugin.generic_lib.contentElements.copyright}
 		imageTitleText = {$plugin.generic_lib.contentElements.imageTitleText}
-		
 		
    }
    

@@ -4,19 +4,8 @@
 # Default PAGE object:
 #page = PAGE
 #page.10 = TEXT
-#page.10.value = HELLO V9!
+#page.10.value = HELLO V10!
 
-
-
-config {
-	
-	#compressCss = 0
-	#concatenateCss = 0
-	
-	#compressJs = 1
-    #concatenateJs = 1
-	
-}
 
 
 # config.contentObjectExceptionHandler = 0

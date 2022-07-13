@@ -16,37 +16,106 @@ lib.navbar = HMENU
 lib.navbar {
 	
 	wrap = <ul>|</ul>
-	
-	1 = TMENU 
-	1 {
+
+
+	# 10 = TEXT 
+	# 10 {
+	# 	wrap = <li class="nav_item firstlevel">|</li>
+	# 	value = {$plugin.generic_lib.navElements.home.de}
+	# 	typolink.parameter = 1
+	# 	typolink.ATagParams = class="menulink"
+	# 	typolink.stdWrap.dataWrap = <span>|</span>
+	# 	typolink.stdWrap.htmlSpecialChars = 1
+	# }
+
+
+	20 = HMENU 
+	20 {
+
 		
-		NO = 1
-		NO.wrapItemAndSub = <li class="nav_item firstlevel">|</li>
-	    NO.ATagParams = class="menulink"
-	    NO.stdWrap.dataWrap = <span>|</span>
-		NO.stdWrap.htmlSpecialChars = 1
+		1 = TMENU 
+		1 {
+			
+			NO = 1
+			NO.wrapItemAndSub = <li class="nav_item firstlevel">|</li>
+		    NO.ATagParams = class="menulink"
+		    NO.stdWrap.dataWrap = <span>|</span>
+			NO.stdWrap.htmlSpecialChars = 1
+			
+			ACT = 1
+	        ACT.wrapItemAndSub = <li class="nav_item firstlevel active">|</li>
+	        ACT.ATagParams = class="active menulink"
+	        ACT.stdWrap.dataWrap = <span>|</span>
+			ACT.stdWrap.htmlSpecialChars = 1
+			
+			CUR = 1
+			CUR.wrapItemAndSub = <li class="nav_item firstlevel current">|</li>
+	        CUR.ATagParams = class="current menulink"
+		    CUR.stdWrap.dataWrap = <span>|</span>
+			CUR.stdWrap.htmlSpecialChars = 1
+
+		}
 		
-		ACT = 1
-        ACT.wrapItemAndSub = <li class="nav_item firstlevel active">|</li>
-        ACT.ATagParams = class="active menulink"
-        ACT.stdWrap.dataWrap = <span>|</span>
-		ACT.stdWrap.htmlSpecialChars = 1
-		
-		CUR = 1
-		CUR.wrapItemAndSub = <li class="nav_item firstlevel current">|</li>
-        CUR.ATagParams = class="current menulink"
-	    CUR.stdWrap.dataWrap = <span>|</span>
-		CUR.stdWrap.htmlSpecialChars = 1
+		2<.1
+	    2.wrap = <ul class="flex flex-column">|</ul>
+	    2.NO.wrapItemAndSub = <li class="flex-item secondlevel">|</li>
+	    2.ACT.wrapItemAndSub = <li class="flex-item secondlevel active">|</li>
+	    2.CUR.wrapItemAndSub = <li class="flex-item secondlevel current">|</li>
 
 	}
-	
-	2<.1
-    2.wrap = <ul class="flex flex-column">|</ul>
-    2.NO.wrapItemAndSub = <li class="flex-item secondlevel">|</li>
-    2.ACT.wrapItemAndSub = <li class="flex-item secondlevel active">|</li>
-    2.CUR.wrapItemAndSub = <li class="flex-item secondlevel current">|</li>
 	    
 }
+
+
+# English
+[siteLanguage("locale") == "en_US.UTF-8"]
+	# lib.navbar.10.value = {$plugin.generic_lib.navElements.home.en}
+[END]
+
+# French
+[siteLanguage("locale") == "fr_FR.UTF-8"]
+	# lib.navbar.10.value = {$plugin.generic_lib.navElements.home.fr}
+[END]
+
+
+
+
+# Only the subPages
+lib.navSubpages < lib.navbar
+lib.navSubpages {
+	
+	10 >
+	
+	20 {
+		special = directory
+		special.value.data  = leveluid:1
+		entryLevel = 1
+		expAll = 1
+	}
+}
+
+
+
+
+# Section Index Jump Menu (optional, set on condition - in FELayout for example)
+lib.sectionIndexNavigation = HMENU
+lib.sectionIndexNavigation {
+
+	special = list
+	special.value.data = page:uid
+	wrap = <ul>|</ul>
+
+	1 = TMENU
+	1 {
+		sectionIndex = 1
+		sectionIndex.type = header
+		sectionIndex.useColPos = -1
+
+		NO.wrapItemAndSub = <li>|</li>
+		No.ATagBeforeWrap = 1
+	}
+}
+
 
 
 # add manually if needed
@@ -109,25 +178,5 @@ lib.languageSwitch {
             stdWrap.dataWrap = <span class="text-muted">|</span>
             stdWrap.typolink >
         }
-	}
-}
-
-
-# Section Index Jump Menu (optional, set on condition - FELayout)
-lib.sectionIndexNavigation = HMENU
-lib.sectionIndexNavigation {
-
-	special = list
-	special.value.data = page:uid
-	wrap = <ul>|</ul>
-
-	1 = TMENU
-	1 {
-		sectionIndex = 1
-		sectionIndex.type = header
-		sectionIndex.useColPos = -1
-
-		NO.wrapItemAndSub = <li>|</li>
-		No.ATagBeforeWrap = 1
 	}
 }

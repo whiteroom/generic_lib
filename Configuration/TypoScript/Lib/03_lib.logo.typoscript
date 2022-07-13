@@ -20,6 +20,9 @@ lib.logo {
 	10.value = <i class="icon-logo"></i>
 	#10.value = {$plugin.generic_lib.clientName}
 	#10.stdWrap.outerWrap = <span class="logo">|</span>
+
+	# consider .icon-logo:before{content: url("data:image/svg+xml; utf8, <svg ... code here</svg>");}
+	# multicolor icoomon icons have issues with css animations
 	
 	10.typolink.parameter = 1
 	10.typolink.title = {$plugin.generic_lib.clientName}: zur Startseite 

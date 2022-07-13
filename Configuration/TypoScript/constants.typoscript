@@ -56,6 +56,10 @@ plugin.generic_lib {
 	contentElements.logo.TitleText.de = zur Startseite
 	contentElements.logo.ATagtitle = whiteRoom | schoeneck stauffer
 	
+	navElements.home.de = Home
+	navElements.home.en = Home
+	navElements.home.fr = Home
+
 	pagemeta.author = whiteRoom | schoeneck stauffer, St. Johanns-Vorstadt 15, 4056 Basel
 	pagemeta.googleVerification = 
 	

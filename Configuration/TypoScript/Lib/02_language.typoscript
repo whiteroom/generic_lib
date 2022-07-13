@@ -12,18 +12,6 @@
 # **********************************************************
 
 
-# No need to do it like this
-# see solution below
-# ##############################################
-# config.doctype ( 
-# <!doctype html> 
-# <!--[if lt IE 7]>   <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="{$plugin.generic_lib.lang.localeShort}">   <![endif]--> 
-# <!--[if IE 7]>      <html class="no-js lt-ie9 lt-ie8" lang="{$plugin.generic_lib.lang.localeShort}">          <![endif]--> 
-# <!--[if IE 8]>      <html class="no-js lt-ie9" lang="{$plugin.generic_lib.lang.localeShort}">                 <![endif]--> 
-# <!--[if gt IE 8]><!-->
-# ) 
-
-
 # Default language
 config {
 	
@@ -35,7 +23,6 @@ config {
 	
 	##### IMG_RESSOURCE not showing up in other languages! #########
 	### remove 'media' from [FE][pageOverlayFields]  ###############
-	
 	
 	# Translations, show default language if not translated
 	# The default is that records with no translation will show up in the default language. Keyword "hideNonTranslated" does what it says
@@ -59,9 +46,6 @@ config {
 	        10.noTrimWrap = | | |
 	        20 = TEXT
 	        20.value = lang="{$plugin.generic_lib.lang.localeShort}"
-	        
-	        # No need to do it like this
-	        # wrap = <html | ><!--<![endif]-->
 	        
 	        wrap = <html | >
 		}

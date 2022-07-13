@@ -81,20 +81,20 @@ plugin.tx_news {
             }
         }
         
-        
 
-
-
-        
 
         # detail view
         detail {
             media {
                 image {
+                    # proper use of srcset in partials presumed
+                    maxWidth > 
+                    maxHeight >
 
-                    maxWidth = 747
-                    maxHeight =
+                    lightbox.enabled = {$plugin.generic_lib.settings.fancybox}
                     lightbox = {$plugin.generic_lib.settings.lightboxCssClass}
+                    # custom variable
+                    lightboxIfMissingTitle = {$plugin.generic_lib.contentElements.clickenlarge.windowtitle}
                 }
                 video {
                     width = {$styles.content.textmedia.maxW}
@@ -103,7 +103,6 @@ plugin.tx_news {
             }
             # don't use/show fb & twitter sharing plugins
             showSocialShareButtons = 1
-            
             showPrevNext = 1
         }
 
@@ -116,10 +115,7 @@ plugin.tx_news {
             }
         }
         
-        
-        facebookLocale = de_DE
-
-        
+        facebookLocale = de_DE        
     }
 
 
@@ -130,7 +126,8 @@ plugin.tx_news {
 
         }
         de {
-			dateFormat = %-d. %-m. %Y
+            #dateFormat = %-d. %-m. %Y
+            dateFormat = %-m. %Y
         }
     }
 }

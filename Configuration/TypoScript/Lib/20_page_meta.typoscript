@@ -34,8 +34,7 @@ page {
 }
 
 # apply as a generic rule to all browsers
-# then hide element
-# and use modernizr to detect if vw/vh is enabled
+# then hide element and use modernizr to detect if vw/vh is enabled
 # move down to closing body tag (avoid conflicts with page indexing)
 page {
   footerData.10 = TEXT

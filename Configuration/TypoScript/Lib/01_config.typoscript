@@ -25,7 +25,6 @@ config {
 	compressJs = 1
 	concatenateJs = 1
 
-
 	moveJsFromHeaderToFooter = 0
 	
 	# RealURL
@@ -56,6 +55,5 @@ config {
 	pageTitleFirst = 1
 	pageTitleSeparator = |
     pageTitleSeparator.noTrimWrap = | | |
-	
 	
 }
