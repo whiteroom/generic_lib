@@ -1,9 +1,4 @@
 plugin.tx_seo {
-    view {
-        templateRootPaths.100 = EXT:generic_lib/Resources/Private/Ext/XmlSitemap/
-        partialRootPaths.100 = EXT:generic_lib/Resources/Private/Ext/XmlSitemap/
-        layoutRootPaths.100 = EXT:generic_lib/Resources/Private/Ext/XmlSitemap/
-    }
     config {
         xmlSitemap {
             sitemaps {
@@ -14,7 +9,7 @@ plugin.tx_seo {
                     }
                 }
                 news {
-                    provider = Whiteroom\GenericLib\XmlSitemap\TxNewsGoogleXmlSitemapDataProvider
+                    provider = TYPO3\CMS\Seo\XmlSitemap\RecordsXmlSitemapDataProvider
                     config {
                         table = tx_news_domain_model_news
                         sortField = sorting
@@ -24,7 +19,7 @@ plugin.tx_seo {
                         # Container
                         pid = 2
                         url {
-                            # Detailview
+                          # Detailview
                             pageId = 6
                             fieldToParameterMap {
                                 uid = tx_news_pi1[news]
@@ -34,19 +29,6 @@ plugin.tx_seo {
                                 tx_news_pi1.action = detail
                             }
                             useCacheHash = 1
-                        }
-                        template = GoogleNews
-                        itemOverrides {
-                            # Publication/Name of the news publication
-                            name =
-                            # Publication/Language of the publication. It should be an ISO 639 Language Code
-                            language =
-                            # Accessibility of the article. Required if access is not open
-                            access =
-                            # Comma-separated list of properties characterizing the content of the article
-                            genres =
-                            # Comma-separated list of up to 5 stock tickers
-                            stock_tickers =
                         }
                     }
                 }
