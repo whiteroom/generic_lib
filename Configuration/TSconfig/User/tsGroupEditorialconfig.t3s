@@ -56,11 +56,7 @@ page {
 		usergroup.disabled = 1
 	}
 	
-	TCEFORM.sys_file_reference {
-		#tx_news specific: Zeige in welchen Ansichten (Detail, List, etc)
-		showinpreview.disabled = 1 
-	}
-
+	
 	#enable all, disable here
 	TCEFORM.tt_content {
 	
@@ -161,15 +157,6 @@ page {
 
 	)
 	
-
-	TCEFORM.tt_content.layout.types {
-
-        list {
-            # removeItems = 0,1,2,3
-        }
-    }
-
-
 	TCEFORM.pages {
 		
 		#GENERAL TAB
@@ -298,8 +285,6 @@ page {
 		keywords.disabled = 1
 		description.disabled = 1
 		alternative_title.disabled = 1
-		sitemap_changefreq.disabled = 1
-		sitemap_priority.disabled = 1
 
 		#Language TAB
 		sys_language_uid.disabled = 1

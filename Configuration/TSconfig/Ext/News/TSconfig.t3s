@@ -1,21 +1,18 @@
 TCAdefaults.tx_news_domain_model_news {
 	
-	# 1 = Default Category
+	# 1 = General/Agenda
 	categories = 1
 
 	istopnews = 0
 	hidden = 0
 	
-    title =
-    subheader =
-    
-    bodytext =
-    author =
-    author_email =
+	# da mit sys_file_reference gearbeitet wird (alternative: tx_news_domain_model_media)
+	# showinpreview = 1
 	
 }
 
 TCAdefaults.sys_file_reference {
+	# da mit sys_file_reference gearbeitet wird (alternative: tx_news_domain_model_media)
 	showinpreview = 1
 } 
 
@@ -27,7 +24,7 @@ TCEFORM {
     # disable on userTSConfig
     tx_news_domain_model_news {
         #	istopnews.disabled = 0
-        #   istopnews.label = Topmost Record
+        #   istopnews.label = Newsletter Record
         #	teaser.disabled = 0
         #	bodytext.disabled = 0
         #	author.disabled = 0
@@ -111,36 +108,17 @@ tx_news{
         3 = Special Use Cases
 	}
 
-    predefine.archive >
-    #predefine.archive = +40 weeks 2 days 4 hours
+
+	predefine.archive = +40 weeks 2 days 4 hours
 	#predefine.archive = next year
 	# As value you can use anything which can be interpreted by 
 	# the php function strtotime (http://de2.php.net/manual/en/function.strtotime.php)
 	
 	
-	module {       
-        
-        #This is the administrative module
-        
-        # filter module collapsed (not working?)
-        alwaysShowFilter = 0
-        
-        filters {
-            searchWord = 1
-            hidden = 1
-            archived = 1
-            topNewsRestriction = 1
-            
-            timeRestriction = 0
-            sortingField = 1
-            number = 0
-            categories = 1
-            categoryConjunction = 1
-            includeSubCategories = 0
-        }
-
+	module {		
 		# redirectToPageOnStart = 1
-		# manualSorting = 1. issues #605, as stated by georg
+		
+		manualSorting = 1
 		
 		# If defined, the administration module will redirect the user always to the given page, no matter what defined in the page tree
 		allowedPage = 2
