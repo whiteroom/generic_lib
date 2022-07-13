@@ -10,9 +10,10 @@ editor:
     contentsCss: ["EXT:rte_ckeditor/Resources/Public/Css/contents.css", "EXT:generic_lib/Resources/Public/Stylesheets/Rte/rte.css"]
     stylesSet:
     # block level styles
-      - { name: "Borderless Table", element: "table", attributes: { class: "contenttable--borderless"} }
+      - { name: "Box", element: "div", attributes: { class: "box"} }
       - { name: "Abstand Oben", element: "p", attributes: { class: "mt-5"} }
       - { name: "Abstand Unten", element: "p", attributes: { class: "mb-5"} }
+      - { name: "Borderless Table", element: "table", attributes: { class: "contenttable--borderless"} }
     # Inline styles
       - { name: "Logo Color Marker", element: "span", attributes: { class: "brandcolor"}}
 
@@ -20,14 +21,14 @@ editor:
     format_tags: "p;h3;h4;pre"
 
     toolbarGroups:
-      - { name: basicstyles, groups: [ blocks, basicstyles ] }
+      - { name: basicstyles, groups: [ basicstyles ] }
       - { name: paragraph, groups: [ list, align ] }
       - { name: links, groups: [ links ] }
       - { name: clipboard, groups: [ clipboard, cleanup, undo ] }
       - { name: editing, groups: [ spellchecker ] }
       - { name: insert, groups: [ insert ] }
       - { name: tools, groups: [ table, specialchar ] }
-      - { name: document, groups: [ mode ] }
+      - { name: document, groups: [ blocks, mode ] }
       - { name: styles, groups: [ styles, format ] }
 
     justifyClasses:
@@ -55,3 +56,5 @@ editor:
   externalPlugins:
     descriptionlist:
       resource: "EXT:generic_lib/Resources/Public/ckeditor-plugin-descriptionlist/plugin.js"
+    div:
+      resource: "EXT:generic_lib/Resources/Public/ckeditor-plugin-div/plugin.js"
