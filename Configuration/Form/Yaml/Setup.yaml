@@ -19,8 +19,8 @@ TYPO3:
             Form:
               renderingOptions:
                 templateRootPaths:
-                  100: 'EXT:generic_lib/Resources/Private/Ext/Form/Templates/'
+                  100: 'EXT:generic_lib/Resources/Private/Frontend/Overrides/Form/Templates/'
                 partialRootPaths:
-                  100: 'EXT:generic_lib/Resources/Private/Ext/Form/Partials/'
+                  100: 'EXT:generic_lib/Resources/Private/Frontend/Overrides/Form/Partials/'
                 layoutRootPaths:
-                  100: 'EXT:generic_lib/Resources/Private/Ext/Form/Layouts/'
+                  100: 'EXT:generic_lib/Resources/Private/Frontend/Overrides/Form/Layouts/'

@@ -98,7 +98,7 @@ page.10 {
 			
 	}
 		
-	#file = {$plugin.generic_lib.theme.resDir}/Private/Templates/Standard2Col.html
+	#file = {$plugin.generic_lib.theme.resDir}/Private/Frontend/Templates/Standard2Col.html
 	
 	file.stdWrap.cObject = CASE
 	file.stdWrap.cObject {
@@ -107,22 +107,22 @@ page.10 {
 		key.override.field = backend_layout
 
         default = TEXT
-		default.value = EXT:generic_lib/Resources/Private/Templates/Standard1Col.html
+		default.value = EXT:generic_lib/Resources/Private/Frontend/Templates/Standard1Col.html
 		
 		# Landing Page
         pagets__1 = TEXT
-		pagets__1.value       = EXT:generic_lib/Resources/Private/Templates/Home.html
+		pagets__1.value       = EXT:generic_lib/Resources/Private/Frontend/Templates/Home.html
 		
 		# Standard einspaltig (use this)
 		pagets__2 < .default
 		
 		# Erweitert (zweispaltig)
 		pagets__3 = TEXT
-		pagets__3.value       = EXT:generic_lib/Resources/Private/Templates/Standard2Col.html
+		pagets__3.value       = EXT:generic_lib/Resources/Private/Frontend/Templates/Standard2Col.html
 	}
 
-	partialRootPath = EXT:generic_lib/Resources/Private/Partials
-	layoutRootPath = EXT:generic_lib/Resources/Private/Layouts
+	partialRootPath = EXT:generic_lib/Resources/Private/Frontend/Partials
+	layoutRootPath = EXT:generic_lib/Resources/Private/Frontend/Layouts
 		
 }
 

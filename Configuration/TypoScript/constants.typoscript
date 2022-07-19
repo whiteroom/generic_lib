@@ -150,7 +150,7 @@ plugin.tx_news {
 
 plugin.tx_cookieconsent {
 
-	#view.partialRootPath = EXT:generic_lib/Resources/Private/Ext/dp_cookieconsent/Partials/
+	#view.partialRootPath = EXT:generic_lib/Resources/Private/Frontend/Overrides/Dp_Cookieconsent/Partials/
     
     settings {
         

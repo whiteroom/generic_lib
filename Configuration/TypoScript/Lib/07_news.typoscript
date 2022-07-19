@@ -2,13 +2,13 @@ plugin.tx_news {
 
 	view {
 		templateRootPaths {
-			200 = EXT:generic_lib/Resources/Private/Ext/News/Templates/
+			200 = EXT:generic_lib/Resources/Private/Frontend/Overrides/News/Templates/
 		}
 		partialRootPaths {
-			200 = EXT:generic_lib/Resources/Private/Ext/News/Partials/
+			200 = EXT:generic_lib/Resources/Private/Frontend/Overrides/News/Partials/
 		}
 		layoutRootPaths {
-			200 = EXT:generic_lib/Resources/Private/Ext/News/Layouts/
+			200 = EXT:generic_lib/Resources/Private/Frontend/Overrides/News/Layouts/
 		}
 	}
 	

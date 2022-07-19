@@ -18,13 +18,13 @@ plugin.tx_form {
         # Adpat additional RootPaths in EXT:generic_lib/Configuration/Form/Yaml/Setup.yaml
         
         templateRootPaths {
-            #100 = EXT:generic_lib/Resources/Private/Ext/Form/Templates/
+            #100 = EXT:generic_lib/Resources/Private/Frontend/Overrides/Form/Templates/
         }
         partialRootPaths {
-            #100 = EXT:generic_lib/Resources/Private/Ext/Form/Partials/
+            #100 = EXT:generic_lib/Resources/Private/Frontend/Overrides/Form/Partials/
         }
         layoutRootPaths {
-            #200 = EXT:generic_lib/Resources/Private/Ext/Form/Layouts/
+            #200 = EXT:generic_lib/Resources/Private/Frontend/Overrides/Form/Layouts/
         }
 
     }
