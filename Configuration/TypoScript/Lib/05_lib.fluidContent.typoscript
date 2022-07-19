@@ -15,13 +15,13 @@
 lib.contentElement {	
 	
    templateRootPaths {
-    	200 = EXT:generic_lib/Resources/Private/Frontend/Overrides/fluid_styled_content/Templates/
+    	200 = EXT:generic_lib/Resources/Private/Frontend/Overrides/Fluid_Styled_Content/Templates/
    }
    partialRootPaths {
-    	200 = EXT:generic_lib/Resources/Private/Frontend/Overrides/fluid_styled_content/Partials/
+    	200 = EXT:generic_lib/Resources/Private/Frontend/Overrides/Fluid_Styled_Content/Partials/
    }
    layoutRootPaths {
-    	200 = EXT:generic_lib/Resources/Private/Frontend/Overrides/fluid_styled_content/Layouts/
+    	200 = EXT:generic_lib/Resources/Private/Frontend/Overrides/Fluid_Styled_Content/Layouts/
    }
    
    
