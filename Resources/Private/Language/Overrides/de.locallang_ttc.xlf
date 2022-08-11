@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns:t3="http://typo3.org/schemas/xliff" version="1.0">
+  <file t3:id="1415814791" source-language="en" datatype="plaintext" original="EXT:frontend/Resources/Private/Language/locallang_ttc.xlf" date="2011-10-17T20:22:32Z" product-name="cms" target-language="de">
+    <header/>
+    <body>
+		
+		
+		<trans-unit id="space_class_extra_small" resname="space_class_extra_small" approved="yes">
+			<source>Extra Small</source>
+			<target state="final">ohne Abstand</target>
+		</trans-unit>
+		<trans-unit id="space_class_small" resname="space_class_small" approved="yes">
+			<source>Small</source>
+			<target state="final">reduzierter Abstand</target>
+		</trans-unit>
+		<trans-unit id="space_class_medium" resname="space_class_medium" approved="yes">
+			<source>Medium</source>
+			<target state="final">grosser Abstand</target>
+		</trans-unit>
+		<trans-unit id="space_class_large" resname="space_class_large" approved="yes">
+			<source>Large</source>
+			<target state="final">sehr grosser Abstand</target>
+		</trans-unit>
+		<trans-unit id="space_class_extra_large" resname="space_class_extra_large" approved="yes">
+			<source>Extra Large</source>
+			<target state="final">maximal grosser Abstand</target>
+		</trans-unit>
+      
+      
+    </body>
+  </file>
+</xliff>

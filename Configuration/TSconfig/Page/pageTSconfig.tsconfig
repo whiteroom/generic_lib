@@ -176,7 +176,15 @@ TCEFORM.tt_content {
 	space_before_class.disabled = 0
 	space_after_class.disabled = 0
 
-	
+	space_after_class.altLabels {
+
+		extra-small = LLL:EXT:generic_lib/Resources/Private/Language/Overrides/locallang_ttc.xlf:space_class_extra_small
+		small = LLL:EXT:generic_lib/Resources/Private/Language/Overrides/locallang_ttc.xlf:space_class_small
+		medium = LLL:EXT:generic_lib/Resources/Private/Language/Overrides/locallang_ttc.xlf:space_class_medium
+		large = LLL:EXT:generic_lib/Resources/Private/Language/Overrides/locallang_ttc.xlf:space_class_large
+		extra-large = LLL:EXT:generic_lib/Resources/Private/Language/Overrides/locallang_ttc.xlf:space_class_extra_large
+
+	}
 	
 	
     layout {

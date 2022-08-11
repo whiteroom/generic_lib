@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" original="EXT:frontend/Resources/Private/Language/locallang_ttc.xlf" date="2011-10-17T20:22:32Z" product-name="cms">
+		<header/>
+		<body>
+
+			<trans-unit id="space_class_extra_small" resname="space_class_extra_small">
+				<source>no margin at all</source>
+			</trans-unit>
+			<trans-unit id="space_class_small" resname="space_class_small">
+				<source>reduced margin</source>
+			</trans-unit>
+			<trans-unit id="space_class_medium" resname="space_class_medium">
+				<source>large margin</source>
+			</trans-unit>
+			<trans-unit id="space_class_large" resname="space_class_large">
+				<source>larger margin</source>
+			</trans-unit>
+			<trans-unit id="space_class_extra_large" resname="space_class_extra_large">
+				<source>greatly enlarged margin</source>
+			</trans-unit>
+			
+		</body>
+	</file>
+</xliff>
