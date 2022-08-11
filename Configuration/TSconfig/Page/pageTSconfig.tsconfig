@@ -171,8 +171,7 @@ TCEFORM.tt_content {
 	frame_class.disabled = 0
 
 	rowDescription.disabled = 0
-	spaceBefore.disabled = 0
-	spaceAfter.disabled = 0
+
 	space_before_class.disabled = 0
 	space_after_class.disabled = 0
 
