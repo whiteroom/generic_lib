@@ -97,7 +97,14 @@ TCEFORM {
     }
 }
 
+[2 in tree.rootLineIds]
+    # this removes unwanted CTypes for default sysfolder tx_news.
+    TCEFORM.tt_content.CType.removeItems = header, textpic, textmedia, image, bullets, table, uploads, multimedia, media,mailform, search, login, menu, shortcut, html, script, splash, div, list, menu_abstract, menu-categorized, menu_categorized_content, menu_categorized_pages, menu_pages, menu_subpages, menu_recently_updated, menu_related_pages, menu_section, menu_section_pages, menu_sitemap, menu_sitemap_pages, form_formframework, felogin_login
+    TCAdefaults.tt_content.CType = text
 
+    # this removes unwanted layout types for the above CTypes in default sysfolder tx_news.
+    TCEFORM.tt_content.layout.types.text.removeItems = 0,1,2,3
+[global]
 
 
 # --- Add template layouts
