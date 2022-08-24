@@ -48,8 +48,8 @@ $customChanges = [
         ],
         'news' => [
             'manualSorting' => 1,
-            'rteForTeaser' => 0,
-            'contentElementRelation' => 0,
+            'rteForTeaser' => 1,
+            'contentElementRelation' => 1,
         ],
         
         'backend' => [
