@@ -322,6 +322,10 @@ nav ul ul li.flex-item {
 
 /* ###### generic ####### */
 
+form {
+    width:100%;
+}
+
 form > legend {
     margin-bottom: 3em;
 }
