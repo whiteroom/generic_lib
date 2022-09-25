@@ -79,8 +79,8 @@ plugin.generic_lib {
 		showLanguages = 1
 		
 		lightboxCssClass = fancybox
-		lightboxTitle = enlarge image on click
-		
+		lightboxTitle = <strong>Lorem ipsum</strong> &nbsp; dolor sit amet consectetur 
+
 		# pid of Footer Content (default = Home)
 		pidFooter = 1
 		showFooter = 0
