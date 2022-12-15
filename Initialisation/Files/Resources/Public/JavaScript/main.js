@@ -1,6 +1,7 @@
 (function() {
+
 	
-	var $grid = $('.grid').prepend('<div class="grid-sizer"></div>');
+	const $grid = $('.grid').prepend('<div class="grid-sizer"></div>');
 
 	$grid.isotope({
     	
@@ -14,24 +15,16 @@
 	});
 
 
-	document.addEventListener('lazyloaded', function(e){
-		$grid.isotope('layout');
-	});
+	document.addEventListener('lazyloaded', function(e){ $grid.isotope('layout'); });
+    $grid.imagesLoaded().progress( function() { $grid.isotope('layout'); });
 
-    $grid.imagesLoaded().progress( function() {
-        $grid.isotope('layout');
-    });
-
-
-
-	showViewPortSize(false);
 		
 	Modernizr.addTest('mix-blend-mode', function(){
 	    return Modernizr.testProp('mixBlendMode');
 	});
 
 	Modernizr.addTest('calcviewportunits', function(){
-	    var computedHeight, 
+	    let computedHeight, 
 	        div = document.createElement('div');
 
 	    div.style.height = 'calc(10vh + 10vw)';
@@ -41,6 +34,9 @@
 
 	    return computedHeight !== "0px";
 	});
+	
+
+	showViewPortSize(false);
 	
 })();
 
@@ -60,7 +56,7 @@ $(window).ready(function(event) {
 		$('body').removeClass('shownav');
 	}
 
-	var doit;
+	let doit;
 	window.onresize = function(){
 	  clearTimeout(doit);
 	  doit = setTimeout(resizedw, 25);
@@ -68,7 +64,7 @@ $(window).ready(function(event) {
 	
 	
 	$(window).scroll( function() {
-	    var top = $(this).scrollTop();
+	    let top = $(this).scrollTop();
 	    if ( top > 50 ) {
 		    $('body').addClass('scrolled');
 		}
@@ -108,7 +104,7 @@ $(window).ready(function(event) {
 	// 	Make placeholder text (input) in forms functional
 	$("input").each(function(){
         if($(this).attr('required') == 'required'){
-            var req = $(this).attr('placeholder') + ' *';
+            const req = $(this).attr('placeholder') + ' *';
             $(this).attr('placeholder', req);
         }
     });
@@ -129,13 +125,13 @@ $(window).ready(function(event) {
 
 function showViewPortSize(display) {
 	if (display) {
-		var height = window.innerHeight;
-		var width = window.innerWidth;
-		jQuery('body').prepend('<div id="viewportsize" style="z-index:9999;position:fixed;bottom:0px;left:0px;color:#fff;background:#000;padding:10px">Height: ' + height + '<br>Width: ' + width + '</div>');
-		jQuery(window).resize(function() {
+		let height = window.innerHeight;
+		let width = window.innerWidth;
+		$('body').prepend('<div id="viewportsize" style="z-index:9999;position:fixed;bottom:0px;left:0px;color:#fff;background:#000;padding:10px">Height: ' + height + '<br>Width: ' + width + '</div>');
+		$(window).resize(function() {
 			height = window.innerHeight;
 			width = window.innerWidth;
-			jQuery('#viewportsize').html('Height: ' + height + '<br>Width: ' + width);
+			$('#viewportsize').html('Height: ' + height + '<br>Width: ' + width);
 		});
 	}
 }
