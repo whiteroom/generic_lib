@@ -59,7 +59,9 @@ p {
     font-weight: var(--fonts-generic-weight);
     font-size: 13px;
     line-height: 16px;
-    letter-spacing: .04em
+    letter-spacing: .04em;
+    -webkit-hyphens: auto;
+    hyphens: auto;
 }
 
 
