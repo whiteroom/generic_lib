@@ -114,6 +114,14 @@ plugin.tx_news {
                 twitter = 1
             }
         }
+
+        pageTitle = 1
+        pageTitle {
+            # Register alternative provider
+            provider = GeorgRinger\News\Seo\NewsTitleProvider
+            # Comma separated list of properties which should be checked, 1st value is used
+            properties = teaser,title
+        }
         
         facebookLocale = de_DE        
     }
