@@ -12,12 +12,19 @@ plugin.tx_seo {
                     provider = TYPO3\CMS\Seo\XmlSitemap\RecordsXmlSitemapDataProvider
                     config {
                         table = tx_news_domain_model_news
+                        
+                        additionalWhere =
                         sortField = sorting
                         lastModifiedField = tstamp
-                        recursive = 1
+                        changeFreqField = sitemap_changefreq
+                        priorityField = sitemap_priority
+
                         
                         # Container
+                        #pid = 2,5,7,9
                         pid = 2
+                        recursive = 2
+                        
                         url {
                           # Detailview
                             pageId = 6

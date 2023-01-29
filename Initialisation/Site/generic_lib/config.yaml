@@ -52,8 +52,7 @@ routeEnhancers:
       ics: 9819
   News:
     type: Extbase
-    limitToPages:
-      - 7
+    limitToPages: [6]
     extension: News
     plugin: Pi1
     routes:
