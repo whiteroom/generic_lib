@@ -40,6 +40,13 @@ page.includeJSLibs {
 		modernizr.async = 0
 		modernizr.disableCompression = 1
         modernizr.excludeFromConcatenation = 1
+
+
+		lazysizes = {$plugin.generic_lib.theme.resDir}/Public/JavaScript/Lib/lazysizes.min.js
+		lazysizes.async = 0
+		lazysizes.disableCompression = 1
+		lazysizes.excludeFromConcatenation = 1
+
 }
 
 

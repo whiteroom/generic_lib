@@ -35,7 +35,7 @@ plugin.generic_lib {
 	sitecredits.agency = Konzept und Design: whiteroom, Basel | Umsetzung: Daniel Schoeneck, https://whiteRoom.ch
 	
 	lang1.localeShort = en
-	lang1.locale = en_EN.UTF-8
+	lang1.locale = en_US.UTF-8
 	
 	lang2.localeShort = fr
 	lang2.locale = fr_FR.UTF-8	
@@ -65,8 +65,8 @@ plugin.generic_lib {
 	
 	
 	theme {
-		baseDir = 	fileadmin/generic_lib
-		resDir = 	fileadmin/generic_lib/Resources
+		baseDir = 	/fileadmin/generic_lib
+		resDir = 	/fileadmin/generic_lib/Resources
 		
 		logo-tilecolor = #000000
 	}

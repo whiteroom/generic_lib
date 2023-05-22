@@ -137,6 +137,21 @@ TCEFORM.pages {
 	
 	subtitle.label = Untertitel
 	nav_title.label = Navigationstitel
+
+
+	## Default
+	subtitle.label.default = Untertitel
+	nav_title.label.default = Navigationstitel
+
+	#subtitle.label.de = Untertitel
+	#nav_title.label.de = Navigationstitel
+
+	subtitle.label.en = Subtitle
+	nav_title.label.en = Navigation Title
+
+	subtitle.label.fr = Sous-titre
+	nav_title.label.fr = Titre de navigation
+
 	
 	layout {
 		altLabels.0 = Standard Layout
@@ -201,8 +216,6 @@ TCEFORM.tt_content {
                 addItems {
                     110 = Spezial (Text schmal)
                 }
-
-
             }
             
             image {
@@ -225,7 +238,7 @@ TCEFORM.tt_content {
                 }
             }
             
-            list {
+            news_pi1 {
 	            altLabels.0 = Standard (Generic Layout)
 	            
                 addItems {
@@ -425,13 +438,8 @@ TCEFORM.sys_file_reference.crop.config.cropVariants {
 
 
 # --------------------------------------------------
-# TCAdefaults.tt_content
+# TCAdefaults
 #
-
-# https als Standard-Protokoll festlegen (AB TYPO3 v8 NICHT MEHR MÖGLICH)
-# neu angelegten Seiten automatisch auf https umstellen
-TCAdefaults.pages.url_scheme = 2
-
 
 
 TCAdefaults.tt_content {
@@ -446,7 +454,7 @@ TCAdefaults.tt_content {
     image_zoom = 1
     
 	# neben dem Text rechts
-	# imageorient = 25   --> doesn't work anymore, see solution line 97
+	# imageorient = 25   --> doesn't work anymore, see solution line 105
 	
 	# neben dem Text links
 	# imageorient = 26
@@ -462,7 +470,8 @@ TCAdefaults.tt_content {
 
 }
 
-[request.getQueryParams()['defVals']['tt_content']['CType'] == 'textmedia']
+#[request.getQueryParams()['defVals']['tt_content']['CType'] == 'textmedia']
+[traverse(request.getQueryParams()['defVals']['tt_content']['CType'] == 'textmedia']
 
 	# frame_class is condition in Frontend Layouts Default.html <f:if condition="{data.frame_class} != none">
 	TCAdefaults.tt_content.frame_class = default

@@ -13,8 +13,9 @@ plugin.tx_seo {
                     config {
                         table = tx_news_domain_model_news
                         
+                        #additionalWhere = AND (fal_media != 0 AND istopnews = 1)
                         additionalWhere =
-                        sortField = sorting
+                        sortField = datetime
                         lastModifiedField = tstamp
                         changeFreqField = sitemap_changefreq
                         priorityField = sitemap_priority

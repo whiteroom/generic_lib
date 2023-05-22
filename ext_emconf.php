@@ -21,21 +21,21 @@ $EM_CONF[$_EXTKEY] = array(
 	'uploadfolder' => '0',
 	'createDirs' => '',
 	'clearCacheOnLoad' => 0,
-	'version' => '9.0.5',
+	'version' => '10.0.1',
 	'constraints' => [
 	    'depends' => [
-	        'php' => '8.0.0-8.1.99',
+	        'php' => '8.0.0-8.2.99',
 			'typo3' => '11.5.1-11.5.99',
 			'indexed_search' => '11.5.1-11.5.99',
 			'form' => '11.5.1-11.5.99',
 			'seo' => '11.5.1-11.5.99',
 			'fluid_styled_content' => '11.5.1-11.5.99',
 			'impexp' => '11.5.1-11.5.99',
-			'news' => '10.0.3-10.0.99',
-			'rx_shariff' => '14.0.0-14.99.99',
+			'news' => '11.0.0-11.9.99',
+			'rx_shariff' => '15.0.0-15.99.99',
 			'vhs' => '6.1.0-6.1.99',
-			'dp_cookieconsent' => '11.6.0-11.6.99',
-        	'fluid_styled_responsive_images' => '10.4.0-10.4.99'
+			'dp_cookieconsent' => '12.0.0-12.0.99',
+        	'fluid_styled_responsive_images' => '11.0.0-11.0.99'
 	    ],
 	    'conflicts' => [
 
