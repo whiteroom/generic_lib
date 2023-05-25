@@ -3,7 +3,7 @@
 	<f:if condition="{data.frame_class} != none">
 		<f:then>
 
-			<f:if condition="{data.list_type} == 'news_pi1'">
+			<f:if condition="{data.CType} == 'news_pi1'">
 			
 				<f:then>
 					<section id="c{data.uid}" class="{data.CType}-{data.list_type} contObj-{data.frame_class} contObj-type-{data.CType} contObj-layout-{data.layout}{f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}">
@@ -37,7 +37,7 @@
 				
 				
 				
-			<f:if condition="{data.list_type} == 'news_pi1'">
+			<f:if condition="{data.CType} == 'news_pi1'">
 			
 				<f:then>
 					</section>
