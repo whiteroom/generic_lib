@@ -15,7 +15,7 @@
 					<span itemprop="headline">{newsItem.title}</span>
 				</f:then>
 				<f:else>
-					<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" configuration="{additionalParams:'&tx_news_pi1[actbackPid]={settings.actbackPid}'}">
+					<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
 						<span itemprop="headline">{newsItem.title}</span>
 					</n:link>
 				</f:else>
@@ -31,7 +31,7 @@
 		<div class="news-img-wrap{f:if(condition: '{contentObjectData.layout} == 105', then: '',else:' ce-gallery left')}">
 			<f:if condition="{newsItem.falMediaPreviews}">
 				<f:then>
-					<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" configuration="{additionalParams:'&tx_news_pi1[actbackPid]={settings.actbackPid}'}">
+					<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
 						<f:alias map="{mediaElement: '{newsItem.falMediaPreviews.0}'}">
 							<f:if condition="{mediaElement.originalResource.type} == 2">
 										<f:comment><f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{settings.list.media.image.maxWidth}" maxHeight="{settings.list.media.image.maxHeight}"/></f:comment>								
@@ -50,7 +50,7 @@
 				<f:else>
 					<f:if condition="{settings.displayDummyIfNoMedia}">
 						<span class="no-media-element">
-							<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" configuration="{additionalParams:'&tx_news_pi1[actbackPid]={settings.actbackPid}'}">
+							<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
 								<f:comment><f:image src="{settings.list.media.dummyImage}" title="" alt="" maxWidth="{settings.list.media.image.maxWidth}" maxHeight="{settings.list.media.image.maxHeight}"/></f:comment>
 								<f:image src="{settings.list.media.dummyImage}" title="" alt="" width="{settings.list.media.image.maxWidth}" height="{settings.list.media.image.maxHeight}"/>
 							</n:link>
@@ -75,7 +75,7 @@
 							<span itemprop="headline">{newsItem.title}</span>
 						</f:then>
 						<f:else>
-							<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" configuration="{additionalParams:'&tx_news_pi1[actbackPid]={settings.actbackPid}'}">
+							<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
 								<span itemprop="headline">{newsItem.title}</span>
 							</n:link>
 						</f:else>
@@ -94,7 +94,7 @@
 				
 				
 				<f:if condition="{settings.showDetailsMore}">
-					<p class="readon"><n:link newsItem="{newsItem}" settings="{settings}" class="more" title="{newsItem.title}" configuration="{additionalParams:'&tx_news_pi1[actbackPid]={settings.actbackPid}'}">
+					<p class="readon"><n:link newsItem="{newsItem}" settings="{settings}" class="more" title="{newsItem.title}">
 						<f:translate key="more-link"/>
 					</n:link></p>
 				</f:if>

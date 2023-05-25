@@ -21,7 +21,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'uploadfolder' => '0',
 	'createDirs' => '',
 	'clearCacheOnLoad' => 0,
-	'version' => '10.0.2',
+	'version' => '10.0.4',
 	'constraints' => [
 	    'depends' => [
 	        'php' => '8.0.0-8.2.99',
@@ -35,7 +35,7 @@ $EM_CONF[$_EXTKEY] = array(
 			'rx_shariff' => '15.0.0-15.99.99',
 			'vhs' => '6.1.0-6.1.99',
 			'dp_cookieconsent' => '12.0.0-12.0.99',
-        	'fluid_styled_responsive_images' => '11.0.0-11.0.99'
+        	'fluid-styled-responsive-images' => '11.0.0-11.0.99'
 	    ],
 	    'conflicts' => [
 

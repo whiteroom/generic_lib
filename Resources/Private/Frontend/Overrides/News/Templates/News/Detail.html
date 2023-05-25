@@ -186,7 +186,11 @@
 			</div>
 			
 			
-			
+			<f:comment>
+				<!-- Bug #731  The SimplePrevNextViewHelper is creating its queries using sys_language_uid set to 0 (hardcoded).
+				Which means, translated records or records not being localized at all (having sys_language_uid = -1) do show the prev/next navigation -> {paginated} being empty
+				-->
+			</f:comment>
 			
 			<f:if condition="{settings.detail.showPrevNext}">
 				<n:simplePrevNext pidList="{newsItem.pid}" news="{newsItem}" as="paginated" sortField="{settings.orderBy}">
