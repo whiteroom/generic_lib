@@ -752,6 +752,56 @@ form > legend {
     border:0!important;
 }
 
+/* EXT: rx_shariff     */
+/* # Shariff Social Icons */
+
+ul[class*="shariff-col"] {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+ul[class*="shariff-col"] li {
+    margin-right: 1em!important;
+}
+
+li.shariff-button a {
+    text-decoration: none!important;
+    padding:0!important;
+    border:0!important;
+    margin:0!important;
+    font-size: 200%
+}
+
+li.shariff-button a .share_text {
+    display:none
+}
+
+li.shariff-button a span::after,
+li.shariff-button a span::before {
+
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: inherit;
+    
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+    margin:0;
+    color:inherit;
+}
+
+
+.fa-facebook-f::after { content: '\ea91' }
+.fa-twitter::after { content: '\ea96' }
+.fa-envelope::after { content: '\e928' }
+.fa-copy::after { content: '\e935' }
+.fa-print::after { content: '\e93e' }
 
 
 

@@ -1,0 +1,39 @@
+<div xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     xmlns:rx="http://typo3.org/ns/Reelworx/RxShariff/ViewHelper" data-namespace-typo3-fluid="true">
+
+{n:link(newsItem:newsItem, settings:settings, uriOnly:1, configuration:'{forceAbsoluteUrl:1}') -> f:variable(name: 'url')}
+{f:variable(name: 'signature', value: '
+
+
+
+
+
+
+shared from:
+whiteroom mediendesign gmbh
+CH-4056 Basel
+instagram.com/whiteroombasel') -> f:format.nl2br()}
+    
+
+
+
+
+{subject 
+-> v:format.append(add: 'whiteroom | {newsItem.title}')
+-> f:variable(name: 'subject')}
+
+
+
+{url 
+-> v:format.append(add: '{signature}')
+-> f:variable(name: 'body')}
+    
+
+    
+
+    <rx:shariff data="{url: url, mail-subject: subject, mail-body: body, mail-url: 'mailto:'}" services="twitter, mail, print" enableBackend="true" />
+
+
+</div>

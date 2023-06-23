@@ -101,7 +101,7 @@ plugin.tx_news {
                     height = 
                 }
             }
-            # don't use/show fb & twitter sharing plugins
+            # use/show sharing plugins
             showSocialShareButtons = 1
             showPrevNext = 1
         }
