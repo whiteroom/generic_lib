@@ -99,10 +99,10 @@
 				<f:format.html>{newsItem.bodytext}</f:format.html>
 			</div>
 
-			<f:if condition="{settings.actbackPid}">
+			<f:if condition="{settings.actbackPid} || {settings.backPid}">
 				<!-- Link Back -->
 				<div class="news-backlink-wrap">
-					<f:link.page pageUid="{settings.actbackPid}">
+					<f:link.page pageUid="{f:if(condition: '{settings.actbackPid}', then: '{settings.actbackPid}', else:'{settings.backPid}')}">
 						<f:translate key="back-link" />
 					</f:link.page>
 				</div>
@@ -199,16 +199,14 @@
 							
 							<f:if condition="{paginated.prev}">
 								<li class="next">
-									<n:link newsItem="{paginated.prev}" settings="{settings}"  
-  configuration="{additionalParams:'&tx_news_pi1[actbackPid]={f:if(condition: \'{settings.actbackPid}\', then: \'{settings.actbackPid}\', else:\'{settings.backPid}\')}'}" class="prev">
+									<n:link newsItem="{paginated.prev}" settings="{settings}" class="prev">
 										{paginated.prev.title}<span aria-hidden="true" class="icon-paginated_prev pl-3"></span>
 									</n:link>
 								</li>
 							</f:if>
 							<f:if condition="{paginated.next}">
 								<li class="previous">
-									<n:link newsItem="{paginated.next}" settings="{settings}" 
-  configuration="{additionalParams:'&tx_news_pi1[actbackPid]={f:if(condition: \'{settings.actbackPid}\', then: \'{settings.actbackPid}\', else:\'{settings.backPid}\')}'}" class="next">
+									<n:link newsItem="{paginated.next}" settings="{settings}" class="next">
 										<span aria-hidden="true" class="icon-paginated_next pr-3"></span>{paginated.next.title}
 									</n:link>
 								</li>
