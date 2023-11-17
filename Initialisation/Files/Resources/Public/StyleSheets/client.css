@@ -518,7 +518,7 @@ main .inner, footer .inner{
 .ce-bullets  a[href$='.doc']::after,
 .ce-bullets  a[href$='.docx']::after { content: '\e924'; color: var(--dark-deepsea); float:right;}
 
-/* .ce-bullets a[href^='http']:after { content: '\e91c';  color: rgb(109, 122, 116); float:right;} */
+/* .ce-bullets a[href^='http']:after { content: '\e934';  color: rgb(109, 122, 116); float:right;} */
 
 
 

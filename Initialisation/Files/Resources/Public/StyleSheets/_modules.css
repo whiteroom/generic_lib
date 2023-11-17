@@ -761,6 +761,10 @@ ul[class*="shariff-col"] {
     padding: 0;
 }
 
+@media print {
+    ul[class*="shariff-col"] { display: none; }
+}
+
 ul[class*="shariff-col"] li {
     margin-right: 1em!important;
 }

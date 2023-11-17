@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?u4ta5t');
-  src:  url('fonts/icomoon.eot?u4ta5t#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?u4ta5t') format('truetype'),
-    url('fonts/icomoon.woff?u4ta5t') format('woff'),
-    url('fonts/icomoon.svg?u4ta5t#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?fi3hd1');
+  src:  url('fonts/icomoon.eot?fi3hd1#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?fi3hd1') format('truetype'),
+    url('fonts/icomoon.woff?fi3hd1') format('woff'),
+    url('fonts/icomoon.svg?fi3hd1#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -38,21 +38,15 @@
   content: "\e901";
 }
 .icon-paginated_prev:before {
-  content: "\e90a";
-}
-.icon-paginated_next:before {
   content: "\e90b";
 }
-.icon-up-rounded:before {
-  content: "\e92e";
+.icon-paginated_next:before {
+  content: "\e90a";
 }
-.icon-down-rounded:before {
-  content: "\e92c";
-}
-.icon-left-rounded:before {
+.icon-left-rounded-1:before {
   content: "\e92b";
 }
-.icon-right-rounded:before {
+.icon-right-rounded-1:before {
   content: "\e92a";
 }
 .icon-bullet-left:before {
@@ -61,11 +55,38 @@
 .icon-bullet-right:before {
   content: "\ea3c";
 }
+.icon-up-rounded-1:before {
+  content: "\e92e";
+}
+.icon-down-rounded-1:before {
+  content: "\e92c";
+}
+.icon-login:before {
+  content: "\e946";
+}
+.icon-search:before {
+  content: "\e947";
+}
+.icon-search-compact:before {
+  content: "\e942";
+}
+.icon-search-long:before {
+  content: "\e943";
+}
+.icon-search-rounded:before {
+  content: "\e944";
+}
+.icon-search-short:before {
+  content: "\e945";
+}
 .icon-fit-to-scale:before {
   content: "\e930";
 }
 .icon-minimize-fit:before {
   content: "\e939";
+}
+.icon-pin:before {
+  content: "\e919";
 }
 .icon-geo-pin:before {
   content: "\e931";
@@ -101,79 +122,82 @@
   content: "\e921";
 }
 .icon-rotate-large:before {
-  content: "\e99a";
-}
-.icon-rotate-medium:before {
-  content: "\e99b";
-}
-.icon-rotate:before {
   content: "\e90c";
 }
-.icon-addtofavorites-large:before {
+.icon-rotate-medium:before {
   content: "\e90d";
 }
-.icon-addtofavorites-medium:before {
+.icon-rotate:before {
   content: "\e90e";
 }
-.icon-addtofavorites:before {
+.icon-addtofavorites-large:before {
   content: "\e90f";
+}
+.icon-addtofavorites-medium:before {
+  content: "\e910";
+}
+.icon-addtofavorites:before {
+  content: "\e911";
 }
 .icon-chevron-down-large:before {
   content: "\e917";
 }
-.icon-chevron-down-medium:before {
-  content: "\e91c";
-}
-.icon-chevron-down:before {
-  content: "\e91d";
-}
 .icon-chevron-up-large:before {
   content: "\e91e";
 }
+.icon-chevron-down-medium:before {
+  content: "\e91c";
+}
 .icon-chevron-up-medium:before {
   content: "\e91f";
+}
+.icon-chevron-down:before {
+  content: "\e91d";
 }
 .icon-chevron-up:before {
   content: "\e920";
 }
 .icon-download-to-file-large:before {
-  content: "\e910";
-}
-.icon-download-to-file-medium:before {
-  content: "\e911";
-}
-.icon-download-to-file:before {
   content: "\e912";
 }
-.icon-addtocollection:before {
+.icon-download-to-file-medium:before {
   content: "\e913";
 }
-.icon-pin:before {
+.icon-download-to-file:before {
   content: "\e914";
 }
 .icon-minus-large:before {
-  content: "\e918";
+  content: "\e91a";
 }
 .icon-plus-large:before {
-  content: "\e919";
+  content: "\e91b";
+}
+.icon-minus:before {
+  content: "\ea0b";
+}
+.icon-plus:before {
+  content: "\ea0a";
 }
 .icon-close-large:before {
-  content: "\e91a";
+  content: "\e922";
 }
 .icon-close-rounded-large:before {
   content: "\e93a";
 }
 .icon-close:before {
-  content: "\e91b";
+  content: "\e923";
 }
 .icon-close-icon:before {
   content: "\e93c";
 }
-.icon-menu-bars-fat:before {
+.icon-menu-bars:before {
   content: "\e903";
 }
+.icon-menu-bars-rounded:before {
+  content: "\e925";
+}
 .icon-menu-bars-stretched:before {
-  content: "\e907";
+  content: "\e929";
 }
 .icon-menu-bars-separated:before {
   content: "\e933";
@@ -182,46 +206,43 @@
   content: "\e940";
 }
 .icon-btn-copy:before {
-  content: "\e925";
+  content: "\e9af";
 }
 .icon-btn-printer:before {
   content: "\e93f";
+}
+.icon-send-outline:before {
+  content: "\f1d9";
+}
+.icon-whatsapp:before {
+  content: "\e941";
 }
 .icon-share:before {
   content: "\e928";
 }
 .icon-share-stretched:before {
-  content: "\e923";
+  content: "\e936";
 }
 .icon-printer:before {
   content: "\e93e";
 }
 .icon-printjob:before {
-  content: "\e93d";
+  content: "\e948";
 }
 .icon-files-empty:before {
-  content: "\e929";
+  content: "\e949";
 }
 .icon-copy-to-clipboard-reverse:before {
-  content: "\e922";
-}
-.icon-whatsapp:before {
-  content: "\e941";
+  content: "\e94a";
 }
 .icon-copy-plus-to-clipboard:before {
-  content: "\e936";
+  content: "\e94b";
 }
 .icon-copy-to-clipboard:before {
   content: "\e935";
 }
-.icon-plus:before {
-  content: "\ea0a";
-}
-.icon-minus:before {
-  content: "\ea0b";
-}
-.icon-menu-bars:before {
-  content: "\e906";
+.icon-addtocollection:before {
+  content: "\e918";
 }
 .icon-file-empty:before {
   content: "\e924";
@@ -241,38 +262,29 @@
 .icon-file-excel:before {
   content: "\eae2";
 }
-.icon-radio-checked:before {
-  content: "\ea54";
-}
-.icon-generic-button:before {
-  content: "\e946";
-}
 .icon-facebook-alternative:before {
-  content: "\e908";
+  content: "\e907";
 }
 .icon-facebook2:before {
   content: "\ea91";
 }
-.icon-linkedin:before {
-  content: "\eac9";
-}
 .icon-twitter:before {
   content: "\ea96";
 }
-.icon-behance2:before {
-  content: "\eaa9";
-}
 .icon-twitter-alternative:before {
-  content: "\e909";
+  content: "\e906";
 }
 .icon-paper-plane-alternative:before {
-  content: "\e944";
+  content: "\e908";
 }
 .icon-paper-plane:before {
-  content: "\e945";
+  content: "\e909";
 }
-.icon-send-outline:before {
-  content: "\f1d9";
+.icon-generic-button:before {
+  content: "\e904";
+}
+.icon-radio-checked:before {
+  content: "\ea54";
 }
 .icon-google3:before {
   content: "\ea8a";
@@ -286,6 +298,12 @@
 .icon-youtube2:before {
   content: "\ea9e";
 }
+.icon-behance2:before {
+  content: "\eaa9";
+}
 .icon-vimeo2:before {
   content: "\eaa1";
+}
+.icon-linkedin:before {
+  content: "\eac9";
 }
