@@ -48,19 +48,19 @@
 						<f:if condition="{iteratorTags.isFirst}">
 							<f:then>
 								<span class="news-list-tags first" itemprop="keywords">
-									<f:link.page pageUid="{settings.backPid}" additionalParams="{tx_news_pi1:{overwriteDemand:{tags: tag}}}">{tag.title}</f:link.page>
+									<f:link.page pageUid="{f:if(condition: '{settings.actbackPid}', then: '{settings.actbackPid}', else:'{settings.backPid}')}" additionalParams="{tx_news_pi1:{overwriteDemand:{tags: tag}}}">{tag.title}</f:link.page>
 								</span>
 							</f:then>
 							<f:else>
 								<f:if condition="{iteratorTags.isLast}">
 									<f:then>
 										<span class="news-list-tags last" itemprop="keywords">
-											<f:link.page pageUid="{settings.backPid}" additionalParams="{tx_news_pi1:{overwriteDemand:{tags: tag}}}">{tag.title}</f:link.page>
+											<f:link.page pageUid="{f:if(condition: '{settings.actbackPid}', then: '{settings.actbackPid}', else:'{settings.backPid}')}" additionalParams="{tx_news_pi1:{overwriteDemand:{tags: tag}}}">{tag.title}</f:link.page>
 										</span>
 									</f:then>
 									<f:else>
 										<span class="news-list-tags" itemprop="keywords">
-											<f:link.page pageUid="{settings.backPid}" additionalParams="{tx_news_pi1:{overwriteDemand:{tags: tag}}}">{tag.title}</f:link.page>
+											<f:link.page pageUid="{f:if(condition: '{settings.actbackPid}', then: '{settings.actbackPid}', else:'{settings.backPid}')}" additionalParams="{tx_news_pi1:{overwriteDemand:{tags: tag}}}">{tag.title}</f:link.page>
 										</span>
 									</f:else>
 								</f:if>
@@ -200,7 +200,7 @@
 							<f:if condition="{paginated.prev}">
 								<li class="next">
 									<n:link newsItem="{paginated.prev}" settings="{settings}"  
-  configuration="{additionalParams:'&tx_news_pi1[actbackPid]={settings.actbackPid}'}" class="prev">
+  configuration="{additionalParams:'&tx_news_pi1[actbackPid]={f:if(condition: \'{settings.actbackPid}\', then: \'{settings.actbackPid}\', else:\'{settings.backPid}\')}'}" class="prev">
 										{paginated.prev.title}<span aria-hidden="true" class="icon-paginated_prev pl-3"></span>
 									</n:link>
 								</li>
@@ -208,7 +208,7 @@
 							<f:if condition="{paginated.next}">
 								<li class="previous">
 									<n:link newsItem="{paginated.next}" settings="{settings}" 
-  configuration="{additionalParams:'&tx_news_pi1[actbackPid]={settings.actbackPid}'}" class="next">
+  configuration="{additionalParams:'&tx_news_pi1[actbackPid]={f:if(condition: \'{settings.actbackPid}\', then: \'{settings.actbackPid}\', else:\'{settings.backPid}\')}'}" class="next">
 										<span aria-hidden="true" class="icon-paginated_next pr-3"></span>{paginated.next.title}
 									</n:link>
 								</li>
