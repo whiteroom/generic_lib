@@ -39,11 +39,18 @@ lib.contentElement {
 			linkParams.ATagParams.dataWrap.override = title="{file:current:title}" class="{$styles.content.textmedia.linkWrap.lightboxCssClass}" data-fancybox="lightbox[{file:current:uid_foreign}]"
 			linkParams.ATagParams.dataWrap.override.if.isTrue.data = file:current:title
 
+			linkWrapWidth = {$styles.content.textmedia.linkWrap.width}
+			
+			#disable if you don't want to use titles in fancybox
+			lightboxTitle = {$plugin.generic_lib.settings.lightboxTitle}
+
+			lightboxCssClass = {$styles.content.textmedia.linkWrap.lightboxCssClass}
+
 	   }
    
 
-		imageAltText = {$plugin.generic_lib.contentElements.copyright}
-		imageTitleText = {$plugin.generic_lib.contentElements.imageTitleText}
+		imageAltTextIfMissing = {$plugin.generic_lib.contentElements.imageAltTextIfMissing}
+		imageTitleTextIfMissing = {$plugin.generic_lib.contentElements.imageTitleTextIfMissing}
 		
    }
    

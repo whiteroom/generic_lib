@@ -69,6 +69,6 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['mediafile_ext'] .= ',eps';
 
 # Backwards-Compatability, this is how it was/is done before
 # Register your custom file extension as allowed media file (< TYPO3 CMS 7.5)
-$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'] .= ',eps';
+$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'] .= ',eps,webp';
 
 

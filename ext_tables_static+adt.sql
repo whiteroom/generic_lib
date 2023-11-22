@@ -700,7 +700,7 @@ CREATE TABLE `sys_template` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 INSERT INTO `sys_template` (`uid`, `pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `starttime`, `endtime`, `sorting`, `description`, `t3_origuid`, `t3ver_oid`, `t3ver_wsid`, `t3ver_state`, `t3ver_stage`, `title`, `root`, `clear`, `include_static_file`, `constants`, `config`, `basedOn`, `includeStaticAfterBasedOn`, `static_file_mode`, `tx_impexp_origuid`) VALUES
-(1, 1, 1685007258, 1526489637, 1, 0, 0, 0, 0, 256, NULL, 0, 0, 0, 0, 0, 'whiteroom generic', 1, 3, 'EXT:news/Configuration/TypoScript,EXT:fluid_styled_content/Configuration/TypoScript/,EXT:rx_shariff/Configuration/TypoScript/WithoutJQueryAndFontawesome,EXT:indexed_search/Configuration/TypoScript,EXT:form/Configuration/TypoScript/,EXT:dp_cookieconsent/Configuration/TypoScript,EXT:seo/Configuration/TypoScript/XmlSitemap,EXT:fluid_styled_responsive_images/Configuration/TypoScript,EXT:generic_lib/Configuration/TypoScript', '', '', '', 0, 0, 1);
+(1, 1, 1685007258, 1526489637, 1, 0, 0, 0, 0, 256, NULL, 0, 0, 0, 0, 0, 'whiteroom generic', 1, 3, 'EXT:news/Configuration/TypoScript,EXT:fluid_styled_content/Configuration/TypoScript/,EXT:rx_shariff/Configuration/TypoScript/WithoutJQueryAndFontawesome,EXT:indexed_search/Configuration/TypoScript,EXT:form/Configuration/TypoScript/,EXT:dp_cookieconsent/Configuration/TypoScript,EXT:seo/Configuration/TypoScript/XmlSitemap, '', '', '', 0, 0, 1);
 
 ALTER TABLE `sys_template`
   ADD PRIMARY KEY (`uid`),

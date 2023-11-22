@@ -1,27 +1,63 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{dimensions}">	
+	<f:variable name="dimensions-width-device-pixel-ratio100" value="{dimensions.width}" />
+	<f:variable name="dimensions-width-device-pixel-ratio150" value="{dimensions.width * 1.5}" />
+	<f:variable name="dimensions-width-device-pixel-ratio200" value="{dimensions.width * 2}" />
+	<f:variable name="dimensions-width-device-pixel-ratio300" value="{dimensions.width * 3}" />
+	<f:variable name="dimensions-width-device-pixel-ratio400" value="{dimensions.width * 4}" />
+</f:if>
 <f:if condition="{file.alternative}">
 	<f:then>
 		<f:if condition="{file.title}">
 			<f:then>
-				<f:media
-					class="image-embed-item"
-					file="{file}"
-					width="{dimensions.width}"
+				<f:image
+					src="/fileadmin/generic_lib/Resources/Public/Images/placeholder.png"
+					fileExtension="webp"
+					class="lazyload"
+					
+					width="{dimensions-width-device-pixel-ratio100}"
 					height="{dimensions.height}"
 					alt="{file.alternative}"
 					title="{file.title}"
-				/>			
+
+					additionalAttributes="{
+						data-src='{f:uri.image(image:file, maxWidth:\'dimensions-width-device-pixel-ratio100\', fileExtension: \'webp\')}',
+						itemprop:'image',
+						type='image/webp',
+						
+						data-srcset='{f:uri.image(image:file, maxWidth: dimensions-width-device-pixel-ratio100, fileExtension: \'webp\')},
+                        {f:uri.image(image:file, maxWidth: dimensions-width-device-pixel-ratio150, fileExtension: \'webp\')} 1.5x,
+                        {f:uri.image(image:file, maxWidth: dimensions-width-device-pixel-ratio200, fileExtension: \'webp\')} 2x,
+                        {f:uri.image(image:file, maxWidth: dimensions-width-device-pixel-ratio300, fileExtension: \'webp\')} 3x,
+                        {f:uri.image(image:file, maxWidth: dimensions-width-device-pixel-ratio400, fileExtension: \'webp\')} 4x'
+		
+						
+					}" />			
 			</f:then>
 			<f:else>
-				<f:media
-					class="image-embed-item"
-					file="{file}"
-					width="{dimensions.width}"
+				<f:image
+					src="/fileadmin/generic_lib/Resources/Public/Images/placeholder.png"
+					fileExtension="webp"
+					class="lazyload"
+					
+					width="{dimensions-width-device-pixel-ratio100}"
 					height="{dimensions.height}"
 					alt="{file.alternative}"
-					title="{settings.media.imageTitleText"
-					
-				/>			
+					title="{settings.media.imageTitleTextIfMissing}"
+
+					additionalAttributes="{
+						data-src='{f:uri.image(image:file, maxWidth:\'dimensions-width-device-pixel-ratio100\', fileExtension: \'webp\')}',
+						itemprop:'image',
+						type='image/webp',
+						
+						data-srcset='{f:uri.image(image:file, maxWidth: dimensions-width-device-pixel-ratio100, fileExtension: \'webp\')},
+                        {f:uri.image(image:file, maxWidth: dimensions-width-device-pixel-ratio150, fileExtension: \'webp\')} 1.5x,
+                        {f:uri.image(image:file, maxWidth: dimensions-width-device-pixel-ratio200, fileExtension: \'webp\')} 2x,
+                        {f:uri.image(image:file, maxWidth: dimensions-width-device-pixel-ratio300, fileExtension: \'webp\')} 3x,
+                        {f:uri.image(image:file, maxWidth: dimensions-width-device-pixel-ratio400, fileExtension: \'webp\')} 4x'
+		
+						
+					}" />			
 			</f:else>
 		</f:if>
 	</f:then>
@@ -29,24 +65,54 @@
 
 		<f:if condition="{file.title}">
 			<f:then>
-				<f:media						
-					class="image-embed-item"
-					file="{file}"
-					width="{dimensions.width}"
+				<f:image
+					src="/fileadmin/generic_lib/Resources/Public/Images/placeholder.png"
+					fileExtension="webp"
+					class="lazyload"
+					
+					width="{dimensions-width-device-pixel-ratio100}"
 					height="{dimensions.height}"
-					alt="{file.name}"
+					alt="{settings.media.imageAltTextIfMissing} - {file.title}"
 					title="{file.title}"
-				/>			
+
+					additionalAttributes="{
+						data-src='{f:uri.image(image:file, maxWidth:\'dimensions-width-device-pixel-ratio100\', fileExtension: \'webp\')}',
+						itemprop:'image',
+						type='image/webp',
+						
+						data-srcset='{f:uri.image(image:file, maxWidth: dimensions-width-device-pixel-ratio100, fileExtension: \'webp\')},
+                        {f:uri.image(image:file, maxWidth: dimensions-width-device-pixel-ratio150, fileExtension: \'webp\')} 1.5x,
+                        {f:uri.image(image:file, maxWidth: dimensions-width-device-pixel-ratio200, fileExtension: \'webp\')} 2x,
+                        {f:uri.image(image:file, maxWidth: dimensions-width-device-pixel-ratio300, fileExtension: \'webp\')} 3x,
+                        {f:uri.image(image:file, maxWidth: dimensions-width-device-pixel-ratio400, fileExtension: \'webp\')} 4x'
+		
+						
+					}" />			
 			</f:then>
 			<f:else>
-				<f:media
-					class="image-embed-item"
-					file="{file}"
-					width="{dimensions.width}"
+				<f:image
+					src="/fileadmin/generic_lib/Resources/Public/Images/placeholder.png"
+					fileExtension="webp"
+					class="lazyload"
+					
+					width="{dimensions-width-device-pixel-ratio100}"
 					height="{dimensions.height}"
-					alt="{file.name}"
-					title="{settings.media.imageTitleText}"
-				/>			
+					alt="{settings.media.imageAltTextIfMissing}"
+					title="{settings.media.imageTitleTextIfMissing}"
+
+					additionalAttributes="{
+						data-src='{f:uri.image(image:file, maxWidth:\'dimensions-width-device-pixel-ratio100\', fileExtension: \'webp\')}',
+						itemprop:'image',
+						type='image/webp',
+						
+						data-srcset='{f:uri.image(image:file, maxWidth: dimensions-width-device-pixel-ratio100, fileExtension: \'webp\')},
+                        {f:uri.image(image:file, maxWidth: dimensions-width-device-pixel-ratio150, fileExtension: \'webp\')} 1.5x,
+                        {f:uri.image(image:file, maxWidth: dimensions-width-device-pixel-ratio200, fileExtension: \'webp\')} 2x,
+                        {f:uri.image(image:file, maxWidth: dimensions-width-device-pixel-ratio300, fileExtension: \'webp\')} 3x,
+                        {f:uri.image(image:file, maxWidth: dimensions-width-device-pixel-ratio400, fileExtension: \'webp\')} 4x'
+		
+						
+					}" />			
 			</f:else>
 		</f:if>
 	</f:else>

@@ -30,7 +30,7 @@
 							slides: [
 								
 								<f:alias map="{opencurlybracket: '{', closecurlybracket: '}'}">
-									<f:for each="{resources}" as="resource">{opencurlybracket} src:"{f:uri.image(src:'{resource.uid}',treatIdAsReference:'1', maxWidth: 2560)}", link:"{resource.link}", title: "{resource.title}", description: "{resource.description}" {closecurlybracket},</f:for>
+									<f:for each="{resources}" as="resource">{opencurlybracket} src:"{f:uri.image(src:'{resource.uid}', treatIdAsReference:'1', maxWidth: 2560, fileExtension: 'webp')}", link:"{resource.link}", title: "{resource.title}", description: "{resource.description}" {closecurlybracket},</f:for>
 								</f:alias>
 
 							    ],

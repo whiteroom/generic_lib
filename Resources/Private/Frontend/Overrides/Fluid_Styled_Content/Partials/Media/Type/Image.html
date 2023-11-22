@@ -10,9 +10,13 @@
 		<f:else>
 			<f:if condition="{data.image_zoom}">
 				<f:then>
-					<ce:link.clickEnlarge image="{file}" configuration="{settings.media.popup}">
+					<a 	href="{f:uri.image(image:file, maxWidth: '{settings.media.popup.linkWrapWidth}', fileExtension: 'webp')}" 
+						title="{data.header}" 
+						class="{settings.media.popup.lightboxCssClass}" 
+						data-fancybox="lightbox[{data.uid}]">
+				
 						<f:render partial="Media/Rendering/Image" arguments="{file: file, dimensions: dimensions, settings: settings}" />
-					</ce:link.clickEnlarge>
+					</a>
 				</f:then>
 				<f:else>
 					<f:render partial="Media/Rendering/Image" arguments="{file: file, dimensions: dimensions, settings: settings}" />
