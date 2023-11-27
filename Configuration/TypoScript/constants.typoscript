@@ -105,10 +105,10 @@ styles.content {
 	textmedia {
 		
 		#CType IMAGE
-		maxW = 1039
+		maxW = 1038
 		
 		#CType TEXTMEDIA 
-		maxWInText = 1039
+		maxWInText = 1038
 
 		rowSpacing = 0
 		textMargin = 0		
