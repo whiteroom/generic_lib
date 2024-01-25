@@ -19,9 +19,9 @@
         "GPL-2.0-or-later"
     ],
     "require": {
-        "typo3/cms-core": "^10.4",
-        "typo3/cms-impexp": "^10.4",
-        "typo3/cms-indexed-search": "^10.4"
+        "typo3/cms-core": "^11.4",
+        "typo3/cms-impexp": "^11.4",
+        "typo3/cms-indexed-search": "^11.4"
     },
     "autoload": {
         "psr-4": {
