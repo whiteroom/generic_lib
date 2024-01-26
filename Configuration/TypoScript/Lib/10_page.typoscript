@@ -21,7 +21,7 @@ page.typeNum = 0
 page.includeCSSLibs {
 		normalize = {$plugin.generic_lib.theme.resDir}/Public/StyleSheets/components/normalize.min.css
 		main = {$plugin.generic_lib.theme.resDir}/Public/StyleSheets/components/main.css
-		icomoon = {$plugin.generic_lib.theme.resDir}/Public/Fonts/style.css
+		icomoon = {$plugin.generic_lib.theme.resDir}/Public/Fonts/icomoon/style.css
 }
 page.includeCSS {
 		theme = {$plugin.generic_lib.theme.resDir}/Public/StyleSheets/client.css
