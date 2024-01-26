@@ -13,16 +13,14 @@
             <nav id="navigation" class="menu"><f:cObject typoscriptObjectPath="lib.navbar" /></nav>
             
             <div id="page-subtitle">
-	            <h1><v:page.info as="page" pageUid="{pageUid}">
-	            	<f:if condition="{page.subtitle}">
-                        <f:then>
-                            <f:format.raw>{page.subtitle}</f:format.raw>
-                        </f:then>
-                        <f:else>
-                            <f:format.raw>{page.title}</f:format.raw>
-                        </f:else>
-                    </f:if>
-	            </v:page.info></h1>
+	            <f:if condition="{data.subtitle}">
+                    <f:then>
+                        <h1><f:format.raw>{data.subtitle}</f:format.raw></h1>
+                    </f:then>
+                    <f:else>
+                        <h1><f:format.raw>{data.title}</f:format.raw></h1>
+                    </f:else>
+                </f:if>
             </div>
             
             <f:comment><!-- <div id="menu-icon"><i class="icon-menu-bars"></i></div> --></f:comment>
