@@ -57,6 +57,7 @@ nav ul ul li.flex-item {
 	
     nav ul ul.flex {
         display:flex;
+        flex-wrap: nowrap;
     }
     
     nav ul ul li.flex-item {
