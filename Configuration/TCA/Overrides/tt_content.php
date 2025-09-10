@@ -1,7 +1,5 @@
 <?php
-if (!defined('TYPO3_MODE')) {
-        die ('Access denied.');
-}
+defined('TYPO3') || die();
 
 // allow longer subheaders
 $GLOBALS['TCA']['tt_content']['columns']['subheader']['config']['max']= 4096;
