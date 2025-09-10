@@ -15,6 +15,10 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['de']['EXT:news/Resou
 
 $customChanges = [
     'SYS' => [
+
+        'UTF8filesystem' => true,
+        'systemLocale' => 'de_DE',
+
         'systemMaintainers' => [
             #  Admin Users are also SystemMaintainers
             1,
