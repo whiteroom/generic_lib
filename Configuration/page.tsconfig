@@ -1,0 +1,5 @@
+@import 'EXT:generic_lib/Configuration/TSconfig/Page/pageTSconfig.tsconfig'
+@import 'EXT:generic_lib/Configuration/TSconfig/Page/pageTSconfigNews.tsconfig'
+
+@import 'EXT:generic_lib/Configuration/TSconfig/User/tsGlobalSettingsAllConfig.tsconfig'
+@import 'EXT:generic_lib/Configuration/TSconfig/User/tsGroupEditorialconfig.tsconfig'

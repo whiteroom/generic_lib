@@ -8,6 +8,13 @@
 
 # this file is UTF-8, check!
 
+
+# Extensions
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript'
+@import 'EXT:seo/Configuration/TypoScript/XmlSitemap/constants.typoscript'
+@import 'EXT:indexed_search/Configuration/TypoScript/constants.typoscript'
+
+
 plugin.generic_lib {
 	# cat=plugin.generic_lib/page/01; type=string; label=Client : Client name of this website
 	clientName = whiteroom

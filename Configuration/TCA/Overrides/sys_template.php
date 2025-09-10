@@ -2,5 +2,16 @@
 defined('TYPO3') || die();
 
 
+call_user_func(function()
+{
+   $extensionKey = 'generic_lib';
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('generic_lib', 'Configuration/TypoScript', 'whiteRoom');
+   /**
+    * Default TypoScript
+    */
+   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+      $extensionKey,
+      'Configuration/TypoScript',
+      'whiteRoom'
+   );
+});

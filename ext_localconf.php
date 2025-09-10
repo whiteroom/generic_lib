@@ -3,9 +3,6 @@ defined('TYPO3') or die();
 
 
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="DIR:EXT:generic_lib/Configuration/TSconfig/Page" extensions="tsconfig">');
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('<INCLUDE_TYPOSCRIPT: source="DIR:EXT:generic_lib/Configuration/TSconfig/User" extensions="tsconfig">');
-
 
 # allow custom translations for tx_news 
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['de']['EXT:news/Resources/Private/Language/locallang_be.xlf'][] = 'EXT:generic_lib/Resources/Private/Language/Overrides/News/de.locallang_be.xlf';

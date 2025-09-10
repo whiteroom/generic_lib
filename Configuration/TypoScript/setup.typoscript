@@ -1,0 +1,10 @@
+# Extensions
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:seo/Configuration/TypoScript/XmlSitemap/setup.typoscript'
+@import 'EXT:form/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:indexed_search/Configuration/TypoScript/setup.typoscript'
+
+
+
+# this distribution
+@import './Lib/*.typoscript'
