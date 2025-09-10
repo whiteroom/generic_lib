@@ -17,7 +17,7 @@
 # ******************************************************************************
 
 
-[getTSFE().type == 9819]
+[getTSFE()?.type == 9819]
 
     config {
             absRefPrefix = {$plugin.generic_lib.absRefPrefixRoot}
@@ -50,48 +50,3 @@
     }
 
 [END]
-
-
-
-# [getTSFE().type == 9819]
-# 
-#     config {
-#         disableAllHeaderCode = 1
-#         xhtml_cleaning = none
-#         admPanel = 0
-#         metaCharset = utf-8
-#         additionalHeaders.10.header = Content-Type:text/calendar;charset=utf-8
-#         disablePrefixComment = 1
-#         linkVars >
-#     }
-#     
-#     page >
-#     page = PAGE 
-#     page.typeNum = 9819
-#     page {
-# 
-#         10 < tt_content.list.20.news_pi1
-#         10 {
-#                 switchableControllerActions {
-#                         News {
-#                                 1 = detail
-#                         }
-#                 }
-#                 settings < plugin.tx_news.settings
-#                 
-#                 settings {
-#                         startingpoint = 44
-#                         format = ical
-#                         domain.data = getEnv:HTTP_HOST
-#                         useStdWrap = domain
-#                 }
-#                 
-#     
-#         }
-#     }
-#     
-#     
-# [END]
-
-
-
