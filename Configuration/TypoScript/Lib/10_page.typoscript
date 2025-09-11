@@ -70,7 +70,7 @@ page.includeJSFooter {
 }
 
 
-[getTSFE() && getTSFE().isBackendUserLoggedIn()] 
+[backend.user.isLoggedIn] 
 
 page.10 = FLUIDTEMPLATE
 page.10 {

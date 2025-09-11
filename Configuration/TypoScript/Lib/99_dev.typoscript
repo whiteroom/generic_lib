@@ -11,7 +11,7 @@
 # config.contentObjectExceptionHandler = 0
 
 
-[getTSFE() && getTSFE().isBackendUserLoggedIn()] 
+[backend.user.isLoggedIn]
 
 	config.no_cache = 1
 	
