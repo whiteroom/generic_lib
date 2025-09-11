@@ -256,6 +256,8 @@ that's why calcviewportunits is used here
     }
 }
 
+@media print { a[href]:after { content: none !important; } }
+
 
 @supports (-webkit-overflow-scrolling: touch) {
     
