@@ -5,43 +5,37 @@ languages:
   -
     title: German
     enabled: true
-    languageId: 0
-    base: /
-    typo3Language: de
     locale: de_DE.UTF-8
-    iso-639-1: de
-    navigationTitle: Deutsch
     hreflang: de-DE
-    direction: ''
+    base: /
+    websiteTitle: ''
+    navigationTitle: Deutsch
     flag: de
+    languageId: 0
   -
     title: English
     enabled: true
-    languageId: 1
-    base: /en/
-    typo3Language: default
     locale: en_US.UTF-8
-    iso-639-1: en
-    navigationTitle: English
     hreflang: en-US
-    direction: ''
-    fallbackType: fallback
+    base: /en/
+    websiteTitle: ''
+    navigationTitle: English
+    fallbackType: strict
     fallbacks: '0'
-    flag: us
+    flag: en-us-gb
+    languageId: 1
   -
     title: French
     enabled: true
-    languageId: 2
-    base: /fr/
-    typo3Language: fr
     locale: fr_FR.UTF-8
-    iso-639-1: fr
-    navigationTitle: Français
     hreflang: fr-FR
-    direction: ''
-    fallbackType: fallback
+    base: /fr/
+    websiteTitle: ''
+    navigationTitle: Français
+    fallbackType: strict
     fallbacks: '1,0'
     flag: fr
+    languageId: 2
 rootPageId: 1
 routeEnhancers:
   PageTypeSuffix:
@@ -101,5 +95,5 @@ routes:
   -
     route: robots.txt
     type: staticText
-    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /typo3_src/\r\nAllow: /typo3/sysext/frontend/Resources/Public/*\r\n\r\n# Only allow URLs generated with RealURL\r\nDisallow: /*?id=*\r\nDisallow: /*&id=*\r\n\r\n# L=0 is the default language\r\nDisallow: /*?L=0*\r\nDisallow: /*&L=0*\r\n\r\n# typeNum = 98 is usually the print version.\r\nDisallow: /*?type=98*\r\nDisallow: /*&type=98*\r\n\r\n# Should always be protected (.htaccess)\r\nDisallow: /*/Private/*\r\nDisallow: /*/Configuration/*\r\nDisallow: /*/Initialisation/*\r\n\r\nAllow: /fileadmin/generic_lib/Resources/Public/*\r\n\r\nDisallow: /typo3temp/*\r\nAllow: /typo3temp/*.css\r\nAllow: /typo3temp/*.css.*.gzip\r\nAllow: /typo3temp/*.js\r\nAllow: /typo3temp/*.js.*.gzip\r\nAllow: /typo3temp/*.jpg\r\nAllow: /typo3temp/*.gif\r\nAllow: /typo3temp/*.png\r\n\r\nDisallow: *.sql\r\nDisallow: *.sql.gz\r\n\r\n\r\nSitemap: https://whiteroom.ch/sitemap.xml\r\n\r\nUser-agent: EmailCollector\r\nDisallow: /"
+    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /typo3_src/\r\nAllow: /typo3/sysext/frontend/Resources/Public/*\r\n\r\n# Only allow URLs generated with RealURL\r\nDisallow: /*?id=*\r\nDisallow: /*&id=*\r\n\r\n# L=0 is the default language\r\nDisallow: /*?L=0*\r\nDisallow: /*&L=0*\r\n\r\n# typeNum = 98 is usually the print version.\r\nDisallow: /*?type=98*\r\nDisallow: /*&type=98*\r\n\r\n# Should always be protected (.htaccess)\r\nDisallow: /*/Private/*\r\nDisallow: /*/Configuration/*\r\nDisallow: /*/Initialisation/*\r\n\r\nAllow: /fileadmin/generic_lib/Resources/Public/*\r\n\r\nDisallow: /typo3temp/*\r\nAllow: /typo3temp/*.css\r\nAllow: /typo3temp/*.css.*.gzip\r\nAllow: /typo3temp/*.js\r\nAllow: /typo3temp/*.js.*.gzip\r\nAllow: /typo3temp/*.jpg\r\nAllow: /typo3temp/*.gif\r\nAllow: /typo3temp/*.png\r\n\r\nDisallow: *.sql\r\nDisallow: *.sql.gz\r\n\r\n\r\nSitemap: https://example.com/sitemap.xml\r\n\r\nUser-agent: EmailCollector\r\nDisallow: /"
 websiteTitle: ''
