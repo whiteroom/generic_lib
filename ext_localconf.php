@@ -14,6 +14,12 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['de']['EXT:news/Resou
 
 
 $customChanges = [
+
+    'BE' => [
+        'lockSSL' => true,
+    ],
+    
+
     'SYS' => [
 
         'UTF8filesystem' => true,
