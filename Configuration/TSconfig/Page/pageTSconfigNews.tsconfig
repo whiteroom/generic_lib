@@ -111,26 +111,34 @@ TCEFORM {
 #
 tx_news{
 
-	templateLayouts {
+    templateLayouts {
 
         1 = Artikel: zeigt Details
         2 =  --div--,Zur Zeit nicht verfügbar:
         3 = Special Use Cases
-	}
+    }
 
     predefine.archive >
     #predefine.archive = +40 weeks 2 days 4 hours
-	#predefine.archive = next year
-	# As value you can use anything which can be interpreted by 
-	# the php function strtotime (http://de2.php.net/manual/en/function.strtotime.php)
-	
-	
-	module {       
+    #predefine.archive = next year
+    # As value you can use anything which can be interpreted by 
+    # the php function strtotime (http://de2.php.net/manual/en/function.strtotime.php)
+    
+    
+    module {       
         
-        #This is the administrative module
+        #This is the administrative module configuration. Extension news_administration required
         
-        # filter module collapsed (not working?)
+        # filter module initially collapsed
         alwaysShowFilter = 0
+            
+            
+        # manual sorting requires the control panel 
+        controlPanels = 1
+        manualSorting = 1
+        
+        columns = uid,sorting,datetime,archive,teaser,categories,tags
+
         
         filters {
             searchWord = 1
@@ -146,26 +154,21 @@ tx_news{
             includeSubCategories = 0
         }
 
-		# redirectToPageOnStart = 1
-		# manualSorting = 1. issues #605, as stated by georg
-		
-		# If defined, the administration module will redirect the user always to the given page, no matter what defined in the page tree
-		allowedPage = 2
-		
-		# If no page is selected in the page tree, any record created in the administration module would otherwise be saved on the root page
-		defaultPid.tx_news_domain_model_news = 2
-		
-		
-		columns = uid,datetime,archive,teaser,categories,tags
-		
-		
-		# Predefine the form in the administration module (Filter anzeigen/verstecken)
-		preselect {
+        # redirectToPageOnStart = 1
+        # If defined, the administration module will redirect the user always to the given page, no matter what defined in the page tree
+        allowedPage = 2
+        
+        # If no page is selected in the page tree, any record created in the administration module would otherwise be saved on the root page
+        defaultPid.tx_news_domain_model_news = 2
+        
+        
+        # Predefine the form in the administration module (Filter anzeigen/verstecken)
+        preselect {
             topNewsRestriction = 0
             sortingField = datetime
-			sortingDirection = desc
+            sortingDirection = desc
         }
-		
-	}
+        
+    }
 
 }
