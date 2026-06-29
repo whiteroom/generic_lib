@@ -51,11 +51,12 @@ $customChanges = [
     'EXTENSIONS' => [
         
         'generic_lib' => [
-            'enableDummySetting' => 0,
+            'enableDummySetting' => 1,
         ],
         'news' => [
             'manualSorting' => 1,
             'rteForTeaser' => 1,
+            'showAdministrationModule' => '0',
             'contentElementRelation' => 1,
         ],
         
