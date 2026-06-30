@@ -30,6 +30,9 @@ $customChanges = [
             1,
         ],
         
+        'miscfile_ext' => '7z,doc,docm,docx,dot,dotm,dotx,epub,gz,ics,mobi,odp,ods,odt,potm,potx,ppam,pps,ppsm,ppsx,ppt,pptm,pptx,rar,sldm,sldx,tar,vcard,vcf,xlam,xls,xlsb,xlsm,xlsx,xlt,xltm,xltx,zip,eot,ttf,woff,otf,ico,map',
+
+        
         'FileInfo' => [
             'fileExtensionToMimeType' => [
                 # add mp3 audio
