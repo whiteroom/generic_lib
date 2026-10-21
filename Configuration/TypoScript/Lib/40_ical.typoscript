@@ -17,7 +17,7 @@
 # ******************************************************************************
 
 
-[request.getPageArguments().getPageType() == 9819]
+[request && request.getPageArguments()?.getPageType() == 9819]
 
     config {
             absRefPrefix = {$plugin.generic_lib.absRefPrefixRoot}
