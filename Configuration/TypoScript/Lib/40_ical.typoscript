@@ -17,7 +17,7 @@
 # ******************************************************************************
 
 
-[getTSFE()?.type == 9819]
+[request.getPageArguments().getPageType() == 9819]
 
     config {
             absRefPrefix = {$plugin.generic_lib.absRefPrefixRoot}

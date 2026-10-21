@@ -19,14 +19,14 @@ page {
 		
 		# icon
 	    5 = IMG_RESOURCE
-	    5 {
-	        file = {$plugin.generic_lib.theme.resDir}/Public/Images/icon.png
-	        file {
-	            width = 64c
-	            height = 64
-	        }
-	        stdWrap.dataWrap = <link rel="icon" sizes="{TSFE:lastImgResourceInfo|0}x{TSFE:lastImgResourceInfo|1}" href="|">
-	    }
+		5 {
+		    file = {$plugin.generic_lib.theme.resDir}/Public/Images/icon.png
+		    file {
+		        width = 64c
+		        height = 64
+		    }
+		    stdWrap.dataWrap = <link rel="icon" sizes="{register:IMAGE_NUM_0}x{register:IMAGE_NUM_1}" href="|">
+		}
 	    
 	    
 	    # Apple touch icons
@@ -36,7 +36,7 @@ page {
 	            width = 57c
 	            height = 57
 	        }
-	        stdWrap.dataWrap = <link rel="apple-touch-icon" sizes="{TSFE:lastImgResourceInfo|0}x{TSFE:lastImgResourceInfo|1}" href="|">
+	        stdWrap.dataWrap = <link rel="apple-touch-icon" sizes="{register:IMAGE_NUM_0}x{register:IMAGE_NUM_1}" href="|">
 	    }
 	
 	    20 < .10
@@ -103,7 +103,7 @@ page {
 	            width = 36c
 	            height = 36
 	        }
-	        stdWrap.dataWrap = <link rel="icon" type="image/png" sizes="{TSFE:lastImgResourceInfo|0}x{TSFE:lastImgResourceInfo|1}" href="|">
+	        stdWrap.dataWrap = <link rel="icon" type="image/png" sizes="{register:IMAGE_NUM_0}x{register:IMAGE_NUM_1}" href="|">
 	    }
 	    
 	    120 < .110
@@ -147,7 +147,7 @@ page {
 	            width = 70c
 	            height = 70
 	        }
-	        stdWrap.dataWrap = <meta name="msapplication-square{TSFE:lastImgResourceInfo|0}x{TSFE:lastImgResourceInfo|1}logo" content="|"/>
+		    stdWrap.dataWrap = <meta name="msapplication-square{register:IMAGE_NUM_0}x{register:IMAGE_NUM_1}logo" content="|"/>
 	    }
 	    
 	    180 < .170
@@ -169,7 +169,7 @@ page {
 		        width = 310c
 		        height = 150
 		    }
-			stdWrap.dataWrap = <meta name="msapplication-wide{TSFE:lastImgResourceInfo|0}x{TSFE:lastImgResourceInfo|1}logo" content="|"/>
+			stdWrap.dataWrap = <meta name="msapplication-wide{register:IMAGE_NUM_0}x{register:IMAGE_NUM_1}logo" content="|"/>
 	    
 	    }
 	    
