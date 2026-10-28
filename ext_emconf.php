@@ -10,7 +10,7 @@
  * "version" and "dependencies" must not be touched!
  ***************************************************************/
 
-$EM_CONF[$_EXTKEY] = array(
+$EM_CONF['generic_lib'] = array(
 	'title' => 'whiteRoom Project Kickstart',
 	'description' => '',
 	'category' => 'distribution',
@@ -21,7 +21,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'uploadfolder' => '0',
 	'createDirs' => '',
 	'clearCacheOnLoad' => 0,
-	'version' => '13.0.10',
+	'version' => '13.1.0',
 	'constraints' => [
 	    'depends' => [
 	        'php' => '8.1.0-8.3.99',
