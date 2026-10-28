@@ -113,18 +113,12 @@ mod {
 # Default backend usergroup and rights for new pages
 TCEMAIN {
     permissions {
-        # default begroup owner of new pages
+        # default BEgroup owner of new pages
         groupid = 1
         user = show,editcontent,edit,delete,new
         group = show,editcontent,edit,delete,new
         everybody =
     }
-    clearCacheCmd = all
-
-	preview {
-	    
-	}
-
 }
 
 
