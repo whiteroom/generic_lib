@@ -10,13 +10,26 @@
 		<f:else>
 			<f:if condition="{data.image_zoom}">
 				<f:then>
-					<a 	href="{f:uri.image(image:file, maxWidth: '{settings.media.popup.linkWrapWidth}', fileExtension: 'webp')}" 
-						title="{data.header}" 
-						class="{settings.media.popup.lightboxCssClass}" 
-						data-fancybox="lightbox[{data.uid}]">
-				
-						<f:render partial="Media/Rendering/Image" arguments="{file: file, dimensions: dimensions, settings: settings}" />
-					</a>
+					<f:if condition="{0: file.title, 1: file.description} != {0: '', 1: ''}">
+						<f:then>
+							<a href="{f:uri.image(image:file, maxWidth: '{settings.media.popup.linkWrapWidth}', fileExtension: 'webp')}" 
+								title="{f:if(condition:'{file.title}', then:'{file.title}', else: '{file.description}')}"
+								class="{settings.media.popup.lightboxCssClass}" 
+								data-fancybox="lightbox[{data.uid}]">
+						
+								<f:render partial="Media/Rendering/Image" arguments="{file: file, dimensions: dimensions, settings: settings}" />
+							</a>
+						</f:then>
+						<f:else>
+							<a 	href="{f:uri.image(image:file, maxWidth: '{settings.media.popup.linkWrapWidth}', fileExtension: 'webp')}" 
+								title="{data.header}" 
+								class="{settings.media.popup.lightboxCssClass}" 
+								data-fancybox="lightbox[{data.uid}]">
+						
+								<f:render partial="Media/Rendering/Image" arguments="{file: file, dimensions: dimensions, settings: settings}" />
+							</a>
+						</f:else>
+					</f:if>
 				</f:then>
 				<f:else>
 					<f:render partial="Media/Rendering/Image" arguments="{file: file, dimensions: dimensions, settings: settings}" />
