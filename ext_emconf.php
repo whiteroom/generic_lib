@@ -11,13 +11,13 @@
 
 $EM_CONF['generic_lib'] = array(
 	'title' => 'whiteRoom Project Kickstart',
-	'description' => 'extension kick starting a full site',
+	'description' => 'Extension kick starting a full site',
 	'category' => 'distribution',
 	'author' => 'Daniel Schoeneck',
 	'author_email' => '',
 	'state' => 'beta',
     'clearCacheOnLoad' => true,
-	'version' => '13.1.3',
+	'version' => '13.1.4',
 	'constraints' => [
 	    'depends' => [
 	        'php' => '8.1.0-8.3.99',
