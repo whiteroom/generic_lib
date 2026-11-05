@@ -161,7 +161,7 @@ td:empty {
 }
 
 
-
+.hyphens-none {hyphens: none; white-space: nowrap}
 .brandcolor { color: var(--primary-color) }
 .text-right {text-align: right}
 .text-center {text-align: center}
