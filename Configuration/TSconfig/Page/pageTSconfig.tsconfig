@@ -119,9 +119,44 @@ TCEMAIN {
         group = show,editcontent,edit,delete,new
         everybody =
     }
+
+	# --- allow for creating links to news records (newsitems or categories)
+	# --- RecordLinkHandler allows news records being linked from BE-Editor 
+	# --- Works with standard content elements like text, textmedia, etc.
+
+    linkHandler {
+	    # Handler für News-Datensätze
+        tx_news {
+            handler = TYPO3\CMS\Backend\LinkHandler\RecordLinkHandler
+            label = foo
+            configuration {
+                table = tx_news_domain_model_news
+                
+                # Default StoragePid for tx_news
+                storagePid = 2
+                
+                # Show PageTree in order to select other records than only those from default StoragePid
+                hidePageTree = 0
+            }
+            scanAfter = page
+        }
+        
+        # Handler für System-Kategorien
+        sys_categories {
+            handler = TYPO3\CMS\Backend\LinkHandler\RecordLinkHandler
+            label = bar
+            configuration {
+                table = sys_category
+
+                # Default StoragePid for categories
+                storagePid = 2
+                
+                hidePageTree = 1
+            }
+            scanAfter = page
+        }
+    }
 }
-
-
 
 # --------------------------------------------------
 # TCEFORM.pages
