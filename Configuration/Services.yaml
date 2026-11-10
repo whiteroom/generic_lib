@@ -1,0 +1,7 @@
+services:
+  Whiteroom\GenericLib\Command\IndexedSearchCacheCommand:
+    tags:
+      - name: 'console.command'
+        command: 'generic_lib:indexedsearchcache'
+        schedulable: true
+        description: 'Rebuild the indexed_search cache, used to extend EXT:indexed_search'

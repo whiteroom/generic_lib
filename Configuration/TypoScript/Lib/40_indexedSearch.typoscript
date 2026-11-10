@@ -20,7 +20,6 @@ page {
 plugin.tx_indexedsearch {
 	
 	settings {
-		displayRules = 0
 		displayAdvancedSearchLink = 0
 		defaultOptions.numberOfResults = 100
 	}
