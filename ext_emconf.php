@@ -17,7 +17,7 @@ $EM_CONF['generic_lib'] = array(
 	'author_email' => '',
 	'state' => 'beta',
     'clearCacheOnLoad' => true,
-	'version' => '13.1.4',
+	'version' => '13.1.5',
 	'constraints' => [
 	    'depends' => [
 	        'php' => '8.1.0-8.3.99',
@@ -30,13 +30,13 @@ $EM_CONF['generic_lib'] = array(
 			'impexp' => '12.4.0-13.4.99',
 			'rx_shariff' => '16.0.0-16.99.99',
 			'vhs' => '7.1.4-7.99.99',
-			'dp_cookieconsent' => '13.0.0-13.99.99'
 	    ],
 	    'conflicts' => [
 
 	    ],
 	    'suggests' => [
 			'news_administration' => '2.0.0-2.0.99',
+			'dp_cookieconsent' => '13.0.0-13.99.99',
 	    ]
 	]
 );
