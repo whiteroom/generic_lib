@@ -1,5 +1,5 @@
 Kickstart whiteroom TYPO3 Projects with an initial setup
-TYPO3 V11.5 LTS
+TYPO3 V13.4 LTS
 
 Goal..
 
