@@ -45,11 +45,6 @@ config {
 
     extTarget = _blank
 
-	# Cache
-	cache_clearAtMidnight = 1
-	cache_period = 1200
-	sendCacheHeaders = 1
-
 	headerComment = {$plugin.generic_lib.sitecredits.agency}
 
 	pageTitleFirst = 1
