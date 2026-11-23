@@ -6,14 +6,23 @@ Vorteil..
 * Keine zusätzliche Extension nötig
 * Als Cron Job konfigurierbar
 
+Verlinkte Medien werden indiziert?\
+Ausschalten unter: Admin Tools → Einstellungen → Extension Configuration → indexed_search:\
+**Ignore Extensions** `(basic.ignoreExtensions)`
 
+List of file extensions that th external parser will ignore (despite having support for them). Comma list.\
+`jpg,jpeg,png,gif,webp,svg`
 
-Aufruf des Befehls
+\
+**Aufruf des Befehls**
 
-* Entweder direkt in der Console, im Zielverzeichnis
-  * ``/opt/plesk/php/8.3/bin/php typo3/sysext/core/bin/typo3 generic_lib:indexedsearchcache``
-* Oder als Cron Job, z.B. /home/httpd/vhosts/schoeneck.ch/cron/recache.sh
-  * ``/home/httpd/vhosts/schoeneck.ch/httpdocs/schoeneck.ch/typo3/sysext/core/bin/typo3 generic_lib:indexedsearchcache``
+* Dry-Run im Zielverzeichnis
+  * ``/opt/plesk/php/8.3/bin/php typo3/sysext/core/bin/typo3 generic_lib:indexedsearchcache --dry-run``
+  * ``/usr/local/bin/php typo3/sysext/core/bin/typo3 generic_lib:indexedsearchcache --dry-run``
+
+* Cron Job, z.B. reindex.sh
+  * ``/opt/plesk/php/8.3/bin/php /home/httpd/vhosts/foo/httpdocs/bar/typo3/sysext/core/bin/typo3 generic_lib:indexedsearchcache``
+  * ``/usr/local/bin/php /home/foo/public_html/bar/typo3/sysext/core/bin/typo3 generic_lib:indexedsearchcache``
 
 
 Good to know, etc..

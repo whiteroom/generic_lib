@@ -20,9 +20,30 @@ page {
 plugin.tx_indexedsearch {
 	
 	settings {
+		targetPid = 1
+
 		displayAdvancedSearchLink = 0
-		defaultOptions.numberOfResults = 100
+		displayResultNumber = 0
+
+		defaultOptions {
+			numberOfResults = 100
+			
+			# defaultOperand 0 ist (AND) -> alle Wörter, Auswertung des gesamten Strings
+			# defaultOperand 1 ist (OR) ->  Vorkommen beliebiges Wort im String
+			defaultOperand = 1
+		}
+
+		results {
+
+			markupSW_summaryMax = 1000
+			markupSW_postPreLgd = 600
+
+			markupSW_divider = …
+			markupSW_divider.noTrimWrap = |   |   |
+		}
 	}
+
+
 
 	view {
 		templateRootPaths {

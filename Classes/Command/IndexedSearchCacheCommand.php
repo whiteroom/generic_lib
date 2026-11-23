@@ -23,6 +23,7 @@ use TYPO3\CMS\Core\Site\Entity\SiteLanguage;
 use TYPO3\CMS\Core\Site\SiteFinder;
 use TYPO3\CMS\Core\Site\Entity\Site;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Cache\CacheManager;
 
 /**
  * IndexedSearchCacheCommand
@@ -50,6 +51,11 @@ class IndexedSearchCacheCommand extends Command
      * @var array<int|string, int>
      */
     private array $statusCodes = [];
+
+    /**
+     * @var array<string, string>
+     */
+    private array $errors = [];
 
     /**
      * Configures the command
@@ -97,8 +103,8 @@ class IndexedSearchCacheCommand extends Command
                                 $sitemap = $this->getSitemap($sitemapUrl);
                                 if (!empty($sitemap->url)) {
                                     $io->writeln('Found ' . count($sitemap->url) . ' urls in sitemap "' . $sitemapUrl . '".');
-                                    foreach ($sitemap->url as $item) {
-                                        $this->urls[] = (string)$item->loc;
+                                    foreach ($sitemap->url as $urlItem) {
+                                        $this->urls[] = (string)$urlItem->loc;
                                     }
                                 } else {
                                     $io->writeln('Sitemap "' . $sitemapUrl . '" could not be fetched.');
@@ -118,6 +124,13 @@ class IndexedSearchCacheCommand extends Command
                 $io->writeln('Fetched ' . count($this->urls) . ' urls total for processing.');
 
                 if (!$input->getOption('dry-run')) {
+                    
+                    // #1: For reindexing, we only need to clar the page cache (only place where it's determined whether a page will be re-rendered)
+                    $cacheManager = GeneralUtility::makeInstance(CacheManager::class);
+                    $cacheManager->getCache('pages')->flush();
+                    $io->writeln('Flushed page cache.');
+
+
                     $this->truncateIndexedSearchTables();
                     $io->writeln('Truncated ' . count($this->tablesTruncate) . ' "indexed_search" tables.');
                 } else {
@@ -127,14 +140,33 @@ class IndexedSearchCacheCommand extends Command
                 $io->writeln('Processing ' . count($this->urls) . ' urls now.');
                 $io->newLine();
 
+                $dryRun = (bool)$input->getOption('dry-run');
+                $failedUrls = []; 
+                
                 foreach ($this->urls as $url) {
-                    $statusCode = !$input->getOption('dry-run') ? $this->requestUrl($url) : 0;
-                    $key = is_int($statusCode) ? $statusCode : 'dry-run';
+                    $statusCode = $dryRun ? 0 : $this->requestUrl($url);
+                    $key = $dryRun ? 'dry-run' : $statusCode;
+
                     $this->statusCodes[$key] = ($this->statusCodes[$key] ?? 0) + 1;
+                    if (!$dryRun && $statusCode >= 500) {
+                        // #2: In case #1 does lead to issues where the cache files are deleted or rewritten, while PHP-FPM is still operating based on the old state
+                        $failedUrls[] = $url;
+                    }
 
                     if (!$input->getOption('no-status')) {
-					    $io->writeln('Got status code "' . $statusCode . '" when requesting "' . $url . '".');
-					}
+                        $io->writeln('Got status code "' . $statusCode . '" when requesting "' . $url . '".');
+                    }
+                }
+                
+                if ($failedUrls !== []) {
+                    $io->newLine();
+                    $io->writeln('Retrying ' . count($failedUrls) . ' failed urls.');
+                    //sleep(5);
+                
+                    foreach ($failedUrls as $url) {
+                        $statusCode = $this->requestUrl($url);
+                        $io->writeln('Retry: status code "' . $statusCode . '" when requesting "' . $url . '".');
+                    }
                 }
 
                 if (!empty($this->statusCodes)) {
@@ -142,6 +174,11 @@ class IndexedSearchCacheCommand extends Command
                         $io->writeln('Finished processing ' . $count . ' urls with status code "' . $statusCode . '".');
                     }
                 }
+
+                foreach ($this->errors as $url => $message) {
+                    $io->writeln('Error for "' . $url . '": ' . $message);
+                }
+
             } else {
                 $io->writeln('No urls found for processing.');
             }
@@ -149,7 +186,7 @@ class IndexedSearchCacheCommand extends Command
             $io->writeln('No sites found.');
         }
 
-        return self::SUCCESS;
+        return $this->errors !== [] ? self::FAILURE : self::SUCCESS;
     }
 
     /**
@@ -159,9 +196,14 @@ class IndexedSearchCacheCommand extends Command
     {
         try {
             $requestFactory = GeneralUtility::makeInstance(RequestFactory::class);
-            $response = $requestFactory->request($url);
+            $response = $requestFactory->request($url, 'GET', [
+                'http_errors' => false,
+                'timeout' => 60,
+            ]);
             return $response->getStatusCode();
+
         } catch (\Exception $ex) {
+            $this->errors[$url] = $ex->getMessage();
             return 999;
         }
     }
